@@ -1,8 +1,0 @@
-/herramientas /herramientas/index.html 200
-/herramientas/ /herramientas/index.html 200
-/herramientas/calculadora-tarifa-hora /herramientas/calculadora-tarifa-hora/index.html 200
-/herramientas/calculadora-tarifa-hora/ /herramientas/calculadora-tarifa-hora/index.html 200
-/herramientas/generador-contrato-freelance /herramientas/generador-contrato-freelance/index.html 200
-/herramientas/generador-contrato-freelance/ /herramientas/generador-contrato-freelance/index.html 200
-/herramientas/calculadora-tarifa /herramientas/calculadora-tarifa-hora/index.html 301
-/tools/* /herramientas/:splat 301
