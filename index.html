@@ -819,6 +819,13 @@
     opacity: 1;
     transform: translateY(0);
   }
+
+  /* === LAYOUT SAFETY === */
+  *, *::before, *::after { box-sizing: border-box; }
+  img, video, iframe { max-width: 100%; height: auto; }
+  table { width: 100%; table-layout: fixed; }
+  .article-wrap > * { max-width: 100%; }
+  pre, code { white-space: pre-wrap; word-break: break-word; }
 </style>
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"WebSite","name":"AutónomoLab","description":"Herramientas gratuitas, calculadoras y recursos para autónomos y freelancers hispanohablantes.","url":"https://autonomolab.com/","inLanguage":"es","potentialAction":{"@type":"SearchAction","target":"https://autonomolab.com/blog/?q={{search_term_string}}","query-input":"required name=search_term_string"}}</script>
 <!-- GOOGLE ANALYTICS 4
