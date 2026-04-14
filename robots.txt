@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://autonomolab.com/sitemap.xml
