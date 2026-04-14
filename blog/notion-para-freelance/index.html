@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="google-site-verification" content="SUSTITUIR_CON_CODIGO_GSC">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Notion para freelancers: organiza tu negocio — AutónomoLab</title>
+<meta name="description" content="Sistema completo para gestionar clientes, proyectos y tareas con Notion. Plantillas y ejemplos prácticos para freelancers y autónomos.">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://autonomolab.com/blog/notion-para-freelance/">
+<meta property="og:title" content="Cómo usar Notion para organizar tu negocio freelance">
+<meta property="og:description" content="Sistema completo para gestionar clientes, proyectos y tareas con Notion.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://autonomolab.com/blog/notion-para-freelance/">
+<meta property="og:site_name" content="AutónomoLab">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"Article","headline":"Cómo usar Notion para organizar tu negocio freelance","url":"https://autonomolab.com/blog/notion-para-freelance/","publisher":{"@type":"Organization","name":"AutónomoLab","url":"https://autonomolab.com"},"inLanguage":"es"}</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cabinet+Grotesk:wght@400;500;700;800;900&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet">
+<style>
+  :root{--bg:#f5f2eb;--bg2:#ede9e0;--ink:#1a1814;--ink2:#4a4740;--ink3:#8a857a;--accent:#d45a2a;--card:#fff;--border:#ddd8ce;--green:#2ab87a;}
+  *{box-sizing:border-box;margin:0;padding:0;}
+  body{background:var(--bg);color:var(--ink);font-family:'Cabinet Grotesk',sans-serif;font-size:16px;line-height:1.7;overflow-x:hidden;}
+  nav{position:sticky;top:0;z-index:100;background:rgba(245,242,235,0.92);backdrop-filter:blur(12px);border-bottom:1px solid var(--border);padding:0 24px;}
+  .nav-inner{max-width:1100px;margin:0 auto;height:60px;display:flex;align-items:center;justify-content:space-between;}
+  .logo{font-size:18px;font-weight:900;color:var(--ink);text-decoration:none;letter-spacing:-0.03em;display:flex;align-items:center;gap:8px;}
+  .logo-dot{width:8px;height:8px;background:var(--accent);border-radius:50%;display:inline-block;flex-shrink:0;}
+  .nav-links{display:flex;gap:28px;list-style:none;}
+  .nav-links a{font-size:14px;font-weight:500;color:var(--ink2);text-decoration:none;}
+  .nav-links a:hover{color:var(--accent);}
+  @media(max-width:640px){.nav-links{display:none;}}
+  .wrap{max-width:680px;margin:0 auto;padding:48px 24px 80px;}
+  .bc{font-size:13px;color:var(--ink3);margin-bottom:28px;}
+  .bc a{color:var(--ink3);text-decoration:none;}
+  .bc span{margin:0 6px;}
+  .cat{font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:.12em;color:var(--accent);margin-bottom:12px;}
+  h1{font-size:clamp(24px,3.5vw,38px);font-weight:900;letter-spacing:-.02em;line-height:1.2;margin-bottom:16px;}
+  .meta{font-size:13px;color:var(--ink3);margin-bottom:32px;}
+  .thumb{width:100%;height:200px;border-radius:12px;overflow:hidden;margin-bottom:32px;}
+  .thumb img{width:100%;height:100%;object-fit:cover;display:block;}
+  h2{font-size:19px;font-weight:900;margin:32px 0 12px;color:var(--ink);}
+  p{font-size:15px;color:var(--ink2);margin-bottom:14px;}
+  ul{padding-left:18px;margin-bottom:14px;}
+  li{font-size:15px;color:var(--ink2);margin-bottom:6px;}
+  strong{color:var(--ink);font-weight:800;}
+  a{color:var(--accent);}
+  .db{background:var(--card);border:1px solid var(--border);border-radius:12px;padding:18px 20px;margin-bottom:12px;}
+  .db-num{display:inline-block;background:var(--green);color:#fff;width:26px;height:26px;border-radius:6px;font-size:13px;font-weight:900;text-align:center;line-height:26px;margin-right:8px;vertical-align:middle;}
+  .db-title{font-size:15px;font-weight:900;color:var(--ink);display:inline;vertical-align:middle;}
+  .db-desc{font-size:14px;color:var(--ink2);margin-top:8px;line-height:1.6;}
+  .tip{background:var(--bg2);border-left:4px solid var(--accent);padding:14px 18px;border-radius:0 8px 8px 0;margin:20px 0;}
+  .tip p{margin:0;font-size:14px;}
+  .cta{background:rgba(212,90,42,.06);border:1px solid rgba(212,90,42,.2);border-radius:12px;padding:22px;margin:32px 0;text-align:center;}
+  .cta h3{margin-bottom:8px;font-size:18px;}
+  .cta p{margin-bottom:12px;font-size:14px;}
+  .cta-btn{display:inline-block;background:var(--accent);color:#fff;padding:10px 20px;border-radius:8px;font-size:14px;font-weight:700;text-decoration:none;}
+  .rg{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin-top:16px;}
+  @media(max-width:500px){.rg{grid-template-columns:1fr 1fr;}}
+  .rc{background:var(--card);border:1px solid var(--border);border-radius:10px;padding:12px;text-decoration:none;display:block;}
+  .rc-e{font-size:18px;margin-bottom:4px;}
+  .rc-n{font-size:12px;font-weight:800;color:var(--ink);}
+  footer{text-align:center;padding:28px 24px;border-top:1px solid var(--border);font-size:13px;color:var(--ink3);margin-top:32px;}
+  footer a{color:var(--accent);text-decoration:none;}
+</style>
+</head>
+<body>
+<nav>
+  <div class="nav-inner">
+    <a href="/" class="logo"><span class="logo-dot"></span>AutónomoLab</a>
+    <ul class="nav-links">
+      <li><a href="/herramientas">Herramientas</a></li>
+      <li><a href="/blog">Blog</a></li>
+      <li><a href="/comparativas">Comparativas</a></li>
+    </ul>
+  </div>
+</nav>
+<div class="wrap">
+  <div class="bc"><a href="/">Inicio</a><span>›</span><a href="/blog">Blog</a><span>›</span>Notion para freelance</div>
+  <div class="cat">📋 Productividad</div>
+  <h1>Cómo usar Notion para organizar tu negocio freelance</h1>
+  <div class="meta">📅 Abril 2026 · ⏱ 10 min de lectura</div>
+  <div class="thumb"><img src="https://images.unsplash.com/photo-1611532736597-de2d4265fba3?w=900&q=80" alt="Notion para freelancers"></div>
+
+  <p>Notion se ha convertido en la herramienta favorita de los freelancers por su flexibilidad. Puedes usarlo como agenda, gestor de proyectos, CRM de clientes y base de conocimiento, todo en un mismo lugar.</p>
+
+  <h2>¿Por qué Notion para freelancers?</h2>
+  <ul>
+    <li><strong>Plan gratuito muy generoso</strong> — suficiente para la mayoría de freelancers</li>
+    <li><strong>Disponible en web, móvil y escritorio</strong> — acceso desde cualquier lugar</li>
+    <li><strong>Bases de datos relacionales</strong> — conecta clientes, proyectos y tareas</li>
+    <li><strong>IA integrada</strong> — para redactar y resumir contenido</li>
+  </ul>
+
+  <h2>Las 4 bases de datos esenciales</h2>
+
+  <div class="db">
+    <div class="db-num">1</div>
+    <span class="db-title">Base de datos de clientes</span>
+    <div class="db-desc">Crea una base de datos con todos tus clientes. Campos recomendados: nombre, empresa, email, teléfono, estado (activo/inactivo/prospecto), valor del contrato y próxima acción.</div>
+  </div>
+
+  <div class="db">
+    <div class="db-num">2</div>
+    <span class="db-title">Gestión de proyectos</span>
+    <div class="db-desc">Conectada a la base de clientes. Cada proyecto tiene: nombre, cliente vinculado, fecha inicio, fecha entrega, estado (en curso / pausado / entregado / cerrado) e importe.</div>
+  </div>
+
+  <div class="db">
+    <div class="db-num">3</div>
+    <span class="db-title">Registro de tareas</span>
+    <div class="db-desc">Las tareas del día a día vinculadas a cada proyecto. Usa una vista kanban para ver qué está en progreso y qué está bloqueado.</div>
+  </div>
+
+  <div class="db">
+    <div class="db-num">4</div>
+    <span class="db-title">Seguimiento financiero</span>
+    <div class="db-desc">Un registro simple de ingresos y gastos mensuales. No sustituye a la gestoría, pero te da una visión rápida de cómo va el mes y qué facturas están pendientes de cobro.</div>
+  </div>
+
+  <div class="tip">
+    <p>💡 <strong>Consejo:</strong> empieza solo con la base de datos de clientes y proyectos. Un sistema que usas es mejor que uno perfecto que no usas.</p>
+  </div>
+
+  <h2>Cómo empezar hoy</h2>
+  <ul>
+    <li>Crea una cuenta gratuita en notion.so</li>
+    <li>Añade una página nueva y crea tu primera base de datos de clientes</li>
+    <li>Importa tus clientes actuales uno a uno</li>
+    <li>Crea tu primera base de proyectos y vincula cada proyecto con su cliente</li>
+    <li>Instala la app móvil para tener acceso desde cualquier lugar</li>
+  </ul>
+
+  <div class="cta">
+    <h3>Genera tu contrato freelance gratis</h3>
+    <p>Complementa tu sistema en Notion con un contrato profesional generado en 2 minutos.</p>
+    <a href="/herramientas/generador-contrato-freelance" class="cta-btn">Generar contrato →</a>
+  </div>
+
+  <h2>Más artículos relacionados</h2>
+  <div class="rg">
+    <a href="/herramientas/generador-contrato-freelance" class="rc"><div class="rc-e">📄</div><div class="rc-n">Generador contrato</div></a>
+    <a href="/blog/chatgpt-para-autonomos" class="rc"><div class="rc-e">🤖</div><div class="rc-n">ChatGPT para autónomos</div></a>
+    <a href="/blog/mejores-herramientas-freelance-2025" class="rc"><div class="rc-e">🛠️</div><div class="rc-n">Mejores herramientas</div></a>
+  </div>
+</div>
+<footer>© 2026 <a href="/">AutónomoLab</a> · <a href="/privacidad">Privacidad</a> · <a href="/cookies">Cookies</a> · <a href="/aviso-legal">Aviso legal</a></footer>
+</body>
+</html>
