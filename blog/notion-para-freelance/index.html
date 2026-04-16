@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="google-site-verification" content="SUSTITUIR_CON_CODIGO_GSC">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Notion para freelancers: guía completa 2026 — AutónomoLab</title>
+<meta name="description" content="Guía completa de Notion para freelancers y autónomos. Sistema paso a paso para gestionar clientes, proyectos, tareas y finanzas desde cero.">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://autonomolab.com/blog/notion-para-freelance/">
+<meta property="og:title" content="Notion para freelancers: guía completa con sistema paso a paso">
+<meta property="og:description" content="Cómo usar Notion para gestionar clientes, proyectos, tareas y finanzas como freelancer.">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://autonomolab.com/blog/notion-para-freelance/">
+<meta property="og:site_name" content="AutónomoLab">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"Article","headline":"Notion para freelancers: guía completa con sistema paso a paso","description":"Cómo usar Notion para gestionar clientes, proyectos, tareas y finanzas como freelancer.","url":"https://autonomolab.com/blog/notion-para-freelance/","publisher":{"@type":"Organization","name":"AutónomoLab","url":"https://autonomolab.com"},"inLanguage":"es"}</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cabinet+Grotesk:wght@400;500;700;800;900&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet">
+<!-- GOOGLE ADSENSE - Sustituir cuando Google apruebe -->
+<style>
+  :root{--bg:#f5f2eb;--bg2:#ede9e0;--ink:#1a1814;--ink2:#4a4740;--ink3:#8a857a;--accent:#d45a2a;--card:#fff;--border:#ddd8ce;--green:#2ab87a;}
+  *{box-sizing:border-box;margin:0;padding:0;}
+  body{background:var(--bg);color:var(--ink);font-family:'Cabinet Grotesk',sans-serif;font-size:16px;line-height:1.7;overflow-x:hidden;}
+  nav{position:sticky;top:0;z-index:100;background:rgba(245,242,235,0.92);backdrop-filter:blur(12px);border-bottom:1px solid var(--border);padding:0 24px;}
+  .nav-inner{max-width:1100px;margin:0 auto;height:60px;display:flex;align-items:center;justify-content:space-between;}
+  .logo{font-size:18px;font-weight:900;color:var(--ink);text-decoration:none;letter-spacing:-0.03em;display:flex;align-items:center;gap:8px;}
+  .logo-dot{width:8px;height:8px;background:var(--accent);border-radius:50%;display:inline-block;flex-shrink:0;}
+  .nav-links{display:flex;gap:28px;list-style:none;}
+  .nav-links a{font-size:14px;font-weight:500;color:var(--ink2);text-decoration:none;}
+  .nav-links a:hover{color:var(--accent);}
+  @media(max-width:640px){.nav-links{display:none;}}
+  .wrap{max-width:680px;margin:0 auto;padding:48px 24px 80px;}
+  .bc{font-size:13px;color:var(--ink3);margin-bottom:28px;}
+  .bc a{color:var(--ink3);text-decoration:none;}
+  .bc span{margin:0 6px;}
+  .cat{font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:.12em;color:var(--accent);margin-bottom:12px;}
+  h1{font-size:clamp(24px,3.5vw,40px);font-weight:900;letter-spacing:-.02em;line-height:1.2;margin-bottom:16px;}
+  .meta{font-size:13px;color:var(--ink3);margin-bottom:32px;display:flex;gap:16px;flex-wrap:wrap;}
+  .thumb{width:100%;height:220px;border-radius:14px;overflow:hidden;margin-bottom:36px;}
+  .thumb img{width:100%;height:100%;object-fit:cover;display:block;}
+  h2{font-size:22px;font-weight:900;margin:40px 0 14px;color:var(--ink);}
+  h3{font-size:17px;font-weight:800;margin:24px 0 10px;color:var(--ink);}
+  p{font-size:15px;color:var(--ink2);margin-bottom:16px;}
+  ul,ol{padding-left:20px;margin-bottom:16px;}
+  li{font-size:15px;color:var(--ink2);margin-bottom:8px;padding-left:4px;}
+  strong{color:var(--ink);font-weight:800;}
+  a{color:var(--accent);}
+  a:hover{text-decoration:underline;}
+  .indice{background:var(--card);border:1px solid var(--border);border-radius:12px;padding:20px 24px;margin:28px 0;}
+  .indice-title{font-size:13px;font-weight:800;text-transform:uppercase;letter-spacing:.1em;color:var(--ink3);margin-bottom:12px;}
+  .indice ol{padding-left:18px;margin:0;}
+  .indice li{font-size:14px;margin-bottom:6px;}
+  .indice a{color:var(--ink2);text-decoration:none;}
+  .indice a:hover{color:var(--accent);}
+  .db{background:var(--card);border:1px solid var(--border);border-radius:12px;padding:22px;margin-bottom:16px;}
+  .db-head{margin-bottom:12px;}
+  .db-n{display:inline-block;background:var(--green);color:#fff;width:28px;height:28px;border-radius:6px;font-size:13px;font-weight:900;text-align:center;line-height:28px;margin-right:8px;vertical-align:middle;}
+  .db-t{font-size:17px;font-weight:900;color:var(--ink);display:inline;vertical-align:middle;}
+  .db-desc{font-size:14px;color:var(--ink2);line-height:1.6;margin-bottom:12px;}
+  .campo-list{list-style:none;padding:0;margin:0;}
+  .campo-list li{font-size:13px;color:var(--ink2);padding:5px 0;border-bottom:1px solid var(--border);padding-left:18px;position:relative;}
+  .campo-list li:last-child{border-bottom:none;}
+  .campo-list li::before{content:'→';position:absolute;left:0;color:var(--accent);font-size:12px;}
+  .campo-name{font-weight:700;color:var(--ink);}
+  .tabla{width:100%;border-collapse:collapse;margin:20px 0;font-size:14px;}
+  .tabla th{background:var(--ink);color:#fff;padding:10px 14px;text-align:left;font-size:12px;text-transform:uppercase;letter-spacing:.06em;}
+  .tabla td{padding:10px 14px;border-bottom:1px solid var(--border);color:var(--ink2);}
+  .tabla tr:last-child td{border-bottom:none;}
+  .tabla tr:nth-child(even) td{background:var(--bg2);}
+  .tabla td:first-child{font-weight:700;color:var(--ink);}
+  .tip{background:var(--bg2);border-left:4px solid var(--accent);padding:16px 20px;border-radius:0 8px 8px 0;margin:24px 0;}
+  .tip p{margin:0;font-size:14px;}
+  .warning{background:rgba(212,90,42,.06);border:1px solid rgba(212,90,42,.2);border-radius:10px;padding:16px 20px;margin:24px 0;}
+  .warning p{margin:0;font-size:14px;}
+  .paso{background:var(--bg2);border-radius:10px;padding:18px 20px;margin-bottom:12px;}
+  .paso-n{font-size:11px;font-weight:800;text-transform:uppercase;letter-spacing:.1em;color:var(--accent);margin-bottom:6px;}
+  .paso-t{font-size:15px;font-weight:900;color:var(--ink);margin-bottom:6px;}
+  .paso-d{font-size:14px;color:var(--ink2);line-height:1.6;}
+  .cta{background:rgba(212,90,42,.06);border:1px solid rgba(212,90,42,.2);border-radius:14px;padding:28px;margin:40px 0;text-align:center;}
+  .cta h3{font-size:20px;margin-bottom:8px;}
+  .cta p{margin-bottom:16px;font-size:14px;}
+  .cta-btn{display:inline-block;background:var(--accent);color:#fff;padding:12px 24px;border-radius:8px;font-size:14px;font-weight:700;text-decoration:none;}
+  .cta-btn:hover{opacity:.9;}
+  .rg{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin-top:16px;}
+  @media(max-width:500px){.rg{grid-template-columns:1fr 1fr;}}
+  .rc{background:var(--card);border:1px solid var(--border);border-radius:10px;padding:14px;text-decoration:none;display:block;}
+  .rc:hover{border-color:rgba(212,90,42,.3);}
+  .rc-e{font-size:20px;margin-bottom:6px;}
+  .rc-n{font-size:13px;font-weight:800;color:var(--ink);}
+  footer{text-align:center;padding:32px 24px;border-top:1px solid var(--border);font-size:13px;color:var(--ink3);margin-top:40px;}
+  footer a{color:var(--accent);text-decoration:none;}
+</style>
+</head>
+<body>
+<nav>
+  <div class="nav-inner">
+    <a href="/" class="logo"><span class="logo-dot"></span>AutónomoLab</a>
+    <ul class="nav-links">
+      <li><a href="/herramientas">Herramientas</a></li>
+      <li><a href="/blog">Blog</a></li>
+      <li><a href="/comparativas">Comparativas</a></li>
+      <li><a href="/sobre">Sobre</a></li>
+    </ul>
+  </div>
+</nav>
+
+<div class="wrap">
+  <div class="bc"><a href="/">Inicio</a><span>›</span><a href="/blog">Blog</a><span>›</span>Notion para freelance</div>
+  <div class="cat">📋 Productividad</div>
+  <h1>Notion para freelancers: guía completa con sistema paso a paso</h1>
+  <div class="meta">
+    <span>📅 Abril 2026</span>
+    <span>⏱ 14 min de lectura</span>
+    <span>✍️ AutónomoLab</span>
+  </div>
+  <div class="thumb">
+    <img loading="lazy" src="https://images.unsplash.com/photo-1611532736597-de2d4265fba3?w=900&q=80" alt="Notion para freelancers organizar negocio">
+  </div>
+
+  <p>Notion es la herramienta de productividad favorita de miles de freelancers por una razón sencilla: se adapta exactamente a como tú trabajas, no al revés. No tienes que cambiar tus procesos para encajar en una herramienta rígida — tú construyes la herramienta que necesitas.</p>
+  <p>En esta guía te explicamos <strong>cómo montar desde cero un sistema completo en Notion</strong> para gestionar clientes, proyectos, tareas y finanzas como autónomo o freelancer. Sin necesidad de conocimientos técnicos previos.</p>
+
+  <div class="indice">
+    <div class="indice-title">Contenido</div>
+    <ol>
+      <li><a href="#porque">Por qué Notion es ideal para freelancers</a></li>
+      <li><a href="#vs">Notion vs otras herramientas: cuándo usarlo</a></li>
+      <li><a href="#bases">Las 5 bases de datos esenciales</a></li>
+      <li><a href="#setup">Cómo montarlo paso a paso</a></li>
+      <li><a href="#flujo">El flujo de trabajo diario con Notion</a></li>
+      <li><a href="#avanzado">Funciones avanzadas para freelancers</a></li>
+      <li><a href="#errores">Errores comunes al empezar con Notion</a></li>
+    </ol>
+  </div>
+
+  <h2 id="porque">Por qué Notion es ideal para freelancers</h2>
+  <p>La mayoría de herramientas de productividad están diseñadas para equipos: Jira, Asana, Monday... son potentes pero innecesariamente complejas para una persona. Notion ocupa un lugar único porque es tan simple o tan potente como tú quieras.</p>
+  <p>Para un freelancer, las ventajas son claras:</p>
+  <ul>
+    <li><strong>Plan gratuito muy generoso</strong> — páginas ilimitadas, bases de datos, archivos hasta 5 MB. Suficiente para la mayoría de freelancers.</li>
+    <li><strong>Todo en un solo lugar</strong> — clientes, proyectos, tareas, notas de reuniones, referencias, plantillas, finanzas. Sin cambiar de app constantemente.</li>
+    <li><strong>Funciona en web, escritorio y móvil</strong> — sincronización instantánea en todos los dispositivos.</li>
+    <li><strong>Bases de datos relacionales</strong> — puedes vincular clientes con proyectos, proyectos con tareas, tareas con plazos. Todo conectado.</li>
+    <li><strong>IA integrada</strong> — desde 2024, Notion tiene IA nativa para resumir notas, generar borradores y extraer puntos clave de reuniones.</li>
+    <li><strong>Compartir con clientes</strong> — puedes compartir páginas específicas con clientes sin que accedan a todo tu workspace.</li>
+  </ul>
+
+  <h2 id="vs">Notion vs otras herramientas: cuándo usarlo</h2>
+  <p>Notion no es la mejor herramienta para todo. Esta tabla te ayuda a decidir:</p>
+
+  <table class="tabla">
+    <thead>
+      <tr><th>Herramienta</th><th>Mejor que Notion para...</th><th>Peor que Notion para...</th></tr>
+    </thead>
+    <tbody>
+      <tr><td>Trello</td><td>Kanban visual rápido</td><td>Datos relacionales, notas complejas</td></tr>
+      <tr><td>Asana</td><td>Gestión de equipos, dependencias</td><td>Documentación, base de conocimiento</td></tr>
+      <tr><td>Google Docs</td><td>Colaboración en tiempo real en docs</td><td>Bases de datos, gestión de proyectos</td></tr>
+      <tr><td>Airtable</td><td>Bases de datos muy complejas</td><td>Documentación, notas, flexibilidad general</td></tr>
+      <tr><td>Todoist</td><td>Gestión de tareas personales rápidas</td><td>Contexto de proyectos, información de clientes</td></tr>
+    </tbody>
+  </table>
+
+  <p><strong>Veredicto:</strong> si eres freelancer individual y quieres una sola herramienta para todo, Notion es la mejor opción. Si solo necesitas gestionar tareas simples, Todoist o Trello son más rápidos de configurar.</p>
+
+  <h2 id="bases">Las 5 bases de datos esenciales</h2>
+  <p>El sistema que te proponemos se basa en 5 bases de datos interconectadas. Cada una tiene un propósito específico y están vinculadas entre sí para que puedas navegar desde un cliente hasta sus proyectos, y desde un proyecto hasta sus tareas, sin salir de Notion.</p>
+
+  <div class="db">
+    <div class="db-head"><span class="db-n">1</span><span class="db-t">Clientes</span></div>
+    <div class="db-desc">La base central del sistema. Contiene toda la información de tus clientes actuales, pasados y potenciales. Todos los proyectos y facturas están vinculados a esta base.</div>
+    <ul class="campo-list">
+      <li><span class="campo-name">Nombre:</span> nombre de la empresa o del contacto</li>
+      <li><span class="campo-name">Estado:</span> Prospecto / Activo / Pausado / Inactivo (selector)</li>
+      <li><span class="campo-name">Email principal:</span> contacto de referencia</li>
+      <li><span class="campo-name">Teléfono:</span> para emergencias</li>
+      <li><span class="campo-name">Sector:</span> para filtrar y segmentar</li>
+      <li><span class="campo-name">Valor contrato:</span> importe total del contrato activo</li>
+      <li><span class="campo-name">Proyectos:</span> relación con la base de Proyectos</li>
+      <li><span class="campo-name">Próxima acción:</span> qué debes hacer con este cliente esta semana</li>
+      <li><span class="campo-name">Notas:</span> contexto importante, preferencias, historial</li>
+    </ul>
+  </div>
+
+  <div class="db">
+    <div class="db-head"><span class="db-n">2</span><span class="db-t">Proyectos</span></div>
+    <div class="db-desc">Un proyecto es cualquier trabajo con entregables y plazos definidos. Está vinculado a un cliente y contiene todas las tareas asociadas.</div>
+    <ul class="campo-list">
+      <li><span class="campo-name">Nombre del proyecto:</span> título descriptivo</li>
+      <li><span class="campo-name">Cliente:</span> relación con la base de Clientes</li>
+      <li><span class="campo-name">Estado:</span> En propuesta / En curso / En revisión / Entregado / Cerrado</li>
+      <li><span class="campo-name">Fecha inicio:</span> cuándo empieza</li>
+      <li><span class="campo-name">Fecha entrega:</span> deadline comprometido</li>
+      <li><span class="campo-name">Importe:</span> lo que cobras por el proyecto</li>
+      <li><span class="campo-name">Cobrado:</span> checkbox — para saber si ya está pagado</li>
+      <li><span class="campo-name">Tareas:</span> relación con la base de Tareas</li>
+      <li><span class="campo-name">Archivos:</span> brief, contrato, referencias</li>
+    </ul>
+  </div>
+
+  <div class="db">
+    <div class="db-head"><span class="db-n">3</span><span class="db-t">Tareas</span></div>
+    <div class="db-desc">Las acciones concretas del día a día. Cada tarea está vinculada a un proyecto, tiene una fecha límite y un estado. Esta base es tu lista de trabajo diaria.</div>
+    <ul class="campo-list">
+      <li><span class="campo-name">Tarea:</span> descripción de la acción concreta</li>
+      <li><span class="campo-name">Proyecto:</span> relación con la base de Proyectos</li>
+      <li><span class="campo-name">Estado:</span> Por hacer / En progreso / Bloqueada / Hecha</li>
+      <li><span class="campo-name">Prioridad:</span> Alta / Media / Baja</li>
+      <li><span class="campo-name">Fecha límite:</span> cuándo debe estar lista</li>
+      <li><span class="campo-name">Estimación:</span> horas estimadas para completarla</li>
+      <li><span class="campo-name">Notas:</span> contexto o recursos necesarios</li>
+    </ul>
+  </div>
+
+  <div class="db">
+    <div class="db-head"><span class="db-n">4</span><span class="db-t">Seguimiento financiero</span></div>
+    <div class="db-desc">Un registro simple de ingresos y gastos. No sustituye a tu gestoría ni a un software de contabilidad, pero te da una visión rápida de cómo va el mes y el año.</div>
+    <ul class="campo-list">
+      <li><span class="campo-name">Concepto:</span> descripción del ingreso o gasto</li>
+      <li><span class="campo-name">Tipo:</span> Ingreso / Gasto (selector)</li>
+      <li><span class="campo-name">Cliente/Proveedor:</span> relación con Clientes o texto libre</li>
+      <li><span class="campo-name">Importe:</span> cantidad en euros o moneda local</li>
+      <li><span class="campo-name">Fecha:</span> cuándo se produce</li>
+      <li><span class="campo-name">Estado:</span> Pendiente / Cobrado / Pagado</li>
+      <li><span class="campo-name">Categoría:</span> Software / Marketing / Formación / etc.</li>
+    </ul>
+  </div>
+
+  <div class="db">
+    <div class="db-head"><span class="db-n">5</span><span class="db-t">Base de conocimiento</span></div>
+    <div class="db-desc">Un repositorio de información útil que usas repetidamente: plantillas de emails, scripts de ventas, procesos documentados, recursos de referencia. Ahorra tiempo enorme a largo plazo.</div>
+    <ul class="campo-list">
+      <li><span class="campo-name">Título:</span> nombre del recurso</li>
+      <li><span class="campo-name">Categoría:</span> Plantillas / Procesos / Referencias / Formación</li>
+      <li><span class="campo-name">Contenido:</span> la información en sí</li>
+      <li><span class="campo-name">Etiquetas:</span> para búsqueda rápida</li>
+    </ul>
+  </div>
+
+  <h2 id="setup">Cómo montarlo paso a paso</h2>
+  <p>Aquí el proceso exacto para montar el sistema desde cero en menos de 2 horas:</p>
+
+  <div class="paso">
+    <div class="paso-n">Paso 1 — 15 minutos</div>
+    <div class="paso-t">Crea el workspace y la estructura principal</div>
+    <div class="paso-d">Entra en notion.so y crea una cuenta gratuita. Crea una página principal llamada "Mi negocio freelance". Dentro, crea 5 páginas: Clientes, Proyectos, Tareas, Finanzas y Base de conocimiento. Esta es tu estructura raíz.</div>
+  </div>
+
+  <div class="paso">
+    <div class="paso-n">Paso 2 — 20 minutos</div>
+    <div class="paso-t">Crea la base de datos de Clientes</div>
+    <div class="paso-d">En la página Clientes, escribe /database y elige "Table". Añade las propiedades descritas en la sección anterior. Cambia la vista a "Board" (kanban) por estado para visualizar el pipeline de clientes de un vistazo. Añade tus 3-5 clientes actuales para ver cómo queda.</div>
+  </div>
+
+  <div class="paso">
+    <div class="paso-n">Paso 3 — 20 minutos</div>
+    <div class="paso-t">Crea la base de Proyectos y vincúlala</div>
+    <div class="paso-d">Crea la base de Proyectos con sus propiedades. En el campo "Cliente", elige el tipo "Relation" y vincúlalo con la base de Clientes. Esto conecta ambas bases — desde cada cliente podrás ver sus proyectos y viceversa. Añade los proyectos activos que tengas ahora mismo.</div>
+  </div>
+
+  <div class="paso">
+    <div class="paso-n">Paso 4 — 20 minutos</div>
+    <div class="paso-t">Crea la base de Tareas con vista de hoy</div>
+    <div class="paso-d">Crea la base de Tareas. Vincula el campo "Proyecto" con la base de Proyectos. Crea una vista filtrada llamada "Hoy" que muestre solo las tareas con fecha límite igual o anterior a hoy y que no estén hechas. Esta vista será tu punto de partida cada mañana.</div>
+  </div>
+
+  <div class="paso">
+    <div class="paso-n">Paso 5 — 15 minutos</div>
+    <div class="paso-t">Crea el Dashboard principal</div>
+    <div class="paso-d">Crea una página nueva llamada "Dashboard" que sea tu página de inicio. Usa bloques /linked view para mostrar en esa página: las tareas de hoy, los proyectos en curso, los clientes activos y el resumen financiero del mes. Todo visible de un vistazo sin abrir múltiples páginas.</div>
+  </div>
+
+  <div class="paso">
+    <div class="paso-n">Paso 6 — 20 minutos</div>
+    <div class="paso-t">Migra tu información actual</div>
+    <div class="paso-d">Importa o añade manualmente tus clientes actuales, proyectos activos y tareas pendientes. No intentes importar todo el historial desde el principio — empieza solo con lo activo. El historial puede esperarse.</div>
+  </div>
+
+  <div class="tip">
+    <p>💡 <strong>Consejo:</strong> no intentes que el sistema sea perfecto desde el primer día. Monta la estructura básica en 2 horas y mejórala a medida que la uses. Un sistema que usas siempre supera a uno perfecto que nunca terminas de configurar.</p>
+  </div>
+
+  <h2 id="flujo">El flujo de trabajo diario con Notion</h2>
+  <p>Una vez montado el sistema, la rutina diaria es muy simple:</p>
+  <ul>
+    <li><strong>Inicio del día (5 min):</strong> abre el Dashboard, revisa las tareas de hoy y los deadlines de esta semana. Decide qué es lo más importante y empieza por eso.</li>
+    <li><strong>Durante el día:</strong> actualiza el estado de las tareas en tiempo real. Cuando termines una tarea, márcala como hecha. Si aparece algo nuevo, añádelo a la base de tareas con su proyecto y fecha.</li>
+    <li><strong>Al terminar el día (5 min):</strong> revisa qué quedó sin hacer, mueve las tareas al día siguiente si es necesario, y añade cualquier acción pendiente de emails o reuniones del día.</li>
+    <li><strong>Revisión semanal (20 min):</strong> cada lunes o viernes, revisa el pipeline de clientes, comprueba los próximos deadlines de la semana y actualiza el seguimiento financiero con los ingresos y gastos de la semana.</li>
+    <li><strong>Revisión mensual (30 min):</strong> cierra los proyectos terminados, revisa los ingresos del mes, identifica qué clientes han generado más trabajo, y planifica el mes siguiente.</li>
+  </ul>
+
+  <h2 id="avanzado">Funciones avanzadas para freelancers</h2>
+
+  <h3>Compartir páginas con clientes</h3>
+  <p>Una de las funciones más útiles de Notion para freelancers es la posibilidad de compartir páginas específicas con clientes sin que accedan a todo tu workspace. Puedes crear una página por proyecto con el estado actual, los entregables pendientes y los archivos compartidos — mucho más profesional que enviar actualizaciones por email.</p>
+
+  <h3>Plantillas para tareas repetitivas</h3>
+  <p>Si cada vez que empieza un proyecto nuevo tienes las mismas tareas iniciales (briefing, contrato, kickoff, etc.), puedes crear una plantilla de proyecto en Notion que las genere automáticamente. Ahorra 20-30 minutos por proyecto nuevo.</p>
+
+  <h3>Notion IA para notas de reuniones</h3>
+  <p>Desde 2024, Notion tiene IA integrada. Una de sus aplicaciones más útiles es pegar las notas de una reunión y pedirle que extraiga los puntos de acción, decisiones tomadas y próximos pasos — en segundos, en formato de lista limpia.</p>
+
+  <h3>Integración con otras herramientas</h3>
+  <p>Notion se integra con Zapier y Make para conectarlo con Gmail, Calendly, Slack o cualquier otra herramienta. Por ejemplo: cuando alguien reserva una reunión por Calendly, automáticamente se crea una nueva entrada en tu base de clientes en Notion.</p>
+
+  <h2 id="errores">Errores comunes al empezar con Notion</h2>
+  <ul>
+    <li><strong>Sobrecomplicar el sistema desde el principio.</strong> Empieza simple. 3 bases de datos bien usadas valen más que 15 bases de datos a medias.</li>
+    <li><strong>No usarlo de forma consistente.</strong> Notion solo funciona si lo actualizas. Si no lo abres todos los días, no sirve de nada.</li>
+    <li><strong>Usar Notion para todo sin criterio.</strong> Para tareas personales rápidas un papel o Todoist pueden ser más rápidos. Notion brilla con información que necesita estructura y contexto.</li>
+    <li><strong>Copiar sistemas de otros sin adaptarlos.</strong> Los sistemas de productividad en YouTube parecen perfectos pero están diseñados para otras personas con otros flujos de trabajo. Adáptalos a cómo tú trabajas realmente.</li>
+    <li><strong>Dedicar más tiempo a configurar que a trabajar.</strong> Es fácil caer en el "productivity porn" — pasarse horas perfeccionando el sistema en lugar de usarlo. Pon un límite: máximo 2 horas de setup inicial, luego solo mejoras puntuales.</li>
+  </ul>
+
+  <div class="warning">
+    <p>⚠️ <strong>Importante:</strong> Notion no reemplaza a un software de facturación ni a una gestoría. Es complementario. Usa Notion para gestionar proyectos y clientes, y una herramienta específica como Holded, Quipu o facturapdf.app para la facturación legal.</p>
+  </div>
+
+  <div class="cta">
+    <h3>Genera tu contrato freelance gratis</h3>
+    <p>Complementa tu sistema en Notion con un contrato profesional listo en 2 minutos, adaptado a España y LATAM.</p>
+    <a href="/herramientas/generador-contrato-freelance" class="cta-btn">Generar contrato gratis →</a>
+  </div>
+
+  <h2>Artículos relacionados</h2>
+  <div class="rg">
+    <a href="/herramientas/generador-contrato-freelance" class="rc"><div class="rc-e">📄</div><div class="rc-n">Generador de contrato</div></a>
+    <a href="/blog/chatgpt-para-autonomos" class="rc"><div class="rc-e">🤖</div><div class="rc-n">ChatGPT para autónomos</div></a>
+    <a href="/blog/mejores-herramientas-freelance-2025" class="rc"><div class="rc-e">🛠️</div><div class="rc-n">Mejores herramientas</div></a>
+  </div>
+
+</div>
+<footer>© 2026 <a href="/">AutónomoLab</a> · <a href="/privacidad">Privacidad</a> · <a href="/cookies">Cookies</a> · <a href="/aviso-legal">Aviso legal</a></footer>
+</body>
+</html>

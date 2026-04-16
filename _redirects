@@ -1,0 +1,59 @@
+# === HERRAMIENTAS ===
+/herramientas/calculadora-tarifa-hora /herramientas/calculadora-tarifa-hora/index.html 200
+/herramientas/calculadora-tarifa-hora/ /herramientas/calculadora-tarifa-hora/index.html 200
+/herramientas/generador-contrato-freelance /herramientas/generador-contrato-freelance/index.html 200
+/herramientas/generador-contrato-freelance/ /herramientas/generador-contrato-freelance/index.html 200
+/herramientas/calculadora-iva /herramientas/calculadora-iva/index.html 200
+/herramientas/calculadora-iva/ /herramientas/calculadora-iva/index.html 200
+/herramientas/calculadora-precio-proyecto /herramientas/calculadora-precio-proyecto/index.html 200
+/herramientas/calculadora-precio-proyecto/ /herramientas/calculadora-precio-proyecto/index.html 200
+/herramientas/generador-firma-email /herramientas/generador-firma-email/index.html 200
+/herramientas/generador-firma-email/ /herramientas/generador-firma-email/index.html 200
+/herramientas/calculadora-finiquito /herramientas/calculadora-finiquito/index.html 200
+/herramientas/calculadora-finiquito/ /herramientas/calculadora-finiquito/index.html 200
+/herramientas/calculadora-tarifa /herramientas/calculadora-tarifa-hora/index.html 301
+/herramientas /herramientas/index.html 200
+/herramientas/ /herramientas/index.html 200
+
+# === BLOG ===
+/blog/como-poner-precio-servicios-freelance /blog/como-poner-precio-servicios-freelance/index.html 200
+/blog/como-poner-precio-servicios-freelance/ /blog/como-poner-precio-servicios-freelance/index.html 200
+/blog/mejores-herramientas-freelance-2025 /blog/mejores-herramientas-freelance-2025/index.html 200
+/blog/mejores-herramientas-freelance-2025/ /blog/mejores-herramientas-freelance-2025/index.html 200
+/blog/notion-para-freelance /blog/notion-para-freelance/index.html 200
+/blog/notion-para-freelance/ /blog/notion-para-freelance/index.html 200
+/blog/chatgpt-para-autonomos /blog/chatgpt-para-autonomos/index.html 200
+/blog/chatgpt-para-autonomos/ /blog/chatgpt-para-autonomos/index.html 200
+/blog/como-conseguir-clientes-freelance /blog/como-conseguir-clientes-freelance/index.html 200
+/blog/como-conseguir-clientes-freelance/ /blog/como-conseguir-clientes-freelance/index.html 200
+/blog/mejor-app-facturacion-autonomo /blog/mejor-app-facturacion-autonomo/index.html 200
+/blog/mejor-app-facturacion-autonomo/ /blog/mejor-app-facturacion-autonomo/index.html 200
+/blog/categoria/precios /blog/categoria/precios/index.html 200
+/blog/categoria/precios/ /blog/categoria/precios/index.html 200
+/blog/categoria/herramientas /blog/categoria/herramientas/index.html 200
+/blog/categoria/herramientas/ /blog/categoria/herramientas/index.html 200
+/blog/categoria/productividad /blog/categoria/productividad/index.html 200
+/blog/categoria/productividad/ /blog/categoria/productividad/index.html 200
+/blog/categoria/ia /blog/categoria/ia/index.html 200
+/blog/categoria/ia/ /blog/categoria/ia/index.html 200
+/blog/categoria/* /blog/index.html 302
+/blog /blog/index.html 200
+/blog/ /blog/index.html 200
+
+# === PÁGINAS ESTÁTICAS ===
+/comparativas /comparativas/index.html 200
+/comparativas/ /comparativas/index.html 200
+/contacto /contacto/index.html 200
+/contacto/ /contacto/index.html 200
+/privacidad /privacidad/index.html 200
+/privacidad/ /privacidad/index.html 200
+/cookies /cookies/index.html 200
+/cookies/ /cookies/index.html 200
+/aviso-legal /aviso-legal/index.html 200
+/aviso-legal/ /aviso-legal/index.html 200
+
+# === ALIASES Y LEGACY ===
+/tools/* /herramientas/:splat 301
+
+/sobre /sobre/index.html 200
+/sobre/ /sobre/index.html 200
