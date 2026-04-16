@@ -4,6 +4,14 @@
 /herramientas/calculadora-tarifa-hora/ /herramientas/calculadora-tarifa-hora/index.html 200
 /herramientas/generador-contrato-freelance /herramientas/generador-contrato-freelance/index.html 200
 /herramientas/generador-contrato-freelance/ /herramientas/generador-contrato-freelance/index.html 200
+/herramientas/calculadora-iva /herramientas/index.html 302
+/herramientas/calculadora-iva/ /herramientas/index.html 302
+/herramientas/calculadora-precio-proyecto /herramientas/index.html 302
+/herramientas/calculadora-precio-proyecto/ /herramientas/index.html 302
+/herramientas/generador-firma-email /herramientas/index.html 302
+/herramientas/generador-firma-email/ /herramientas/index.html 302
+/herramientas/calculadora-finiquito /herramientas/index.html 302
+/herramientas/calculadora-finiquito/ /herramientas/index.html 302
 /blog /blog/index.html 200
 /blog/ /blog/index.html 200
 /blog/como-poner-precio-servicios-freelance /blog/como-poner-precio-servicios-freelance/index.html 200
@@ -18,6 +26,9 @@
 /blog/como-conseguir-clientes-freelance/ /blog/como-conseguir-clientes-freelance/index.html 200
 /blog/mejor-app-facturacion-autonomo /blog/mejor-app-facturacion-autonomo/index.html 200
 /blog/mejor-app-facturacion-autonomo/ /blog/mejor-app-facturacion-autonomo/index.html 200
+/blog/categoria /blog/index.html 302
+/blog/categoria/ /blog/index.html 302
+/blog/categoria/* /blog/index.html 302
 /comparativas /comparativas/index.html 200
 /comparativas/ /comparativas/index.html 200
 /privacidad /privacidad/index.html 200
@@ -30,3 +41,11 @@
 /contacto/ /contacto/index.html 200
 /herramientas/calculadora-tarifa /herramientas/calculadora-tarifa-hora/index.html 301
 /tools/* /herramientas/:splat 301
+/herramientas/calculadora-iva /herramientas/calculadora-iva/index.html 200
+/herramientas/calculadora-iva/ /herramientas/calculadora-iva/index.html 200
+/herramientas/calculadora-precio-proyecto /herramientas/calculadora-precio-proyecto/index.html 200
+/herramientas/calculadora-precio-proyecto/ /herramientas/calculadora-precio-proyecto/index.html 200
+/herramientas/generador-firma-email /herramientas/generador-firma-email/index.html 200
+/herramientas/generador-firma-email/ /herramientas/generador-firma-email/index.html 200
+/herramientas/calculadora-finiquito /herramientas/calculadora-finiquito/index.html 200
+/herramientas/calculadora-finiquito/ /herramientas/calculadora-finiquito/index.html 200
