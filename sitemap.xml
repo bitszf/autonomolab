@@ -21,4 +21,6 @@
   <url><loc>https://autonomolab.com/herramientas/generador-firma-email/</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
   <url><loc>https://autonomolab.com/herramientas/calculadora-finiquito/</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
   <url><loc>https://autonomolab.com/sobre/</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://autonomolab.com/blog/iva-trimestral-autonomos/</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://autonomolab.com/blog/categoria/fiscal/</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
 </urlset>

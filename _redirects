@@ -36,9 +36,14 @@
 /blog/categoria/productividad /blog/categoria/productividad/ 301
 /blog/categoria/ia/ /blog/categoria/ia/index.html 200
 /blog/categoria/ia /blog/categoria/ia/ 301
+/blog/categoria/fiscal/ /blog/categoria/fiscal/index.html 200
+/blog/categoria/fiscal /blog/categoria/fiscal/ 301
 /blog/categoria/* /blog/index.html 302
 /blog/ /blog/index.html 200
 /blog /blog/ 301
+
+/blog/iva-trimestral-autonomos/ /blog/iva-trimestral-autonomos/index.html 200
+/blog/iva-trimestral-autonomos /blog/iva-trimestral-autonomos/ 301
 
 # === PÁGINAS ESTÁTICAS ===
 /comparativas/ /comparativas/index.html 200
