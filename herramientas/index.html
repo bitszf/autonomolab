@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Herramientas gratuitas para autónomos y freelancers — AutónomoLab</title>
+<meta name="description" content="Calculadoras, generadores y plantillas gratuitas para autónomos y freelancers. Sin registro, sin coste.">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://autonomolab.com/herramientas/">
+<link rel="icon" type="image/x-icon" href="/favicon.ico">
+<link rel="icon" type="image/svg+xml" href="/favicon.svg">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+<meta name="theme-color" content="#1a1814">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cabinet+Grotesk:wght@400;500;700;800;900&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet">
+<style>
+  :root{--bg:#f5f2eb;--bg2:#ede9e0;--ink:#1a1814;--ink2:#4a4740;--ink3:#8a857a;--accent:#d45a2a;--card:#ffffff;--border:#ddd8ce;}
+  *{box-sizing:border-box;margin:0;padding:0;}
+  body{overflow-x:hidden;background:var(--bg);color:var(--ink);font-family:'Cabinet Grotesk',sans-serif;font-size:16px;line-height:1.6;}
+  nav{position:sticky;top:0;z-index:100;background:rgba(245,242,235,0.92);backdrop-filter:blur(12px);border-bottom:1px solid var(--border);padding:0 24px;}
+  .nav-inner{max-width:1100px;margin:0 auto;height:60px;display:flex;align-items:center;justify-content:space-between;}
+  .logo{font-size:18px;font-weight:900;color:var(--ink);text-decoration:none;letter-spacing:-0.03em;display:flex;align-items:center;gap:8px;}
+  .logo-dot{width:8px;height:8px;background:var(--accent);border-radius:50%;}
+  .nav-links{display:flex;gap:28px;list-style:none;}
+  .nav-links a{font-size:14px;font-weight:500;color:var(--ink2);text-decoration:none;}
+  .nav-links a:hover{color:var(--accent);}
+  .section{max-width:1100px;margin:0 auto;padding:64px 24px;}
+  h1{font-size:clamp(32px,5vw,52px);font-weight:900;letter-spacing:-0.03em;margin-bottom:12px;}
+  h1 em{font-family:'Instrument Serif',serif;font-style:italic;font-weight:400;color:var(--accent);}
+  .subtitle{font-size:18px;color:var(--ink2);margin-bottom:48px;max-width:520px;}
+  .tools-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;}
+  @media(max-width:900px){.tools-grid{grid-template-columns:repeat(2,1fr);}}
+  @media(max-width:560px){.tools-grid{grid-template-columns:1fr;}}
+  .tool-card{background:var(--card);border:1px solid var(--border);border-radius:14px;padding:24px;text-decoration:none;display:block;transition:transform .2s,box-shadow .2s,border-color .2s;}
+  .tool-card:hover{transform:translateY(-3px);box-shadow:0 8px 32px rgba(26,24,20,.12);border-color:rgba(212,90,42,.3);}
+  .tool-emoji{font-size:32px;margin-bottom:16px;display:block;}
+  .tool-name{font-size:17px;font-weight:800;color:var(--ink);margin-bottom:6px;}
+  .tool-desc{font-size:13px;color:var(--ink2);line-height:1.5;margin-bottom:16px;}
+  .tool-footer{display:flex;align-items:center;justify-content:space-between;}
+  .tool-tag{font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:.08em;background:var(--bg2);color:var(--ink3);padding:3px 8px;border-radius:4px;}
+  .tool-tag.new{background:rgba(42,184,122,.12);color:#2ab87a;}
+  .tool-tag.popular{background:rgba(212,90,42,.1);color:var(--accent);}
+  .tool-arrow{font-size:18px;color:var(--ink3);}
+  .tool-card:hover .tool-arrow{transform:translateX(4px);}
+  footer{text-align:center;padding:40px 24px;border-top:1px solid var(--border);font-size:13px;color:var(--ink3);}
+  footer a{color:var(--accent);text-decoration:none;}
+
+  /* === LAYOUT SAFETY === */
+  *, *::before, *::after { box-sizing: border-box; }
+  img, video, iframe { max-width: 100%; height: auto; }
+  table { width: 100%; table-layout: fixed; }
+  .article-wrap > * { max-width: 100%; }
+  pre, code { white-space: pre-wrap; word-break: break-word; }
+
+  /* VALUE SECTION */
+  .value-section h2,.guide-section h2,.faq-section h2{font-size:clamp(22px,3vw,30px);font-weight:900;letter-spacing:-.02em;margin-bottom:14px;color:var(--ink);}
+  .value-intro{font-size:16px;color:var(--ink2);margin-bottom:28px;max-width:580px;}
+  .value-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:16px;}
+  @media(max-width:900px){.value-grid{grid-template-columns:1fr 1fr;}}
+  @media(max-width:500px){.value-grid{grid-template-columns:1fr;}}
+  .value-card{background:var(--card);border:1px solid var(--border);border-radius:12px;padding:20px;}
+  .value-icon{font-size:24px;margin-bottom:10px;}
+  .value-title{font-size:15px;font-weight:800;color:var(--ink);margin-bottom:6px;}
+  .value-desc{font-size:13px;color:var(--ink2);line-height:1.5;}
+
+  /* GUIDE SECTION */
+  .guide-steps{display:flex;flex-direction:column;gap:14px;}
+  .guide-step{display:flex;gap:16px;align-items:flex-start;background:var(--card);border:1px solid var(--border);border-radius:12px;padding:20px;}
+  .guide-step-num{width:32px;height:32px;background:var(--accent);color:#fff;border-radius:8px;font-size:15px;font-weight:900;display:flex;align-items:center;justify-content:center;flex-shrink:0;}
+  .guide-step-body{flex:1;min-width:0;}
+  .guide-step-title{font-size:16px;font-weight:800;margin-bottom:4px;}
+  .guide-step-title a{color:var(--ink);text-decoration:none;}
+  .guide-step-title a:hover{color:var(--accent);}
+  .guide-step-desc{font-size:13px;color:var(--ink2);line-height:1.5;}
+
+  /* FAQ */
+  .faq-section{margin-bottom:16px;}
+  .faq-item{background:var(--card);border:1px solid var(--border);border-radius:12px;margin-bottom:10px;overflow:hidden;}
+  .faq-q{font-size:15px;font-weight:800;color:var(--ink);padding:16px 20px;cursor:pointer;display:flex;justify-content:space-between;align-items:center;}
+  .faq-q::after{content:'+';font-size:20px;font-weight:400;color:var(--ink3);flex-shrink:0;margin-left:12px;}
+  .faq-item.open .faq-q::after{content:'−';}
+  .faq-a{font-size:14px;color:var(--ink2);line-height:1.6;padding:0 20px 16px;display:none;}
+  .faq-a a{color:var(--accent);}
+  .faq-item.open .faq-a{display:block;}
+
+  /* BLOG CTA */
+  .blog-cta{background:var(--ink);border-radius:16px;padding:32px 36px;display:flex;align-items:center;justify-content:space-between;gap:24px;flex-wrap:wrap;}
+  .blog-cta h2{font-size:22px;font-weight:900;color:#fff;margin-bottom:8px;letter-spacing:-.02em;}
+  .blog-cta p{font-size:15px;color:rgba(255,255,255,.65);margin:0;}
+  .blog-cta-btn{display:inline-block;background:var(--accent);color:#fff;padding:13px 24px;border-radius:10px;font-size:14px;font-weight:800;text-decoration:none;white-space:nowrap;flex-shrink:0;}
+  .blog-cta-btn:hover{opacity:.9;}
+
+</style>
+<meta property="og:title" content="Herramientas para autónomos y freelancers">
+<meta property="og:description" content="Calculadoras, generadores y plantillas gratuitas para autónomos y freelancers.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://autonomolab.com/herramientas/">
+<meta property="og:site_name" content="AutónomoLab">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Herramientas para autónomos y freelancers">
+<meta name="twitter:description" content="Calculadoras, generadores y plantillas gratuitas para autónomos y freelancers.">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"CollectionPage","name":"Herramientas para autónomos y freelancers","description":"Calculadoras, generadores y plantillas gratuitas para autónomos y freelancers.","url":"https://autonomolab.com/herramientas/","inLanguage":"es"}</script>
+<!-- GOOGLE ANALYTICS 4
+  INSTRUCCIONES:
+  1. Ve a https://analytics.google.com
+  2. Crea una propiedad para autonomolab.com
+  3. Google te dará un Measurement ID como: G-XXXXXXXXXX
+  4. Sustituye G-XXXXXXXXXX por tu ID real abajo
+-->
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<!-- <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-XXXXXXXXXX');
+</script> -->
+<!-- GOOGLE ADSENSE
+  INSTRUCCIONES:
+  1. Ve a https://adsense.google.com
+  2. Añade autonomolab.com como sitio
+  3. Google te dará un código como este:
+     <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-XXXXXXXXXXXXXXXXX" crossorigin="anonymous"></script>
+  4. Sustituye el bloque de abajo con ese código
+  5. Para mostrar anuncios en un lugar específico, añade:
+     <ins class="adsbygoogle"
+          style="display:block"
+          data-ad-client="ca-pub-XXXXXXXXXXXXXXXXX"
+          data-ad-slot="XXXXXXXXXX"
+          data-ad-format="auto"
+          data-full-width-responsive="true"></ins>
+     <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+-->
+</head>
+<body>
+<nav>
+  <div class="nav-inner">
+    <a href="/" class="logo"><span class="logo-dot"></span>AutónomoLab</a>
+    <ul class="nav-links">
+      <li><a href="/herramientas">Herramientas</a></li>
+      <li><a href="/blog">Blog</a></li>
+      <li><a href="/comparativas">Comparativas</a></li>
+      <li><a href="/sobre">Sobre</a></li>
+    </ul>
+  </div>
+</nav>
+<section class="section">
+  <h1>Herramientas <em>gratuitas</em></h1>
+  <p class="subtitle">Todo lo que necesitas para gestionar tu negocio independiente. Sin registro, sin coste, sin trampa.</p>
+  <div class="tools-grid">
+    <a href="/herramientas/calculadora-tarifa-hora" class="tool-card">
+      <span class="tool-emoji">💰</span>
+      <div class="tool-name">Calculadora de tarifa hora</div>
+      <div class="tool-desc">¿Cuánto deberías cobrar? Calcula tu tarifa ideal según ingresos, gastos y horas disponibles.</div>
+      <div class="tool-footer"><span class="tool-tag popular">Más usada</span><span class="tool-arrow">→</span></div>
+    </a>
+    <a href="/herramientas/generador-contrato-freelance" class="tool-card">
+      <span class="tool-emoji">📄</span>
+      <div class="tool-name">Generador de contrato</div>
+      <div class="tool-desc">Genera un contrato freelance profesional en 2 minutos. Descarga en PDF listo para firmar.</div>
+      <div class="tool-footer"><span class="tool-tag new">Nuevo</span><span class="tool-arrow">→</span></div>
+    </a>
+    <a href="/herramientas/calculadora-iva" class="tool-card">
+      <span class="tool-emoji">🧾</span>
+      <div class="tool-name">Simulador IVA trimestral</div>
+      <div class="tool-desc">Calcula tu declaración trimestral de IVA e IRPF. España y países LATAM incluidos.</div>
+      <div class="tool-footer"><span class="tool-tag">Fiscal</span><span class="tool-arrow">→</span></div>
+    </a>
+    <a href="/herramientas/calculadora-precio-proyecto" class="tool-card">
+      <span class="tool-emoji">📐</span>
+      <div class="tool-name">Calculadora de proyecto</div>
+      <div class="tool-desc">Estima el precio justo de cualquier proyecto desglosando horas, complejidad y margen.</div>
+      <div class="tool-footer"><span class="tool-tag">Presupuestos</span><span class="tool-arrow">→</span></div>
+    </a>
+    <a href="/herramientas/generador-firma-email" class="tool-card">
+      <span class="tool-emoji">✉️</span>
+      <div class="tool-name">Firma de email profesional</div>
+      <div class="tool-desc">Genera tu firma de correo profesional en segundos. Copia el HTML para Gmail u Outlook.</div>
+      <div class="tool-footer"><span class="tool-tag new">Nuevo</span><span class="tool-arrow">→</span></div>
+    </a>
+    <a href="/herramientas/calculadora-finiquito" class="tool-card">
+      <span class="tool-emoji">💼</span>
+      <div class="tool-name">Calculadora de finiquito</div>
+      <div class="tool-desc">Calcula el finiquito de un empleado o tu propia liquidación. Vacaciones, pagas y más.</div>
+      <div class="tool-footer"><span class="tool-tag tool-tag-new">Nuevo</span><span class="tool-arrow">→</span></div>
+    </a>
+
+    <a href="/herramientas/calculadora-irpf" class="tool-card fade-in">
+      <span class="tool-emoji">📊</span>
+      <div class="tool-name">Calculadora IRPF (Modelo 130)</div>
+      <div class="tool-desc">Calcula tu pago fraccionado de IRPF trimestral como autónomo en estimación directa.</div>
+      <div class="tool-footer"><span class="tool-tag">Fiscal</span><span class="tool-arrow">→</span></div>
+    </a>
+
+    <a href="/herramientas/simulador-cuota-autonomo" class="tool-card fade-in">
+      <span class="tool-emoji">💼</span>
+      <div class="tool-name">Simulador cuota de autónomo</div>
+      <div class="tool-desc">Calcula cuánto pagarás de cuota mensual según tus ingresos reales con el sistema de tramos 2026.</div>
+      <div class="tool-footer"><span class="tool-tag">Fiscal</span><span class="tool-arrow">→</span></div>
+    </a>
+
+    <a href="/herramientas/generador-presupuesto" class="tool-card fade-in">
+      <span class="tool-emoji">📋</span>
+      <div class="tool-name">Generador de presupuesto</div>
+      <div class="tool-desc">Crea un presupuesto freelance profesional con desglose por partidas. Imprimible en PDF.</div>
+      <div class="tool-footer"><span class="tool-tag tool-tag-new">Nuevo</span><span class="tool-arrow">→</span></div>
+    </a>
+
+    <a href="/herramientas/calculadora-ahorro-fiscal" class="tool-card fade-in">
+      <span class="tool-emoji">💡</span>
+      <div class="tool-name">Calculadora ahorro fiscal</div>
+      <div class="tool-desc">Descubre cuánto puedes ahorrar al año deduciendo correctamente tus gastos como autónomo.</div>
+      <div class="tool-footer"><span class="tool-tag">Fiscal</span><span class="tool-arrow">→</span></div>
+    </a>
+
+    <a href="/herramientas/plantilla-factura-excel" class="tool-card fade-in">
+      <span class="tool-emoji">📊</span>
+      <div class="tool-name">Plantilla factura Excel</div>
+      <div class="tool-desc">Plantilla .xlsx gratuita con IVA y retención IRPF automáticos. Compatible con Excel, LibreOffice y Google Sheets.</div>
+      <div class="tool-footer"><span class="tool-tag tool-tag-new">Descarga</span><span class="tool-arrow">→</span></div>
+    </a>
+
+    <a href="/herramientas/calculadora-precio-palabra" class="tool-card fade-in">
+      <span class="tool-emoji">✍️</span>
+      <div class="tool-name">Precio por palabra</div>
+      <div class="tool-desc">Calcula tu tarifa por palabra como redactor freelance según tus ingresos objetivo y velocidad de escritura.</div>
+      <div class="tool-footer"><span class="tool-tag tool-tag-new">Nuevo</span><span class="tool-arrow">→</span></div>
+    </a>
+  </div>
+</section>
+
+<!-- SECCIÓN DE VALOR -->
+<section class="section" style="padding-top:0;">
+  <div class="value-section">
+    <h2>¿Por qué usar las herramientas de AutónomoLab?</h2>
+    <p class="value-intro">Diseñadas específicamente para autónomos y freelancers hispanohablantes. Sin registro, sin límites, sin coste oculto.</p>
+    <div class="value-grid">
+      <div class="value-card">
+        <div class="value-icon">🌎</div>
+        <div class="value-title">España y LATAM</div>
+        <div class="value-desc">Todas las herramientas están adaptadas a la fiscalidad y el contexto de España, México, Argentina, Colombia y Chile.</div>
+      </div>
+      <div class="value-card">
+        <div class="value-icon">⚡</div>
+        <div class="value-title">Resultados inmediatos</div>
+        <div class="value-desc">Sin formularios de registro ni procesos de onboarding. Entras, introduces tus datos y obtienes el resultado en segundos.</div>
+      </div>
+      <div class="value-card">
+        <div class="value-icon">🔒</div>
+        <div class="value-title">Privacidad total</div>
+        <div class="value-desc">Ningún dato sale de tu navegador. No almacenamos tu información, no la vendemos ni la usamos para ningún otro fin.</div>
+      </div>
+      <div class="value-card">
+        <div class="value-icon">📱</div>
+        <div class="value-title">Funciona en móvil</div>
+        <div class="value-desc">Diseño responsive optimizado para que puedas calcular tu tarifa o revisar tu IVA desde cualquier dispositivo.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- GUÍA DE USO -->
+<section class="section" style="padding-top:0;">
+  <div class="guide-section">
+    <h2>¿Por dónde empezar?</h2>
+    <p style="font-size:15px;color:var(--ink2);margin-bottom:24px;">Si acabas de llegar a AutónomoLab, estas son las tres herramientas más útiles para empezar:</p>
+    <div class="guide-steps">
+      <div class="guide-step">
+        <div class="guide-step-num">1</div>
+        <div class="guide-step-body">
+          <div class="guide-step-title"><a href="/herramientas/calculadora-tarifa-hora">Calculadora de tarifa hora</a></div>
+          <div class="guide-step-desc">Antes de aceptar cualquier proyecto, necesitas saber cuánto debes cobrar para que tu negocio sea sostenible. Esta calculadora te da tu tarifa mínima real en 2 minutos.</div>
+        </div>
+      </div>
+      <div class="guide-step">
+        <div class="guide-step-num">2</div>
+        <div class="guide-step-body">
+          <div class="guide-step-title"><a href="/herramientas/calculadora-precio-proyecto">Calculadora de precio de proyecto</a></div>
+          <div class="guide-step-desc">Cuando tengas un proyecto concreto, desglósalo en tareas con horas estimadas. Esta herramienta calcula el precio final con margen de seguridad incluido.</div>
+        </div>
+      </div>
+      <div class="guide-step">
+        <div class="guide-step-num">3</div>
+        <div class="guide-step-body">
+          <div class="guide-step-title"><a href="/herramientas/generador-contrato-freelance">Generador de contrato freelance</a></div>
+          <div class="guide-step-desc">Una vez acordado el precio, protégete con un contrato. Genera uno profesional en 2 minutos adaptado a tu país sin necesidad de abogado.</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section class="section" style="padding-top:0;">
+  <div class="faq-section">
+    <h2>Preguntas frecuentes</h2>
+    <div class="faq-item">
+      <div class="faq-q">¿Son realmente gratuitas todas las herramientas?</div>
+      <div class="faq-a">Sí, completamente. No hay plan de pago, no hay funciones premium y no hay límite de uso. Todas las herramientas de AutónomoLab son y seguirán siendo gratuitas.</div>
+    </div>
+    <div class="faq-item">
+      <div class="faq-q">¿Necesito registrarme para usarlas?</div>
+      <div class="faq-a">No. Ninguna herramienta requiere registro, email ni ningún dato personal. Entras directamente y empiezas a usarla.</div>
+    </div>
+    <div class="faq-item">
+      <div class="faq-q">¿Funcionan para autónomos en LATAM?</div>
+      <div class="faq-a">Sí. La calculadora de tarifa hora, el generador de contratos y la calculadora de precio de proyecto están adaptadas a México, Argentina, Colombia, Chile y otros países hispanohablantes. La calculadora de IVA y la de finiquito están orientadas al mercado español.</div>
+    </div>
+    <div class="faq-item">
+      <div class="faq-q">¿Qué herramienta es la más útil para empezar?</div>
+      <div class="faq-a">Depende de tu situación. Si estás empezando como freelance, la calculadora de tarifa hora es la más importante — necesitas saber cuánto cobrar antes de aceptar cualquier proyecto. Si ya tienes clientes, el generador de contratos es lo más urgente.</div>
+    </div>
+    <div class="faq-item">
+      <div class="faq-q">¿Vais a añadir más herramientas?</div>
+      <div class="faq-a">Sí. Tenemos en desarrollo una calculadora de IRPF, un simulador de cuota de autónomo y un generador de presupuestos. Si echas en falta alguna herramienta específica, <a href="/contacto">escríbenos</a>.</div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA BLOG -->
+<section class="section" style="padding-top:0;padding-bottom:60px;">
+  <div class="blog-cta">
+    <div class="blog-cta-text">
+      <h2>¿Quieres aprender más?</h2>
+      <p>El blog de AutónomoLab tiene guías completas sobre precios, clientes, herramientas y fiscalidad para autónomos y freelancers.</p>
+    </div>
+    <a href="/blog" class="blog-cta-btn">Ver todos los artículos →</a>
+  </div>
+</section>
+
+<footer>© 2026 <a href="/">AutónomoLab</a> · Herramientas gratuitas para autónomos y freelancers</footer>
+
+<script>
+  document.querySelectorAll('.faq-q').forEach(q => {
+    q.addEventListener('click', () => q.parentElement.classList.toggle('open'));
+  });
+</script>
+</body>
+</html>

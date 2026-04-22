@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Calculadora precio por palabra para redactores freelance — AutónomoLab</title>
+<meta name="description" content="Calcula cuánto cobrar por palabra como redactor freelance. Calcula tu tarifa por palabra basándote en tus ingresos objetivo y velocidad de escritura.">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://autonomolab.com/herramientas/calculadora-precio-palabra/">
+<meta property="og:title" content="Calculadora precio por palabra para redactores freelance">
+<meta property="og:description" content="Calcula tu tarifa por palabra como redactor freelance según tus ingresos objetivo y velocidad.">
+<meta property="og:url" content="https://autonomolab.com/herramientas/calculadora-precio-palabra/">
+<meta property="og:site_name" content="AutónomoLab">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"WebApplication","name":"Calculadora precio por palabra para redactores","description":"Calcula cuánto cobrar por palabra como redactor freelance.","url":"https://autonomolab.com/herramientas/calculadora-precio-palabra/","applicationCategory":"BusinessApplication","operatingSystem":"Web","offers":{"@type":"Offer","price":"0","priceCurrency":"EUR"},"inLanguage":"es"}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"¿Cuánto cobra un redactor freelance por palabra en España?","acceptedAnswer":{"@type":"Answer","text":"En España, un redactor freelance junior cobra entre 0,02€ y 0,05€ por palabra, un nivel medio entre 0,05€ y 0,10€ y un redactor senior o especializado entre 0,10€ y 0,25€ por palabra o más."}},{"@type":"Question","name":"¿Es mejor cobrar por palabra, por hora o por proyecto?","acceptedAnswer":{"@type":"Answer","text":"Depende del tipo de trabajo. Cobrar por palabra es común en artículos de blog y contenido web. Cobrar por hora es mejor para trabajos de investigación intensiva. Cobrar por proyecto es ideal para copy publicitario, newsletters o guiones donde el valor no está en el número de palabras."}}]}</script>
+<link rel="icon" type="image/x-icon" href="/favicon.ico">
+<link rel="icon" type="image/svg+xml" href="/favicon.svg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cabinet+Grotesk:wght@400;500;700;800;900&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet">
+<style>
+  :root{--bg:#f5f2eb;--bg2:#ede9e0;--ink:#1a1814;--ink2:#4a4740;--ink3:#8a857a;--accent:#d45a2a;--card:#fff;--border:#ddd8ce;--green:#2ab87a;}
+  *{box-sizing:border-box;margin:0;padding:0;}
+  body{background:var(--bg);color:var(--ink);font-family:'Cabinet Grotesk',sans-serif;font-size:16px;line-height:1.7;overflow-x:hidden;}
+  nav{position:sticky;top:0;z-index:100;background:rgba(245,242,235,0.92);backdrop-filter:blur(12px);border-bottom:1px solid var(--border);padding:0 24px;}
+  .nav-inner{max-width:1100px;margin:0 auto;height:60px;display:flex;align-items:center;justify-content:space-between;}
+  .logo{font-size:18px;font-weight:900;color:var(--ink);text-decoration:none;letter-spacing:-0.03em;display:flex;align-items:center;gap:8px;}
+  .logo-dot{width:8px;height:8px;background:var(--accent);border-radius:50%;display:inline-block;flex-shrink:0;}
+  .nav-links{display:flex;gap:28px;list-style:none;}
+  .nav-links a{font-size:14px;font-weight:500;color:var(--ink2);text-decoration:none;}
+  .nav-links a:hover{color:var(--accent);}
+  @media(max-width:640px){.nav-links{display:none;}}
+  .page{max-width:1100px;margin:0 auto;padding:48px 24px 80px;}
+  .bc{font-size:13px;color:var(--ink3);margin-bottom:24px;}
+  .bc a{color:var(--ink3);text-decoration:none;}
+  .bc span{margin:0 6px;}
+  .tool-tag{font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:.15em;color:var(--ink3);margin-bottom:10px;}
+  h1{font-size:clamp(28px,4vw,44px);font-weight:900;letter-spacing:-.03em;margin-bottom:12px;}
+  h1 em{font-family:'Instrument Serif',serif;font-style:italic;font-weight:400;color:var(--accent);}
+  .tool-desc-header{font-size:16px;color:var(--ink2);max-width:540px;margin-bottom:40px;}
+  .layout{display:grid;grid-template-columns:1fr 380px;gap:32px;align-items:start;}
+  @media(max-width:860px){.layout{grid-template-columns:1fr;}}
+  .form-card{background:var(--card);border:1px solid var(--border);border-radius:16px;padding:28px;}
+  .section{margin-bottom:24px;}
+  .section-title{font-size:12px;font-weight:800;text-transform:uppercase;letter-spacing:.1em;color:var(--ink3);margin-bottom:14px;padding-bottom:8px;border-bottom:1px solid var(--border);}
+  .field{margin-bottom:14px;}
+  .field label{display:block;font-size:13px;font-weight:700;color:var(--ink);margin-bottom:6px;}
+  .field input,.field select{width:100%;background:var(--bg);border:1px solid var(--border);border-radius:8px;padding:11px 14px;font-size:15px;font-family:inherit;color:var(--ink);outline:none;transition:border-color .2s;}
+  .field input:focus,.field select:focus{border-color:var(--accent);}
+  .field .hint{font-size:12px;color:var(--ink3);margin-top:4px;}
+  .calc-btn{width:100%;background:var(--accent);color:#fff;border:none;border-radius:10px;padding:14px;font-size:16px;font-weight:800;font-family:inherit;cursor:pointer;margin-top:8px;}
+  .calc-btn:hover{opacity:.9;}
+  .result-panel{position:sticky;top:80px;}
+  .result-card{background:var(--ink);color:#fff;border-radius:16px;padding:28px;margin-bottom:16px;text-align:center;}
+  .result-label{font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:.12em;color:rgba(255,255,255,.5);margin-bottom:8px;}
+  .result-amount{font-size:52px;font-weight:900;letter-spacing:-.03em;line-height:1;margin-bottom:4px;}
+  .result-unit{font-size:16px;color:rgba(255,255,255,.6);font-weight:400;}
+  .result-sub{font-size:13px;color:rgba(255,255,255,.55);margin-top:6px;}
+  .breakdown{background:var(--card);border:1px solid var(--border);border-radius:14px;padding:20px;margin-bottom:12px;}
+  .bd-title{font-size:12px;font-weight:800;text-transform:uppercase;letter-spacing:.1em;color:var(--ink3);margin-bottom:12px;}
+  .brow{display:flex;justify-content:space-between;padding:9px 0;border-bottom:1px solid var(--border);font-size:14px;}
+  .brow:last-child{border-bottom:none;font-weight:800;}
+  .brow span{color:var(--ink2);}
+  .brow strong{color:var(--ink);}
+  .brow.highlight strong{color:var(--accent);font-size:16px;}
+  .simulador{background:var(--card);border:1px solid var(--border);border-radius:14px;padding:20px;margin-bottom:12px;}
+  .sim-title{font-size:12px;font-weight:800;text-transform:uppercase;letter-spacing:.1em;color:var(--ink3);margin-bottom:12px;}
+  .sim-field{display:flex;justify-content:space-between;align-items:center;margin-bottom:10px;}
+  .sim-field label{font-size:13px;color:var(--ink2);}
+  .sim-field input{width:100px;background:var(--bg);border:1px solid var(--border);border-radius:6px;padding:7px 10px;font-size:13px;font-family:inherit;text-align:right;outline:none;}
+  .sim-field input:focus{border-color:var(--accent);}
+  .sim-result{background:var(--bg2);border-radius:8px;padding:12px;text-align:center;font-size:15px;font-weight:800;color:var(--ink);margin-top:8px;}
+  .tabla{width:100%;border-collapse:collapse;margin:20px 0;font-size:14px;}
+  .tabla th{background:var(--ink);color:#fff;padding:8px 12px;text-align:left;font-size:11px;text-transform:uppercase;letter-spacing:.06em;}
+  .tabla td{padding:8px 12px;border-bottom:1px solid var(--border);color:var(--ink2);}
+  .tabla td:first-child{font-weight:700;color:var(--ink);}
+  .faq-section{margin-top:48px;padding-top:32px;border-top:1px solid var(--border);}
+  .faq-section h2{font-size:22px;font-weight:900;margin-bottom:20px;}
+  .faq-item{background:var(--card);border:1px solid var(--border);border-radius:12px;margin-bottom:10px;overflow:hidden;}
+  .faq-q{font-size:15px;font-weight:800;color:var(--ink);padding:16px 20px;cursor:pointer;display:flex;justify-content:space-between;align-items:center;}
+  .faq-q::after{content:'+';font-size:20px;font-weight:400;color:var(--ink3);flex-shrink:0;margin-left:12px;}
+  .faq-item.open .faq-q::after{content:'−';}
+  .faq-a{font-size:14px;color:var(--ink2);line-height:1.6;padding:0 20px 16px;display:none;}
+  .faq-item.open .faq-a{display:block;}
+  strong{color:var(--ink);font-weight:800;}
+  .info{margin-top:48px;}
+  .info h2{font-size:20px;font-weight:900;margin-bottom:12px;}
+  .info p{font-size:15px;color:var(--ink2);margin-bottom:12px;}
+  .related{margin-top:40px;padding-top:28px;border-top:1px solid var(--border);}
+  .related h2{font-size:20px;font-weight:900;margin-bottom:14px;}
+  .rg{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;}
+  @media(max-width:560px){.rg{grid-template-columns:1fr 1fr;}}
+  .rc{background:var(--card);border:1px solid var(--border);border-radius:10px;padding:14px;text-decoration:none;display:block;}
+  .rc:hover{border-color:rgba(212,90,42,.3);}
+  .rc-e{font-size:22px;margin-bottom:6px;}
+  .rc-n{font-size:13px;font-weight:800;color:var(--ink);}
+  footer{text-align:center;padding:32px 24px;border-top:1px solid var(--border);font-size:13px;color:var(--ink3);margin-top:40px;}
+  footer a{color:var(--accent);text-decoration:none;}
+</style>
+</head>
+<body>
+<nav>
+  <div class="nav-inner">
+    <a href="/" class="logo"><span class="logo-dot"></span>AutónomoLab</a>
+    <ul class="nav-links">
+      <li><a href="/herramientas">Herramientas</a></li>
+      <li><a href="/blog">Blog</a></li>
+      <li><a href="/comparativas">Comparativas</a></li>
+      <li><a href="/sobre">Sobre</a></li>
+    </ul>
+  </div>
+</nav>
+<div class="page">
+  <div class="bc"><a href="/">Inicio</a><span>›</span><a href="/herramientas">Herramientas</a><span>›</span>Precio por palabra</div>
+  <div class="tool-tag">✍️ Herramienta gratuita</div>
+  <h1>Calculadora <em>precio por palabra</em></h1>
+  <p class="tool-desc-header">Calcula tu tarifa ideal por palabra como redactor freelance según tus ingresos objetivo, velocidad de escritura y tipo de contenido.</p>
+
+  <div class="layout">
+    <div class="form-card">
+      <div class="section">
+        <div class="section-title">🎯 Tus objetivos</div>
+        <div class="field">
+          <label>Ingresos netos mensuales objetivo (€)</label>
+          <input type="number" id="ingresos-obj" placeholder="Ej: 2000" min="0" step="100" value="2000">
+        </div>
+        <div class="field">
+          <label>Horas de trabajo al día disponibles</label>
+          <select id="horas-dia">
+            <option value="4">4 horas (media jornada)</option>
+            <option value="6">6 horas</option>
+            <option value="8" selected>8 horas (jornada completa)</option>
+          </select>
+        </div>
+        <div class="field">
+          <label>Días de trabajo por semana</label>
+          <select id="dias-semana">
+            <option value="4">4 días</option>
+            <option value="5" selected>5 días</option>
+          </select>
+        </div>
+      </div>
+
+      <div class="section">
+        <div class="section-title">⚡ Tu velocidad de escritura</div>
+        <div class="field">
+          <label>Tipo de contenido principal</label>
+          <select id="tipo-contenido" onchange="actualizarVelocidad()">
+            <option value="1000">Artículos de blog (investigación media)</option>
+            <option value="700">Artículos técnicos / especializados</option>
+            <option value="1500">Contenido web / SEO estándar</option>
+            <option value="400">Copy publicitario / persuasivo</option>
+            <option value="800">Newsletters y emails</option>
+            <option value="600">Guiones de vídeo</option>
+            <option value="custom">Velocidad personalizada</option>
+          </select>
+        </div>
+        <div class="field" id="velocidad-field">
+          <label>Palabras que escribes por hora (netas) <span id="velocidad-ref" style="font-size:11px;color:var(--ink3);font-weight:400;"></span></label>
+          <input type="number" id="velocidad" placeholder="Ej: 1000" min="100" step="50" value="1000">
+          <div class="hint">Incluye investigación, escritura y revisión. Sé realista — no solo la velocidad de tecleo.</div>
+        </div>
+        <div class="field">
+          <label>Gastos mensuales del negocio (€)</label>
+          <input type="number" id="gastos-neg" placeholder="Ej: 400" min="0" step="50" value="400">
+          <div class="hint">Cuota de autónomo, gestoría, software, etc.</div>
+        </div>
+        <div class="field">
+          <label>Factor fiscal (multiplicador para cubrir impuestos)</label>
+          <select id="factor-fiscal">
+            <option value="1.25">1,25 — Tramo bajo (hasta 20.200€)</option>
+            <option value="1.35" selected>1,35 — Tramo medio (20.200–35.200€)</option>
+            <option value="1.45">1,45 — Tramo alto (35.200€+)</option>
+          </select>
+        </div>
+      </div>
+      <button class="calc-btn" onclick="calcular()">Calcular mi precio por palabra →</button>
+    </div>
+
+    <div class="result-panel">
+      <div class="result-card">
+        <div class="result-label">Tu tarifa por palabra</div>
+        <div class="result-amount" id="result-ppw">—</div>
+        <div class="result-unit">€/palabra</div>
+        <div class="result-sub" id="result-sub">Introduce tus datos y pulsa calcular</div>
+      </div>
+      <div class="breakdown">
+        <div class="bd-title">Equivalencias</div>
+        <div class="brow"><span>Tarifa por hora</span><strong id="bd-hora">—</strong></div>
+        <div class="brow"><span>Artículo 500 palabras</span><strong id="bd-500">—</strong></div>
+        <div class="brow"><span>Artículo 1.000 palabras</span><strong id="bd-1000">—</strong></div>
+        <div class="brow"><span>Artículo 2.000 palabras</span><strong id="bd-2000">—</strong></div>
+        <div class="brow highlight"><span>Ingresos mensuales est.</span><strong id="bd-mes">—</strong></div>
+      </div>
+
+      <div class="simulador">
+        <div class="sim-title">Simula un proyecto concreto</div>
+        <div class="sim-field">
+          <label>Número de palabras</label>
+          <input type="number" id="sim-palabras" placeholder="1500" min="0" step="100" oninput="simular()">
+        </div>
+        <div class="sim-result" id="sim-result">— €</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="info">
+    <h2>Tarifas de referencia por palabra en 2026</h2>
+    <table class="tabla">
+      <thead><tr><th>Nivel</th><th>Tarifa por palabra</th><th>Artículo 1.000 palabras</th></tr></thead>
+      <tbody>
+        <tr><td>Junior (0-2 años)</td><td>0,02€ – 0,05€</td><td>20€ – 50€</td></tr>
+        <tr><td>Mid (2-5 años)</td><td>0,05€ – 0,10€</td><td>50€ – 100€</td></tr>
+        <tr><td>Senior (+5 años)</td><td>0,10€ – 0,20€</td><td>100€ – 200€</td></tr>
+        <tr><td>Especializado / técnico</td><td>0,15€ – 0,30€+</td><td>150€ – 300€+</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="faq-section">
+    <h2>Preguntas frecuentes</h2>
+    <div class="faq-item"><div class="faq-q">¿Cuánto cobra un redactor freelance por palabra en España?</div><div class="faq-a">En España, un redactor freelance junior cobra entre 0,02€ y 0,05€ por palabra. Un nivel medio entre 0,05€ y 0,10€. Un redactor senior o especializado puede llegar a 0,15€-0,30€ por palabra o más en nichos técnicos como medicina, finanzas o derecho.</div></div>
+    <div class="faq-item"><div class="faq-q">¿Es mejor cobrar por palabra o por hora?</div><div class="faq-a">Depende del tipo de trabajo. Por palabra funciona bien para artículos de blog y contenido web donde el alcance es claro. Por hora es más justo para trabajos de investigación intensiva o edición. Por proyecto es ideal para copy publicitario donde el valor no está en el número de palabras sino en el resultado.</div></div>
+    <div class="faq-item"><div class="faq-q">¿Hay que incluir el IVA en el precio por palabra?</div><div class="faq-a">Sí, si eres autónomo en España debes añadir el 21% de IVA a tus facturas. La tarifa por palabra que calcules debe ser la base imponible — al cliente le cobrarás ese precio más IVA. Si tu cliente es de la UE y es empresa, la operación puede ser intracomunitaria y no llevar IVA.</div></div>
+    <div class="faq-item"><div class="faq-q">¿Cómo aumentar mi tarifa por palabra sin perder clientes?</div><div class="faq-a">Especializándote en un nicho (medicina, finanzas, tecnología), mejorando el SEO de tu portfolio para aparecer en búsquedas de clientes que ya buscan y pagan bien, y demostrando resultados concretos (tráfico generado, conversiones, posicionamiento) en lugar de solo entregar palabras.</div></div>
+  </div>
+
+  <div class="related">
+    <h2>Más herramientas</h2>
+    <div class="rg">
+      <a href="/herramientas/calculadora-tarifa-hora" class="rc"><div class="rc-e">💰</div><div class="rc-n">Calculadora tarifa hora</div></a>
+      <a href="/herramientas/calculadora-precio-proyecto" class="rc"><div class="rc-e">🎯</div><div class="rc-n">Precio de proyecto</div></a>
+      <a href="/herramientas/generador-presupuesto" class="rc"><div class="rc-e">📋</div><div class="rc-n">Generador presupuesto</div></a>
+    </div>
+  </div>
+</div>
+<footer>© 2026 <a href="/">AutónomoLab</a> · <a href="/privacidad">Privacidad</a> · <a href="/cookies">Cookies</a> · <a href="/aviso-legal">Aviso legal</a></footer>
+<script>
+var VELOCIDADES = {'1000':1000,'700':700,'1500':1500,'400':400,'800':800,'600':600};
+function actualizarVelocidad(){
+  var tipo=document.getElementById('tipo-contenido').value;
+  if(tipo!=='custom'&&VELOCIDADES[tipo]){
+    document.getElementById('velocidad').value=VELOCIDADES[tipo];
+    document.getElementById('velocidad-ref').textContent='(estimación para este tipo)';
+  } else {
+    document.getElementById('velocidad-ref').textContent='';
+  }
+}
+function fmt2(n){return n.toLocaleString('es-ES',{minimumFractionDigits:2,maximumFractionDigits:2})+'€';}
+function fmtPPW(n){return n.toLocaleString('es-ES',{minimumFractionDigits:4,maximumFractionDigits:4});}
+
+var ppwCalculado=0;
+
+function calcular(){
+  var obj=parseFloat(document.getElementById('ingresos-obj').value)||2000;
+  var horas=parseInt(document.getElementById('horas-dia').value)||8;
+  var dias=parseInt(document.getElementById('dias-semana').value)||5;
+  var vel=parseFloat(document.getElementById('velocidad').value)||1000;
+  var gastos=parseFloat(document.getElementById('gastos-neg').value)||400;
+  var fiscal=parseFloat(document.getElementById('factor-fiscal').value)||1.35;
+
+  // Cálculo
+  var horasFacturablesMes=horas*dias*4.33*0.60; // 60% facturables
+  var palabrasMes=vel*horasFacturablesMes;
+  var brutoNecesario=(obj+gastos)*fiscal;
+  var ppw=brutoNecesario/palabrasMes;
+  var tarifaHora=ppw*vel;
+  ppwCalculado=ppw;
+
+  document.getElementById('result-ppw').textContent=fmtPPW(ppw);
+  document.getElementById('result-sub').textContent='Para ganar '+fmt2(obj)+'/mes netos';
+  document.getElementById('bd-hora').textContent=fmt2(tarifaHora);
+  document.getElementById('bd-500').textContent=fmt2(ppw*500);
+  document.getElementById('bd-1000').textContent=fmt2(ppw*1000);
+  document.getElementById('bd-2000').textContent=fmt2(ppw*2000);
+  document.getElementById('bd-mes').textContent='~'+fmt2(obj);
+  simular();
+}
+
+function simular(){
+  if(!ppwCalculado) return;
+  var palabras=parseFloat(document.getElementById('sim-palabras').value)||0;
+  if(palabras>0){
+    document.getElementById('sim-result').textContent=fmt2(ppwCalculado*palabras)+' ('+palabras.toLocaleString('es-ES')+' palabras)';
+  }
+}
+
+document.querySelectorAll('.faq-q').forEach(function(q){q.addEventListener('click',function(){q.parentElement.classList.toggle('open');});});
+calcular();
+</script>
+</body>
+</html>

@@ -1,0 +1,703 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Generador de contrato freelance gratis PDF — AutónomoLab</title>
+<meta name="description" content="Genera un contrato freelance profesional gratis en menos de 2 minutos. Adaptado a España, México, Argentina, Colombia y Chile. Descarga en PDF.">
+<meta name="keywords" content="contrato freelance, modelo contrato freelance, plantilla contrato servicios, contrato freelance pdf, contrato autonomo">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://autonomolab.com/herramientas/generador-contrato-freelance/">
+<link rel="icon" type="image/x-icon" href="/favicon.ico">
+<link rel="icon" type="image/svg+xml" href="/favicon.svg">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+<meta name="theme-color" content="#1a1814">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cabinet+Grotesk:wght@400;500;700;800;900&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --bg:#f5f2eb;--bg2:#ede9e0;--ink:#1a1814;--ink2:#4a4740;--ink3:#8a857a;
+    --accent:#d45a2a;--accent-light:rgba(212,90,42,0.08);--card:#ffffff;
+    --border:#ddd8ce;--green:#2ab87a;--green-light:rgba(42,184,122,0.08);
+  }
+  *{box-sizing:border-box;margin:0;padding:0;}
+  html{scroll-behavior:smooth;}
+  body{overflow-x:hidden;background:var(--bg);color:var(--ink);font-family:'Cabinet Grotesk',sans-serif;font-size:16px;line-height:1.6;}
+
+  nav{position:sticky;top:0;z-index:100;background:rgba(245,242,235,0.92);backdrop-filter:blur(12px);border-bottom:1px solid var(--border);padding:0 24px;}
+  .nav-inner{max-width:1100px;margin:0 auto;height:60px;display:flex;align-items:center;justify-content:space-between;}
+  .logo{font-size:18px;font-weight:900;color:var(--ink);text-decoration:none;letter-spacing:-0.03em;display:flex;align-items:center;gap:8px;}
+  .logo-dot{width:8px;height:8px;background:var(--accent);border-radius:50%;display:inline-block;}
+  .nav-links{display:flex;gap:28px;list-style:none;}
+  .nav-links a{font-size:14px;font-weight:500;color:var(--ink2);text-decoration:none;}
+  .nav-links a:hover{color:var(--accent);}
+  @media(max-width:640px){.nav-links{display:none;}}
+
+  .page{max-width:1100px;margin:0 auto;padding:40px 24px 80px;}
+  .breadcrumb{font-size:13px;color:var(--ink3);margin-bottom:24px;}
+  .breadcrumb a{color:var(--ink3);text-decoration:none;}
+  .breadcrumb a:hover{color:var(--accent);}
+  .breadcrumb span{margin:0 6px;}
+
+  .page-header{margin-bottom:40px;}
+  .page-tag{display:inline-flex;align-items:center;gap:6px;font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:.12em;color:var(--accent);background:var(--accent-light);border:1px solid rgba(212,90,42,.2);padding:4px 12px;border-radius:100px;margin-bottom:16px;}
+  h1{font-size:clamp(26px,4vw,42px);font-weight:900;letter-spacing:-.03em;line-height:1.1;margin-bottom:10px;}
+  h1 em{font-family:'Instrument Serif',serif;font-style:italic;font-weight:400;color:var(--accent);}
+  .page-desc{font-size:16px;color:var(--ink2);max-width:560px;}
+
+  /* LAYOUT */
+  .tool-layout{display:grid;grid-template-columns:420px 1fr;gap:28px;align-items:start;}
+  @media(max-width:900px){.tool-layout{grid-template-columns:1fr;}}
+
+  /* FORM */
+  .form-panel{background:var(--card);border:1px solid var(--border);border-radius:16px;padding:28px;position:sticky;top:80px;}
+  .form-section{margin-bottom:24px;}
+  .form-section-title{font-size:11px;font-weight:800;text-transform:uppercase;letter-spacing:.12em;color:var(--ink3);margin-bottom:14px;padding-bottom:8px;border-bottom:1px solid var(--border);}
+  .field{margin-bottom:14px;}
+  .field label{display:block;font-size:13px;font-weight:700;color:var(--ink);margin-bottom:5px;}
+  input[type=text],input[type=number],input[type=date],input[type=email],select,textarea{
+    width:100%;background:var(--bg);border:1px solid var(--border);border-radius:8px;
+    padding:10px 12px;font-size:14px;font-family:inherit;color:var(--ink);
+    outline:none;transition:border-color .2s;
+  }
+  input:focus,select:focus,textarea:focus{border-color:var(--accent);}
+  textarea{resize:vertical;min-height:72px;}
+  .field-row{display:grid;grid-template-columns:1fr 1fr;gap:10px;}
+  .input-with-symbol{position:relative;}
+  .input-symbol{position:absolute;left:12px;top:50%;transform:translateY(-50%);font-size:14px;font-weight:700;color:var(--ink3);pointer-events:none;}
+  .input-with-symbol input{padding-left:28px;}
+
+  .generate-btn{width:100%;background:var(--ink);color:#fff;border:none;border-radius:10px;padding:15px;font-size:15px;font-weight:800;font-family:inherit;cursor:pointer;transition:background .2s,transform .15s;margin-top:4px;}
+  .generate-btn:hover{background:var(--accent);transform:translateY(-1px);}
+
+  /* PREVIEW PANEL */
+  .preview-panel{}
+  .preview-toolbar{display:flex;align-items:center;justify-content:space-between;margin-bottom:16px;flex-wrap:wrap;gap:10px;}
+  .preview-title{font-size:15px;font-weight:800;color:var(--ink);}
+  .toolbar-actions{display:flex;gap:8px;}
+  .btn-print{background:var(--accent);color:#fff;border:none;border-radius:8px;padding:10px 18px;font-size:13px;font-weight:700;font-family:inherit;cursor:pointer;transition:opacity .2s;display:flex;align-items:center;gap:6px;}
+  .btn-print:hover{opacity:.9;}
+  .btn-copy{background:var(--bg2);color:var(--ink2);border:1px solid var(--border);border-radius:8px;padding:10px 16px;font-size:13px;font-weight:700;font-family:inherit;cursor:pointer;transition:border-color .2s;}
+  .btn-copy:hover{border-color:var(--ink2);}
+
+  /* CONTRACT DOCUMENT */
+  .contract-doc{background:var(--card);border:1px solid var(--border);border-radius:16px;padding:48px;font-family:'Cabinet Grotesk',sans-serif;line-height:1.7;color:var(--ink);}
+  @media(max-width:640px){.contract-doc{padding:24px;}}
+
+  .contract-header{text-align:center;margin-bottom:40px;padding-bottom:32px;border-bottom:2px solid var(--ink);}
+  .contract-logo-area{font-size:13px;font-weight:700;color:var(--ink3);text-transform:uppercase;letter-spacing:.12em;margin-bottom:16px;}
+  .contract-title{font-size:24px;font-weight:900;letter-spacing:-.02em;margin-bottom:6px;}
+  .contract-subtitle{font-size:13px;color:var(--ink3);}
+
+  .contract-parties{display:grid;grid-template-columns:1fr 1fr;gap:24px;margin-bottom:32px;padding:24px;background:var(--bg);border-radius:10px;}
+  @media(max-width:600px){.contract-parties{grid-template-columns:1fr;}}
+  .party-block{}
+  .party-role{font-size:10px;font-weight:800;text-transform:uppercase;letter-spacing:.12em;color:var(--ink3);margin-bottom:6px;}
+  .party-name{font-size:16px;font-weight:800;color:var(--ink);margin-bottom:2px;}
+  .party-detail{font-size:13px;color:var(--ink2);}
+
+  .contract-section{margin-bottom:28px;}
+  .contract-section-num{font-size:10px;font-weight:800;text-transform:uppercase;letter-spacing:.12em;color:var(--accent);margin-bottom:6px;}
+  .contract-section h3{font-size:15px;font-weight:800;color:var(--ink);margin-bottom:10px;}
+  .contract-section p{font-size:14px;color:var(--ink2);margin-bottom:8px;}
+  .contract-section ul{padding-left:20px;font-size:14px;color:var(--ink2);}
+  .contract-section ul li{margin-bottom:4px;}
+
+  .contract-payment-box{background:var(--bg);border-radius:10px;padding:20px;margin:12px 0;}
+  .payment-row{display:flex;justify-content:space-between;padding:6px 0;border-bottom:1px solid var(--border);font-size:14px;}
+  .payment-row:last-child{border-bottom:none;font-weight:800;font-size:15px;}
+  .payment-label{color:var(--ink2);}
+  .payment-val{color:var(--ink);font-weight:700;}
+
+  .contract-signatures{display:grid;grid-template-columns:1fr 1fr;gap:32px;margin-top:48px;padding-top:32px;border-top:2px solid var(--border);}
+  @media(max-width:600px){.contract-signatures{grid-template-columns:1fr;}}
+  .sig-block{}
+  .sig-line{border-bottom:1px solid var(--ink);margin-bottom:8px;height:48px;}
+  .sig-name{font-size:13px;font-weight:700;color:var(--ink);}
+  .sig-role{font-size:12px;color:var(--ink3);}
+  .sig-date{font-size:12px;color:var(--ink3);margin-top:4px;}
+
+  .contract-footer-note{text-align:center;font-size:12px;color:var(--ink3);margin-top:32px;padding-top:24px;border-top:1px solid var(--border);}
+
+  /* EMPTY STATE */
+  .empty-state{text-align:center;padding:80px 24px;color:var(--ink3);}
+  .empty-icon{font-size:48px;margin-bottom:16px;}
+  .empty-title{font-size:18px;font-weight:800;color:var(--ink2);margin-bottom:8px;}
+  .empty-desc{font-size:14px;}
+
+  /* FAQ */
+  .faq{margin-top:64px;}
+  .faq h2{font-size:28px;font-weight:900;letter-spacing:-.03em;margin-bottom:28px;}
+  .faq h2 em{font-family:'Instrument Serif',serif;font-style:italic;font-weight:400;color:var(--accent);}
+  .faq-item{border-bottom:1px solid var(--border);padding:20px 0;}
+  .faq-q{font-size:15px;font-weight:800;color:var(--ink);margin-bottom:8px;}
+  .faq-a{font-size:14px;color:var(--ink2);line-height:1.6;}
+
+  .related{margin-top:64px;}
+  .related h2{font-size:24px;font-weight:900;letter-spacing:-.03em;margin-bottom:20px;}
+  .related-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;}
+  @media(max-width:700px){.related-grid{grid-template-columns:1fr 1fr;}}
+  .related-card{background:var(--card);border:1px solid var(--border);border-radius:12px;padding:18px;text-decoration:none;transition:border-color .2s,transform .2s;display:block;}
+  .related-card:hover{border-color:rgba(212,90,42,.3);transform:translateY(-2px);}
+  .related-emoji{font-size:24px;margin-bottom:8px;}
+  .related-name{font-size:14px;font-weight:800;color:var(--ink);}
+
+  footer{text-align:center;padding:40px 24px;border-top:1px solid var(--border);font-size:13px;color:var(--ink3);margin-top:40px;}
+  footer a{color:var(--accent);text-decoration:none;}
+
+  /* PRINT */
+  @media print {
+    nav,footer,.form-panel,.preview-toolbar,.related,.faq,.breadcrumb,.page-header{display:none!important;}
+    body{overflow-x:hidden;background:#fff;}
+    .tool-layout{display:block;}
+    .contract-doc{border:none;padding:20px;box-shadow:none;border-radius:0;}
+    .page{padding:0;}
+  }
+
+  /* === LAYOUT SAFETY === */
+  *, *::before, *::after { box-sizing: border-box; }
+  img, video, iframe { max-width: 100%; height: auto; }
+  table { width: 100%; table-layout: fixed; }
+  .article-wrap > * { max-width: 100%; }
+  pre, code { white-space: pre-wrap; word-break: break-word; }
+
+  /* FAQ SECTION */
+  .faq-section { margin-top: 56px; padding-top: 40px; border-top: 1px solid var(--border); }
+  .faq-section h2 { font-size: 22px; font-weight: 900; margin-bottom: 20px; letter-spacing: -.02em; }
+  .faq-item { background: var(--card); border: 1px solid var(--border); border-radius: 12px; padding: 0; margin-bottom: 10px; overflow: hidden; }
+  .faq-q { font-size: 15px; font-weight: 800; color: var(--ink); padding: 16px 20px; cursor: pointer; display: flex; justify-content: space-between; align-items: center; }
+  .faq-q::after { content: '+'; font-size: 20px; font-weight: 400; color: var(--ink3); flex-shrink: 0; margin-left: 12px; }
+  .faq-item.open .faq-q::after { content: '−'; }
+  .faq-a { font-size: 14px; color: var(--ink2); line-height: 1.6; padding: 0 20px 16px; display: none; }
+  .faq-item.open .faq-a { display: block; }
+</style>
+<meta property="og:title" content="Generador de contrato freelance">
+<meta property="og:description" content="Genera un contrato freelance profesional en 2 minutos. Gratis, sin registro, adaptado a España y LATAM.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://autonomolab.com/herramientas/generador-contrato-freelance/">
+<meta property="og:site_name" content="AutónomoLab">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Generador de contrato freelance">
+<meta name="twitter:description" content="Genera un contrato freelance profesional en 2 minutos. Gratis, sin registro, adaptado a España y LATAM.">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"WebApplication","name":"Generador de contrato freelance","description":"Genera un contrato freelance profesional en 2 minutos. Gratis, sin registro, adaptado a España y LATAM.","url":"https://autonomolab.com/herramientas/generador-contrato-freelance/","applicationCategory":"BusinessApplication","operatingSystem":"Web","offers":{"@type":"Offer","price":"0","priceCurrency":"EUR"},"inLanguage":"es"}</script>
+<!-- GOOGLE ANALYTICS 4
+  INSTRUCCIONES:
+  1. Ve a https://analytics.google.com
+  2. Crea una propiedad para autonomolab.com
+  3. Google te dará un Measurement ID como: G-XXXXXXXXXX
+  4. Sustituye G-XXXXXXXXXX por tu ID real abajo
+-->
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<!-- <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-XXXXXXXXXX');
+</script> -->
+<!-- GOOGLE ADSENSE
+  INSTRUCCIONES:
+  1. Ve a https://adsense.google.com
+  2. Añade autonomolab.com como sitio
+  3. Google te dará un código como este:
+     <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-XXXXXXXXXXXXXXXXX" crossorigin="anonymous"></script>
+  4. Sustituye el bloque de abajo con ese código
+  5. Para mostrar anuncios en un lugar específico, añade:
+     <ins class="adsbygoogle"
+          style="display:block"
+          data-ad-client="ca-pub-XXXXXXXXXXXXXXXXX"
+          data-ad-slot="XXXXXXXXXX"
+          data-ad-format="auto"
+          data-full-width-responsive="true"></ins>
+     <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+-->
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"¿Es legal un contrato freelance generado online?","acceptedAnswer":{"@type":"Answer","text":"Sí, un contrato freelance es legalmente válido en España y LATAM siempre que incluya los datos de ambas partes, la descripción del servicio, el precio, los plazos y las condiciones de pago. No requiere notario."}},{"@type":"Question","name":"¿Qué debe incluir un contrato freelance?","acceptedAnswer":{"@type":"Answer","text":"Un contrato freelance debe incluir: datos de las partes, descripción detallada del proyecto, precio y forma de pago, plazos de entrega, política de revisiones, propiedad intelectual, confidencialidad y causas de rescisión."}},{"@type":"Question","name":"¿Necesito contrato para trabajar como freelance?","acceptedAnswer":{"@type":"Answer","text":"No es obligatorio legalmente, pero es muy recomendable. Un contrato protege a ambas partes, evita malentendidos sobre el alcance del proyecto y facilita el cobro en caso de impago."}},{"@type":"Question","name":"¿Cuánto cobra un abogado por redactar un contrato freelance?","acceptedAnswer":{"@type":"Answer","text":"Un abogado puede cobrar entre 150€ y 500€ por redactar un contrato freelance personalizado. Nuestro generador es gratuito y cubre los aspectos esenciales para la mayoría de proyectos."}}]}</script>
+</head>
+<body>
+
+<nav>
+  <div class="nav-inner">
+    <a href="/" class="logo"><span class="logo-dot"></span>AutónomoLab</a>
+    <ul class="nav-links">
+      <li><a href="/herramientas">Herramientas</a></li>
+      <li><a href="/blog">Blog</a></li>
+      <li><a href="/comparativas">Comparativas</a></li>
+      <li><a href="/sobre">Sobre</a></li>
+    </ul>
+  </div>
+</nav>
+
+<div class="page">
+  <div class="breadcrumb">
+    <a href="/">Inicio</a><span>›</span>
+    <a href="/herramientas">Herramientas</a><span>›</span>
+    Generador de contrato freelance
+  </div>
+
+  <div class="page-header">
+    <div class="page-tag">📄 Herramienta gratuita</div>
+    <h1>Generador de <em>contrato freelance</em></h1>
+    <p class="page-desc">Crea un contrato profesional en menos de 2 minutos. Adaptado a España, México, Argentina, Colombia y Chile. Sin registro, descarga en PDF gratis.</p>
+  </div>
+
+  <div class="tool-layout">
+
+    <!-- FORM -->
+    <div class="form-panel">
+
+      <div class="form-section">
+        <div class="form-section-title">🌍 País y moneda</div>
+        <div class="field">
+          <label for="pais">País</label>
+          <select id="pais" onchange="actualizarPais()">
+            <option value="es">🇪🇸 España</option>
+            <option value="mx">🇲🇽 México</option>
+            <option value="ar">🇦🇷 Argentina</option>
+            <option value="co">🇨🇴 Colombia</option>
+            <option value="cl">🇨🇱 Chile</option>
+            <option value="pe">🇵🇪 Perú</option>
+            <option value="uy">🇺🇾 Uruguay</option>
+            <option value="otro">🌎 Otro</option>
+          </select>
+        </div>
+      </div>
+
+      <div class="form-section">
+        <div class="form-section-title">👤 Tus datos (Prestador)</div>
+        <div class="field">
+          <label>Nombre completo o empresa</label>
+          <input type="text" id="freelancer-nombre" placeholder="Ana García López">
+        </div>
+        <div class="field">
+          <label id="label-doc-freelancer">NIF / CIF</label>
+          <input type="text" id="freelancer-doc" placeholder="12345678A">
+        </div>
+        <div class="field">
+          <label>Email</label>
+          <input type="email" id="freelancer-email" placeholder="ana@email.com">
+        </div>
+      </div>
+
+      <div class="form-section">
+        <div class="form-section-title">🏢 Datos del cliente</div>
+        <div class="field">
+          <label>Nombre completo o empresa</label>
+          <input type="text" id="cliente-nombre" placeholder="Empresa Cliente S.L.">
+        </div>
+        <div class="field">
+          <label id="label-doc-cliente">NIF / CIF</label>
+          <input type="text" id="cliente-doc" placeholder="B12345678">
+        </div>
+        <div class="field">
+          <label>Email</label>
+          <input type="email" id="cliente-email" placeholder="contacto@empresa.com">
+        </div>
+      </div>
+
+      <div class="form-section">
+        <div class="form-section-title">💼 Proyecto</div>
+        <div class="field">
+          <label>Descripción del servicio</label>
+          <textarea id="servicio-desc" placeholder="Diseño y desarrollo de página web corporativa, incluyendo hasta 5 páginas, diseño responsive y optimización SEO básica."></textarea>
+        </div>
+        <div class="field">
+          <label>Entregables principales</label>
+          <textarea id="entregables" placeholder="- Diseño de homepage y páginas interiores&#10;- Versión móvil responsive&#10;- Panel de administración básico"></textarea>
+        </div>
+        <div class="field-row">
+          <div class="field">
+            <label>Fecha inicio</label>
+            <input type="date" id="fecha-inicio">
+          </div>
+          <div class="field">
+            <label>Fecha entrega</label>
+            <input type="date" id="fecha-entrega">
+          </div>
+        </div>
+      </div>
+
+      <div class="form-section">
+        <div class="form-section-title">💰 Honorarios</div>
+        <div class="field">
+          <label id="label-importe">Importe total (€)</label>
+          <div class="input-with-symbol">
+            <span class="input-symbol" id="symbol-moneda">€</span>
+            <input type="number" id="importe" placeholder="2500" min="0">
+          </div>
+        </div>
+        <div class="field">
+          <label>Forma de pago</label>
+          <select id="forma-pago">
+            <option value="50-50">50% inicio / 50% entrega</option>
+            <option value="100-entrega">100% a la entrega</option>
+            <option value="30-40-30">30% inicio / 40% mitad / 30% entrega</option>
+            <option value="mensual">Pago mensual</option>
+            <option value="100-inicio">100% por adelantado</option>
+          </select>
+        </div>
+        <div class="field">
+          <label id="label-impuesto">IVA aplicable</label>
+          <select id="impuesto">
+            <option value="21">21% IVA (España)</option>
+            <option value="16">16% IVA (México)</option>
+            <option value="19">19% IVA (Colombia/Chile)</option>
+            <option value="18">18% IGV (Perú)</option>
+            <option value="22">22% IVA (Uruguay)</option>
+            <option value="0">Sin impuesto / Exento</option>
+          </select>
+        </div>
+      </div>
+
+      <div class="form-section">
+        <div class="form-section-title">⚙️ Condiciones</div>
+        <div class="field">
+          <label>Revisiones incluidas</label>
+          <select id="revisiones">
+            <option value="2">2 rondas de revisión</option>
+            <option value="3">3 rondas de revisión</option>
+            <option value="1">1 ronda de revisión</option>
+            <option value="ilimitadas">Revisiones ilimitadas</option>
+            <option value="0">Sin revisiones incluidas</option>
+          </select>
+        </div>
+        <div class="field">
+          <label>Derechos de propiedad intelectual</label>
+          <select id="derechos">
+            <option value="total">Transferencia total al cliente tras pago</option>
+            <option value="licencia">Licencia de uso (freelancer mantiene derechos)</option>
+            <option value="compartida">Propiedad compartida</option>
+          </select>
+        </div>
+        <div class="field">
+          <label>Confidencialidad</label>
+          <select id="confidencialidad">
+            <option value="si">Cláusula NDA incluida</option>
+            <option value="no">Sin cláusula de confidencialidad</option>
+          </select>
+        </div>
+      </div>
+
+      <button class="generate-btn" onclick="generarContrato()">Generar contrato →</button>
+    </div>
+
+    <!-- PREVIEW -->
+    <div class="preview-panel">
+      <div class="preview-toolbar">
+        <span class="preview-title">Vista previa del contrato</span>
+        <div class="toolbar-actions">
+          <button class="btn-copy" onclick="copiarTexto()">📋 Copiar texto</button>
+          <button class="btn-print" onclick="window.print()">⬇️ Descargar PDF</button>
+        </div>
+      </div>
+
+      <div id="contrato-output">
+        <div class="empty-state">
+          <div class="empty-icon">📄</div>
+          <div class="empty-title">Rellena el formulario</div>
+          <div class="empty-desc">Tu contrato aparecerá aquí en tiempo real</div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- FAQ -->
+  <div class="faq">
+    <h2>Preguntas <em>frecuentes</em></h2>
+    <div class="faq-item">
+      <div class="faq-q">¿Es legal un contrato generado con esta herramienta?</div>
+      <div class="faq-a">Sí. Un contrato es válido cuando refleja el acuerdo entre las partes, independientemente de cómo se haya redactado. Esta herramienta genera contratos con cláusulas estándar reconocidas. Para proyectos de alto valor o complejidad legal específica, recomendamos revisión por un abogado.</div>
+    </div>
+    <div class="faq-item">
+      <div class="faq-q">¿Cómo descargo el contrato en PDF?</div>
+      <div class="faq-a">Haz clic en "Descargar PDF" — se abrirá el diálogo de impresión del navegador. Selecciona "Guardar como PDF" como destino. El contrato se imprime limpio, sin la interfaz de la herramienta.</div>
+    </div>
+    <div class="faq-item">
+      <div class="faq-q">¿Se guardan mis datos?</div>
+      <div class="faq-a">No. Todo se procesa en tu navegador, ningún dato se envía a ningún servidor. Cuando cierras la página, los datos desaparecen. Puedes usarla con total privacidad.</div>
+    </div>
+    <div class="faq-item">
+      <div class="faq-q">¿Qué diferencia hay entre el contrato para España y LATAM?</div>
+      <div class="faq-a">Principalmente el tipo de documento de identidad (NIF en España, RFC en México, RUT en Chile/Colombia, etc.), la moneda, el tipo de impuesto aplicable (IVA/IGV) y algunas referencias legales en las cláusulas. El contrato se adapta automáticamente al seleccionar el país.</div>
+    </div>
+  </div>
+
+  <!-- RELATED -->
+  <div class="related">
+    <h2>Más herramientas</h2>
+    <div class="related-grid">
+      <a href="/herramientas/calculadora-tarifa-hora" class="related-card">
+        <div class="related-emoji">💰</div>
+        <div class="related-name">Calculadora tarifa hora</div>
+      </a>
+      <a href="/herramientas/calculadora-iva" class="related-card">
+        <div class="related-emoji">🧾</div>
+        <div class="related-name">Simulador IVA</div>
+      </a>
+      <a href="/herramientas/calculadora-precio-proyecto" class="related-card">
+        <div class="related-emoji">📐</div>
+        <div class="related-name">Calculadora de proyecto</div>
+      </a>
+    </div>
+  </div>
+</div>
+
+
+  <div class="faq-section">
+    <h2>Preguntas frecuentes sobre contratos freelance</h2>
+
+    <div class="faq-item">
+      <div class="faq-q">¿Es legal un contrato generado online?</div>
+      <div class="faq-a">Sí, un contrato freelance es completamente válido legalmente en España y LATAM siempre que incluya los datos de ambas partes, la descripción del servicio, el precio y los plazos. No requiere notario ni firma electrónica avanzada para ser válido.</div>
+    </div>
+
+    <div class="faq-item">
+      <div class="faq-q">¿Qué pasa si trabajo sin contrato?</div>
+      <div class="faq-a">Trabajar sin contrato te deja desprotegido ante impagos, cambios de scope y conflictos sobre los entregables. En caso de disputa, es muy difícil demostrar las condiciones acordadas sin un documento firmado.</div>
+    </div>
+
+    <div class="faq-item">
+      <div class="faq-q">¿Cómo firma el cliente el contrato?</div>
+      <div class="faq-a">Puedes enviarlo por email y pedir que el cliente lo firme manualmente y te devuelva el PDF escaneado. Para mayor profesionalidad, puedes usar herramientas de firma electrónica gratuitas como DocuSign o Signaturit.</div>
+    </div>
+
+    <div class="faq-item">
+      <div class="faq-q">¿Necesito un abogado para revisar el contrato?</div>
+      <div class="faq-a">Para proyectos pequeños y medianos el contrato generado cubre los aspectos esenciales. Para proyectos grandes (más de 5.000€) o con cláusulas especiales de confidencialidad o exclusividad, es recomendable que un abogado lo revise.</div>
+    </div>
+  </div>
+<footer>© 2026 <a href="/">AutónomoLab</a> · Herramientas gratuitas para autónomos y freelancers</footer>
+
+<script>
+const PAISES = {
+  es: { nombre:'España', moneda:'EUR', simbolo:'€', doc:'NIF / CIF', impuesto:'IVA', tipoImp:21, ley:'Código Civil español' },
+  mx: { nombre:'México', moneda:'MXN', simbolo:'$', doc:'RFC', impuesto:'IVA', tipoImp:16, ley:'Código Civil Federal mexicano' },
+  ar: { nombre:'Argentina', moneda:'ARS', simbolo:'$', doc:'CUIT / CUIL', impuesto:'IVA', tipoImp:21, ley:'Código Civil y Comercial argentino' },
+  co: { nombre:'Colombia', moneda:'COP', simbolo:'$', doc:'NIT / CC', impuesto:'IVA', tipoImp:19, ley:'Código Civil colombiano' },
+  cl: { nombre:'Chile', moneda:'CLP', simbolo:'$', doc:'RUT', impuesto:'IVA', tipoImp:19, ley:'Código Civil chileno' },
+  pe: { nombre:'Perú', moneda:'PEN', simbolo:'S/', doc:'RUC / DNI', impuesto:'IGV', tipoImp:18, ley:'Código Civil peruano' },
+  uy: { nombre:'Uruguay', moneda:'UYU', simbolo:'$', doc:'RUT / CI', impuesto:'IVA', tipoImp:22, ley:'Código Civil uruguayo' },
+  otro: { nombre:'Internacional', moneda:'USD', simbolo:'$', doc:'Documento de identidad', impuesto:'Impuesto', tipoImp:0, ley:'legislación aplicable' },
+};
+
+function actualizarPais() {
+  const p = PAISES[document.getElementById('pais').value];
+  document.getElementById('label-doc-freelancer').textContent = p.doc;
+  document.getElementById('label-doc-cliente').textContent = p.doc;
+  document.getElementById('symbol-moneda').textContent = p.simbolo;
+  document.getElementById('label-importe').textContent = `Importe total (${p.moneda})`;
+  document.getElementById('label-impuesto').textContent = `${p.impuesto} aplicable`;
+
+  // Actualizar opciones de impuesto
+  const sel = document.getElementById('impuesto');
+  const opts = {
+    es: [{v:'21',l:'21% IVA (España)'},{v:'10',l:'10% IVA reducido'},{v:'0',l:'Exento de IVA'}],
+    mx: [{v:'16',l:'16% IVA'},{v:'8',l:'8% IVA frontera'},{v:'0',l:'Tasa 0% / Exento'}],
+    ar: [{v:'21',l:'21% IVA'},{v:'10.5',l:'10.5% IVA reducido'},{v:'0',l:'Exento'}],
+    co: [{v:'19',l:'19% IVA'},{v:'5',l:'5% IVA reducido'},{v:'0',l:'Exento'}],
+    cl: [{v:'19',l:'19% IVA'},{v:'0',l:'Exento'}],
+    pe: [{v:'18',l:'18% IGV'},{v:'0',l:'Exento'}],
+    uy: [{v:'22',l:'22% IVA'},{v:'10',l:'10% IVA mínimo'},{v:'0',l:'Exento'}],
+    otro: [{v:'0',l:'Sin impuesto'},{v:'21',l:'21%'},{v:'16',l:'16%'},{v:'19',l:'19%'}],
+  };
+  sel.innerHTML = (opts[document.getElementById('pais').value]||opts.otro)
+    .map(o=>`<option value="${o.v}">${o.l}</option>`).join('');
+
+  generarContrato();
+}
+
+function formaPagoTexto(val, simbolo, base, imp) {
+  const total = base + imp;
+  switch(val) {
+    case '50-50': return `El pago se realizará en dos partes: ${simbolo}${(total*0.5).toLocaleString('es-ES',{minimumFractionDigits:0,maximumFractionDigits:0})} al inicio del proyecto y ${simbolo}${(total*0.5).toLocaleString('es-ES',{minimumFractionDigits:0,maximumFractionDigits:0})} a la entrega final.`;
+    case '100-entrega': return `El importe total de ${simbolo}${total.toLocaleString('es-ES',{minimumFractionDigits:0,maximumFractionDigits:0})} se abonará íntegramente a la entrega y aprobación del trabajo.`;
+    case '30-40-30': return `El pago se dividirá en tres partes: ${simbolo}${(total*0.3).toLocaleString('es-ES',{minimumFractionDigits:0,maximumFractionDigits:0})} al inicio, ${simbolo}${(total*0.4).toLocaleString('es-ES',{minimumFractionDigits:0,maximumFractionDigits:0})} a mitad del proyecto y ${simbolo}${(total*0.3).toLocaleString('es-ES',{minimumFractionDigits:0,maximumFractionDigits:0})} a la entrega final.`;
+    case 'mensual': return `Los honorarios se abonarán mensualmente mediante factura emitida al inicio de cada mes.`;
+    case '100-inicio': return `El importe total de ${simbolo}${total.toLocaleString('es-ES',{minimumFractionDigits:0,maximumFractionDigits:0})} se abonará íntegramente antes del inicio del proyecto.`;
+    default: return '';
+  }
+}
+
+function derechosTexto(val) {
+  switch(val) {
+    case 'total': return 'Una vez efectuado el pago íntegro, el Cliente adquiere todos los derechos de propiedad intelectual sobre los entregables. El Prestador renuncia a cualquier reclamación futura sobre dichos derechos.';
+    case 'licencia': return 'El Prestador conserva todos los derechos de propiedad intelectual sobre los entregables. Se concede al Cliente una licencia de uso no exclusiva, no transferible y sin limitación temporal para los fines acordados.';
+    case 'compartida': return 'Los derechos de propiedad intelectual sobre los entregables serán compartidos entre ambas partes en igual proporción, pudiendo cada parte hacer uso de los mismos sin necesidad de autorización expresa de la otra.';
+  }
+}
+
+function ndaTexto(pais) {
+  return `Ambas partes se comprometen a mantener en estricta confidencialidad toda la información intercambiada en el marco de este contrato. Esta obligación tendrá una vigencia de dos (2) años tras la finalización del presente contrato. El incumplimiento de esta cláusula podrá dar lugar a reclamaciones por daños y perjuicios conforme a la ${PAISES[pais].ley}.`;
+}
+
+function formatFecha(str) {
+  if (!str) return '___________';
+  const d = new Date(str + 'T00:00:00');
+  return d.toLocaleDateString('es-ES', {day:'numeric', month:'long', year:'numeric'});
+}
+
+function generarContrato() {
+  const pais = document.getElementById('pais').value;
+  const p = PAISES[pais];
+  const fn = document.getElementById('freelancer-nombre').value || '[Nombre del Prestador]';
+  const fd = document.getElementById('freelancer-doc').value || '[' + p.doc + ']';
+  const fe = document.getElementById('freelancer-email').value || '[email@prestador.com]';
+  const cn = document.getElementById('cliente-nombre').value || '[Nombre del Cliente]';
+  const cd = document.getElementById('cliente-doc').value || '[' + p.doc + ']';
+  const ce = document.getElementById('cliente-email').value || '[email@cliente.com]';
+  const desc = document.getElementById('servicio-desc').value || '[Descripción del servicio]';
+  const entregables = document.getElementById('entregables').value || '[Entregables a definir]';
+  const fi = formatFecha(document.getElementById('fecha-inicio').value);
+  const ff = formatFecha(document.getElementById('fecha-entrega').value);
+  const importe = parseFloat(document.getElementById('importe').value) || 0;
+  const impPct = parseFloat(document.getElementById('impuesto').value) || 0;
+  const impValor = importe * (impPct/100);
+  const total = importe + impValor;
+  const formaText = formaPagoTexto(document.getElementById('forma-pago').value, p.simbolo, importe, impValor);
+  const revisiones = document.getElementById('revisiones').value;
+  const revText = revisiones === 'ilimitadas' ? 'revisiones ilimitadas' : revisiones === '0' ? 'ninguna revisión incluida' : `${revisiones} ronda${revisiones>1?'s':''} de revisión`;
+  const derechos = derechosTexto(document.getElementById('derechos').value);
+  const nda = document.getElementById('confidencialidad').value === 'si';
+  const hoy = new Date().toLocaleDateString('es-ES', {day:'numeric', month:'long', year:'numeric'});
+
+  const entregablesHtml = entregables.split('\n').filter(l=>l.trim())
+    .map(l=>`<li>${l.replace(/^[-•]\s*/,'')}</li>`).join('');
+
+  document.getElementById('contrato-output').innerHTML = `
+  <div class="contract-doc" id="contrato-imprimible">
+    <div class="contract-header">
+      <div class="contract-logo-area">AutónomoLab · autonomolab.com</div>
+      <div class="contract-title">CONTRATO DE PRESTACIÓN DE SERVICIOS FREELANCE</div>
+      <div class="contract-subtitle">${p.nombre} · ${hoy}</div>
+    </div>
+
+    <div class="contract-parties">
+      <div class="party-block">
+        <div class="party-role">Prestador de servicios</div>
+        <div class="party-name">${fn}</div>
+        <div class="party-detail">${p.doc}: ${fd}</div>
+        <div class="party-detail">${fe}</div>
+      </div>
+      <div class="party-block">
+        <div class="party-role">Cliente</div>
+        <div class="party-name">${cn}</div>
+        <div class="party-detail">${p.doc}: ${cd}</div>
+        <div class="party-detail">${ce}</div>
+      </div>
+    </div>
+
+    <div class="contract-section">
+      <div class="contract-section-num">Cláusula 1</div>
+      <h3>Objeto del contrato</h3>
+      <p>El Prestador se compromete a realizar para el Cliente los siguientes servicios:</p>
+      <p>${desc}</p>
+      <p><strong>Entregables:</strong></p>
+      <ul>${entregablesHtml}</ul>
+    </div>
+
+    <div class="contract-section">
+      <div class="contract-section-num">Cláusula 2</div>
+      <h3>Plazos</h3>
+      <p>El proyecto dará inicio el <strong>${fi}</strong> y se entregará antes del <strong>${ff}</strong>. El incumplimiento de los plazos por parte del Cliente en la provisión de materiales, feedback o aprobaciones podrá dar lugar a una revisión de las fechas acordadas.</p>
+      <p>El contrato incluye <strong>${revText}</strong>. Las revisiones adicionales se presupuestarán por separado.</p>
+    </div>
+
+    <div class="contract-section">
+      <div class="contract-section-num">Cláusula 3</div>
+      <h3>Honorarios y forma de pago</h3>
+      <div class="contract-payment-box">
+        <div class="payment-row"><span class="payment-label">Base imponible</span><span class="payment-val">${p.simbolo}${importe.toLocaleString('es-ES',{minimumFractionDigits:2,maximumFractionDigits:2})}</span></div>
+        ${impPct > 0 ? `<div class="payment-row"><span class="payment-label">${p.impuesto} (${impPct}%)</span><span class="payment-val">${p.simbolo}${impValor.toLocaleString('es-ES',{minimumFractionDigits:2,maximumFractionDigits:2})}</span></div>` : ''}
+        <div class="payment-row"><span class="payment-label">Total</span><span class="payment-val">${p.simbolo}${total.toLocaleString('es-ES',{minimumFractionDigits:2,maximumFractionDigits:2})} ${p.moneda}</span></div>
+      </div>
+      <p>${formaText}</p>
+      <p>El pago se realizará mediante transferencia bancaria en un plazo máximo de <strong>15 días naturales</strong> desde la emisión de la factura correspondiente.</p>
+    </div>
+
+    <div class="contract-section">
+      <div class="contract-section-num">Cláusula 4</div>
+      <h3>Propiedad intelectual</h3>
+      <p>${derechos}</p>
+    </div>
+
+    ${nda ? `
+    <div class="contract-section">
+      <div class="contract-section-num">Cláusula 5</div>
+      <h3>Confidencialidad</h3>
+      <p>${ndaTexto(pais)}</p>
+    </div>` : ''}
+
+    <div class="contract-section">
+      <div class="contract-section-num">Cláusula ${nda?6:5}</div>
+      <h3>Resolución del contrato</h3>
+      <p>Cualquiera de las partes podrá resolver este contrato con un preaviso de <strong>15 días naturales</strong> mediante comunicación escrita. En caso de resolución anticipada por parte del Cliente, se abonarán los trabajos realizados hasta la fecha más una compensación del 20% del importe pendiente. En caso de incumplimiento grave por parte del Prestador, el Cliente podrá resolver el contrato sin preavisó y solicitar la devolución de los importes abonados por trabajos no entregados.</p>
+    </div>
+
+    <div class="contract-section">
+      <div class="contract-section-num">Cláusula ${nda?7:6}</div>
+      <h3>Legislación aplicable</h3>
+      <p>El presente contrato se regirá e interpretará conforme a la ${p.ley}. Para cualquier controversia derivada de este contrato, ambas partes acuerdan someterse a la jurisdicción de los tribunales correspondientes al domicilio del Prestador.</p>
+    </div>
+
+    <div class="contract-signatures">
+      <div class="sig-block">
+        <div class="sig-line"></div>
+        <div class="sig-name">${fn}</div>
+        <div class="sig-role">Prestador de servicios</div>
+        <div class="sig-date">Fecha: ___________________</div>
+      </div>
+      <div class="sig-block">
+        <div class="sig-line"></div>
+        <div class="sig-name">${cn}</div>
+        <div class="sig-role">Cliente</div>
+        <div class="sig-date">Fecha: ___________________</div>
+      </div>
+    </div>
+
+    <div class="contract-footer-note">
+      Contrato generado con AutónomoLab (autonomolab.com) · Esta herramienta tiene carácter orientativo. Para proyectos de alta complejidad legal se recomienda revisión por un profesional.
+    </div>
+  </div>`;
+}
+
+function copiarTexto() {
+  const el = document.getElementById('contrato-imprimible');
+  if (!el) return;
+  const text = el.innerText;
+  navigator.clipboard.writeText(text).then(() => {
+    const btn = document.querySelector('.btn-copy');
+    btn.textContent = '✅ Copiado';
+    setTimeout(() => btn.textContent = '📋 Copiar texto', 2000);
+  });
+}
+
+// Inicializar fecha de hoy
+const hoy = new Date();
+const manana = new Date(hoy); manana.setDate(manana.getDate()+30);
+document.getElementById('fecha-inicio').value = hoy.toISOString().split('T')[0];
+document.getElementById('fecha-entrega').value = manana.toISOString().split('T')[0];
+
+// Generar preview inicial
+generarContrato();
+
+// Live preview en todos los inputs
+document.querySelectorAll('input,select,textarea').forEach(el => {
+  el.addEventListener('input', generarContrato);
+  el.addEventListener('change', generarContrato);
+});
+</script>
+
+
+<script>
+  document.querySelectorAll('.faq-q').forEach(q => {
+    q.addEventListener('click', () => {
+      const item = q.parentElement;
+      item.classList.toggle('open');
+    });
+  });
+</script>
+</body>
+</html>

@@ -1,0 +1,379 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ChatGPT para autónomos: 20 usos con prompts — AutónomoLab</title>
+<meta name="description" content="Guía completa de ChatGPT para autónomos y freelancers. 20 usos prácticos con prompts reales listos para copiar. Ahorra 10+ horas a la semana.">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://autonomolab.com/blog/chatgpt-para-autonomos/">
+<meta property="og:title" content="ChatGPT para autónomos: 20 usos prácticos con prompts reales">
+<meta property="og:description" content="20 usos de ChatGPT para autónomos con prompts listos para copiar. Ahorra 10+ horas semanales.">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://autonomolab.com/blog/chatgpt-para-autonomos/">
+<meta property="og:site_name" content="AutónomoLab">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"Article","headline":"ChatGPT para autónomos: 20 usos prácticos con prompts reales","description":"Guía completa de ChatGPT para autónomos y freelancers con prompts listos para copiar.","url":"https://autonomolab.com/blog/chatgpt-para-autonomos/","publisher":{"@type":"Organization","name":"AutónomoLab","url":"https://autonomolab.com"},"inLanguage":"es"}</script>
+<link rel="icon" type="image/x-icon" href="/favicon.ico">
+<link rel="icon" type="image/svg+xml" href="/favicon.svg">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+<meta name="theme-color" content="#1a1814">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cabinet+Grotesk:wght@400;500;700;800;900&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet">
+<!-- GOOGLE ADSENSE - Sustituir cuando Google apruebe -->
+<style>
+  :root{--bg:#f5f2eb;--bg2:#ede9e0;--ink:#1a1814;--ink2:#4a4740;--ink3:#8a857a;--accent:#d45a2a;--card:#fff;--border:#ddd8ce;--green:#2ab87a;--purple:#7c6aff;}
+  *{box-sizing:border-box;margin:0;padding:0;}
+  body{background:var(--bg);color:var(--ink);font-family:'Cabinet Grotesk',sans-serif;font-size:16px;line-height:1.7;overflow-x:hidden;}
+  nav{position:sticky;top:0;z-index:100;background:rgba(245,242,235,0.92);backdrop-filter:blur(12px);border-bottom:1px solid var(--border);padding:0 24px;}
+  .nav-inner{max-width:1100px;margin:0 auto;height:60px;display:flex;align-items:center;justify-content:space-between;}
+  .logo{font-size:18px;font-weight:900;color:var(--ink);text-decoration:none;letter-spacing:-0.03em;display:flex;align-items:center;gap:8px;}
+  .logo-dot{width:8px;height:8px;background:var(--accent);border-radius:50%;display:inline-block;flex-shrink:0;}
+  .nav-links{display:flex;gap:28px;list-style:none;}
+  .nav-links a{font-size:14px;font-weight:500;color:var(--ink2);text-decoration:none;}
+  .nav-links a:hover{color:var(--accent);}
+  @media(max-width:640px){.nav-links{display:none;}}
+  .wrap{max-width:680px;margin:0 auto;padding:48px 24px 80px;}
+  .bc{font-size:13px;color:var(--ink3);margin-bottom:28px;}
+  .bc a{color:var(--ink3);text-decoration:none;}
+  .bc span{margin:0 6px;}
+  .cat{font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:.12em;color:var(--accent);margin-bottom:12px;}
+  h1{font-size:clamp(24px,3.5vw,40px);font-weight:900;letter-spacing:-.02em;line-height:1.2;margin-bottom:16px;}
+  .meta{font-size:13px;color:var(--ink3);margin-bottom:32px;display:flex;gap:16px;flex-wrap:wrap;}
+  .thumb{width:100%;height:220px;border-radius:14px;overflow:hidden;margin-bottom:36px;}
+  .thumb img{width:100%;height:100%;object-fit:cover;display:block;}
+  h2{font-size:22px;font-weight:900;margin:40px 0 14px;color:var(--ink);}
+  h3{font-size:17px;font-weight:800;margin:24px 0 10px;color:var(--ink);}
+  p{font-size:15px;color:var(--ink2);margin-bottom:16px;}
+  ul,ol{padding-left:20px;margin-bottom:16px;}
+  li{font-size:15px;color:var(--ink2);margin-bottom:8px;padding-left:4px;}
+  strong{color:var(--ink);font-weight:800;}
+  a{color:var(--accent);}
+  a:hover{text-decoration:underline;}
+  .indice{background:var(--card);border:1px solid var(--border);border-radius:12px;padding:20px 24px;margin:28px 0;}
+  .indice-title{font-size:13px;font-weight:800;text-transform:uppercase;letter-spacing:.1em;color:var(--ink3);margin-bottom:12px;}
+  .indice ol{padding-left:18px;margin:0;}
+  .indice li{font-size:14px;margin-bottom:6px;}
+  .indice a{color:var(--ink2);text-decoration:none;}
+  .indice a:hover{color:var(--accent);}
+
+  /* USO CARD */
+  .uso{background:var(--card);border:1px solid var(--border);border-radius:12px;padding:20px;margin-bottom:14px;}
+  .uso-head{margin-bottom:10px;}
+  .uso-n{display:inline-block;background:var(--ink);color:#fff;width:28px;height:28px;border-radius:6px;font-size:13px;font-weight:900;text-align:center;line-height:28px;margin-right:8px;vertical-align:middle;}
+  .uso-t{font-size:16px;font-weight:900;color:var(--ink);display:inline;vertical-align:middle;}
+  .uso-d{font-size:14px;color:var(--ink2);margin-top:8px;line-height:1.6;margin-bottom:10px;}
+
+  /* PROMPT BOX */
+  .prompt{background:#1a1814;border-radius:8px;padding:16px 18px;margin-top:10px;}
+  .prompt-label{font-size:10px;font-weight:800;text-transform:uppercase;letter-spacing:.12em;color:rgba(255,255,255,.4);margin-bottom:8px;}
+  .prompt-text{font-size:13px;color:rgba(255,255,255,.85);line-height:1.6;font-family:monospace;}
+
+  .tabla{width:100%;border-collapse:collapse;margin:20px 0;font-size:14px;}
+  .tabla th{background:var(--ink);color:#fff;padding:10px 14px;text-align:left;font-size:12px;text-transform:uppercase;letter-spacing:.06em;}
+  .tabla td{padding:10px 14px;border-bottom:1px solid var(--border);color:var(--ink2);}
+  .tabla tr:last-child td{border-bottom:none;}
+  .tabla tr:nth-child(even) td{background:var(--bg2);}
+  .tabla td:first-child{font-weight:700;color:var(--ink);}
+  .tip{background:var(--bg2);border-left:4px solid var(--accent);padding:16px 20px;border-radius:0 8px 8px 0;margin:24px 0;}
+  .tip p{margin:0;font-size:14px;}
+  .warning{background:rgba(212,90,42,.06);border:1px solid rgba(212,90,42,.2);border-radius:10px;padding:16px 20px;margin:24px 0;}
+  .warning p{margin:0;font-size:14px;}
+  .cta{background:rgba(212,90,42,.06);border:1px solid rgba(212,90,42,.2);border-radius:14px;padding:28px;margin:40px 0;text-align:center;}
+  .cta h3{font-size:20px;margin-bottom:8px;}
+  .cta p{margin-bottom:16px;font-size:14px;}
+  .cta-btn{display:inline-block;background:var(--accent);color:#fff;padding:12px 24px;border-radius:8px;font-size:14px;font-weight:700;text-decoration:none;}
+  .cta-btn:hover{opacity:.9;}
+  .rg{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin-top:16px;}
+  @media(max-width:500px){.rg{grid-template-columns:1fr 1fr;}}
+  .rc{background:var(--card);border:1px solid var(--border);border-radius:10px;padding:14px;text-decoration:none;display:block;}
+  .rc:hover{border-color:rgba(212,90,42,.3);}
+  .rc-e{font-size:20px;margin-bottom:6px;}
+  .rc-n{font-size:13px;font-weight:800;color:var(--ink);}
+  footer{text-align:center;padding:32px 24px;border-top:1px solid var(--border);font-size:13px;color:var(--ink3);margin-top:40px;}
+  footer a{color:var(--accent);text-decoration:none;}
+</style>
+</head>
+<body>
+<nav>
+  <div class="nav-inner">
+    <a href="/" class="logo"><span class="logo-dot"></span>AutónomoLab</a>
+    <ul class="nav-links">
+      <li><a href="/herramientas">Herramientas</a></li>
+      <li><a href="/blog">Blog</a></li>
+      <li><a href="/comparativas">Comparativas</a></li>
+      <li><a href="/sobre">Sobre</a></li>
+    </ul>
+  </div>
+</nav>
+
+<div class="wrap">
+  <div class="bc"><a href="/">Inicio</a><span>›</span><a href="/blog">Blog</a><span>›</span>ChatGPT para autónomos</div>
+  <div class="cat">🤖 Inteligencia artificial</div>
+  <h1>ChatGPT para autónomos: 20 usos prácticos con prompts reales</h1>
+  <div class="meta">
+    <span>📅 Abril 2026</span>
+    <span>⏱ 15 min de lectura</span>
+    <span>✍️ AutónomoLab</span>
+  </div>
+  <div class="thumb">
+    <img loading="lazy" src="https://images.unsplash.com/photo-1677442135703-1787eea5ce01?w=900&q=80" alt="ChatGPT e inteligencia artificial para autónomos">
+  </div>
+
+  <p>La inteligencia artificial no va a reemplazarte como freelancer. Pero sí va a reemplazar a los freelancers que no usan IA. ChatGPT, Claude y otras herramientas de IA generativa se han convertido en el asistente más valioso que puede tener un autónomo — disponible 24h, sin sueldo, y capaz de hacer en segundos lo que antes llevaba horas.</p>
+  <p>En esta guía encontrarás <strong>20 usos concretos con prompts reales listos para copiar</strong>, organizados por área de tu negocio. No teoría — ejemplos que puedes usar hoy mismo.</p>
+
+  <div class="indice">
+    <div class="indice-title">Contenido</div>
+    <ol>
+      <li><a href="#herramientas">Qué herramienta usar: ChatGPT vs Claude vs Gemini</a></li>
+      <li><a href="#captacion">IA para captación de clientes</a></li>
+      <li><a href="#comunicacion">IA para comunicación profesional</a></li>
+      <li><a href="#contenido">IA para crear contenido</a></li>
+      <li><a href="#admin">IA para tareas administrativas</a></li>
+      <li><a href="#productividad">IA para productividad y organización</a></li>
+      <li><a href="#errores">Errores al usar IA que te hacen perder tiempo</a></li>
+    </ol>
+  </div>
+
+  <h2 id="herramientas">Qué herramienta usar: ChatGPT vs Claude vs Gemini</h2>
+  <p>Antes de entrar en los usos, vale la pena elegir bien la herramienta. Las tres principales tienen planes gratuitos suficientes para empezar:</p>
+
+  <table class="tabla">
+    <thead>
+      <tr><th>Herramienta</th><th>Mejor para</th><th>Plan gratuito</th><th>Precio Pro</th></tr>
+    </thead>
+    <tbody>
+      <tr><td>ChatGPT (OpenAI)</td><td>Uso general, código, imágenes</td><td>Sí (GPT-4o mini)</td><td>~20 USD/mes</td></tr>
+      <tr><td>Claude (Anthropic)</td><td>Textos largos, redacción, análisis</td><td>Sí (Claude Sonnet)</td><td>~20 USD/mes</td></tr>
+      <tr><td>Gemini (Google)</td><td>Integración con Google Workspace</td><td>Sí</td><td>~20 USD/mes</td></tr>
+      <tr><td>Copilot (Microsoft)</td><td>Integración con Office 365</td><td>Sí</td><td>Incluido en M365</td></tr>
+    </tbody>
+  </table>
+
+  <div class="tip">
+    <p>💡 <strong>Recomendación:</strong> empieza con el plan gratuito de ChatGPT o Claude. Son más que suficientes para los 20 usos de esta guía. Solo paga si lo usas intensivamente a diario.</p>
+  </div>
+
+  <h2 id="captacion">IA para captación de clientes</h2>
+
+  <div class="uso">
+    <div class="uso-head"><span class="uso-n">1</span><span class="uso-t">Redactar propuestas comerciales</span></div>
+    <div class="uso-d">Una propuesta bien redactada puede ser la diferencia entre ganar o perder un proyecto. La IA puede generar un borrador sólido en segundos que tú personalizas.</div>
+    <div class="prompt">
+      <div class="prompt-label">📋 Prompt listo para copiar</div>
+      <div class="prompt-text">Eres un experto en propuestas comerciales freelance. Escribe una propuesta profesional para [describe el proyecto] dirigida a [tipo de empresa/cliente]. Mi especialidad es [tu especialidad] y tengo [X años] de experiencia. El presupuesto aproximado es [precio]. Incluye: resumen del proyecto, mi enfoque, entregables, plazos y precio. Tono: profesional pero cercano. Idioma: español.</div>
+    </div>
+  </div>
+
+  <div class="uso">
+    <div class="uso-head"><span class="uso-n">2</span><span class="uso-t">Personalizar emails en frío</span></div>
+    <div class="uso-d">El email en frío genérico no funciona. La IA te ayuda a personalizar cada email en segundos a partir de información de la empresa.</div>
+    <div class="prompt">
+      <div class="prompt-label">📋 Prompt listo para copiar</div>
+      <div class="prompt-text">Escribe un email en frío corto (máximo 150 palabras) para contactar a [nombre de la empresa]. Son una [describe la empresa]. Soy freelance especializado en [tu especialidad]. He detectado que [problema específico que has visto en su web/redes]. Mi objetivo es conseguir una reunión de 15 minutos. Tono directo y sin rodeos. Sin frases de relleno tipo "espero que este email te encuentre bien".</div>
+    </div>
+  </div>
+
+  <div class="uso">
+    <div class="uso-head"><span class="uso-n">3</span><span class="uso-t">Preparar la reunión de descubrimiento</span></div>
+    <div class="uso-d">Antes de hablar con un cliente potencial, la IA puede ayudarte a preparar las preguntas correctas para entender bien el proyecto y detectar señales de alerta.</div>
+    <div class="prompt">
+      <div class="prompt-label">📋 Prompt listo para copiar</div>
+      <div class="prompt-text">Voy a tener una reunión de descubrimiento con un cliente potencial. Es una [tipo de empresa] que necesita [tipo de servicio]. Dame 10 preguntas estratégicas para hacer en la reunión que me ayuden a: entender bien el proyecto, detectar si tienen presupuesto real, identificar quién toma las decisiones, y saber si es un buen cliente para trabajar.</div>
+    </div>
+  </div>
+
+  <div class="uso">
+    <div class="uso-head"><span class="uso-n">4</span><span class="uso-t">Optimizar tu perfil de LinkedIn</span></div>
+    <div class="uso-d">Tu titular y sección "Acerca de" en LinkedIn son tu escaparate principal. La IA puede reescribirlos orientados a atraer clientes, no solo a listar tu experiencia.</div>
+    <div class="prompt">
+      <div class="prompt-label">📋 Prompt listo para copiar</div>
+      <div class="prompt-text">Reescribe mi perfil de LinkedIn para atraer clientes, no para buscar empleo. Mi especialidad es [tu especialidad], trabajo con [tipo de clientes], y mis principales resultados son [menciona 2-3 logros concretos]. Escribe: (1) Un titular de máximo 200 caracteres con mi propuesta de valor clara. (2) Una sección "Acerca de" de 300 palabras que empiece con el problema que resuelvo y termine con una llamada a la acción. Tono: profesional pero humano.</div>
+    </div>
+  </div>
+
+  <h2 id="comunicacion">IA para comunicación profesional</h2>
+
+  <div class="uso">
+    <div class="uso-head"><span class="uso-n">5</span><span class="uso-t">Responder a clientes difíciles</span></div>
+    <div class="uso-d">Cuando un cliente pide más trabajo sin pagar más, paga tarde o da feedback agresivo, es difícil responder con calma y profesionalidad. La IA lo hace por ti.</div>
+    <div class="prompt">
+      <div class="prompt-label">📋 Prompt listo para copiar</div>
+      <div class="prompt-text">Ayúdame a responder este email de un cliente de forma profesional, firme pero sin ser agresivo. El cliente dice: "[pega el email del cliente]". Quiero: mantener la relación, dejar claro que lo que pide está fuera del alcance acordado, y ofrecerle una solución alternativa si la hay. Máximo 150 palabras.</div>
+    </div>
+  </div>
+
+  <div class="uso">
+    <div class="uso-head"><span class="uso-n">6</span><span class="uso-t">Negociar precio sin perder el cliente</span></div>
+    <div class="uso-d">Cuando el cliente dice "es muy caro", la respuesta correcta no es bajar el precio sino replantear el alcance. La IA te ayuda a formularlo bien.</div>
+    <div class="prompt">
+      <div class="prompt-label">📋 Prompt listo para copiar</div>
+      <div class="prompt-text">Un cliente me ha dicho que mi presupuesto de [precio] está por encima de su presupuesto de [su precio]. El proyecto consiste en [describe el proyecto]. Escribe una respuesta que: no baje el precio directamente, ofrezca una versión reducida del proyecto que encaje en su presupuesto, y deje la puerta abierta para la versión completa más adelante. Máximo 200 palabras, tono profesional.</div>
+    </div>
+  </div>
+
+  <div class="uso">
+    <div class="uso-head"><span class="uso-n">7</span><span class="uso-t">Comunicar retrasos o problemas</span></div>
+    <div class="uso-d">Comunicar malas noticias a un cliente es incómodo. La IA te ayuda a redactar el mensaje de forma honesta y profesional que minimice el impacto en la relación.</div>
+    <div class="prompt">
+      <div class="prompt-label">📋 Prompt listo para copiar</div>
+      <div class="prompt-text">Necesito comunicar a un cliente que voy a entregar el proyecto con [X días] de retraso por [motivo]. Escribe un email que: sea directo y honesto, no ponga excusas innecesarias, muestre que estoy tomando responsabilidad, y proponga una nueva fecha de entrega realista. Tono profesional y empático. Máximo 150 palabras.</div>
+    </div>
+  </div>
+
+  <div class="uso">
+    <div class="uso-head"><span class="uso-n">8</span><span class="uso-t">Pedir testimonios y referencias</span></div>
+    <div class="uso-d">La mayoría de clientes satisfechos nunca dejan una reseña porque no saben qué decir. Un buen email lo facilita.</div>
+    <div class="prompt">
+      <div class="prompt-label">📋 Prompt listo para copiar</div>
+      <div class="prompt-text">Acabo de terminar un proyecto con éxito con [nombre del cliente]. Escribe un email corto pidiéndole un testimonio para mi web y una posible recomendación. El email debe: ser natural y no parecer una petición corporativa, recordarle brevemente el resultado que conseguimos juntos, y facilitar el proceso ofreciéndole escribir el testimonio yo mismo para que él solo lo apruebe. Máximo 120 palabras.</div>
+    </div>
+  </div>
+
+  <h2 id="contenido">IA para crear contenido</h2>
+
+  <div class="uso">
+    <div class="uso-head"><span class="uso-n">9</span><span class="uso-t">Generar ideas de posts para LinkedIn</span></div>
+    <div class="uso-d">Publicar contenido de forma consistente es difícil cuando tienes que generar ideas además de ejecutarlas. La IA puede darte un mes de ideas en 2 minutos.</div>
+    <div class="prompt">
+      <div class="prompt-label">📋 Prompt listo para copiar</div>
+      <div class="prompt-text">Soy freelance especializado en [tu especialidad]. Mi cliente ideal es [describe tu cliente]. Dame 20 ideas de posts para LinkedIn que demuestren mi expertise y sean útiles para mi audiencia. Mezcla formatos: consejos prácticos, errores comunes, casos de éxito, opiniones del sector y preguntas a la audiencia. Que sean específicos, no genéricos.</div>
+    </div>
+  </div>
+
+  <div class="uso">
+    <div class="uso-head"><span class="uso-n">10</span><span class="uso-t">Escribir el post a partir de la idea</span></div>
+    <div class="uso-d">Una vez tienes la idea, la IA puede escribir el borrador del post completo que tú personalizas con tu voz y experiencia real.</div>
+    <div class="prompt">
+      <div class="prompt-label">📋 Prompt listo para copiar</div>
+      <div class="prompt-text">Escribe un post de LinkedIn sobre [idea del post]. Estructura: gancho en la primera línea que genere curiosidad, desarrollo en 3-5 puntos concretos, cierre con reflexión o pregunta a la audiencia. Tono: directo, humano, sin palabras de moda corporativas. Longitud: 150-250 palabras. No uses emojis en exceso. El objetivo es generar comentarios y compartidos.</div>
+    </div>
+  </div>
+
+  <div class="uso">
+    <div class="uso-head"><span class="uso-n">11</span><span class="uso-t">Crear descripciones de servicios para tu web</span></div>
+    <div class="uso-d">La mayoría de webs freelance describen qué hacen, no qué resultado obtiene el cliente. La IA ayuda a reorientar el mensaje.</div>
+    <div class="prompt">
+      <div class="prompt-label">📋 Prompt listo para copiar</div>
+      <div class="prompt-text">Escribe la descripción del servicio "[nombre del servicio]" para mi web freelance. Mi cliente ideal es [describe al cliente]. El principal beneficio que obtendrá es [beneficio]. Empieza con el problema del cliente, explica mi solución y termina con el resultado que puede esperar. Tono: claro, orientado a resultados, sin jerga técnica. Máximo 120 palabras.</div>
+    </div>
+  </div>
+
+  <div class="uso">
+    <div class="uso-head"><span class="uso-n">12</span><span class="uso-t">Resumir documentos largos de clientes</span></div>
+    <div class="uso-d">Briefings de 20 páginas, contratos extensos, informes de competencia... la IA puede resumirlos en los puntos clave en segundos.</div>
+    <div class="prompt">
+      <div class="prompt-label">📋 Prompt listo para copiar</div>
+      <div class="prompt-text">Resume el siguiente documento en máximo 10 puntos clave. Destaca: los objetivos principales, los plazos importantes, los entregables esperados, y cualquier requisito o restricción especial. [Pega el documento]</div>
+    </div>
+  </div>
+
+  <h2 id="admin">IA para tareas administrativas</h2>
+
+  <div class="uso">
+    <div class="uso-head"><span class="uso-n">13</span><span class="uso-t">Redactar cláusulas para contratos</span></div>
+    <div class="uso-d">Cuando necesitas una cláusula específica que tu contrato estándar no cubre, la IA puede redactarla en lenguaje legal claro.</div>
+    <div class="prompt">
+      <div class="prompt-label">📋 Prompt listo para copiar</div>
+      <div class="prompt-text">Redacta una cláusula para un contrato freelance que cubra [describe la situación: propiedad intelectual / pagos tardíos / cancelación del proyecto / revisiones extra / etc.]. Debe estar en español, ser clara y equilibrada para ambas partes. Incluye consecuencias concretas si se incumple.</div>
+    </div>
+  </div>
+
+  <div class="uso">
+    <div class="uso-head"><span class="uso-n">14</span><span class="uso-t">Crear plantillas de onboarding de clientes</span></div>
+    <div class="uso-d">Un buen proceso de onboarding profesionaliza tu imagen y previene malentendidos. La IA puede crear el cuestionario inicial perfecto para tu servicio.</div>
+    <div class="prompt">
+      <div class="prompt-label">📋 Prompt listo para copiar</div>
+      <div class="prompt-text">Crea un cuestionario de onboarding para nuevos clientes de mi servicio de [tu servicio]. Incluye preguntas sobre: objetivos del proyecto, público objetivo del cliente, referencias de estilo o competidores, plazos y presupuesto, personas involucradas en la aprobación, y cualquier restricción importante. Máximo 15 preguntas, formato claro y profesional.</div>
+    </div>
+  </div>
+
+  <div class="uso">
+    <div class="uso-head"><span class="uso-n">15</span><span class="uso-t">Preparar informes de resultados para clientes</span></div>
+    <div class="uso-d">Enviar un informe mensual de resultados fideliza clientes y justifica tu tarifa. La IA te ayuda a estructurarlo de forma profesional.</div>
+    <div class="prompt">
+      <div class="prompt-label">📋 Prompt listo para copiar</div>
+      <div class="prompt-text">Crea una plantilla de informe mensual de resultados para un cliente de [tipo de servicio]. Debe incluir: resumen ejecutivo de una página, métricas principales del mes, comparativa con el mes anterior, acciones realizadas, resultados obtenidos, próximos pasos y recomendaciones. Formato claro, orientado a resultados, que un cliente no técnico pueda entender fácilmente.</div>
+    </div>
+  </div>
+
+  <h2 id="productividad">IA para productividad y organización</h2>
+
+  <div class="uso">
+    <div class="uso-head"><span class="uso-n">16</span><span class="uso-t">Planificar tu semana de trabajo</span></div>
+    <div class="uso-d">La IA puede ayudarte a priorizar tareas y distribuir tu tiempo de forma realista entre proyectos, captación y administración.</div>
+    <div class="prompt">
+      <div class="prompt-label">📋 Prompt listo para copiar</div>
+      <div class="prompt-text">Ayúdame a planificar mi semana de trabajo. Tengo las siguientes tareas pendientes: [lista tus tareas]. Mis restricciones son: [X horas disponibles, reuniones fijas, deadlines]. Distribuye las tareas en bloques de trabajo de 2-3 horas por día, priorizando por urgencia e importancia. Incluye tiempo para emails, reuniones y captación de clientes.</div>
+    </div>
+  </div>
+
+  <div class="uso">
+    <div class="uso-head"><span class="uso-n">17</span><span class="uso-t">Investigar sectores antes de reuniones</span></div>
+    <div class="uso-d">Llegar a una reunión con conocimiento del sector del cliente genera confianza inmediata. La IA puede darte un briefing rápido en minutos.</div>
+    <div class="prompt">
+      <div class="prompt-label">📋 Prompt listo para copiar</div>
+      <div class="prompt-text">Voy a reunirme con una empresa del sector [sector]. Dame un briefing de 5 puntos sobre: principales retos del sector en 2026, cómo suelen comprar servicios como el mío las empresas de este sector, qué métricas les importan más, términos técnicos que debería conocer, y preguntas que probablemente me harán sobre mi servicio.</div>
+    </div>
+  </div>
+
+  <div class="uso">
+    <div class="uso-head"><span class="uso-n">18</span><span class="uso-t">Crear sistemas y procesos repetibles</span></div>
+    <div class="uso-d">Documentar tus procesos te permite escalar, delegar y ser más eficiente. La IA puede ayudarte a crear SOPs (procedimientos estándar de operación) para cualquier tarea repetitiva.</div>
+    <div class="prompt">
+      <div class="prompt-label">📋 Prompt listo para copiar</div>
+      <div class="prompt-text">Crea un SOP (procedimiento estándar) para [describe el proceso: entregar un proyecto, hacer onboarding de cliente, gestionar revisiones, etc.]. Incluye: objetivo del proceso, pasos detallados en orden, herramientas necesarias, tiempos estimados por paso, y posibles problemas y cómo resolverlos. Formato: lista numerada, clara y fácil de seguir.</div>
+    </div>
+  </div>
+
+  <div class="uso">
+    <div class="uso-head"><span class="uso-n">19</span><span class="uso-t">Aprender habilidades nuevas más rápido</span></div>
+    <div class="uso-d">En lugar de buscar cursos y tutoriales, la IA puede actuar como tu tutor personalizado para cualquier habilidad que necesites aprender.</div>
+    <div class="prompt">
+      <div class="prompt-label">📋 Prompt listo para copiar</div>
+      <div class="prompt-text">Quiero aprender [habilidad/herramienta] para usarla en mi trabajo como [tu especialidad]. Tengo [X horas] disponibles. Crea un plan de aprendizaje con: los conceptos fundamentales que debo dominar primero, recursos gratuitos específicos (tutoriales, documentación, vídeos), ejercicios prácticos para cada concepto, y cómo puedo aplicarlo en un proyecto real desde el primer día.</div>
+    </div>
+  </div>
+
+  <div class="uso">
+    <div class="uso-head"><span class="uso-n">20</span><span class="uso-t">Hacer seguimiento de proyectos y deadlines</span></div>
+    <div class="uso-d">Si le das el contexto de tus proyectos actuales, la IA puede ayudarte a identificar riesgos y priorizar acciones para no perder ningún deadline.</div>
+    <div class="prompt">
+      <div class="prompt-label">📋 Prompt listo para copiar</div>
+      <div class="prompt-text">Tengo los siguientes proyectos activos: [lista tus proyectos con sus deadlines y estado actual]. Analiza los riesgos de cada uno, identifica cuáles tienen más probabilidad de retrasarse, y dime qué acciones concretas debo tomar esta semana para asegurarme de cumplir todos los plazos. Sé directo y específico.</div>
+    </div>
+  </div>
+
+  <h2 id="errores">Errores al usar IA que te hacen perder tiempo</h2>
+  <ul>
+    <li><strong>Publicar el texto de la IA sin editarlo.</strong> Se nota. La IA tiene patrones de escritura reconocibles. Siempre edita, añade tu voz, tus ejemplos reales y tu perspectiva.</li>
+    <li><strong>Prompts demasiado vagos.</strong> "Escríbeme un email" produce resultados mediocres. Cuanto más contexto y especificidad des, mejor resultado obtendrás.</li>
+    <li><strong>No verificar los datos.</strong> La IA puede inventarse estadísticas, nombres o fechas con total confianza. Verifica siempre cualquier dato factual antes de usarlo.</li>
+    <li><strong>Usar la IA para pensar en lugar de para ejecutar.</strong> La IA es mejor ejecutando que pensando estratégicamente. Tú defines la estrategia — la IA la implementa.</li>
+    <li><strong>No iterar el prompt.</strong> Si el primer resultado no es lo que necesitas, no lo descartes — mejora el prompt. Añade más contexto, especifica el tono, da un ejemplo de lo que quieres.</li>
+  </ul>
+
+  <div class="warning">
+    <p>⚠️ <strong>Importante:</strong> nunca compartas con la IA información confidencial de clientes, datos personales sensibles ni secretos comerciales. Los modelos de IA pueden usar esas conversaciones para entrenamiento futuro dependiendo de la configuración.</p>
+  </div>
+
+  <div class="cta">
+    <h3>Más herramientas gratuitas para autónomos</h3>
+    <p>Calcula tu tarifa hora, genera contratos profesionales y gestiona mejor tu negocio con nuestras herramientas gratuitas.</p>
+    <a href="/herramientas" class="cta-btn">Ver todas las herramientas →</a>
+  </div>
+
+  <h2>Artículos relacionados</h2>
+  <div class="rg">
+    <a href="/herramientas/calculadora-tarifa-hora" class="rc"><div class="rc-e">💰</div><div class="rc-n">Calculadora tarifa hora</div></a>
+    <a href="/blog/notion-para-freelance" class="rc"><div class="rc-e">📋</div><div class="rc-n">Notion para freelance</div></a>
+    <a href="/blog/mejores-herramientas-freelance-2025" class="rc"><div class="rc-e">🛠️</div><div class="rc-n">Mejores herramientas</div></a>
+  </div>
+
+</div>
+<footer>© 2026 <a href="/">AutónomoLab</a> · <a href="/privacidad">Privacidad</a> · <a href="/cookies">Cookies</a> · <a href="/aviso-legal">Aviso legal</a></footer>
+</body>
+</html>

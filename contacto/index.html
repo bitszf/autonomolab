@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Contacto — AutónomoLab · Herramientas para autónomos</title>
+<meta name="description" content="Contacta con AutónomoLab. Sugerencias, colaboraciones o reportar un error en nuestras herramientas.">
+<meta name="robots" content="noindex, follow">
+<link rel="canonical" href="https://autonomolab.com/contacto/">
+<link rel="icon" type="image/x-icon" href="/favicon.ico">
+<link rel="icon" type="image/svg+xml" href="/favicon.svg">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+<meta name="theme-color" content="#1a1814">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cabinet+Grotesk:wght@400;500;700;800;900&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet">
+<style>
+  :root{--bg:#f5f2eb;--bg2:#ede9e0;--ink:#1a1814;--ink2:#4a4740;--ink3:#8a857a;--accent:#d45a2a;--card:#fff;--border:#ddd8ce;}
+  *{box-sizing:border-box;margin:0;padding:0;}
+  body{overflow-x:hidden;background:var(--bg);color:var(--ink);font-family:'Cabinet Grotesk',sans-serif;font-size:16px;line-height:1.7;}
+  nav{position:sticky;top:0;z-index:100;background:rgba(245,242,235,0.92);backdrop-filter:blur(12px);border-bottom:1px solid var(--border);padding:0 24px;}
+  .nav-inner{max-width:1100px;margin:0 auto;height:60px;display:flex;align-items:center;justify-content:space-between;}
+  .logo{font-size:18px;font-weight:900;color:var(--ink);text-decoration:none;letter-spacing:-0.03em;display:flex;align-items:center;gap:8px;}
+  .logo-dot{width:8px;height:8px;background:var(--accent);border-radius:50%;display:inline-block;}
+  .nav-links{display:flex;gap:28px;list-style:none;}
+  .nav-links a{font-size:14px;font-weight:500;color:var(--ink2);text-decoration:none;}
+  .nav-links a:hover{color:var(--accent);}
+  @media(max-width:640px){.nav-links{display:none;}}
+  .page{max-width:640px;margin:0 auto;padding:56px 24px 80px;}
+  .breadcrumb{font-size:13px;color:var(--ink3);margin-bottom:28px;}
+  .breadcrumb a{color:var(--ink3);text-decoration:none;}
+  .breadcrumb span{margin:0 6px;}
+  h1{font-size:clamp(28px,4vw,42px);font-weight:900;letter-spacing:-.03em;margin-bottom:12px;}
+  h1 em{font-family:'Instrument Serif',serif;font-style:italic;font-weight:400;color:var(--accent);}
+  .page-desc{font-size:17px;color:var(--ink2);margin-bottom:40px;}
+  .contact-options{display:flex;flex-direction:column;gap:14px;margin-bottom:48px;}
+  .contact-card{background:var(--card);border:1px solid var(--border);border-radius:14px;padding:20px 24px;display:flex;align-items:center;gap:16px;}
+  .contact-icon{font-size:28px;flex-shrink:0;}
+  .contact-body{overflow-x:hidden;}
+  .contact-title{font-size:15px;font-weight:800;color:var(--ink);margin-bottom:2px;}
+  .contact-desc{font-size:13px;color:var(--ink3);}
+  .contact-link{font-size:14px;font-weight:700;color:var(--accent);text-decoration:none;display:block;margin-top:4px;}
+  .contact-link:hover{text-decoration:underline;}
+  h2{font-size:20px;font-weight:900;margin-bottom:16px;}
+  .form-field{margin-bottom:16px;}
+  .form-field label{display:block;font-size:14px;font-weight:700;color:var(--ink);margin-bottom:6px;}
+  input[type=text],input[type=email],select,textarea{width:100%;background:var(--bg);border:1px solid var(--border);border-radius:8px;padding:11px 14px;font-size:14px;font-family:inherit;color:var(--ink);outline:none;transition:border-color .2s;}
+  input:focus,select:focus,textarea:focus{border-color:var(--accent);}
+  textarea{min-height:120px;resize:vertical;}
+  .submit-btn{background:var(--ink);color:#fff;border:none;border-radius:10px;padding:14px 28px;font-size:15px;font-weight:800;font-family:inherit;cursor:pointer;transition:background .2s;width:100%;}
+  .submit-btn:hover{background:var(--accent);}
+  .success-msg{display:none;background:rgba(42,184,122,.1);border:1px solid rgba(42,184,122,.3);border-radius:10px;padding:16px;text-align:center;font-size:14px;color:#2ab87a;font-weight:700;margin-top:16px;}
+  footer{text-align:center;padding:40px 24px;border-top:1px solid var(--border);font-size:13px;color:var(--ink3);margin-top:40px;}
+  footer a{color:var(--accent);text-decoration:none;}
+
+  /* === LAYOUT SAFETY === */
+  *, *::before, *::after { box-sizing: border-box; }
+  img, video, iframe { max-width: 100%; height: auto; }
+  table { width: 100%; table-layout: fixed; }
+  .article-wrap > * { max-width: 100%; }
+  pre, code { white-space: pre-wrap; word-break: break-word; }
+</style>
+<meta property="og:title" content="Contacto AutónomoLab">
+<meta property="og:description" content="Contacta con AutónomoLab. Sugerencias, colaboraciones o reportar un error.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://autonomolab.com/contacto/">
+<meta property="og:site_name" content="AutónomoLab">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Contacto AutónomoLab">
+<meta name="twitter:description" content="Contacta con AutónomoLab. Sugerencias, colaboraciones o reportar un error.">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"ContactPage","name":"Contacto AutónomoLab","description":"Contacta con AutónomoLab. Sugerencias, colaboraciones o reportar un error.","url":"https://autonomolab.com/contacto/","inLanguage":"es"}</script>
+<!-- GOOGLE ANALYTICS 4
+  INSTRUCCIONES:
+  1. Ve a https://analytics.google.com
+  2. Crea una propiedad para autonomolab.com
+  3. Google te dará un Measurement ID como: G-XXXXXXXXXX
+  4. Sustituye G-XXXXXXXXXX por tu ID real abajo
+-->
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<!-- <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-XXXXXXXXXX');
+</script> -->
+</head>
+<body>
+<nav>
+  <div class="nav-inner">
+    <a href="/" class="logo"><span class="logo-dot"></span>AutónomoLab</a>
+    <ul class="nav-links">
+      <li><a href="/herramientas">Herramientas</a></li>
+      <li><a href="/blog">Blog</a></li>
+      <li><a href="/comparativas">Comparativas</a></li>
+      <li><a href="/sobre">Sobre</a></li>
+    </ul>
+  </div>
+</nav>
+<div class="page">
+  <div class="breadcrumb"><a href="/">Inicio</a><span>›</span>Contacto</div>
+  <h1>Hablemos <em>contigo</em></h1>
+  <p class="page-desc">¿Tienes una sugerencia, encontraste un error o quieres proponer una herramienta nueva? Escríbenos.</p>
+
+  <div class="contact-options">
+    <div class="contact-card">
+      <div class="contact-icon">🐛</div>
+      <div class="contact-body">
+        <div class="contact-title">Reportar un error</div>
+        <div class="contact-desc">¿Algo no funciona bien en alguna herramienta?</div>
+        <a href="mailto:hola@autonomolab.com?subject=Error en herramienta" class="contact-link">hola@autonomolab.com</a>
+      </div>
+    </div>
+    <div class="contact-card">
+      <div class="contact-icon">💡</div>
+      <div class="contact-body">
+        <div class="contact-title">Sugerir una herramienta</div>
+        <div class="contact-desc">¿Echas en falta alguna calculadora o generador?</div>
+        <a href="mailto:hola@autonomolab.com?subject=Sugerencia de herramienta" class="contact-link">hola@autonomolab.com</a>
+      </div>
+    </div>
+    <div class="contact-card">
+      <div class="contact-icon">🤝</div>
+      <div class="contact-body">
+        <div class="contact-title">Colaboraciones</div>
+        <div class="contact-desc">¿Quieres escribir en el blog o proponer una colaboración?</div>
+        <a href="mailto:hola@autonomolab.com?subject=Colaboración" class="contact-link">hola@autonomolab.com</a>
+      </div>
+    </div>
+  </div>
+
+  <h2>O escríbenos directamente</h2>
+  <div class="form-field">
+    <label>Tu nombre</label>
+    <input type="text" id="nombre" placeholder="Ana García">
+  </div>
+  <div class="form-field">
+    <label>Tu email</label>
+    <input type="email" id="email" placeholder="ana@email.com">
+  </div>
+  <div class="form-field">
+    <label>Asunto</label>
+    <select id="asunto">
+      <option>Reportar un error</option>
+      <option>Sugerir una herramienta</option>
+      <option>Colaboración o partnership</option>
+      <option>Otro</option>
+    </select>
+  </div>
+  <div class="form-field">
+    <label>Mensaje</label>
+    <textarea id="mensaje" placeholder="Cuéntanos..."></textarea>
+  </div>
+  <button class="submit-btn" onclick="enviar()">Enviar mensaje →</button>
+  <div class="success-msg" id="success">✅ ¡Mensaje recibido! Te respondemos en 24-48 horas.</div>
+</div>
+<footer>© 2026 <a href="/">AutónomoLab</a> · <a href="/privacidad">Privacidad</a> · <a href="/cookies">Cookies</a> · <a href="/aviso-legal">Aviso legal</a></footer>
+<script>
+function enviar() {
+  const nombre = document.getElementById('nombre').value;
+  const email = document.getElementById('email').value;
+  const mensaje = document.getElementById('mensaje').value;
+  if (!nombre || !email || !mensaje) {
+    alert('Por favor rellena todos los campos.');
+    return;
+  }
+  document.getElementById('success').style.display = 'block';
+  document.getElementById('nombre').value = '';
+  document.getElementById('email').value = '';
+  document.getElementById('mensaje').value = '';
+}
+</script>
+</body>
+</html>

@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Plantilla de factura Excel gratis para autónomos — AutónomoLab</title>
+<meta name="description" content="Descarga gratis una plantilla de factura en Excel profesional para autónomos. Incluye cálculo automático de IVA, retención IRPF y registro anual de facturas.">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://autonomolab.com/herramientas/plantilla-factura-excel/">
+<meta property="og:title" content="Plantilla de factura Excel gratis para autónomos">
+<meta property="og:description" content="Plantilla Excel profesional con cálculo automático de IVA, IRPF y registro anual. Descarga gratuita.">
+<meta property="og:url" content="https://autonomolab.com/herramientas/plantilla-factura-excel/">
+<meta property="og:site_name" content="AutónomoLab">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"WebApplication","name":"Plantilla de factura Excel para autónomos","description":"Plantilla Excel gratuita con IVA automático, retención IRPF y registro anual de facturas.","url":"https://autonomolab.com/herramientas/plantilla-factura-excel/","applicationCategory":"BusinessApplication","operatingSystem":"Web","offers":{"@type":"Offer","price":"0","priceCurrency":"EUR"},"inLanguage":"es"}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"¿La plantilla de factura funciona en Google Sheets?","acceptedAnswer":{"@type":"Answer","text":"Sí. Puedes subir el archivo .xlsx a Google Drive y abrirlo con Google Sheets. Las fórmulas son compatibles y el diseño se mantiene correctamente."}},{"@type":"Question","name":"¿Necesito tener Excel instalado para usarla?","acceptedAnswer":{"@type":"Answer","text":"No. Puedes usar la plantilla con LibreOffice Calc (gratuito) o Google Sheets (gratuito). Cualquier programa que abra archivos .xlsx funciona."}},{"@type":"Question","name":"¿La factura generada es legal en España?","acceptedAnswer":{"@type":"Answer","text":"La plantilla incluye todos los campos obligatorios para una factura legal en España: número, fecha, datos del emisor y receptor con NIF, descripción, base imponible, IVA e importe total. Completa todos los campos correctamente y tendrás una factura válida."}}]}</script>
+<link rel="icon" type="image/x-icon" href="/favicon.ico">
+<link rel="icon" type="image/svg+xml" href="/favicon.svg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cabinet+Grotesk:wght@400;500;700;800;900&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet">
+<style>
+  :root{--bg:#f5f2eb;--bg2:#ede9e0;--ink:#1a1814;--ink2:#4a4740;--ink3:#8a857a;--accent:#d45a2a;--card:#fff;--border:#ddd8ce;--green:#2ab87a;}
+  *{box-sizing:border-box;margin:0;padding:0;}
+  body{background:var(--bg);color:var(--ink);font-family:'Cabinet Grotesk',sans-serif;font-size:16px;line-height:1.7;overflow-x:hidden;}
+  nav{position:sticky;top:0;z-index:100;background:rgba(245,242,235,0.92);backdrop-filter:blur(12px);border-bottom:1px solid var(--border);padding:0 24px;}
+  .nav-inner{max-width:1100px;margin:0 auto;height:60px;display:flex;align-items:center;justify-content:space-between;}
+  .logo{font-size:18px;font-weight:900;color:var(--ink);text-decoration:none;letter-spacing:-0.03em;display:flex;align-items:center;gap:8px;}
+  .logo-dot{width:8px;height:8px;background:var(--accent);border-radius:50%;display:inline-block;flex-shrink:0;}
+  .nav-links{display:flex;gap:28px;list-style:none;}
+  .nav-links a{font-size:14px;font-weight:500;color:var(--ink2);text-decoration:none;}
+  .nav-links a:hover{color:var(--accent);}
+  @media(max-width:640px){.nav-links{display:none;}}
+  .page{max-width:900px;margin:0 auto;padding:48px 24px 80px;}
+  .bc{font-size:13px;color:var(--ink3);margin-bottom:24px;}
+  .bc a{color:var(--ink3);text-decoration:none;}
+  .bc span{margin:0 6px;}
+  .tool-tag{font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:.15em;color:var(--ink3);margin-bottom:10px;}
+  h1{font-size:clamp(28px,4vw,44px);font-weight:900;letter-spacing:-.03em;margin-bottom:16px;}
+  h1 em{font-family:'Instrument Serif',serif;font-style:italic;font-weight:400;color:var(--accent);}
+  .hero{display:grid;grid-template-columns:1fr 320px;gap:40px;align-items:start;margin-bottom:56px;}
+  @media(max-width:780px){.hero{grid-template-columns:1fr;}}
+  .hero-desc{font-size:17px;color:var(--ink2);margin-bottom:24px;}
+  .features{display:flex;flex-direction:column;gap:10px;margin-bottom:28px;}
+  .feat{display:flex;align-items:flex-start;gap:12px;font-size:15px;color:var(--ink2);}
+  .feat-icon{font-size:18px;flex-shrink:0;margin-top:2px;}
+  .feat-text strong{color:var(--ink);}
+  .download-card{background:var(--ink);border-radius:16px;padding:28px;text-align:center;position:sticky;top:80px;}
+  .dl-icon{font-size:48px;margin-bottom:12px;}
+  .dl-name{font-size:16px;font-weight:800;color:#fff;margin-bottom:4px;}
+  .dl-meta{font-size:13px;color:rgba(255,255,255,.5);margin-bottom:20px;}
+  .dl-btn{display:block;background:var(--accent);color:#fff;padding:14px 20px;border-radius:10px;font-size:15px;font-weight:800;text-decoration:none;margin-bottom:10px;}
+  .dl-btn:hover{opacity:.9;}
+  .dl-compat{font-size:12px;color:rgba(255,255,255,.4);}
+  .sheets{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin:32px 0;}
+  @media(max-width:600px){.sheets{grid-template-columns:1fr;}}
+  .sheet-card{background:var(--card);border:1px solid var(--border);border-radius:12px;padding:20px;}
+  .sheet-num{font-size:24px;font-weight:900;color:var(--accent);margin-bottom:8px;}
+  .sheet-name{font-size:15px;font-weight:800;color:var(--ink);margin-bottom:6px;}
+  .sheet-desc{font-size:13px;color:var(--ink2);line-height:1.5;}
+  h2{font-size:22px;font-weight:900;margin:40px 0 14px;letter-spacing:-.02em;}
+  p{font-size:15px;color:var(--ink2);margin-bottom:14px;}
+  ul{padding-left:20px;margin-bottom:14px;}
+  li{font-size:15px;color:var(--ink2);margin-bottom:6px;}
+  strong{color:var(--ink);font-weight:800;}
+  .tip{background:var(--bg2);border-left:4px solid var(--accent);padding:14px 18px;border-radius:0 8px 8px 0;margin:20px 0;}
+  .tip p{margin:0;font-size:14px;}
+  .faq-section{margin-top:48px;padding-top:32px;border-top:1px solid var(--border);}
+  .faq-section h2{font-size:22px;font-weight:900;margin-bottom:20px;}
+  .faq-item{background:var(--card);border:1px solid var(--border);border-radius:12px;margin-bottom:10px;overflow:hidden;}
+  .faq-q{font-size:15px;font-weight:800;color:var(--ink);padding:16px 20px;cursor:pointer;display:flex;justify-content:space-between;align-items:center;}
+  .faq-q::after{content:'+';font-size:20px;font-weight:400;color:var(--ink3);flex-shrink:0;margin-left:12px;}
+  .faq-item.open .faq-q::after{content:'−';}
+  .faq-a{font-size:14px;color:var(--ink2);line-height:1.6;padding:0 20px 16px;display:none;}
+  .faq-item.open .faq-a{display:block;}
+  .related{margin-top:48px;padding-top:32px;border-top:1px solid var(--border);}
+  .related h2{font-size:20px;font-weight:900;margin-bottom:14px;}
+  .rg{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;}
+  @media(max-width:560px){.rg{grid-template-columns:1fr 1fr;}}
+  .rc{background:var(--card);border:1px solid var(--border);border-radius:10px;padding:14px;text-decoration:none;display:block;}
+  .rc:hover{border-color:rgba(212,90,42,.3);}
+  .rc-e{font-size:22px;margin-bottom:6px;}
+  .rc-n{font-size:13px;font-weight:800;color:var(--ink);}
+  footer{text-align:center;padding:32px 24px;border-top:1px solid var(--border);font-size:13px;color:var(--ink3);margin-top:40px;}
+  footer a{color:var(--accent);text-decoration:none;}
+</style>
+</head>
+<body>
+<nav>
+  <div class="nav-inner">
+    <a href="/" class="logo"><span class="logo-dot"></span>AutónomoLab</a>
+    <ul class="nav-links">
+      <li><a href="/herramientas">Herramientas</a></li>
+      <li><a href="/blog">Blog</a></li>
+      <li><a href="/comparativas">Comparativas</a></li>
+      <li><a href="/sobre">Sobre</a></li>
+    </ul>
+  </div>
+</nav>
+<div class="page">
+  <div class="bc"><a href="/">Inicio</a><span>›</span><a href="/herramientas">Herramientas</a><span>›</span>Plantilla factura Excel</div>
+  <div class="tool-tag">📊 Descarga gratuita</div>
+  <h1>Plantilla de <em>factura Excel</em> para autónomos</h1>
+
+  <div class="hero">
+    <div>
+      <p class="hero-desc">Una plantilla profesional y lista para usar. Calcula el IVA y la retención de IRPF automáticamente. Compatible con Excel, LibreOffice y Google Sheets.</p>
+      <div class="features">
+        <div class="feat"><span class="feat-icon">🧮</span><div class="feat-text"><strong>IVA automático</strong> — introduce el % y el importe se calcula solo. Soporta 21%, 10%, 4% y exento.</div></div>
+        <div class="feat"><span class="feat-icon">📊</span><div class="feat-text"><strong>Retención IRPF</strong> — si tus clientes te retienen, la plantilla descuenta el importe automáticamente.</div></div>
+        <div class="feat"><span class="feat-icon">📋</span><div class="feat-text"><strong>Registro anual</strong> — hoja adicional para registrar todas tus facturas del año y ver el total facturado.</div></div>
+        <div class="feat"><span class="feat-icon">🎨</span><div class="feat-text"><strong>Diseño profesional</strong> — aspecto limpio y serio. Sin logos de terceros ni marcas de agua.</div></div>
+        <div class="feat"><span class="feat-icon">🆓</span><div class="feat-text"><strong>100% gratis</strong> — sin registro, sin suscripción, sin límites de uso.</div></div>
+      </div>
+    </div>
+
+    <div class="download-card">
+      <div class="dl-icon">📊</div>
+      <div class="dl-name">Plantilla Factura Autónomo</div>
+      <div class="dl-meta">Formato .xlsx · 3 hojas incluidas</div>
+      <a href="/herramientas/plantilla-factura-excel/plantilla-factura-autonomo.xlsx" download class="dl-btn">⬇️ Descargar gratis</a>
+      <div class="dl-compat">Compatible con Excel · LibreOffice · Google Sheets</div>
+    </div>
+  </div>
+
+  <h2>¿Qué incluye la plantilla?</h2>
+  <div class="sheets">
+    <div class="sheet-card">
+      <div class="sheet-num">01</div>
+      <div class="sheet-name">Factura</div>
+      <div class="sheet-desc">La factura en sí. Rellena tus datos, los del cliente y las líneas de servicio. El IVA, IRPF y total se calculan automáticamente.</div>
+    </div>
+    <div class="sheet-card">
+      <div class="sheet-num">02</div>
+      <div class="sheet-name">Instrucciones</div>
+      <div class="sheet-desc">Guía paso a paso para rellenar la plantilla correctamente. Ideal si es tu primera factura como autónomo.</div>
+    </div>
+    <div class="sheet-card">
+      <div class="sheet-num">03</div>
+      <div class="sheet-name">Registro anual</div>
+      <div class="sheet-desc">Tabla para llevar el control de todas tus facturas del año con totales automáticos de base imponible, IVA y total facturado.</div>
+    </div>
+  </div>
+
+  <h2>Cómo usar la plantilla</h2>
+  <ul>
+    <li><strong>Las celdas en amarillo</strong> son las que debes rellenar con tus datos.</li>
+    <li><strong>Las celdas en gris</strong> se calculan automáticamente — no las modifiques.</li>
+    <li>Cambia el <strong>% de IVA</strong> según corresponda: 21% general, 10% reducido, 4% superreducido o 0 si está exento.</li>
+    <li>Si tus clientes te <strong>retienen IRPF</strong> en factura (normalmente el 15%), ponlo en el campo correspondiente.</li>
+    <li>Guarda una copia con el nombre de la factura (ej: <em>FAC-2026-001.xlsx</em>) para tener el histórico ordenado.</li>
+  </ul>
+
+  <div class="tip"><p>💡 <strong>Para generar el PDF:</strong> en Excel ve a Archivo → Guardar como → PDF. En LibreOffice, Archivo → Exportar como PDF. En Google Sheets, Archivo → Descargar → PDF.</p></div>
+
+  <h2>¿Cuándo necesito una factura con retención de IRPF?</h2>
+  <p>La retención de IRPF (normalmente el 15%) aplica cuando facturas a empresas o profesionales en España. La empresa retiene ese porcentaje y lo ingresa directamente a Hacienda en tu nombre. Tú recibes el importe neto y luego en la declaración de la renta anual se liquida la diferencia.</p>
+  <p>Si todos tus clientes te retienen IRPF y supera el 70% de tus ingresos, puedes estar exento de presentar el modelo 130 trimestral.</p>
+
+  <div class="faq-section">
+    <h2>Preguntas frecuentes</h2>
+    <div class="faq-item"><div class="faq-q">¿La plantilla funciona en Google Sheets?</div><div class="faq-a">Sí. Sube el archivo .xlsx a Google Drive, haz clic derecho y selecciona "Abrir con Google Sheets". Todas las fórmulas funcionan y el diseño se mantiene. Puedes usarla directamente desde Google Sheets sin necesidad de Excel.</div></div>
+    <div class="faq-item"><div class="faq-q">¿Necesito Excel instalado?</div><div class="faq-a">No. Puedes usar LibreOffice Calc (gratuito y open source) o Google Sheets (gratuito con cuenta Google). Cualquier programa que abra archivos .xlsx es compatible.</div></div>
+    <div class="faq-item"><div class="faq-q">¿La factura es válida legalmente en España?</div><div class="faq-a">La plantilla incluye todos los campos obligatorios: número correlativo, fecha, datos del emisor y receptor con NIF, descripción de los servicios, base imponible, tipo y cuota de IVA e importe total. Si rellenas todos los campos correctamente, la factura cumple los requisitos legales del Reglamento de Facturación español.</div></div>
+    <div class="faq-item"><div class="faq-q">¿Puedo añadir más líneas de servicio?</div><div class="faq-a">Sí. La plantilla tiene 10 líneas por defecto. Para añadir más, inserta filas nuevas en la tabla y copia las fórmulas de la columna "Total" a las nuevas filas. Recuerda actualizar la fórmula del subtotal para incluir las nuevas filas.</div></div>
+    <div class="faq-item"><div class="faq-q">¿Puedo personalizar el logo o colores?</div><div class="faq-a">Sí, el archivo es completamente editable. Puedes cambiar los colores, añadir tu logo como imagen, modificar los textos o adaptar el diseño a tu identidad visual.</div></div>
+  </div>
+
+  <div class="related">
+    <h2>Más herramientas gratuitas</h2>
+    <div class="rg">
+      <a href="/herramientas/generador-presupuesto" class="rc"><div class="rc-e">📋</div><div class="rc-n">Generador de presupuesto</div></a>
+      <a href="/herramientas/generador-contrato-freelance" class="rc"><div class="rc-e">📄</div><div class="rc-n">Generador de contrato</div></a>
+      <a href="/herramientas/calculadora-iva" class="rc"><div class="rc-e">🧮</div><div class="rc-n">Calculadora IVA</div></a>
+    </div>
+  </div>
+</div>
+<footer>© 2026 <a href="/">AutónomoLab</a> · <a href="/privacidad">Privacidad</a> · <a href="/cookies">Cookies</a> · <a href="/aviso-legal">Aviso legal</a></footer>
+<script>
+  document.querySelectorAll('.faq-q').forEach(function(q){q.addEventListener('click',function(){q.parentElement.classList.toggle('open');});});
+</script>
+</body>
+</html>
