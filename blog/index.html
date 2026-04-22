@@ -3,10 +3,16 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Blog para autónomos y freelancers — AutónomoLab</title>
-<meta name="description" content="Guías, tutoriales y recursos prácticos para autónomos y freelancers. Precios, productividad, herramientas e inteligencia artificial.">
+<title>Cómo poner precio a servicios freelance — AutónomoLab</title>
+<meta name="description" content="Aprende a calcular tu tarifa freelance correctamente. Fórmulas, tarifas por sector en España y LATAM, y estrategias para cobrar lo que mereces.">
 <meta name="robots" content="index, follow">
-<link rel="canonical" href="https://autonomolab.com/blog/">
+<link rel="canonical" href="https://autonomolab.com/blog/como-poner-precio-servicios-freelance/">
+<meta property="og:title" content="Cómo poner precio a tus servicios freelance sin infravalorarte">
+<meta property="og:description" content="Fórmulas, tarifas por sector y estrategias reales para freelancers en España y LATAM.">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://autonomolab.com/blog/como-poner-precio-servicios-freelance/">
+<meta property="og:site_name" content="AutónomoLab">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"Article","headline":"Cómo poner precio a tus servicios freelance sin infravalorarte","description":"Fórmulas, tarifas por sector y estrategias reales para freelancers en España y LATAM.","url":"https://autonomolab.com/blog/como-poner-precio-servicios-freelance/","publisher":{"@type":"Organization","name":"AutónomoLab","url":"https://autonomolab.com"},"inLanguage":"es"}</script>
 <link rel="icon" type="image/x-icon" href="/favicon.ico">
 <link rel="icon" type="image/svg+xml" href="/favicon.svg">
 <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
@@ -16,98 +22,84 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Cabinet+Grotesk:wght@400;500;700;800;900&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet">
+<!-- GOOGLE ADSENSE - Sustituir este comentario por el script de AdSense cuando Google lo apruebe -->
 <style>
-  :root{--bg:#f5f2eb;--bg2:#ede9e0;--ink:#1a1814;--ink2:#4a4740;--ink3:#8a857a;--accent:#d45a2a;--card:#fff;--border:#ddd8ce;}
+  :root{--bg:#f5f2eb;--bg2:#ede9e0;--ink:#1a1814;--ink2:#4a4740;--ink3:#8a857a;--accent:#d45a2a;--card:#fff;--border:#ddd8ce;--green:#2ab87a;}
   *{box-sizing:border-box;margin:0;padding:0;}
-  body{overflow-x:hidden;background:var(--bg);color:var(--ink);font-family:'Cabinet Grotesk',sans-serif;font-size:16px;line-height:1.6;}
+  body{background:var(--bg);color:var(--ink);font-family:'Cabinet Grotesk',sans-serif;font-size:16px;line-height:1.7;overflow-x:hidden;}
   nav{position:sticky;top:0;z-index:100;background:rgba(245,242,235,0.92);backdrop-filter:blur(12px);border-bottom:1px solid var(--border);padding:0 24px;}
   .nav-inner{max-width:1100px;margin:0 auto;height:60px;display:flex;align-items:center;justify-content:space-between;}
   .logo{font-size:18px;font-weight:900;color:var(--ink);text-decoration:none;letter-spacing:-0.03em;display:flex;align-items:center;gap:8px;}
-  .logo-dot{width:8px;height:8px;background:var(--accent);border-radius:50%;display:inline-block;}
+  .logo-dot{width:8px;height:8px;background:var(--accent);border-radius:50%;display:inline-block;flex-shrink:0;}
   .nav-links{display:flex;gap:28px;list-style:none;}
   .nav-links a{font-size:14px;font-weight:500;color:var(--ink2);text-decoration:none;}
   .nav-links a:hover{color:var(--accent);}
   @media(max-width:640px){.nav-links{display:none;}}
-  .page{max-width:1100px;margin:0 auto;padding:56px 24px 80px;}
-  .page-header{margin-bottom:48px;}
-  .page-tag{font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:.15em;color:var(--ink3);margin-bottom:10px;}
-  h1{font-size:clamp(32px,5vw,48px);font-weight:900;letter-spacing:-.03em;margin-bottom:12px;}
-  h1 em{font-family:'Instrument Serif',serif;font-style:italic;font-weight:400;color:var(--accent);}
-  .page-desc{font-size:17px;color:var(--ink2);max-width:520px;}
-  .cats{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:40px;}
-  .cat{font-size:13px;font-weight:700;padding:6px 14px;border-radius:100px;border:1px solid var(--border);color:var(--ink2);text-decoration:none;transition:all .2s;}
-  .cat:hover,.cat.active{background:var(--ink);color:#fff;border-color:var(--ink);}
-  .blog-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;}
-  @media(max-width:900px){.blog-grid{grid-template-columns:1fr 1fr;}}
-  @media(max-width:560px){.blog-grid{grid-template-columns:1fr;}}
-  .blog-card{background:var(--card);border:1px solid var(--border);border-radius:14px;overflow:hidden;text-decoration:none;display:block;transition:transform .2s,box-shadow .2s;}
-  .blog-card:hover{transform:translateY(-3px);box-shadow:0 8px 32px rgba(26,24,20,.1);}
-  .blog-card.featured{grid-column:span 2;}
-  @media(max-width:560px){.blog-card.featured{grid-column:span 1;}}
-  .blog-thumb{height:160px;display:flex;align-items:center;justify-content:center;font-size:52px;}
-  .blog-card.featured .blog-thumb{height:200px;}
-  .t1{background:linear-gradient(135deg,#fde8d8,#fbd0b5);}
-  .t2{background:linear-gradient(135deg,#d8e8fd,#b5d0fb);}
-  .t3{background:linear-gradient(135deg,#d8fde8,#b5fbd0);}
-  .t4{background:linear-gradient(135deg,#fde8f8,#fbd0f0);}
-  .t5{background:linear-gradient(135deg,#f8fde8,#f0fbd0);}
-  .t6{background:linear-gradient(135deg,#e8d8fd,#d0b5fb);}
-  .blog-body{overflow-x:hidden;padding:20px;}
-  .blog-cat{font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:.1em;color:var(--accent);margin-bottom:8px;}
-  .blog-title{font-size:16px;font-weight:800;color:var(--ink);line-height:1.3;margin-bottom:8px;letter-spacing:-.01em;}
-  .blog-card.featured .blog-title{font-size:20px;}
-  .blog-excerpt{font-size:13px;color:var(--ink2);line-height:1.5;margin-bottom:10px;}
-  .blog-meta{font-size:12px;color:var(--ink3);}
-  footer{text-align:center;padding:40px 24px;border-top:1px solid var(--border);font-size:13px;color:var(--ink3);margin-top:40px;}
-  footer a{color:var(--accent);text-decoration:none;}
 
-  /* === LAYOUT SAFETY === */
-  *, *::before, *::after { box-sizing: border-box; }
-  img, video, iframe { max-width: 100%; height: auto; }
-  table { width: 100%; table-layout: fixed; }
-  .article-wrap > * { max-width: 100%; }
-  pre, code { white-space: pre-wrap; word-break: break-word; }
+  .wrap{max-width:680px;margin:0 auto;padding:48px 24px 80px;}
+  .bc{font-size:13px;color:var(--ink3);margin-bottom:28px;}
+  .bc a{color:var(--ink3);text-decoration:none;}
+  .bc span{margin:0 6px;}
+  .cat{font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:.12em;color:var(--accent);margin-bottom:12px;}
+  h1{font-size:clamp(24px,3.5vw,40px);font-weight:900;letter-spacing:-.02em;line-height:1.2;margin-bottom:16px;}
+  .meta{font-size:13px;color:var(--ink3);margin-bottom:32px;display:flex;gap:16px;flex-wrap:wrap;}
+  .thumb{width:100%;height:220px;border-radius:14px;overflow:hidden;margin-bottom:36px;}
+  .thumb img{width:100%;height:100%;object-fit:cover;display:block;}
+
+  h2{font-size:22px;font-weight:900;margin:40px 0 14px;color:var(--ink);}
+  h3{font-size:17px;font-weight:800;margin:24px 0 10px;color:var(--ink);}
+  p{font-size:15px;color:var(--ink2);margin-bottom:16px;}
+  ul,ol{padding-left:20px;margin-bottom:16px;}
+  li{font-size:15px;color:var(--ink2);margin-bottom:8px;padding-left:4px;}
+  strong{color:var(--ink);font-weight:800;}
+  a{color:var(--accent);}
+  a:hover{text-decoration:underline;}
+
+  .formula{background:var(--ink);color:#fff;border-radius:12px;padding:24px;margin:24px 0;text-align:center;}
+  .formula-text{font-size:18px;font-weight:900;margin-bottom:6px;line-height:1.3;}
+  .formula-sub{font-size:12px;color:rgba(255,255,255,.55);}
+
+  .ejemplo{background:var(--bg2);border-radius:10px;padding:20px 22px;margin:20px 0;}
+  .ejemplo-title{font-size:12px;font-weight:800;text-transform:uppercase;letter-spacing:.1em;color:var(--accent);margin-bottom:10px;}
+  .ejemplo p{margin-bottom:8px;font-size:14px;}
+  .ejemplo p:last-child{margin-bottom:0;}
+
+  .tabla{width:100%;border-collapse:collapse;margin:20px 0;font-size:14px;}
+  .tabla th{background:var(--ink);color:#fff;padding:10px 14px;text-align:left;font-size:12px;text-transform:uppercase;letter-spacing:.06em;}
+  .tabla td{padding:10px 14px;border-bottom:1px solid var(--border);color:var(--ink2);}
+  .tabla tr:last-child td{border-bottom:none;}
+  .tabla tr:nth-child(even) td{background:var(--bg2);}
+  .tabla td:first-child{font-weight:700;color:var(--ink);}
+
+  .tip{background:var(--bg2);border-left:4px solid var(--accent);padding:16px 20px;border-radius:0 8px 8px 0;margin:24px 0;}
+  .tip p{margin:0;font-size:14px;}
+
+  .warning{background:rgba(212,90,42,.06);border:1px solid rgba(212,90,42,.2);border-radius:10px;padding:16px 20px;margin:24px 0;}
+  .warning p{margin:0;font-size:14px;}
+
+  .cta{background:rgba(212,90,42,.06);border:1px solid rgba(212,90,42,.2);border-radius:14px;padding:28px;margin:40px 0;text-align:center;}
+  .cta h3{font-size:20px;margin-bottom:8px;}
+  .cta p{margin-bottom:16px;font-size:14px;}
+  .cta-btn{display:inline-block;background:var(--accent);color:#fff;padding:12px 24px;border-radius:8px;font-size:14px;font-weight:700;text-decoration:none;}
+  .cta-btn:hover{opacity:.9;}
+
+  .indice{background:var(--card);border:1px solid var(--border);border-radius:12px;padding:20px 24px;margin:28px 0;}
+  .indice-title{font-size:13px;font-weight:800;text-transform:uppercase;letter-spacing:.1em;color:var(--ink3);margin-bottom:12px;}
+  .indice ol{padding-left:18px;margin:0;}
+  .indice li{font-size:14px;margin-bottom:6px;}
+  .indice a{color:var(--ink2);text-decoration:none;}
+  .indice a:hover{color:var(--accent);}
+
+  .rg{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin-top:16px;}
+  @media(max-width:500px){.rg{grid-template-columns:1fr 1fr;}}
+  .rc{background:var(--card);border:1px solid var(--border);border-radius:10px;padding:14px;text-decoration:none;display:block;}
+  .rc:hover{border-color:rgba(212,90,42,.3);}
+  .rc-e{font-size:20px;margin-bottom:6px;}
+  .rc-n{font-size:13px;font-weight:800;color:var(--ink);}
+
+  footer{text-align:center;padding:32px 24px;border-top:1px solid var(--border);font-size:13px;color:var(--ink3);margin-top:40px;}
+  footer a{color:var(--accent);text-decoration:none;}
 </style>
-<meta property="og:title" content="Blog AutónomoLab">
-<meta property="og:description" content="Guías, tutoriales y recursos prácticos para autónomos y freelancers hispanohablantes.">
-<meta property="og:type" content="website">
-<meta property="og:url" content="https://autonomolab.com/blog/">
-<meta property="og:site_name" content="AutónomoLab">
-<meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Blog AutónomoLab">
-<meta name="twitter:description" content="Guías, tutoriales y recursos prácticos para autónomos y freelancers hispanohablantes.">
-<script type="application/ld+json">{"@context":"https://schema.org","@type":"Blog","name":"Blog AutónomoLab","description":"Guías, tutoriales y recursos prácticos para autónomos y freelancers hispanohablantes.","url":"https://autonomolab.com/blog/","inLanguage":"es"}</script>
-<!-- GOOGLE ANALYTICS 4
-  INSTRUCCIONES:
-  1. Ve a https://analytics.google.com
-  2. Crea una propiedad para autonomolab.com
-  3. Google te dará un Measurement ID como: G-XXXXXXXXXX
-  4. Sustituye G-XXXXXXXXXX por tu ID real abajo
--->
-<!-- Global site tag (gtag.js) - Google Analytics -->
-<!-- <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-  gtag('config', 'G-XXXXXXXXXX');
-</script> -->
-<!-- GOOGLE ADSENSE
-  INSTRUCCIONES:
-  1. Ve a https://adsense.google.com
-  2. Añade autonomolab.com como sitio
-  3. Google te dará un código como este:
-     <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-XXXXXXXXXXXXXXXXX" crossorigin="anonymous"></script>
-  4. Sustituye el bloque de abajo con ese código
-  5. Para mostrar anuncios en un lugar específico, añade:
-     <ins class="adsbygoogle"
-          style="display:block"
-          data-ad-client="ca-pub-XXXXXXXXXXXXXXXXX"
-          data-ad-slot="XXXXXXXXXX"
-          data-ad-format="auto"
-          data-full-width-responsive="true"></ins>
-     <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
--->
 </head>
 <body>
 <nav>
@@ -121,106 +113,249 @@
     </ul>
   </div>
 </nav>
-<div class="page">
-  <div class="page-header">
-    <div class="page-tag">Blog y guías</div>
-    <h1>Aprende a gestionar<br><em>tu negocio</em></h1>
-    <p class="page-desc">Artículos prácticos sobre precios, productividad, herramientas e inteligencia artificial para autónomos y freelancers.</p>
+
+<div class="wrap">
+  <div class="bc"><a href="/">Inicio</a><span>›</span><a href="/blog">Blog</a><span>›</span>Cómo poner precio</div>
+  <div class="cat">💸 Precios</div>
+  <h1>Cómo poner precio a tus servicios freelance sin infravalorarte</h1>
+  <div class="meta">
+    <span>📅 Abril 2026</span>
+    <span>⏱ 12 min de lectura</span>
+    <span>✍️ AutónomoLab</span>
+  </div>
+  <div class="thumb">
+    <img loading="lazy" src="https://images.unsplash.com/photo-1579621970563-ebec7560ff3e?w=900&q=80" alt="Cómo poner precio a servicios freelance sin infravalorarte">
   </div>
 
-  <div class="cats">
-    <a href="/blog" class="cat active">Todos</a>
-    <a href="/blog/categoria/precios" class="cat">Precios</a>
-    <a href="/blog/categoria/herramientas" class="cat">Herramientas</a>
-    <a href="/blog/categoria/productividad" class="cat">Productividad</a>
-    <a href="/blog/categoria/ia" class="cat">Inteligencia artificial</a>
-    <a href="/blog/categoria/fiscal" class="cat">Fiscal</a>
+  <p>El error más frecuente entre freelancers y autónomos — especialmente al empezar — es cobrar demasiado poco. Puede parecer que un precio bajo es la estrategia lógica para conseguir clientes, pero en realidad atrae clientes difíciles, genera agotamiento y hace insostenible el negocio a largo plazo.</p>
+  <p>En esta guía te explicamos <strong>cómo calcular tu tarifa real paso a paso</strong>, qué cobran otros freelancers en España y LATAM según el sector, y cómo defender tu precio ante cualquier cliente sin perder el contrato.</p>
+
+  <div class="indice">
+    <div class="indice-title">Contenido</div>
+    <ol>
+      <li><a href="#error">El error más común al poner precio</a></li>
+      <li><a href="#formula">La fórmula para calcular tu tarifa mínima</a></li>
+      <li><a href="#ejemplo">Ejemplo real paso a paso</a></li>
+      <li><a href="#sectores">Tarifas freelance por sector en España y LATAM</a></li>
+      <li><a href="#margen">El margen de seguridad que nadie calcula</a></li>
+      <li><a href="#defender">Cómo defender tu tarifa ante un cliente</a></li>
+      <li><a href="#subir">Cuándo y cómo subir tus precios</a></li>
+      <li><a href="#errores">Errores frecuentes al poner precio</a></li>
+    </ol>
   </div>
 
-  <div class="blog-grid">
-    <a href="/blog/como-poner-precio-servicios-freelance" class="blog-card featured">
-      <div class="blog-thumb" style="background:none;padding:0;overflow:hidden;">
-        <img loading="lazy" src="https://images.unsplash.com/photo-1579621970563-ebec7560ff3e?w=800&q=80" alt="Cómo poner precio a servicios freelance sin infravalorarte" style="width:100%;height:100%;object-fit:cover;">
-      </div>
-      <div class="blog-body">
-        <div class="blog-cat">Precios</div>
-        <div class="blog-title">Cómo poner precio a tus servicios freelance sin infravalorarte</div>
-        <div class="blog-excerpt">El error más común de los freelancers es cobrar demasiado poco. Te explicamos cómo calcular tu tarifa real y defenderla ante los clientes.</div>
-        <div class="blog-meta">8 min de lectura · Guía completa</div>
-      </div>
-    </a>
+  <h2 id="error">El error más común al poner precio</h2>
+  <p>La mayoría de freelancers calcula su precio de una de estas dos formas incorrectas:</p>
+  <ul>
+    <li><strong>Mirando a la competencia:</strong> "Voy a cobrar un poco menos que los demás para conseguir clientes." Esto inicia una guerra de precios que solo perjudica a todos.</li>
+    <li><strong>Sin base de cálculo:</strong> ponen un número que "parece razonable" sin saber si cubre sus costes reales.</li>
+  </ul>
+  <p>El resultado es siempre el mismo: trabajan muchas horas, ganan poco, y acaban agotados o volviendo a un empleo por cuenta ajena.</p>
 
-    <a href="/blog/mejores-herramientas-freelance-2025" class="blog-card">
-      <div class="blog-thumb" style="background:none;padding:0;overflow:hidden;">
-        <img loading="lazy" src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?w=600&q=80" alt="Mejores herramientas para freelancers 2026" style="width:100%;height:100%;object-fit:cover;">
-      </div>
-      <div class="blog-body">
-        <div class="blog-cat">Herramientas</div>
-        <div class="blog-title">Las 15 mejores herramientas para freelancers en 2026</div>
-        <div class="blog-excerpt">Desde gestión de proyectos hasta facturación, estas son las apps imprescindibles.</div>
-        <div class="blog-meta">12 min · Comparativa</div>
-      </div>
-    </a>
-
-    <a href="/blog/notion-para-freelance" class="blog-card">
-      <div class="blog-thumb" style="background:none;padding:0;overflow:hidden;">
-        <img loading="lazy" src="https://images.unsplash.com/photo-1611532736597-de2d4265fba3?w=600&q=80" alt="Notion para freelancers organizar negocio" style="width:100%;height:100%;object-fit:cover;">
-      </div>
-      <div class="blog-body">
-        <div class="blog-cat">Productividad</div>
-        <div class="blog-title">Cómo usar Notion para organizar tu negocio freelance</div>
-        <div class="blog-excerpt">Sistema completo para gestionar clientes, proyectos y tareas con Notion.</div>
-        <div class="blog-meta">10 min · Tutorial</div>
-      </div>
-    </a>
-
-    <a href="/blog/chatgpt-para-autonomos" class="blog-card">
-      <div class="blog-thumb" style="background:none;padding:0;overflow:hidden;">
-        <img loading="lazy" src="https://images.unsplash.com/photo-1677442135703-1787eea5ce01?w=600&q=80" alt="ChatGPT e inteligencia artificial para autónomos" style="width:100%;height:100%;object-fit:cover;">
-      </div>
-      <div class="blog-body">
-        <div class="blog-cat">Inteligencia artificial</div>
-        <div class="blog-title">ChatGPT para autónomos: 20 usos prácticos con prompts reales</div>
-        <div class="blog-excerpt">20 prompts listos para copiar que te ahorran 10+ horas a la semana.</div>
-        <div class="blog-meta">15 min · Guía práctica</div>
-      </div>
-    </a>
-
-    <a href="/blog/como-conseguir-clientes-freelance" class="blog-card">
-      <div class="blog-thumb" style="background:none;padding:0;overflow:hidden;">
-        <img loading="lazy" src="https://images.unsplash.com/photo-1556761175-4b46a572b786?w=600&q=80" alt="Cómo conseguir clientes como freelance" style="width:100%;height:100%;object-fit:cover;">
-      </div>
-      <div class="blog-body">
-        <div class="blog-cat">Clientes</div>
-        <div class="blog-title">Cómo conseguir tus primeros clientes como freelance</div>
-        <div class="blog-excerpt">Estrategias probadas para empezar a facturar sin experiencia previa ni contactos.</div>
-        <div class="blog-meta">11 min · Guía</div>
-      </div>
-    </a>
-
-    <a href="/blog/mejor-app-facturacion-autonomo" class="blog-card">
-      <div class="blog-thumb" style="background:none;padding:0;overflow:hidden;">
-        <img loading="lazy" src="https://images.unsplash.com/photo-1554224155-6726b3ff858f?w=600&q=80" alt="Mejor app facturación autónomos 2026" style="width:100%;height:100%;object-fit:cover;">
-      </div>
-      <div class="blog-body">
-        <div class="blog-cat">Herramientas</div>
-        <div class="blog-title">Mejor app de facturación para autónomos en 2026</div>
-        <div class="blog-excerpt">Comparamos Holded, Quaderno, Quipu y más para que elijas la que mejor se adapta.</div>
-        <div class="blog-meta">10 min · Comparativa</div>
-      </div>
-    </a>
-      <a href="/blog/iva-trimestral-autonomos" class="blog-card">
-      <div class="blog-thumb" style="background:none;padding:0;overflow:hidden;">
-        <img loading="lazy" src="https://images.unsplash.com/photo-1554224155-8d04cb21cd6c?w=600&q=80" alt="IVA trimestral para autónomos modelo 303" style="width:100%;height:100%;object-fit:cover;">
-      </div>
-      <div class="blog-body">
-        <div class="blog-cat">🧮 Fiscal</div>
-        <div class="blog-title">IVA trimestral para autónomos: guía completa 2026</div>
-        <div class="blog-excerpt">Todo sobre el modelo 303: cómo calcularlo, qué puedes deducir, fechas límite y qué pasa si te retrasas.</div>
-        <div class="blog-meta">14 min · Guía completa</div>
-      </div>
-    </a>
+  <div class="warning">
+    <p>⚠️ <strong>Dato real:</strong> según estudios sobre trabajo autónomo en España, más del 60% de los freelancers admite haber aceptado proyectos por debajo de su tarifa mínima en algún momento. En LATAM ese porcentaje sube al 70%.</p>
   </div>
+
+  <h2 id="formula">La fórmula para calcular tu tarifa mínima</h2>
+  <p>Antes de pensar en lo que "el mercado paga", necesitas saber cuánto <strong>necesitas cobrar tú</strong> para cubrir todos tus costes y alcanzar tus objetivos de ingresos. La fórmula base es:</p>
+
+  <div class="formula">
+    <div class="formula-text">Tarifa hora = (Ingresos netos objetivo + Gastos anuales) ÷ Horas facturables al año</div>
+    <div class="formula-sub">Esta es tu tarifa mínima absoluta — lo que necesitas cobrar para no perder dinero</div>
+  </div>
+
+  <p>Vamos a desglosar cada parte:</p>
+
+  <h3>1. Ingresos netos objetivo</h3>
+  <p>¿Cuánto quieres llevarte a casa cada mes, después de impuestos? No el bruto, sino lo que realmente entra en tu cuenta. Incluye:</p>
+  <ul>
+    <li>Lo que necesitas para tus gastos personales (alquiler, alimentación, transporte)</li>
+    <li>Un colchón de ahorro mensual</li>
+    <li>Fondo de emergencia (al menos 3 meses de gastos)</li>
+    <li>Inversión en tu desarrollo profesional</li>
+  </ul>
+
+  <h3>2. Gastos del negocio</h3>
+  <p>Este es el punto donde más se equivoca la gente. Los gastos de un autónomo van mucho más allá del material de trabajo:</p>
+
+  <table class="tabla">
+    <thead>
+      <tr><th>Gasto</th><th>España (mes)</th><th>LATAM aprox. (mes)</th></tr>
+    </thead>
+    <tbody>
+      <tr><td>Cuota de autónomo / seguridad social</td><td>230–500€</td><td>50–150 USD</td></tr>
+      <tr><td>Gestoría o software contabilidad</td><td>50–150€</td><td>20–80 USD</td></tr>
+      <tr><td>Software y suscripciones</td><td>50–200€</td><td>30–100 USD</td></tr>
+      <tr><td>Equipamiento (amortización)</td><td>30–100€</td><td>20–60 USD</td></tr>
+      <tr><td>Formación continua</td><td>30–100€</td><td>20–50 USD</td></tr>
+      <tr><td>Marketing y presencia online</td><td>20–100€</td><td>10–50 USD</td></tr>
+      <tr><td>Espacio de trabajo / coworking</td><td>0–300€</td><td>0–150 USD</td></tr>
+    </tbody>
+  </table>
+
+  <h3>3. Horas facturables reales</h3>
+  <p>Este es el punto donde más se infravalora el trabajo. Si trabajas 8 horas al día, <strong>no son 8 horas facturables</strong>. El tiempo real que puedes cobrar a clientes es bastante menor:</p>
+  <ul>
+    <li>Gestión de emails y comunicación con clientes: 1-1,5h/día</li>
+    <li>Administración, facturación y contabilidad: 30-45 min/día</li>
+    <li>Captación de nuevos clientes y networking: 30-60 min/día</li>
+    <li>Formación y actualización: 30 min/día</li>
+  </ul>
+  <p>La media real de horas facturables es <strong>entre 4 y 5 horas al día</strong> trabajando a tiempo completo, lo que equivale a <strong>20-25 horas semanales</strong> o unas <strong>900-1.100 horas anuales</strong> (descontando vacaciones y festivos).</p>
+
+  <div class="tip">
+    <p>💡 <strong>Truco:</strong> durante una semana normal, registra en un papel o app cuántas horas son realmente facturables. La mayoría se lleva una sorpresa — el número real suele ser un 30-40% menor de lo que creían.</p>
+  </div>
+
+  <h2 id="ejemplo">Ejemplo real paso a paso</h2>
+  <p>Veamos un caso concreto para un <strong>diseñador freelance en España</strong>:</p>
+
+  <div class="ejemplo">
+    <div class="ejemplo-title">📊 Ejemplo — Diseñador gráfico freelance en España</div>
+    <p><strong>Ingresos netos mensuales objetivo:</strong> 2.500€/mes = 30.000€/año</p>
+    <p><strong>Factor fiscal estimado</strong> (para obtener bruto de 30.000€ netos): x1,35 = <strong>40.500€ brutos necesarios</strong></p>
+    <p><strong>Gastos anuales del negocio:</strong> cuota autónomo (3.600€) + gestoría (1.200€) + software (1.200€) + formación (600€) = <strong>6.600€/año</strong></p>
+    <p><strong>Total necesario:</strong> 40.500 + 6.600 = <strong>47.100€/año</strong></p>
+    <p><strong>Horas facturables:</strong> 22h/semana × 46 semanas = <strong>1.012 horas/año</strong></p>
+    <p><strong>Tarifa mínima:</strong> 47.100 ÷ 1.012 = <strong>46,5€/hora</strong></p>
+    <p>Añadiendo un margen de seguridad del 20%: <strong>~56€/hora</strong></p>
+  </div>
+
+  <div class="ejemplo">
+    <div class="ejemplo-title">📊 Ejemplo — Desarrollador web freelance en México</div>
+    <p><strong>Ingresos netos mensuales objetivo:</strong> 45.000 MXN/mes = 540.000 MXN/año</p>
+    <p><strong>Factor fiscal estimado:</strong> x1,30 = <strong>702.000 MXN brutos necesarios</strong></p>
+    <p><strong>Gastos anuales del negocio:</strong> seguridad social (18.000 MXN) + contabilidad (12.000 MXN) + software (15.000 MXN) = <strong>45.000 MXN/año</strong></p>
+    <p><strong>Total necesario:</strong> 702.000 + 45.000 = <strong>747.000 MXN/año</strong></p>
+    <p><strong>Horas facturables:</strong> 22h/semana × 48 semanas = <strong>1.056 horas/año</strong></p>
+    <p><strong>Tarifa mínima:</strong> 747.000 ÷ 1.056 = <strong>707 MXN/hora (~35 USD)</strong></p>
+    <p>Añadiendo margen del 20%: <strong>~850 MXN/hora (~42 USD)</strong></p>
+  </div>
+
+  <div class="cta">
+    <h3>Calcula tu tarifa exacta en 2 minutos</h3>
+    <p>Usa nuestra calculadora gratuita adaptada a España, México, Argentina, Colombia y Chile.</p>
+    <a href="/herramientas/calculadora-tarifa-hora" class="cta-btn">Calcular mi tarifa gratis →</a>
+  </div>
+
+  <h2 id="sectores">Tarifas freelance por sector en España y LATAM</h2>
+  <p>Una vez calculada tu tarifa mínima, es útil compararla con lo que se cobra en tu sector. Estos son rangos reales basados en datos de plataformas como Malt, Workana y encuestas del sector:</p>
+
+  <h3>España — Tarifas hora aproximadas (2026)</h3>
+  <table class="tabla">
+    <thead>
+      <tr><th>Perfil</th><th>Junior</th><th>Mid</th><th>Senior</th></tr>
+    </thead>
+    <tbody>
+      <tr><td>Desarrollador web</td><td>25–40€</td><td>40–65€</td><td>65–100€+</td></tr>
+      <tr><td>Diseñador gráfico/UX</td><td>20–35€</td><td>35–55€</td><td>55–90€+</td></tr>
+      <tr><td>Copywriter / redactor</td><td>15–25€</td><td>25–45€</td><td>45–80€+</td></tr>
+      <tr><td>Community manager</td><td>15–25€</td><td>25–40€</td><td>40–65€+</td></tr>
+      <tr><td>Consultor marketing digital</td><td>30–50€</td><td>50–80€</td><td>80–150€+</td></tr>
+      <tr><td>Traductor / intérprete</td><td>0,06–0,10€/pal</td><td>0,10–0,15€/pal</td><td>0,15–0,25€+/pal</td></tr>
+      <tr><td>Fotógrafo / videógrafo</td><td>20–35€</td><td>35–60€</td><td>60–120€+</td></tr>
+      <tr><td>Consultor SEO</td><td>25–40€</td><td>40–70€</td><td>70–120€+</td></tr>
+    </tbody>
+  </table>
+
+  <h3>LATAM — Tarifas hora aproximadas en USD (2026)</h3>
+  <table class="tabla">
+    <thead>
+      <tr><th>Perfil</th><th>Junior</th><th>Mid</th><th>Senior</th></tr>
+    </thead>
+    <tbody>
+      <tr><td>Desarrollador web</td><td>15–25 USD</td><td>25–45 USD</td><td>45–80 USD+</td></tr>
+      <tr><td>Diseñador gráfico/UX</td><td>10–20 USD</td><td>20–35 USD</td><td>35–60 USD+</td></tr>
+      <tr><td>Copywriter / redactor</td><td>8–15 USD</td><td>15–30 USD</td><td>30–60 USD+</td></tr>
+      <tr><td>Community manager</td><td>8–15 USD</td><td>15–25 USD</td><td>25–50 USD+</td></tr>
+      <tr><td>Consultor marketing digital</td><td>15–25 USD</td><td>25–50 USD</td><td>50–100 USD+</td></tr>
+      <tr><td>Consultor SEO</td><td>15–25 USD</td><td>25–45 USD</td><td>45–90 USD+</td></tr>
+    </tbody>
+  </table>
+
+  <div class="tip">
+    <p>💡 <strong>Importante:</strong> si trabajas con clientes de España o Europa desde LATAM, puedes cobrar tarifas más cercanas a las europeas. La diferencia de coste de vida juega a tu favor.</p>
+  </div>
+
+  <h2 id="margen">El margen de seguridad que nadie calcula</h2>
+  <p>La tarifa que obtienes con la fórmula anterior es tu <strong>mínimo absoluto</strong>. Si cobras exactamente eso, cualquier mes flojo te dejará en números rojos. Por eso es imprescindible añadir un margen de seguridad:</p>
+  <ul>
+    <li><strong>+15%</strong> si tienes cartera de clientes estable y trabajo constante</li>
+    <li><strong>+20-25%</strong> si estás empezando o tu flujo de trabajo es irregular</li>
+    <li><strong>+30%</strong> si trabajas en sectores muy estacionales o con clientes puntuales</li>
+  </ul>
+  <p>Este margen cubre vacaciones no pagadas, bajas por enfermedad, meses con menos proyectos, actualizaciones de equipamiento y cualquier imprevisto del negocio.</p>
+
+  <h2 id="defender">Cómo defender tu tarifa ante un cliente</h2>
+  <p>Saber cuánto cobrar es solo la mitad del trabajo. La otra mitad es comunicarlo con confianza. Estas son las estrategias que funcionan:</p>
+
+  <h3>Presenta valor, no horas</h3>
+  <p>Los clientes no compran horas — compran resultados. En lugar de decir "cobro 60€/hora", di "el proyecto tendrá un coste de 2.400€ e incluye X, Y y Z entregables en un plazo de 3 semanas". El cliente ve el valor, no el tiempo.</p>
+
+  <h3>No des precio en el primer contacto</h3>
+  <p>Cuando un cliente pregunta "¿cuánto cobras?" nada más conocerte, no respondas con un número. Di: <em>"Depende del alcance del proyecto. ¿Puedes contarme más sobre lo que necesitas?"</em> Entender bien el proyecto antes de dar precio te permite ser más preciso y evitar infravalorarte por falta de información.</p>
+
+  <h3>Usa el silencio después de dar el precio</h3>
+  <p>Cuando digas tu precio, calla. No añadas justificaciones inmediatamente ni ofrezcas descuentos antes de que el cliente haya dicho nada. El silencio genera incomodidad — y esa incomodidad suele resolverse con un "de acuerdo".</p>
+
+  <h3>Ten preparada una alternativa de menor alcance</h3>
+  <p>Si el cliente dice que el presupuesto no llega, ofrece <strong>menos alcance, no menos precio</strong>. "Puedo hacer el proyecto completo por 2.400€ o solo las 3 páginas principales por 1.200€, sin las páginas secundarias." Esto mantiene tu tarifa intacta y le da al cliente una opción real.</p>
+
+  <div class="ejemplo">
+    <div class="ejemplo-title">💬 Ejemplo de respuesta a "es muy caro"</div>
+    <p><strong>Cliente:</strong> "Tu presupuesto está por encima de lo que tenemos. ¿Puedes hacer algo en el precio?"</p>
+    <p><strong>Respuesta efectiva:</strong> "Entiendo que el presupuesto es una variable importante. Lo que sí puedo hacer es ajustar el alcance para que encaje mejor. Por ejemplo, podríamos empezar con las 3 páginas clave y dejar la sección de blog para una segunda fase. ¿Te funcionaría eso?"</p>
+  </div>
+
+  <h2 id="subir">Cuándo y cómo subir tus precios</h2>
+  <p>Subir tarifas es inevitable si quieres que tu negocio sea sostenible. Las señales de que ha llegado el momento:</p>
+  <ul>
+    <li>Tienes <strong>más demanda de la que puedes atender</strong> — lista de espera de clientes</li>
+    <li>Llevas <strong>más de 12 meses sin subir precios</strong> y la inflación ha erosionado tu poder adquisitivo</li>
+    <li>Tus clientes <strong>nunca negocian tu tarifa</strong> — señal de que estás por debajo del mercado</li>
+    <li>Has mejorado significativamente tus habilidades o especialización</li>
+    <li>Has acumulado casos de éxito y testimonios que refuerzan tu posicionamiento</li>
+  </ul>
+
+  <h3>Cómo comunicar la subida a clientes actuales</h3>
+  <p>Comunícalo con al menos <strong>30 días de antelación</strong> por escrito. El mensaje debe ser directo, sin disculpas excesivas, y puede incluir brevemente el motivo (actualización de tarifas anual, mayor especialización, inflación). Un cliente que te valora lo aceptará. Si no lo acepta, probablemente era el momento de renovar tu cartera de clientes de todas formas.</p>
+
+  <div class="ejemplo">
+    <div class="ejemplo-title">✉️ Plantilla para comunicar subida de tarifa</div>
+    <p><strong>Asunto:</strong> Actualización de tarifas — [tu nombre/empresa]</p>
+    <p>Hola [nombre],</p>
+    <p>Te escribo para informarte de que a partir del [fecha] actualizaré mis tarifas. El nuevo precio por [servicio] será de [nueva tarifa], frente a los [tarifa actual] actuales.</p>
+    <p>Todos los proyectos en curso se mantendrán con las condiciones actuales hasta su finalización. Los nuevos proyectos que iniciemos a partir de [fecha] se facturarán con la nueva tarifa.</p>
+    <p>Ha sido un placer trabajar contigo y espero que podamos seguir colaborando. Quedo disponible si tienes cualquier pregunta.</p>
+    <p>Un saludo, [tu nombre]</p>
+  </div>
+
+  <h2 id="errores">Errores frecuentes al poner precio</h2>
+  <ul>
+    <li><strong>Cobrar por proyecto sin calcular las horas reales.</strong> Estimas 10 horas, el proyecto lleva 20. Resultado: trabajas al 50% de tu tarifa.</li>
+    <li><strong>No incluir las reuniones y revisiones.</strong> Cada reunión de una hora que no cobras es dinero que pierdes. Especifica en el contrato cuántas revisiones están incluidas.</li>
+    <li><strong>Dar descuentos por volumen sin límite.</strong> "Como son muchos proyectos te hago un descuento del 30%." Ese descuento puede convertirse en la tarifa estándar para siempre.</li>
+    <li><strong>No revisar las tarifas anualmente.</strong> La inflación en España fue del 3-4% anual en los últimos años. Si no subes precios, cada año trabajas más barato en términos reales.</li>
+    <li><strong>Compararse solo con precios de plataformas.</strong> Fiverr y Upwork están llenos de precios de países con coste de vida muy bajo. No son una referencia válida si vives en España o en las grandes ciudades de LATAM.</li>
+  </ul>
+
+  <div class="tip">
+    <p>🎯 <strong>Regla de oro:</strong> si un cliente acepta tu tarifa sin ningún tipo de negociación, probablemente estás cobrando un 20-30% por debajo del mercado. La negociación leve y respetuosa es señal de que tu precio está en el rango correcto.</p>
+  </div>
+
+  <div class="cta">
+    <h3>Calcula tu tarifa hora ahora</h3>
+    <p>Usa nuestra calculadora gratuita. En 2 minutos sabes exactamente cuánto deberías cobrar según tu país, tus gastos y tus objetivos de ingresos.</p>
+    <a href="/herramientas/calculadora-tarifa-hora" class="cta-btn">Ir a la calculadora →</a>
+  </div>
+
+  <h2>Artículos relacionados</h2>
+  <div class="rg">
+    <a href="/herramientas/calculadora-tarifa-hora" class="rc"><div class="rc-e">💰</div><div class="rc-n">Calculadora tarifa hora</div></a>
+    <a href="/herramientas/generador-contrato-freelance" class="rc"><div class="rc-e">📄</div><div class="rc-n">Generador de contrato</div></a>
+    <a href="/blog/como-conseguir-clientes-freelance" class="rc"><div class="rc-e">🎯</div><div class="rc-n">Conseguir clientes</div></a>
+  </div>
+
 </div>
 <footer>© 2026 <a href="/">AutónomoLab</a> · <a href="/privacidad">Privacidad</a> · <a href="/cookies">Cookies</a> · <a href="/aviso-legal">Aviso legal</a></footer>
 </body>
