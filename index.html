@@ -3,15 +3,16 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>AutónomoLab — Herramientas para autónomos y freelancers</title>
-<meta name="description" content="Herramientas gratuitas, calculadoras y recursos para autónomos y freelancers. Calcula tu tarifa, genera contratos, gestiona tu negocio independiente.">
-<meta name="keywords" content="herramientas autónomos, herramientas freelance, calculadora tarifa freelance, contrato freelance, recursos trabajo remoto">
-<meta property="og:title" content="AutónomoLab — Herramientas para freelancers y autónomos">
-<meta property="og:description" content="Herramientas gratuitas para autónomos y freelancers. Calcula tarifas, genera contratos y gestiona tu negocio.">
-<meta property="og:type" content="website">
-<meta property="og:url" content="https://autonomolab.com/">
+<title>AutónomoLab — Herramientas gratuitas para autónomos y freelancers</title>
+<meta name="description" content="12 herramientas gratuitas para autónomos y freelancers: calculadoras, generadores y guías. IVA, IRPF, tarifa hora, finiquito, contratos y más. Sin registro.">
 <meta name="robots" content="index, follow">
 <link rel="canonical" href="https://autonomolab.com/">
+<meta property="og:title" content="AutónomoLab — Herramientas gratuitas para autónomos y freelancers">
+<meta property="og:description" content="12 herramientas gratuitas para autónomos: calculadoras, generadores y guías. Sin registro, sin coste.">
+<meta property="og:url" content="https://autonomolab.com/">
+<meta property="og:site_name" content="AutónomoLab">
+<meta property="og:type" content="website">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"WebSite","name":"AutónomoLab","url":"https://autonomolab.com","description":"Herramientas gratuitas para autónomos y freelancers hispanohablantes.","inLanguage":"es","potentialAction":{"@type":"SearchAction","target":"https://autonomolab.com/herramientas/"}}</script>
 <link rel="icon" type="image/x-icon" href="/favicon.ico">
 <link rel="icon" type="image/svg+xml" href="/favicon.svg">
 <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
@@ -22,858 +23,152 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Cabinet+Grotesk:wght@400;500;700;800;900&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet">
 <style>
-  :root {
-    --bg: #f5f2eb;
-    --bg2: #ede9e0;
-    --ink: #1a1814;
-    --ink2: #4a4740;
-    --ink3: #8a857a;
-    --accent: #d45a2a;
-    --accent2: #2a6dd4;
-    --accent3: #2ab87a;
-    --card: #ffffff;
-    --border: #ddd8ce;
-    --shadow: 0 2px 20px rgba(26,24,20,0.08);
-  }
-
-  * { box-sizing: border-box; margin: 0; padding: 0; }
-
-  html { scroll-behavior: smooth; }
-
-  body {
-    background: var(--bg);
-    color: var(--ink);
-    font-family: 'Cabinet Grotesk', sans-serif;
-    font-size: 16px;
-    line-height: 1.6;
-    overflow-x: hidden;
-  }
-
-  /* Grain overlay */
-  body::after {
-    content: '';
-    position: fixed;
-    inset: 0;
-    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='0.04'/%3E%3C/svg%3E");
-    pointer-events: none;
-    z-index: 999;
-    opacity: 0.4;
-  }
+  :root{--bg:#f5f2eb;--bg2:#ede9e0;--ink:#1a1814;--ink2:#4a4740;--ink3:#8a857a;--accent:#d45a2a;--card:#fff;--border:#ddd8ce;--green:#2ab87a;}
+  *{box-sizing:border-box;margin:0;padding:0;}
+  body{background:var(--bg);color:var(--ink);font-family:'Cabinet Grotesk',sans-serif;font-size:16px;line-height:1.7;overflow-x:hidden;}
 
   /* NAV */
-  nav {
-    position: sticky;
-    top: 0;
-    z-index: 100;
-    background: rgba(245,242,235,0.92);
-    backdrop-filter: blur(12px);
-    border-bottom: 1px solid var(--border);
-    padding: 0 24px;
-  }
-
-  .nav-inner {
-    max-width: 1100px;
-    margin: 0 auto;
-    height: 60px;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-  }
-
-  .logo {
-    font-size: 18px;
-    font-weight: 900;
-    color: var(--ink);
-    text-decoration: none;
-    letter-spacing: -0.03em;
-    display: flex;
-    align-items: center;
-    gap: 8px;
-  }
-
-  .logo-dot {
-    width: 8px;
-    height: 8px;
-    background: var(--accent);
-    border-radius: 50%;
-    display: inline-block;
-  }
-
-  .nav-links {
-    display: flex;
-    gap: 28px;
-    list-style: none;
-  }
-
-  .nav-links a {
-    font-size: 14px;
-    font-weight: 500;
-    color: var(--ink2);
-    text-decoration: none;
-    transition: color 0.2s;
-  }
-
-  .nav-links a:hover { color: var(--accent); }
-
-  .nav-cta {
-    background: var(--ink);
-    color: #fff !important;
-    padding: 8px 16px;
-    border-radius: 6px;
-    font-size: 13px !important;
-    font-weight: 700 !important;
-    transition: background 0.2s !important;
-  }
-
-  .nav-cta:hover { background: var(--accent) !important; color: #fff !important; }
-
-  @media (max-width: 640px) {
-    .nav-links { display: none; }
-  }
+  nav{position:sticky;top:0;z-index:100;background:rgba(245,242,235,0.92);backdrop-filter:blur(12px);border-bottom:1px solid var(--border);padding:0 24px;}
+  .nav-inner{max-width:1200px;margin:0 auto;height:64px;display:flex;align-items:center;justify-content:space-between;}
+  .logo{font-size:18px;font-weight:900;color:var(--ink);text-decoration:none;letter-spacing:-0.03em;display:flex;align-items:center;gap:8px;}
+  .logo-dot{width:8px;height:8px;background:var(--accent);border-radius:50%;display:inline-block;flex-shrink:0;}
+  .nav-links{display:flex;gap:28px;list-style:none;align-items:center;}
+  .nav-links a{font-size:14px;font-weight:500;color:var(--ink2);text-decoration:none;}
+  .nav-links a:hover{color:var(--accent);}
+  .nav-cta{background:var(--ink);color:#fff !important;padding:8px 18px;border-radius:8px;font-weight:700 !important;}
+  .nav-cta:hover{background:var(--accent) !important;color:#fff !important;}
+  @media(max-width:640px){.nav-links{display:none;}}
 
   /* HERO */
-  .hero {
-    max-width: 1100px;
-    margin: 0 auto;
-    padding: 80px 24px 80px;
-    display: grid;
-    grid-template-columns: 1fr 400px;
-    gap: 64px;
-    align-items: center;
-  }
+  .hero{max-width:1200px;margin:0 auto;padding:72px 24px 80px;display:grid;grid-template-columns:1fr 420px;gap:48px;align-items:center;}
+  @media(max-width:900px){.hero{grid-template-columns:1fr;padding:48px 24px 56px;}}
+  .hero-badge{display:inline-flex;align-items:center;gap:8px;background:var(--card);border:1px solid var(--border);border-radius:100px;padding:6px 14px;font-size:12px;font-weight:700;color:var(--ink2);margin-bottom:20px;}
+  .hero-badge-dot{width:6px;height:6px;background:var(--accent);border-radius:50%;}
+  .hero h1{font-size:clamp(36px,5.5vw,62px);font-weight:900;letter-spacing:-.04em;line-height:1.08;margin-bottom:20px;}
+  .hero h1 em{font-family:'Instrument Serif',serif;font-style:italic;font-weight:400;color:var(--accent);}
+  .hero-desc{font-size:18px;color:var(--ink2);line-height:1.6;margin-bottom:32px;max-width:480px;}
+  .hero-ctas{display:flex;gap:12px;flex-wrap:wrap;}
+  .btn-primary{display:inline-block;background:var(--ink);color:#fff;padding:14px 28px;border-radius:10px;font-size:15px;font-weight:800;text-decoration:none;transition:background .2s;}
+  .btn-primary:hover{background:var(--accent);}
+  .btn-secondary{display:inline-block;background:transparent;color:var(--ink);padding:14px 28px;border-radius:10px;font-size:15px;font-weight:700;text-decoration:none;border:1.5px solid var(--border);transition:border-color .2s;}
+  .btn-secondary:hover{border-color:var(--ink);}
+  .hero-stats{display:flex;gap:28px;margin-top:36px;flex-wrap:wrap;}
+  .hero-stat-num{font-size:24px;font-weight:900;color:var(--ink);display:block;}
+  .hero-stat-label{font-size:12px;color:var(--ink3);}
 
-  .hero-left {
-    padding-top: 0;
-  }
+  /* MINI CALCULADORA EN HERO */
+  .hero-widget{background:var(--card);border:1px solid var(--border);border-radius:16px;padding:24px;box-shadow:0 4px 24px rgba(26,24,20,.06);}
+  .widget-title{font-size:13px;font-weight:800;color:var(--ink);margin-bottom:4px;display:flex;align-items:center;gap:8px;}
+  .widget-subtitle{font-size:12px;color:var(--ink3);margin-bottom:20px;}
+  .widget-result{background:var(--bg2);border-radius:10px;padding:16px;text-align:center;margin-bottom:16px;}
+  .widget-result-label{font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:.1em;color:var(--ink3);margin-bottom:4px;}
+  .widget-result-value{font-size:36px;font-weight:900;color:var(--ink);letter-spacing:-.02em;}
+  .widget-result-unit{font-size:14px;color:var(--ink3);font-weight:400;}
+  .widget-fields{display:flex;flex-direction:column;gap:10px;margin-bottom:16px;}
+  .widget-field{display:flex;justify-content:space-between;align-items:center;background:var(--bg);border:1px solid var(--border);border-radius:8px;padding:10px 14px;}
+  .widget-field-label{font-size:13px;color:var(--ink2);}
+  .widget-field-value{font-size:13px;font-weight:700;color:var(--ink);}
+  .widget-link{display:block;background:var(--accent);color:#fff;text-align:center;padding:11px;border-radius:8px;font-size:13px;font-weight:800;text-decoration:none;}
+  .widget-link:hover{opacity:.9;}
 
-  .hero-visual {
-    padding-top: 24px;
-    padding-bottom: 24px;
-  }
-
-  @media (max-width: 900px) {
-    .hero {
-      grid-template-columns: 1fr;
-      gap: 32px;
-      padding: 48px 24px 40px;
-    }
-    .hero-left { order: 1; }
-    .hero-visual { order: 2; }
-  }
-
-  .hero-tag {
-    display: inline-flex;
-    align-items: center;
-    gap: 6px;
-    font-size: 12px;
-    font-weight: 700;
-    text-transform: uppercase;
-    letter-spacing: 0.12em;
-    color: var(--accent);
-    background: rgba(212,90,42,0.08);
-    border: 1px solid rgba(212,90,42,0.2);
-    padding: 5px 12px;
-    border-radius: 100px;
-    margin-bottom: 24px;
-  }
-
-  .hero-tag span { width: 6px; height: 6px; background: var(--accent); border-radius: 50%; }
-
-  h1 {
-    font-family: 'Cabinet Grotesk', sans-serif;
-    font-size: clamp(38px, 6vw, 64px);
-    font-weight: 900;
-    line-height: 1.0;
-    letter-spacing: -0.03em;
-    margin-bottom: 20px;
-    color: var(--ink);
-  }
-
-  h1 em {
-    font-family: 'Instrument Serif', serif;
-    font-style: italic;
-    font-weight: 400;
-    color: var(--accent);
-  }
-
-  .hero-sub {
-    font-size: 18px;
-    color: var(--ink2);
-    line-height: 1.6;
-    margin-bottom: 32px;
-    max-width: 480px;
-    font-weight: 400;
-  }
-
-  .hero-actions {
-    display: flex;
-    gap: 12px;
-    flex-wrap: wrap;
-  }
-
-  .btn-primary {
-    background: var(--ink);
-    color: #fff;
-    padding: 14px 28px;
-    border-radius: 8px;
-    font-size: 15px;
-    font-weight: 700;
-    text-decoration: none;
-    transition: background 0.2s, transform 0.15s;
-    display: inline-flex;
-    align-items: center;
-    gap: 8px;
-  }
-
-  .btn-primary:hover { background: var(--accent); transform: translateY(-1px); }
-
-  .btn-secondary {
-    background: transparent;
-    color: var(--ink2);
-    padding: 14px 24px;
-    border-radius: 8px;
-    font-size: 15px;
-    font-weight: 600;
-    text-decoration: none;
-    border: 1px solid var(--border);
-    transition: border-color 0.2s, color 0.2s;
-    display: inline-flex;
-    align-items: center;
-    gap: 8px;
-  }
-
-  .btn-secondary:hover { border-color: var(--ink2); color: var(--ink); }
-
-  .hero-stats {
-    display: flex;
-    gap: 28px;
-    margin-top: 40px;
-    padding-top: 32px;
-    border-top: 1px solid var(--border);
-  }
-
-  .stat-item { }
-
-  .stat-num {
-    font-size: 26px;
-    font-weight: 900;
-    letter-spacing: -0.03em;
-    color: var(--ink);
-    line-height: 1;
-    margin-bottom: 2px;
-  }
-
-  .stat-label {
-    font-size: 12px;
-    color: var(--ink3);
-    font-weight: 500;
-  }
-
-  /* Hero visual */
-  .hero-visual { position: relative; overflow: visible; }
-
-  .hero-card-main {
-    background: var(--card);
-    border-radius: 16px;
-    padding: 28px;
-    box-shadow: var(--shadow), 0 0 0 1px var(--border);
-    position: relative;
-    z-index: 2;
-    animation: floatUp 0.6s ease forwards;
-    opacity: 0;
-    transform: translateY(20px);
-    animation-delay: 0.2s;
-  }
-
-  @keyframes floatUp {
-    to { opacity: 1; transform: translateY(0); }
-  }
-
-  .card-header {
-    display: flex;
-    align-items: center;
-    gap: 10px;
-    margin-bottom: 20px;
-  }
-
-  .card-icon {
-    width: 40px;
-    height: 40px;
-    background: rgba(212,90,42,0.1);
-    border-radius: 10px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 20px;
-  }
-
-  .card-title-block {}
-  .card-title { font-size: 15px; font-weight: 800; color: var(--ink); }
-  .card-sub { font-size: 12px; color: var(--ink3); }
-
-  .calc-display {
-    background: var(--bg);
-    border-radius: 10px;
-    padding: 20px;
-    margin-bottom: 16px;
-    text-align: center;
-  }
-
-  .calc-label { font-size: 11px; color: var(--ink3); text-transform: uppercase; letter-spacing: 0.1em; margin-bottom: 4px; }
-  .calc-value { font-size: 42px; font-weight: 900; letter-spacing: -0.04em; color: var(--ink); line-height: 1; }
-  .calc-unit { font-size: 16px; color: var(--ink3); font-weight: 500; }
-
-  .calc-inputs {
-    display: flex;
-    flex-direction: column;
-    gap: 8px;
-    margin-bottom: 16px;
-  }
-
-  .calc-row {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    background: var(--bg2);
-    padding: 10px 14px;
-    border-radius: 8px;
-  }
-
-  .calc-row-label { font-size: 13px; color: var(--ink2); font-weight: 500; }
-  .calc-row-val { font-size: 13px; font-weight: 700; color: var(--ink); }
-
-  .calc-btn {
-    width: 100%;
-    background: var(--accent);
-    color: #fff;
-    border: none;
-    border-radius: 8px;
-    padding: 12px;
-    font-size: 14px;
-    font-weight: 700;
-    font-family: inherit;
-    cursor: pointer;
-    transition: opacity 0.2s;
-  }
-
-  .calc-btn:hover { opacity: 0.9; }
-
-  /* mini cards removed */
-
-  /* TOOLS SECTION */
-  .section {
-    max-width: 1100px;
-    margin: 0 auto;
-    padding: 80px 24px;
-  }
-
-  .section-header {
-    margin-bottom: 48px;
-  }
-
-  .section-tag {
-    font-size: 11px;
-    font-weight: 700;
-    text-transform: uppercase;
-    letter-spacing: 0.15em;
-    color: var(--ink3);
-    margin-bottom: 10px;
-  }
-
-  .section-title {
-    font-size: clamp(28px, 4vw, 40px);
-    font-weight: 900;
-    letter-spacing: -0.03em;
-    line-height: 1.1;
-    color: var(--ink);
-    margin-bottom: 12px;
-  }
-
-  .section-title em {
-    font-family: 'Instrument Serif', serif;
-    font-style: italic;
-    font-weight: 400;
-    color: var(--accent);
-  }
-
-  .section-desc {
-    font-size: 17px;
-    color: var(--ink2);
-    max-width: 540px;
-  }
-
-  /* Tools grid */
-  .tools-grid {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 16px;
-  }
-
-  @media (max-width: 900px) { .tools-grid { grid-template-columns: repeat(2, 1fr); } }
-  @media (max-width: 560px) { .tools-grid { grid-template-columns: 1fr; } }
-
-  .tool-card {
-    background: var(--card);
-    border: 1px solid var(--border);
-    border-radius: 14px;
-    padding: 24px;
-    text-decoration: none;
-    display: block;
-    transition: transform 0.2s, box-shadow 0.2s, border-color 0.2s;
-    position: relative;
-    overflow: hidden;
-  }
-
-  .tool-card::before {
-    content: '';
-    position: absolute;
-    inset: 0;
-    background: linear-gradient(135deg, rgba(212,90,42,0.04), transparent);
-    opacity: 0;
-    transition: opacity 0.2s;
-  }
-
-  .tool-card:hover {
-    transform: translateY(-3px);
-    box-shadow: 0 8px 32px rgba(26,24,20,0.12);
-    border-color: rgba(212,90,42,0.3);
-  }
-
-  .tool-card:hover::before { opacity: 1; }
-
-  .tool-card.featured {
-    grid-column: span 2;
-    background: var(--ink);
-    border-color: transparent;
-  }
-
-  @media (max-width: 560px) { .tool-card.featured { grid-column: span 1; } }
-
-  .tool-card.featured .tool-name { color: #fff; }
-  .tool-card.featured .tool-desc { color: rgba(255,255,255,0.6); }
-  .tool-card.featured .tool-tag { background: rgba(255,255,255,0.1); color: rgba(255,255,255,0.7); }
-  .tool-card.featured .tool-arrow { color: rgba(255,255,255,0.4); }
-  .tool-card.featured:hover { border-color: transparent; }
-
-  .tool-emoji {
-    font-size: 32px;
-    margin-bottom: 16px;
-    display: block;
-  }
-
-  .tool-name {
-    font-size: 17px;
-    font-weight: 800;
-    color: var(--ink);
-    margin-bottom: 6px;
-    letter-spacing: -0.02em;
-  }
-
-  .tool-desc {
-    font-size: 13px;
-    color: var(--ink2);
-    line-height: 1.5;
-    margin-bottom: 16px;
-  }
-
-  .tool-footer {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-  }
-
-  .tool-tag {
-    font-size: 11px;
-    font-weight: 700;
-    text-transform: uppercase;
-    letter-spacing: 0.08em;
-    background: var(--bg2);
-    color: var(--ink3);
-    padding: 3px 8px;
-    border-radius: 4px;
-  }
-
-  .tool-tag.new { background: rgba(42,184,122,0.12); color: var(--accent3); }
-  .tool-tag.popular { background: rgba(212,90,42,0.1); color: var(--accent); }
-
-  .tool-arrow {
-    font-size: 18px;
-    color: var(--ink3);
-    transition: transform 0.2s;
-  }
-
-  .tool-card:hover .tool-arrow { transform: translateX(4px); }
+  /* SECCIÓN HERRAMIENTAS */
+  .section{max-width:1200px;margin:0 auto;padding:0 24px 80px;}
+  .section-header{margin-bottom:36px;}
+  .section-tag{font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:.15em;color:var(--ink3);margin-bottom:8px;}
+  .section-title{font-size:clamp(26px,3.5vw,38px);font-weight:900;letter-spacing:-.03em;margin-bottom:8px;}
+  .section-title em{font-family:'Instrument Serif',serif;font-style:italic;font-weight:400;color:var(--accent);}
+  .section-desc{font-size:16px;color:var(--ink2);}
+  .tools-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:16px;}
+  @media(max-width:1000px){.tools-grid{grid-template-columns:repeat(3,1fr);}}
+  @media(max-width:700px){.tools-grid{grid-template-columns:1fr 1fr;}}
+  @media(max-width:440px){.tools-grid{grid-template-columns:1fr;}}
+  .tool-card{background:var(--card);border:1px solid var(--border);border-radius:12px;padding:20px;text-decoration:none;display:flex;flex-direction:column;transition:transform .2s,border-color .2s,box-shadow .2s;}
+  .tool-card:hover{transform:translateY(-2px);border-color:rgba(212,90,42,.3);box-shadow:0 4px 20px rgba(26,24,20,.06);}
+  .tool-emoji{font-size:28px;margin-bottom:12px;display:block;}
+  .tool-name{font-size:14px;font-weight:800;color:var(--ink);margin-bottom:6px;line-height:1.3;}
+  .tool-desc{font-size:12px;color:var(--ink2);line-height:1.5;flex:1;margin-bottom:14px;}
+  .tool-footer{display:flex;justify-content:space-between;align-items:center;}
+  .tool-tag{font-size:10px;font-weight:800;text-transform:uppercase;letter-spacing:.08em;padding:3px 8px;border-radius:100px;background:var(--bg2);color:var(--ink3);}
+  .tool-tag-new{background:rgba(212,90,42,.1);color:var(--accent);}
+  .tool-tag-fiscal{background:rgba(42,184,122,.1);color:var(--green);}
+  .tool-arrow{font-size:14px;color:var(--ink3);}
+  .tools-cta{margin-top:20px;text-align:center;}
+  .tools-cta a{display:inline-block;background:transparent;color:var(--ink);padding:11px 24px;border-radius:8px;font-size:14px;font-weight:700;text-decoration:none;border:1.5px solid var(--border);}
+  .tools-cta a:hover{border-color:var(--ink);}
 
   /* DIVIDER */
-  .divider {
-    border: none;
-    border-top: 1px solid var(--border);
-    margin: 0 24px;
-  }
+  hr.divider{border:none;border-top:1px solid var(--border);margin:0 24px;}
 
-  /* BLOG SECTION */
-  .blog-grid {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 20px;
-  }
-
-  @media (max-width: 900px) { .blog-grid { grid-template-columns: 1fr 1fr; } }
-  @media (max-width: 560px) { .blog-grid { grid-template-columns: 1fr; } }
-
-  .blog-card {
-    background: var(--card);
-    border: 1px solid var(--border);
-    border-radius: 14px;
-    overflow: hidden;
-    text-decoration: none;
-    transition: transform 0.2s, box-shadow 0.2s;
-    display: block;
-  }
-
-  .blog-card:hover {
-    transform: translateY(-2px);
-    box-shadow: 0 6px 24px rgba(26,24,20,0.1);
-  }
-
-  .blog-thumb {
-    height: 140px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 48px;
-  }
-
-  .blog-thumb-1 { background: linear-gradient(135deg, #fde8d8, #fbd0b5); }
-  .blog-thumb-2 { background: linear-gradient(135deg, #d8e8fd, #b5d0fb); }
-  .blog-thumb-3 { background: linear-gradient(135deg, #d8fde8, #b5fbd0); }
-
-  .blog-body { padding: 20px; }
-
-  .blog-cat {
-    font-size: 11px;
-    font-weight: 700;
-    text-transform: uppercase;
-    letter-spacing: 0.1em;
-    color: var(--accent);
-    margin-bottom: 8px;
-  }
-
-  .blog-title {
-    font-size: 15px;
-    font-weight: 800;
-    color: var(--ink);
-    line-height: 1.3;
-    margin-bottom: 8px;
-    letter-spacing: -0.01em;
-  }
-
-  .blog-meta {
-    font-size: 12px;
-    color: var(--ink3);
-  }
+  /* BLOG */
+  .blog-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;}
+  @media(max-width:800px){.blog-grid{grid-template-columns:1fr 1fr;}}
+  @media(max-width:500px){.blog-grid{grid-template-columns:1fr;}}
+  .blog-card{background:var(--card);border:1px solid var(--border);border-radius:12px;overflow:hidden;text-decoration:none;display:block;transition:transform .2s,box-shadow .2s;}
+  .blog-card:hover{transform:translateY(-2px);box-shadow:0 4px 20px rgba(26,24,20,.08);}
+  .blog-thumb{height:150px;overflow:hidden;}
+  .blog-thumb img{width:100%;height:100%;object-fit:cover;display:block;}
+  .blog-body{padding:16px;}
+  .blog-cat{font-size:10px;font-weight:700;text-transform:uppercase;letter-spacing:.1em;color:var(--accent);margin-bottom:6px;}
+  .blog-title{font-size:14px;font-weight:800;color:var(--ink);line-height:1.3;margin-bottom:6px;}
+  .blog-meta{font-size:11px;color:var(--ink3);}
+  .blog-cta{text-align:center;margin-top:20px;}
+  .blog-cta a{display:inline-block;background:transparent;color:var(--ink);padding:11px 24px;border-radius:8px;font-size:14px;font-weight:700;text-decoration:none;border:1.5px solid var(--border);}
+  .blog-cta a:hover{border-color:var(--ink);}
 
   /* WHY SECTION */
-  .why-section {
-    background: var(--ink);
-    padding: 80px 24px;
-    position: relative;
-    overflow: hidden;
-  }
-
-  .why-section::before {
-    content: '';
-    position: absolute;
-    top: -100px;
-    right: -100px;
-    width: 400px;
-    height: 400px;
-    background: radial-gradient(circle, rgba(212,90,42,0.15), transparent 70%);
-    pointer-events: none;
-  }
-
-  .why-inner {
-    max-width: 1100px;
-    margin: 0 auto;
-  }
-
-  .why-section .section-title { color: #fff; }
-  .why-section .section-tag { color: rgba(255,255,255,0.4); }
-  .why-section .section-desc { color: rgba(255,255,255,0.6); }
-
-  .why-grid {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap: 24px;
-    margin-top: 48px;
-  }
-
-  @media (max-width: 900px) { .why-grid { grid-template-columns: repeat(2, 1fr); } }
-  @media (max-width: 480px) { .why-grid { grid-template-columns: 1fr; } }
-
-  .why-item {
-    padding: 24px;
-    background: rgba(255,255,255,0.04);
-    border: 1px solid rgba(255,255,255,0.08);
-    border-radius: 12px;
-  }
-
-  .why-num {
-    font-size: 36px;
-    font-weight: 900;
-    letter-spacing: -0.04em;
-    color: var(--accent);
-    line-height: 1;
-    margin-bottom: 8px;
-  }
-
-  .why-title {
-    font-size: 15px;
-    font-weight: 800;
-    color: #fff;
-    margin-bottom: 6px;
-  }
-
-  .why-desc {
-    font-size: 13px;
-    color: rgba(255,255,255,0.5);
-    line-height: 1.5;
-  }
+  .why-section{background:var(--ink);padding:72px 24px;}
+  .why-inner{max-width:1200px;margin:0 auto;}
+  .why-header{text-align:center;margin-bottom:48px;}
+  .why-tag{font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:.15em;color:rgba(255,255,255,.4);margin-bottom:10px;}
+  .why-title{font-size:clamp(26px,3.5vw,38px);font-weight:900;color:#fff;letter-spacing:-.03em;}
+  .why-title em{font-family:'Instrument Serif',serif;font-style:italic;font-weight:400;color:var(--accent);}
+  .why-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;}
+  @media(max-width:700px){.why-grid{grid-template-columns:1fr;}}
+  .why-card{background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.08);border-radius:12px;padding:24px;}
+  .why-icon{font-size:28px;margin-bottom:12px;}
+  .why-card-title{font-size:16px;font-weight:800;color:#fff;margin-bottom:8px;}
+  .why-card-desc{font-size:13px;color:rgba(255,255,255,.6);line-height:1.6;}
 
   /* NEWSLETTER */
-  .newsletter {
-    background: var(--bg2);
-    border-top: 1px solid var(--border);
-    border-bottom: 1px solid var(--border);
-    padding: 64px 24px;
-  }
-
-  .newsletter-inner {
-    max-width: 560px;
-    margin: 0 auto;
-    text-align: center;
-  }
-
-  .newsletter h2 {
-    font-size: 32px;
-    font-weight: 900;
-    letter-spacing: -0.03em;
-    margin-bottom: 10px;
-  }
-
-  .newsletter h2 em {
-    font-family: 'Instrument Serif', serif;
-    font-style: italic;
-    font-weight: 400;
-    color: var(--accent);
-  }
-
-  .newsletter p {
-    font-size: 16px;
-    color: var(--ink2);
-    margin-bottom: 28px;
-  }
-
-  .newsletter-form {
-    display: flex;
-    gap: 10px;
-    max-width: 400px;
-    margin: 0 auto;
-  }
-
-  @media (max-width: 480px) { .newsletter-form { flex-direction: column; } }
-
-  .newsletter-input {
-    flex: 1;
-    background: var(--card);
-    border: 1px solid var(--border);
-    border-radius: 8px;
-    padding: 12px 16px;
-    font-size: 14px;
-    font-family: inherit;
-    color: var(--ink);
-    outline: none;
-    transition: border-color 0.2s;
-  }
-
-  .newsletter-input:focus { border-color: var(--accent); }
-  .newsletter-input::placeholder { color: var(--ink3); }
-
-  .newsletter-btn {
-    background: var(--accent);
-    color: #fff;
-    border: none;
-    border-radius: 8px;
-    padding: 12px 20px;
-    font-size: 14px;
-    font-weight: 700;
-    font-family: inherit;
-    cursor: pointer;
-    white-space: nowrap;
-    transition: opacity 0.2s;
-  }
-
-  .newsletter-btn:hover { opacity: 0.9; }
-
-  .newsletter-note {
-    font-size: 12px;
-    color: var(--ink3);
-    margin-top: 12px;
-  }
+  .newsletter{padding:72px 24px;background:var(--bg2);}
+  .newsletter-inner{max-width:560px;margin:0 auto;text-align:center;}
+  .newsletter h2{font-size:clamp(24px,3vw,32px);font-weight:900;letter-spacing:-.03em;margin-bottom:10px;}
+  .newsletter h2 em{font-family:'Instrument Serif',serif;font-style:italic;font-weight:400;color:var(--accent);}
+  .newsletter p{font-size:16px;color:var(--ink2);margin-bottom:28px;}
+  .newsletter-form{display:flex;gap:10px;max-width:400px;margin:0 auto;}
+  @media(max-width:480px){.newsletter-form{flex-direction:column;}}
+  .newsletter-input{flex:1;background:var(--card);border:1px solid var(--border);border-radius:8px;padding:12px 16px;font-size:14px;font-family:inherit;color:var(--ink);outline:none;}
+  .newsletter-input:focus{border-color:var(--accent);}
+  .newsletter-btn{background:var(--accent);color:#fff;border:none;border-radius:8px;padding:12px 20px;font-size:14px;font-weight:800;font-family:inherit;cursor:pointer;white-space:nowrap;}
+  .newsletter-btn:hover{opacity:.9;}
+  .newsletter-note{font-size:12px;color:var(--ink3);margin-top:12px;}
 
   /* FOOTER */
-  footer {
-    padding: 48px 24px 32px;
-    max-width: 1100px;
-    margin: 0 auto;
-  }
-
-  .footer-top {
-    display: grid;
-    grid-template-columns: 1.5fr repeat(3, 1fr);
-    gap: 40px;
-    margin-bottom: 48px;
-  }
-
-  @media (max-width: 700px) {
-    .footer-top { grid-template-columns: 1fr 1fr; }
-  }
-
-  .footer-brand {}
-
-  .footer-logo {
-    font-size: 18px;
-    font-weight: 900;
-    letter-spacing: -0.03em;
-    color: var(--ink);
-    margin-bottom: 10px;
-    display: flex;
-    align-items: center;
-    gap: 6px;
-  }
-
-  .footer-tagline {
-    font-size: 13px;
-    color: var(--ink3);
-    line-height: 1.5;
-    max-width: 220px;
-  }
-
-  .footer-col-title {
-    font-size: 12px;
-    font-weight: 800;
-    text-transform: uppercase;
-    letter-spacing: 0.1em;
-    color: var(--ink);
-    margin-bottom: 14px;
-  }
-
-  .footer-links {
-    list-style: none;
-    display: flex;
-    flex-direction: column;
-    gap: 8px;
-  }
-
-  .footer-links a {
-    font-size: 13px;
-    color: var(--ink3);
-    text-decoration: none;
-    transition: color 0.2s;
-  }
-
-  .footer-links a:hover { color: var(--accent); }
-
-  .footer-bottom {
-    border-top: 1px solid var(--border);
-    padding-top: 24px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    gap: 16px;
-    flex-wrap: wrap;
-  }
-
-  .footer-copy {
-    font-size: 13px;
-    color: var(--ink3);
-  }
-
-  .footer-legal {
-    display: flex;
-    gap: 20px;
-  }
-
-  .footer-legal a {
-    font-size: 13px;
-    color: var(--ink3);
-    text-decoration: none;
-    transition: color 0.2s;
-  }
-
-  .footer-legal a:hover { color: var(--ink); }
-
-  /* Animations */
-  .fade-in {
-    opacity: 0;
-    transform: translateY(16px);
-    transition: opacity 0.6s ease, transform 0.6s ease;
-  }
-
-  .fade-in.visible {
-    opacity: 1;
-    transform: translateY(0);
-  }
-
-  /* === LAYOUT SAFETY === */
-  *, *::before, *::after { box-sizing: border-box; }
-  img, video, iframe { max-width: 100%; height: auto; }
-  table { width: 100%; table-layout: fixed; }
-  .article-wrap > * { max-width: 100%; }
-  pre, code { white-space: pre-wrap; word-break: break-word; }
+  footer{background:var(--ink);padding:48px 24px 32px;}
+  .footer-inner{max-width:1200px;margin:0 auto;}
+  .footer-top{display:grid;grid-template-columns:1fr 1fr 1fr 1fr;gap:32px;margin-bottom:40px;}
+  @media(max-width:700px){.footer-top{grid-template-columns:1fr 1fr;}}
+  @media(max-width:440px){.footer-top{grid-template-columns:1fr;}}
+  .footer-logo{font-size:18px;font-weight:900;color:#fff;display:flex;align-items:center;gap:8px;margin-bottom:10px;text-decoration:none;}
+  .footer-logo-dot{width:7px;height:7px;background:var(--accent);border-radius:50%;}
+  .footer-tagline{font-size:13px;color:rgba(255,255,255,.4);line-height:1.5;}
+  .footer-col-title{font-size:11px;font-weight:800;text-transform:uppercase;letter-spacing:.1em;color:rgba(255,255,255,.4);margin-bottom:12px;}
+  .footer-col ul{list-style:none;display:flex;flex-direction:column;gap:8px;}
+  .footer-col a{font-size:13px;color:rgba(255,255,255,.6);text-decoration:none;}
+  .footer-col a:hover{color:#fff;}
+  .footer-bottom{border-top:1px solid rgba(255,255,255,.08);padding-top:24px;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:12px;}
+  .footer-copy{font-size:12px;color:rgba(255,255,255,.3);}
+  .footer-legal{display:flex;gap:16px;}
+  .footer-legal a{font-size:12px;color:rgba(255,255,255,.3);text-decoration:none;}
+  .footer-legal a:hover{color:rgba(255,255,255,.6);}
 </style>
-<script type="application/ld+json">{"@context":"https://schema.org","@type":"WebSite","name":"AutónomoLab","description":"Herramientas gratuitas, calculadoras y recursos para autónomos y freelancers hispanohablantes.","url":"https://autonomolab.com/","inLanguage":"es","potentialAction":{"@type":"SearchAction","target":"https://autonomolab.com/blog/?q={{search_term_string}}","query-input":"required name=search_term_string"}}</script>
-<!-- GOOGLE ANALYTICS 4
-  INSTRUCCIONES:
-  1. Ve a https://analytics.google.com
-  2. Crea una propiedad para autonomolab.com
-  3. Google te dará un Measurement ID como: G-XXXXXXXXXX
-  4. Sustituye G-XXXXXXXXXX por tu ID real abajo
--->
-<!-- Global site tag (gtag.js) - Google Analytics -->
-<!-- <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-  gtag('config', 'G-XXXXXXXXXX');
-</script> -->
-<!-- GOOGLE ADSENSE
-  INSTRUCCIONES:
-  1. Ve a https://adsense.google.com
-  2. Añade autonomolab.com como sitio
-  3. Google te dará un código como este:
-     <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-XXXXXXXXXXXXXXXXX" crossorigin="anonymous"></script>
-  4. Sustituye el bloque de abajo con ese código
-  5. Para mostrar anuncios en un lugar específico, añade:
-     <ins class="adsbygoogle"
-          style="display:block"
-          data-ad-client="ca-pub-XXXXXXXXXXXXXXXXX"
-          data-ad-slot="XXXXXXXXXX"
-          data-ad-format="auto"
-          data-full-width-responsive="true"></ins>
-     <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
--->
+<script src="/cookie-banner.js"></script>
 </head>
 <body>
 
-<!-- NAV -->
 <nav>
   <div class="nav-inner">
-    <a href="/" class="logo">
-      <span class="logo-dot"></span>
-      AutónomoLab
-    </a>
+    <a href="/" class="logo"><span class="logo-dot"></span>AutónomoLab</a>
     <ul class="nav-links">
       <li><a href="/herramientas">Herramientas</a></li>
       <li><a href="/blog">Blog</a></li>
@@ -885,320 +180,262 @@
 </nav>
 
 <!-- HERO -->
-<section class="hero">
-  <div class="hero-left">
-    <div class="hero-tag"><span></span> Para autónomos y freelancers</div>
-    <h1>El <em>laboratorio</em> del autónomo moderno</h1>
-    <p class="hero-sub">Herramientas gratuitas, calculadoras y guías para gestionar tu negocio independiente. Sin complicaciones, sin registro.</p>
-    <div class="hero-actions">
-      <a href="/herramientas" class="btn-primary">Ver herramientas gratis →</a>
-      <a href="/blog" class="btn-secondary">Leer el blog</a>
-    </div>
-    <div class="hero-stats">
-      <div class="stat-item">
-        <div class="stat-num">12+</div>
-        <div class="stat-label">Herramientas gratis</div>
+<section>
+  <div class="hero">
+    <div>
+      <div class="hero-badge"><span class="hero-badge-dot"></span>Para autónomos y freelancers</div>
+      <h1>El <em>laboratorio</em> del autónomo moderno</h1>
+      <p class="hero-desc">Herramientas gratuitas, calculadoras y guías para gestionar tu negocio independiente. Sin complicaciones, sin registro.</p>
+      <div class="hero-ctas">
+        <a href="/herramientas" class="btn-primary">Ver herramientas gratis →</a>
+        <a href="/blog" class="btn-secondary">Leer el blog</a>
       </div>
-      <div class="stat-item">
-        <div class="stat-num">100%</div>
-        <div class="stat-label">Sin registro</div>
-      </div>
-      <div class="stat-item">
-        <div class="stat-num">ES+LATAM</div>
-        <div class="stat-label">Adaptado a tu país</div>
+      <div class="hero-stats">
+        <div><span class="hero-stat-num">12+</span><span class="hero-stat-label">Herramientas gratis</span></div>
+        <div><span class="hero-stat-num">100%</span><span class="hero-stat-label">Sin registro</span></div>
+        <div><span class="hero-stat-num">ES+LATAM</span><span class="hero-stat-label">Adaptado a tu país</span></div>
       </div>
     </div>
-  </div>
-
-  <div class="hero-visual">
-    <div class="hero-card-main">
-      <div class="card-header">
-        <div class="card-icon">💰</div>
-        <div class="card-title-block">
-          <div class="card-title">Calculadora de tarifa hora</div>
-          <div class="card-sub">¿Cuánto deberías cobrar?</div>
-        </div>
+    <div class="hero-widget">
+      <div class="widget-title">💰 Calculadora de tarifa hora</div>
+      <div class="widget-subtitle">¿Cuánto deberías cobrar?</div>
+      <div class="widget-result">
+        <div class="widget-result-label">Tu tarifa recomendada</div>
+        <div class="widget-result-value">€47<span class="widget-result-unit">/h</span></div>
       </div>
-      <div class="calc-display">
-        <div class="calc-label">Tu tarifa recomendada</div>
-        <div class="calc-value">€47<span class="calc-unit">/h</span></div>
+      <div class="widget-fields">
+        <div class="widget-field"><span class="widget-field-label">Ingresos anuales objetivo</span><span class="widget-field-value">€36.000</span></div>
+        <div class="widget-field"><span class="widget-field-label">Horas facturables / mes</span><span class="widget-field-value">80h</span></div>
+        <div class="widget-field"><span class="widget-field-label">Gastos mensuales</span><span class="widget-field-value">€400</span></div>
       </div>
-      <div class="calc-inputs">
-        <div class="calc-row">
-          <span class="calc-row-label">Ingresos anuales objetivo</span>
-          <span class="calc-row-val">€36.000</span>
-        </div>
-        <div class="calc-row">
-          <span class="calc-row-label">Horas facturables / mes</span>
-          <span class="calc-row-val">80h</span>
-        </div>
-        <div class="calc-row">
-          <span class="calc-row-label">Gastos mensuales</span>
-          <span class="calc-row-val">€400</span>
-        </div>
-      </div>
-      <button class="calc-btn">Calcular mi tarifa →</button>
+      <a href="/herramientas/calculadora-tarifa-hora" class="widget-link">Calcular mi tarifa →</a>
     </div>
-
-
   </div>
 </section>
 
-<hr class="divider">
-
-<!-- TOOLS SECTION -->
+<!-- HERRAMIENTAS -->
 <section class="section">
-  <div class="section-header fade-in">
-    <div class="section-tag">Herramientas gratuitas</div>
-    <h2 class="section-title">Todo lo que necesitas,<br><em>sin coste</em></h2>
-    <p class="section-desc">Calculadoras, generadores y plantillas pensadas para autónomos y freelancers hispanohablantes.</p>
+  <div class="section-header">
+    <div class="section-tag">🛠️ Herramientas gratuitas</div>
+    <h2 class="section-title">12 herramientas, <em>sin coste</em></h2>
+    <p class="section-desc">Todo lo que necesitas para gestionar tu negocio independiente. Sin registro, sin límites.</p>
   </div>
-
   <div class="tools-grid">
-    <a href="/herramientas/calculadora-tarifa-hora" class="tool-card featured fade-in">
+    <a href="/herramientas/calculadora-tarifa-hora" class="tool-card">
       <span class="tool-emoji">💰</span>
       <div class="tool-name">Calculadora de tarifa hora</div>
-      <div class="tool-desc">Calcula cuánto deberías cobrar por hora basándote en tus ingresos objetivo, gastos y horas disponibles. Adaptada a España y LATAM.</div>
-      <div class="tool-footer">
-        <span class="tool-tag popular">Más usada</span>
-        <span class="tool-arrow">→</span>
-      </div>
+      <div class="tool-desc">¿Cuánto deberías cobrar? Calcula tu tarifa según ingresos, gastos y horas disponibles.</div>
+      <div class="tool-footer"><span class="tool-tag">Más usada</span><span class="tool-arrow">→</span></div>
     </a>
-
-    <a href="/herramientas/generador-contrato-freelance" class="tool-card fade-in">
+    <a href="/herramientas/generador-contrato-freelance" class="tool-card">
       <span class="tool-emoji">📄</span>
       <div class="tool-name">Generador de contrato</div>
-      <div class="tool-desc">Crea un contrato freelance profesional en menos de 2 minutos. Descarga en PDF listo para firmar.</div>
-      <div class="tool-footer">
-        <span class="tool-tag new">Nuevo</span>
-        <span class="tool-arrow">→</span>
-      </div>
+      <div class="tool-desc">Contrato freelance profesional en 2 minutos. Descarga en PDF listo para firmar.</div>
+      <div class="tool-footer"><span class="tool-tag tool-tag-new">Nuevo</span><span class="tool-arrow">→</span></div>
     </a>
-
-    <a href="/herramientas/calculadora-iva" class="tool-card fade-in">
-      <span class="tool-emoji">🧾</span>
-      <div class="tool-name">Simulador IVA trimestral</div>
-      <div class="tool-desc">Calcula tu declaración trimestral de IVA y IRPF de forma rápida. España e IVA LATAM incluidos.</div>
-      <div class="tool-footer">
-        <span class="tool-tag">Fiscal</span>
-        <span class="tool-arrow">→</span>
-      </div>
+    <a href="/herramientas/calculadora-iva" class="tool-card">
+      <span class="tool-emoji">🧮</span>
+      <div class="tool-name">Calculadora IVA trimestral</div>
+      <div class="tool-desc">Calcula tu declaración del modelo 303. España y países LATAM incluidos.</div>
+      <div class="tool-footer"><span class="tool-tag tool-tag-fiscal">Fiscal</span><span class="tool-arrow">→</span></div>
     </a>
-
-    <a href="/herramientas/calculadora-precio-proyecto" class="tool-card fade-in">
-      <span class="tool-emoji">📐</span>
+    <a href="/herramientas/calculadora-precio-proyecto" class="tool-card">
+      <span class="tool-emoji">🎯</span>
       <div class="tool-name">Calculadora de proyecto</div>
-      <div class="tool-desc">Estima el precio justo de cualquier proyecto freelance desglosando horas, complejidad y margen.</div>
-      <div class="tool-footer">
-        <span class="tool-tag">Presupuestos</span>
-        <span class="tool-arrow">→</span>
-      </div>
+      <div class="tool-desc">Estima el precio justo de cualquier proyecto desglosando horas, complejidad y margen.</div>
+      <div class="tool-footer"><span class="tool-tag">Presupuestos</span><span class="tool-arrow">→</span></div>
     </a>
-
-    <a href="/herramientas/generador-firma-email" class="tool-card fade-in">
+    <a href="/herramientas/generador-firma-email" class="tool-card">
       <span class="tool-emoji">✉️</span>
       <div class="tool-name">Firma de email profesional</div>
-      <div class="tool-desc">Genera una firma de correo profesional en segundos. Copia el HTML y pégalo en Gmail o Outlook.</div>
-      <div class="tool-footer">
-        <span class="tool-tag new">Nuevo</span>
-        <span class="tool-arrow">→</span>
-      </div>
+      <div class="tool-desc">Genera tu firma de correo en segundos. Copia el HTML para Gmail u Outlook.</div>
+      <div class="tool-footer"><span class="tool-tag tool-tag-new">Nuevo</span><span class="tool-arrow">→</span></div>
     </a>
-
-    <a href="/herramientas/calculadora-finiquito" class="tool-card fade-in">
+    <a href="/herramientas/calculadora-finiquito" class="tool-card">
       <span class="tool-emoji">💼</span>
       <div class="tool-name">Calculadora de finiquito</div>
-      <div class="tool-desc">Calcula lo que te corresponde cobrar al terminar una relación laboral. Vacaciones, pagas extra y salario pendiente.</div>
-      <div class="tool-footer">
-        <span class="tool-tag">Laboral</span>
-        <span class="tool-arrow">→</span>
-      </div>
+      <div class="tool-desc">Verifica tu finiquito antes de firmarlo. Vacaciones, pagas extra y salario pendiente.</div>
+      <div class="tool-footer"><span class="tool-tag">Laboral</span><span class="tool-arrow">→</span></div>
     </a>
-
-    <a href="/herramientas" class="tool-card fade-in" style="background:var(--bg2); border-style: dashed;">
+    <a href="/herramientas/calculadora-irpf" class="tool-card">
       <span class="tool-emoji">📊</span>
       <div class="tool-name">Calculadora IRPF</div>
-      <div class="tool-desc">Calcula tu pago fraccionado del IRPF trimestral (modelo 130) como autónomo en España.</div>
-      <div class="tool-footer">
-        <span class="tool-tag">Fiscal</span>
-        <span class="tool-arrow">→</span>
-      </div>
+      <div class="tool-desc">Calcula tu pago fraccionado trimestral del IRPF. Modelo 130 para autónomos.</div>
+      <div class="tool-footer"><span class="tool-tag tool-tag-fiscal">Fiscal</span><span class="tool-arrow">→</span></div>
+    </a>
+    <a href="/herramientas/simulador-cuota-autonomo" class="tool-card">
+      <span class="tool-emoji">🏦</span>
+      <div class="tool-name">Cuota de autónomo</div>
+      <div class="tool-desc">Calcula cuánto pagarás de cuota según tus ingresos reales. Sistema de tramos 2026.</div>
+      <div class="tool-footer"><span class="tool-tag tool-tag-fiscal">Fiscal</span><span class="tool-arrow">→</span></div>
+    </a>
+    <a href="/herramientas/generador-presupuesto" class="tool-card">
+      <span class="tool-emoji">📋</span>
+      <div class="tool-name">Generador de presupuesto</div>
+      <div class="tool-desc">Presupuestos profesionales con desglose por partidas. Imprimible en PDF.</div>
+      <div class="tool-footer"><span class="tool-tag tool-tag-new">Nuevo</span><span class="tool-arrow">→</span></div>
+    </a>
+    <a href="/herramientas/calculadora-ahorro-fiscal" class="tool-card">
+      <span class="tool-emoji">💡</span>
+      <div class="tool-name">Ahorro fiscal</div>
+      <div class="tool-desc">Descubre cuánto puedes ahorrar al año deduciendo correctamente tus gastos.</div>
+      <div class="tool-footer"><span class="tool-tag tool-tag-fiscal">Fiscal</span><span class="tool-arrow">→</span></div>
+    </a>
+    <a href="/herramientas/plantilla-factura-excel" class="tool-card">
+      <span class="tool-emoji">📊</span>
+      <div class="tool-name">Plantilla factura Excel</div>
+      <div class="tool-desc">Plantilla .xlsx con IVA y retención IRPF automáticos. Compatible con LibreOffice y Sheets.</div>
+      <div class="tool-footer"><span class="tool-tag" style="background:rgba(42,107,212,.1);color:#2a6bd4;">Descarga</span><span class="tool-arrow">→</span></div>
+    </a>
+    <a href="/herramientas/calculadora-precio-palabra" class="tool-card">
+      <span class="tool-emoji">✍️</span>
+      <div class="tool-name">Precio por palabra</div>
+      <div class="tool-desc">Tu tarifa ideal por palabra como redactor freelance según ingresos y velocidad.</div>
+      <div class="tool-footer"><span class="tool-tag tool-tag-new">Nuevo</span><span class="tool-arrow">→</span></div>
     </a>
   </div>
+  <div class="tools-cta"><a href="/herramientas">Ver todas las herramientas →</a></div>
 </section>
 
 <hr class="divider">
 
-<!-- BLOG SECTION -->
-<section class="section">
-  <div class="section-header fade-in">
-    <div class="section-tag">Blog y guías</div>
-    <h2 class="section-title">Aprende a gestionar<br><em>tu negocio</em></h2>
-    <p class="section-desc">Artículos prácticos sobre precios, clientes, productividad e inteligencia artificial para autónomos.</p>
+<!-- BLOG -->
+<section class="section" style="padding-top:64px;">
+  <div class="section-header">
+    <div class="section-tag">📝 Blog y guías</div>
+    <h2 class="section-title">Aprende a <em>gestionar</em> tu negocio</h2>
+    <p class="section-desc">Guías en profundidad sobre precios, fiscalidad, productividad e IA para autónomos.</p>
   </div>
-
   <div class="blog-grid">
-    <a href="/blog/iva-trimestral-autonomos" class="blog-card fade-in">
-      <div class="blog-thumb blog-thumb-1" style="padding:0;overflow:hidden;background:none;"><img loading="lazy" src="https://images.unsplash.com/photo-1554224155-8d04cb21cd6c?w=600&q=80" alt="IVA trimestral para autónomos modelo 303" style="width:100%;height:100%;object-fit:cover;"></div>
+    <a href="/blog/como-calcular-finiquito" class="blog-card">
+      <div class="blog-thumb"><img loading="lazy" src="https://images.unsplash.com/photo-1507679799987-c73779587ccf?w=600&q=80" alt="Cómo calcular el finiquito en España 2026"></div>
+      <div class="blog-body">
+        <div class="blog-cat">💼 Laboral · Nuevo</div>
+        <div class="blog-title">Cómo calcular el finiquito en España 2026</div>
+        <div class="blog-meta">13 min · Guía completa</div>
+      </div>
+    </a>
+    <a href="/blog/iva-trimestral-autonomos" class="blog-card">
+      <div class="blog-thumb"><img loading="lazy" src="https://images.unsplash.com/photo-1554224155-8d04cb21cd6c?w=600&q=80" alt="IVA trimestral para autónomos modelo 303"></div>
       <div class="blog-body">
         <div class="blog-cat">🧮 Fiscal</div>
         <div class="blog-title">IVA trimestral para autónomos: guía completa 2026</div>
         <div class="blog-meta">14 min · Guía completa</div>
       </div>
     </a>
-
-    <a href="/blog/como-poner-precio-servicios-freelance" class="blog-card fade-in">
-      <div class="blog-thumb blog-thumb-2" style="padding:0;overflow:hidden;background:none;"><img loading="lazy" src="https://images.unsplash.com/photo-1579621970563-ebec7560ff3e?w=600&q=80" alt="Cómo poner precio a servicios freelance sin infravalorarte" style="width:100%;height:100%;object-fit:cover;"></div>
+    <a href="/blog/como-poner-precio-servicios-freelance" class="blog-card">
+      <div class="blog-thumb"><img loading="lazy" src="https://images.unsplash.com/photo-1579621970563-ebec7560ff3e?w=600&q=80" alt="Cómo poner precio a servicios freelance"></div>
       <div class="blog-body">
-        <div class="blog-cat">Precios</div>
+        <div class="blog-cat">💸 Precios</div>
         <div class="blog-title">Cómo poner precio a tus servicios freelance sin infravalorarte</div>
         <div class="blog-meta">12 min · Guía completa</div>
       </div>
     </a>
-
-    <a href="/blog/notion-para-freelance" class="blog-card fade-in">
-      <div class="blog-thumb blog-thumb-3" style="padding:0;overflow:hidden;background:none;"><img loading="lazy" src="https://images.unsplash.com/photo-1611532736597-de2d4265fba3?w=600&q=80" alt="Notion para freelancers organizar negocio" style="width:100%;height:100%;object-fit:cover;"></div>
-      <div class="blog-body">
-        <div class="blog-cat">Productividad</div>
-        <div class="blog-title">Cómo usar Notion para organizar tu negocio freelance</div>
-        <div class="blog-meta">10 min · Tutorial</div>
-      </div>
-    </a>
   </div>
-  <div style="text-align:center;margin-top:28px;">
-    <a href="/blog" style="display:inline-block;background:var(--ink);color:#fff;padding:12px 28px;border-radius:10px;font-size:14px;font-weight:800;text-decoration:none;">Ver los 7 artículos →</a>
+  <div class="blog-cta"><a href="/blog">Ver los 8 artículos →</a></div>
+</section>
+
+<!-- WHY -->
+<section class="why-section">
+  <div class="why-inner">
+    <div class="why-header">
+      <div class="why-tag">¿Por qué AutónomoLab?</div>
+      <h2 class="why-title">Construido para <em>autónomos reales</em></h2>
+    </div>
+    <div class="why-grid">
+      <div class="why-card">
+        <div class="why-icon">🌎</div>
+        <div class="why-card-title">España y toda LATAM</div>
+        <div class="why-card-desc">Herramientas adaptadas a la fiscalidad y el contexto real de España, México, Argentina, Colombia y Chile.</div>
+      </div>
+      <div class="why-card">
+        <div class="why-icon">🆓</div>
+        <div class="why-card-title">100% gratuito, siempre</div>
+        <div class="why-card-desc">Sin plan de pago, sin funciones premium, sin límites artificiales. Todas las herramientas son gratuitas sin condiciones.</div>
+      </div>
+      <div class="why-card">
+        <div class="why-icon">🔒</div>
+        <div class="why-card-title">Privacidad total</div>
+        <div class="why-card-desc">Ningún dato sale de tu navegador. No almacenamos ni vendemos tu información. Sin cookies de seguimiento.</div>
+      </div>
+    </div>
   </div>
 </section>
 
-<!-- WHY SECTION -->
-<div class="why-section">
-  <div class="why-inner">
-    <div class="section-header fade-in">
-      <div class="section-tag">¿Por qué AutónomoLab?</div>
-      <h2 class="section-title">Hecho por y para<br><em>independientes</em></h2>
-      <p class="section-desc">Sin suscripciones, sin trucos, sin registro obligatorio. Solo herramientas que funcionan.</p>
-    </div>
-
-    <div class="why-grid">
-      <div class="why-item fade-in">
-        <div class="why-num">100%</div>
-        <div class="why-title">Gratuito siempre</div>
-        <div class="why-desc">Todas las herramientas son gratuitas. Sin planes de pago ni funciones ocultas.</div>
-      </div>
-      <div class="why-item fade-in">
-        <div class="why-num">0</div>
-        <div class="why-title">Registro requerido</div>
-        <div class="why-desc">Entra, usa la herramienta y sal. Sin formularios ni emails. Tu tiempo vale.</div>
-      </div>
-      <div class="why-item fade-in">
-        <div class="why-num">ES+</div>
-        <div class="why-title">España y LATAM</div>
-        <div class="why-desc">Adaptado a la fiscalidad y contexto de España, México, Argentina, Colombia y más.</div>
-      </div>
-      <div class="why-item fade-in">
-        <div class="why-num">IA</div>
-        <div class="why-title">Con inteligencia</div>
-        <div class="why-desc">Próximamente: herramientas con IA para automatizar las tareas más repetitivas.</div>
-      </div>
-    </div>
-  </div>
-</div>
-
 <!-- NEWSLETTER -->
-<div class="newsletter">
-  <div class="newsletter-inner fade-in">
+<section class="newsletter">
+  <div class="newsletter-inner">
     <h2>El lab en tu <em>bandeja</em></h2>
-    <p>Una newsletter mensual con nuevas herramientas, guías y recursos para autónomos. Sin spam.</p>
+    <p>Nuevas herramientas, guías y recursos para autónomos. Sin spam, cuando haya algo que merezca la pena.</p>
     <div class="newsletter-form">
       <input type="email" class="newsletter-input" placeholder="tu@email.com" id="nl-email">
       <button class="newsletter-btn" onclick="nlSubmit()">Suscribirse</button>
     </div>
-    <p class="newsletter-note" id="nl-note">Sin spam. Baja cuando quieras. GDPR compliant.</p>
+    <p class="newsletter-note" id="nl-note">Sin spam. Baja cuando quieras.</p>
   </div>
-</div>
+</section>
 
 <!-- FOOTER -->
 <footer>
-  <div class="footer-top">
-    <div class="footer-brand">
-      <div class="footer-logo"><span class="logo-dot"></span> AutónomoLab</div>
-      <p class="footer-tagline">Herramientas y recursos gratuitos para autónomos y freelancers hispanohablantes.</p>
+  <div class="footer-inner">
+    <div class="footer-top">
+      <div>
+        <a href="/" class="footer-logo"><span class="footer-logo-dot"></span>AutónomoLab</a>
+        <p class="footer-tagline">Herramientas gratuitas para autónomos y freelancers hispanohablantes.</p>
+      </div>
+      <div class="footer-col">
+        <div class="footer-col-title">Herramientas</div>
+        <ul>
+          <li><a href="/herramientas/calculadora-tarifa-hora">Tarifa hora</a></li>
+          <li><a href="/herramientas/calculadora-iva">IVA trimestral</a></li>
+          <li><a href="/herramientas/calculadora-irpf">IRPF modelo 130</a></li>
+          <li><a href="/herramientas/calculadora-finiquito">Finiquito</a></li>
+          <li><a href="/herramientas/generador-contrato-freelance">Contrato freelance</a></li>
+          <li><a href="/herramientas">Ver todas →</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <div class="footer-col-title">Blog</div>
+        <ul>
+          <li><a href="/blog/categoria/precios">Precios</a></li>
+          <li><a href="/blog/categoria/fiscal">Fiscal</a></li>
+          <li><a href="/blog/categoria/productividad">Productividad</a></li>
+          <li><a href="/blog/categoria/ia">Inteligencia artificial</a></li>
+          <li><a href="/blog/categoria/herramientas">Herramientas</a></li>
+          <li><a href="/blog">Ver todo →</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <div class="footer-col-title">AutónomoLab</div>
+        <ul>
+          <li><a href="/sobre">Sobre nosotros</a></li>
+          <li><a href="/comparativas">Comparativas</a></li>
+          <li><a href="/contacto">Contacto</a></li>
+          <li><a href="https://facturapdf.app" target="_blank" rel="noopener">facturapdf.app ↗</a></li>
+        </ul>
+      </div>
     </div>
-    <div>
-      <div class="footer-col-title">Herramientas</div>
-      <ul class="footer-links">
-        <li><a href="/herramientas/calculadora-tarifa-hora">Calculadora tarifa hora</a></li>
-        <li><a href="/herramientas/generador-contrato-freelance">Generador de contrato</a></li>
-        <li><a href="/herramientas/calculadora-iva">Simulador IVA</a></li>
-        <li><a href="/herramientas/generador-firma-email">Firma de email</a></li>
-        <li><a href="/herramientas">Ver todas →</a></li>
-      </ul>
-    </div>
-    <div>
-      <div class="footer-col-title">Blog</div>
-      <ul class="footer-links">
-        <li><a href="/blog/categoria/precios">Precios y tarifas</a></li>
-        <li><a href="/blog/categoria/productividad">Productividad</a></li>
-        <li><a href="/blog/categoria/herramientas">Herramientas</a></li>
-        <li><a href="/blog/categoria/ia">Inteligencia artificial</a></li>
-        <li><a href="/blog/categoria/fiscal">Fiscal</a></li>
-        <li><a href="/blog">Ver todo →</a></li>
-      </ul>
-    </div>
-    <div>
-      <div class="footer-col-title">Legal</div>
-      <ul class="footer-links">
-        <li><a href="/privacidad">Privacidad</a></li>
-        <li><a href="/cookies">Cookies</a></li>
-        <li><a href="/aviso-legal">Aviso legal</a></li>
-        <li><a href="/contacto">Contacto</a></li>
-      </ul>
-    </div>
-  </div>
-  <div class="footer-bottom">
-    <span class="footer-copy">© 2026 AutónomoLab · Herramientas para autónomos y freelancers</span>
-    <div class="footer-legal">
-      <a href="/privacidad">Privacidad</a>
-      <a href="/cookies">Cookies</a>
+    <div class="footer-bottom">
+      <span class="footer-copy">© 2026 AutónomoLab</span>
+      <div class="footer-legal">
+        <a href="/privacidad">Privacidad</a>
+        <a href="/cookies">Cookies</a>
+        <a href="/aviso-legal">Aviso legal</a>
+      </div>
     </div>
   </div>
 </footer>
 
 <script>
-  // Intersection Observer para animaciones fade-in
-  const observer = new IntersectionObserver((entries) => {
-    entries.forEach((entry, i) => {
-      if (entry.isIntersecting) {
-        setTimeout(() => {
-          entry.target.classList.add('visible');
-        }, i * 80);
-        observer.unobserve(entry.target);
-      }
-    });
-  }, { threshold: 0.1 });
-
-  document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
-
-  // Newsletter form
-  document.querySelector('.newsletter-btn').addEventListener('click', () => {
-    const input = document.querySelector('.newsletter-input');
-    if (input.value && input.value.includes('@')) {
-      input.value = '';
-      input.placeholder = '¡Suscrito! Gracias 🎉';
-    }
-  });
-</script>
-
-
-<script>
-function nlSubmit() {
+function nlSubmit(){
   var email = document.getElementById('nl-email').value;
-  if (!email || !email.includes('@')) {
-    document.getElementById('nl-note').textContent = 'Por favor introduce un email válido.';
+  var note = document.getElementById('nl-note');
+  if(!email || !email.includes('@')){
+    note.textContent = 'Por favor introduce un email válido.';
     return;
   }
-  document.getElementById('nl-note').textContent = '✅ ¡Gracias! Te avisamos cuando esté lista la newsletter.';
-  document.getElementById('nl-note').style.color = '#2ab87a';
+  note.textContent = '✅ ¡Gracias! Te avisamos cuando esté lista la newsletter.';
+  note.style.color = '#2ab87a';
   document.getElementById('nl-email').value = '';
   document.querySelector('.newsletter-btn').disabled = true;
 }

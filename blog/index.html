@@ -4,13 +4,18 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Blog para autónomos y freelancers — AutónomoLab</title>
-<meta name="description" content="Guías, tutoriales y recursos prácticos para autónomos y freelancers. Precios, productividad, herramientas e inteligencia artificial.">
+<meta name="description" content="Guías prácticas sobre precios, fiscalidad, productividad e inteligencia artificial para autónomos y freelancers. Artículos en profundidad, sin relleno.">
 <meta name="robots" content="index, follow">
 <link rel="canonical" href="https://autonomolab.com/blog/">
+<meta property="og:title" content="Blog para autónomos y freelancers — AutónomoLab">
+<meta property="og:description" content="Guías prácticas sobre precios, fiscalidad y productividad para autónomos y freelancers.">
+<meta property="og:url" content="https://autonomolab.com/blog/">
+<meta property="og:site_name" content="AutónomoLab">
+<meta property="og:type" content="website">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"Blog","name":"Blog AutónomoLab","description":"Guías prácticas para autónomos y freelancers hispanohablantes.","url":"https://autonomolab.com/blog/","inLanguage":"es","publisher":{"@type":"Organization","name":"AutónomoLab","url":"https://autonomolab.com"}}</script>
 <link rel="icon" type="image/x-icon" href="/favicon.ico">
 <link rel="icon" type="image/svg+xml" href="/favicon.svg">
 <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
-<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
 <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
 <meta name="theme-color" content="#1a1814">
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -19,95 +24,53 @@
 <style>
   :root{--bg:#f5f2eb;--bg2:#ede9e0;--ink:#1a1814;--ink2:#4a4740;--ink3:#8a857a;--accent:#d45a2a;--card:#fff;--border:#ddd8ce;}
   *{box-sizing:border-box;margin:0;padding:0;}
-  body{overflow-x:hidden;background:var(--bg);color:var(--ink);font-family:'Cabinet Grotesk',sans-serif;font-size:16px;line-height:1.6;}
+  body{background:var(--bg);color:var(--ink);font-family:'Cabinet Grotesk',sans-serif;font-size:16px;line-height:1.7;overflow-x:hidden;}
   nav{position:sticky;top:0;z-index:100;background:rgba(245,242,235,0.92);backdrop-filter:blur(12px);border-bottom:1px solid var(--border);padding:0 24px;}
   .nav-inner{max-width:1100px;margin:0 auto;height:60px;display:flex;align-items:center;justify-content:space-between;}
   .logo{font-size:18px;font-weight:900;color:var(--ink);text-decoration:none;letter-spacing:-0.03em;display:flex;align-items:center;gap:8px;}
-  .logo-dot{width:8px;height:8px;background:var(--accent);border-radius:50%;display:inline-block;}
+  .logo-dot{width:8px;height:8px;background:var(--accent);border-radius:50%;display:inline-block;flex-shrink:0;}
   .nav-links{display:flex;gap:28px;list-style:none;}
   .nav-links a{font-size:14px;font-weight:500;color:var(--ink2);text-decoration:none;}
   .nav-links a:hover{color:var(--accent);}
   @media(max-width:640px){.nav-links{display:none;}}
   .page{max-width:1100px;margin:0 auto;padding:56px 24px 80px;}
-  .page-header{margin-bottom:48px;}
-  .page-tag{font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:.15em;color:var(--ink3);margin-bottom:10px;}
-  h1{font-size:clamp(32px,5vw,48px);font-weight:900;letter-spacing:-.03em;margin-bottom:12px;}
-  h1 em{font-family:'Instrument Serif',serif;font-style:italic;font-weight:400;color:var(--accent);}
-  .page-desc{font-size:17px;color:var(--ink2);max-width:520px;}
+  .blog-header{margin-bottom:48px;}
+  .blog-tag{font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:.15em;color:var(--ink3);margin-bottom:10px;}
+  .blog-header h1{font-size:clamp(32px,5vw,52px);font-weight:900;letter-spacing:-.03em;margin-bottom:12px;}
+  .blog-header h1 em{font-family:'Instrument Serif',serif;font-style:italic;font-weight:400;color:var(--accent);}
+  .blog-header p{font-size:17px;color:var(--ink2);max-width:520px;margin-bottom:28px;}
   .cats{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:40px;}
-  .cat{font-size:13px;font-weight:700;padding:6px 14px;border-radius:100px;border:1px solid var(--border);color:var(--ink2);text-decoration:none;transition:all .2s;}
+  .cat{font-size:13px;font-weight:700;padding:6px 16px;border-radius:100px;border:1px solid var(--border);color:var(--ink2);text-decoration:none;transition:all .2s;}
   .cat:hover,.cat.active{background:var(--ink);color:#fff;border-color:var(--ink);}
+  /* FEATURED — artículo destacado grande */
+  .featured-article{display:grid;grid-template-columns:1fr 1fr;gap:0;background:var(--card);border:1px solid var(--border);border-radius:16px;overflow:hidden;text-decoration:none;margin-bottom:28px;transition:transform .2s,box-shadow .2s;}
+  .featured-article:hover{transform:translateY(-3px);box-shadow:0 8px 40px rgba(26,24,20,.1);}
+  @media(max-width:700px){.featured-article{grid-template-columns:1fr;}}
+  .featured-thumb{height:100%;min-height:240px;overflow:hidden;}
+  .featured-thumb img{width:100%;height:100%;object-fit:cover;display:block;}
+  .featured-body{padding:32px;}
+  .featured-cat{font-size:11px;font-weight:800;text-transform:uppercase;letter-spacing:.12em;color:var(--accent);margin-bottom:12px;}
+  .featured-title{font-size:22px;font-weight:900;color:var(--ink);line-height:1.25;margin-bottom:12px;letter-spacing:-.02em;}
+  .featured-excerpt{font-size:14px;color:var(--ink2);line-height:1.6;margin-bottom:16px;}
+  .featured-meta{font-size:12px;color:var(--ink3);}
+  .featured-badge{display:inline-block;background:var(--accent);color:#fff;font-size:10px;font-weight:800;padding:3px 10px;border-radius:100px;margin-bottom:10px;}
+  /* GRID NORMAL */
   .blog-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;}
   @media(max-width:900px){.blog-grid{grid-template-columns:1fr 1fr;}}
   @media(max-width:560px){.blog-grid{grid-template-columns:1fr;}}
   .blog-card{background:var(--card);border:1px solid var(--border);border-radius:14px;overflow:hidden;text-decoration:none;display:block;transition:transform .2s,box-shadow .2s;}
   .blog-card:hover{transform:translateY(-3px);box-shadow:0 8px 32px rgba(26,24,20,.1);}
-  .blog-card.featured{grid-column:span 2;}
-  @media(max-width:560px){.blog-card.featured{grid-column:span 1;}}
-  .blog-thumb{height:160px;display:flex;align-items:center;justify-content:center;font-size:52px;}
-  .blog-card.featured .blog-thumb{height:200px;}
-  .t1{background:linear-gradient(135deg,#fde8d8,#fbd0b5);}
-  .t2{background:linear-gradient(135deg,#d8e8fd,#b5d0fb);}
-  .t3{background:linear-gradient(135deg,#d8fde8,#b5fbd0);}
-  .t4{background:linear-gradient(135deg,#fde8f8,#fbd0f0);}
-  .t5{background:linear-gradient(135deg,#f8fde8,#f0fbd0);}
-  .t6{background:linear-gradient(135deg,#e8d8fd,#d0b5fb);}
-  .blog-body{overflow-x:hidden;padding:20px;}
+  .blog-thumb{height:170px;overflow:hidden;}
+  .blog-thumb img{width:100%;height:100%;object-fit:cover;display:block;}
+  .blog-body{padding:20px;}
   .blog-cat{font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:.1em;color:var(--accent);margin-bottom:8px;}
   .blog-title{font-size:16px;font-weight:800;color:var(--ink);line-height:1.3;margin-bottom:8px;letter-spacing:-.01em;}
-  .blog-card.featured .blog-title{font-size:20px;}
   .blog-excerpt{font-size:13px;color:var(--ink2);line-height:1.5;margin-bottom:10px;}
   .blog-meta{font-size:12px;color:var(--ink3);}
   footer{text-align:center;padding:40px 24px;border-top:1px solid var(--border);font-size:13px;color:var(--ink3);margin-top:40px;}
   footer a{color:var(--accent);text-decoration:none;}
-
-  /* === LAYOUT SAFETY === */
-  *, *::before, *::after { box-sizing: border-box; }
-  img, video, iframe { max-width: 100%; height: auto; }
-  table { width: 100%; table-layout: fixed; }
-  .article-wrap > * { max-width: 100%; }
-  pre, code { white-space: pre-wrap; word-break: break-word; }
 </style>
-<meta property="og:title" content="Blog AutónomoLab">
-<meta property="og:description" content="Guías, tutoriales y recursos prácticos para autónomos y freelancers hispanohablantes.">
-<meta property="og:type" content="website">
-<meta property="og:url" content="https://autonomolab.com/blog/">
-<meta property="og:site_name" content="AutónomoLab">
-<meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Blog AutónomoLab">
-<meta name="twitter:description" content="Guías, tutoriales y recursos prácticos para autónomos y freelancers hispanohablantes.">
-<script type="application/ld+json">{"@context":"https://schema.org","@type":"Blog","name":"Blog AutónomoLab","description":"Guías, tutoriales y recursos prácticos para autónomos y freelancers hispanohablantes.","url":"https://autonomolab.com/blog/","inLanguage":"es"}</script>
-<!-- GOOGLE ANALYTICS 4
-  INSTRUCCIONES:
-  1. Ve a https://analytics.google.com
-  2. Crea una propiedad para autonomolab.com
-  3. Google te dará un Measurement ID como: G-XXXXXXXXXX
-  4. Sustituye G-XXXXXXXXXX por tu ID real abajo
--->
-<!-- Global site tag (gtag.js) - Google Analytics -->
-<!-- <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-  gtag('config', 'G-XXXXXXXXXX');
-</script> -->
-<!-- GOOGLE ADSENSE
-  INSTRUCCIONES:
-  1. Ve a https://adsense.google.com
-  2. Añade autonomolab.com como sitio
-  3. Google te dará un código como este:
-     <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-XXXXXXXXXXXXXXXXX" crossorigin="anonymous"></script>
-  4. Sustituye el bloque de abajo con ese código
-  5. Para mostrar anuncios en un lugar específico, añade:
-     <ins class="adsbygoogle"
-          style="display:block"
-          data-ad-client="ca-pub-XXXXXXXXXXXXXXXXX"
-          data-ad-slot="XXXXXXXXXX"
-          data-ad-format="auto"
-          data-full-width-responsive="true"></ins>
-     <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
--->
+<script src="/cookie-banner.js"></script>
 </head>
 <body>
 <nav>
@@ -121,11 +84,12 @@
     </ul>
   </div>
 </nav>
+
 <div class="page">
-  <div class="page-header">
-    <div class="page-tag">Blog y guías</div>
-    <h1>Aprende a gestionar<br><em>tu negocio</em></h1>
-    <p class="page-desc">Artículos prácticos sobre precios, productividad, herramientas e inteligencia artificial para autónomos y freelancers.</p>
+  <div class="blog-header">
+    <div class="blog-tag">📝 Blog y guías</div>
+    <h1>Aprende a gestionar <em>tu negocio</em></h1>
+    <p>Artículos prácticos sobre precios, fiscalidad, productividad e inteligencia artificial para autónomos y freelancers.</p>
   </div>
 
   <div class="cats">
@@ -137,91 +101,102 @@
     <a href="/blog/categoria/fiscal" class="cat">Fiscal</a>
   </div>
 
+  <!-- ARTÍCULO DESTACADO — el más reciente -->
+  <a href="/blog/como-calcular-finiquito" class="featured-article">
+    <div class="featured-thumb">
+      <img loading="lazy" src="https://images.unsplash.com/photo-1507679799987-c73779587ccf?w=800&q=80" alt="Cómo calcular el finiquito en España 2026">
+    </div>
+    <div class="featured-body">
+      <div class="featured-badge">Nuevo</div>
+      <div class="featured-cat">💼 Laboral</div>
+      <div class="featured-title">Cómo calcular el finiquito en España 2026 — guía completa</div>
+      <div class="featured-excerpt">Todo lo que necesitas saber antes de firmar tu finiquito. Fórmulas claras, ejemplo completo con números reales y calculadora gratuita para verificar el importe.</div>
+      <div class="featured-meta">13 min · Guía completa</div>
+    </div>
+  </a>
+
+  <!-- GRID DE ARTÍCULOS -->
   <div class="blog-grid">
-    <a href="/blog/como-poner-precio-servicios-freelance" class="blog-card featured">
-      <div class="blog-thumb" style="background:none;padding:0;overflow:hidden;">
-        <img loading="lazy" src="https://images.unsplash.com/photo-1579621970563-ebec7560ff3e?w=800&q=80" alt="Cómo poner precio a servicios freelance sin infravalorarte" style="width:100%;height:100%;object-fit:cover;">
+    <a href="/blog/iva-trimestral-autonomos" class="blog-card">
+      <div class="blog-thumb">
+        <img loading="lazy" src="https://images.unsplash.com/photo-1554224155-8d04cb21cd6c?w=600&q=80" alt="IVA trimestral para autónomos modelo 303">
       </div>
       <div class="blog-body">
-        <div class="blog-cat">Precios</div>
+        <div class="blog-cat">🧮 Fiscal</div>
+        <div class="blog-title">IVA trimestral para autónomos: guía completa 2026</div>
+        <div class="blog-excerpt">Modelo 303, fechas límite, deducciones y cómo calcularlo paso a paso.</div>
+        <div class="blog-meta">14 min · Guía completa</div>
+      </div>
+    </a>
+    <a href="/blog/como-poner-precio-servicios-freelance" class="blog-card">
+      <div class="blog-thumb">
+        <img loading="lazy" src="https://images.unsplash.com/photo-1579621970563-ebec7560ff3e?w=600&q=80" alt="Cómo poner precio a servicios freelance sin infravalorarte">
+      </div>
+      <div class="blog-body">
+        <div class="blog-cat">💸 Precios</div>
         <div class="blog-title">Cómo poner precio a tus servicios freelance sin infravalorarte</div>
-        <div class="blog-excerpt">El error más común de los freelancers es cobrar demasiado poco. Te explicamos cómo calcular tu tarifa real y defenderla ante los clientes.</div>
-        <div class="blog-meta">8 min de lectura · Guía completa</div>
+        <div class="blog-excerpt">Fórmulas y tarifas por sector para España y LATAM.</div>
+        <div class="blog-meta">12 min · Guía completa</div>
       </div>
     </a>
-
-    <a href="/blog/mejores-herramientas-freelance-2025" class="blog-card">
-      <div class="blog-thumb" style="background:none;padding:0;overflow:hidden;">
-        <img loading="lazy" src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?w=600&q=80" alt="Mejores herramientas para freelancers 2026" style="width:100%;height:100%;object-fit:cover;">
-      </div>
-      <div class="blog-body">
-        <div class="blog-cat">Herramientas</div>
-        <div class="blog-title">Las 15 mejores herramientas para freelancers en 2026</div>
-        <div class="blog-excerpt">Desde gestión de proyectos hasta facturación, estas son las apps imprescindibles.</div>
-        <div class="blog-meta">12 min · Comparativa</div>
-      </div>
-    </a>
-
-    <a href="/blog/notion-para-freelance" class="blog-card">
-      <div class="blog-thumb" style="background:none;padding:0;overflow:hidden;">
-        <img loading="lazy" src="https://images.unsplash.com/photo-1611532736597-de2d4265fba3?w=600&q=80" alt="Notion para freelancers organizar negocio" style="width:100%;height:100%;object-fit:cover;">
-      </div>
-      <div class="blog-body">
-        <div class="blog-cat">Productividad</div>
-        <div class="blog-title">Cómo usar Notion para organizar tu negocio freelance</div>
-        <div class="blog-excerpt">Sistema completo para gestionar clientes, proyectos y tareas con Notion.</div>
-        <div class="blog-meta">10 min · Tutorial</div>
-      </div>
-    </a>
-
     <a href="/blog/chatgpt-para-autonomos" class="blog-card">
-      <div class="blog-thumb" style="background:none;padding:0;overflow:hidden;">
-        <img loading="lazy" src="https://images.unsplash.com/photo-1677442135703-1787eea5ce01?w=600&q=80" alt="ChatGPT e inteligencia artificial para autónomos" style="width:100%;height:100%;object-fit:cover;">
+      <div class="blog-thumb">
+        <img loading="lazy" src="https://images.unsplash.com/photo-1677442135703-1787eea5ce01?w=600&q=80" alt="ChatGPT para autónomos prompts reales">
       </div>
       <div class="blog-body">
-        <div class="blog-cat">Inteligencia artificial</div>
+        <div class="blog-cat">🤖 Inteligencia artificial</div>
         <div class="blog-title">ChatGPT para autónomos: 20 usos prácticos con prompts reales</div>
         <div class="blog-excerpt">20 prompts listos para copiar que te ahorran 10+ horas a la semana.</div>
         <div class="blog-meta">15 min · Guía práctica</div>
       </div>
     </a>
-
     <a href="/blog/como-conseguir-clientes-freelance" class="blog-card">
-      <div class="blog-thumb" style="background:none;padding:0;overflow:hidden;">
-        <img loading="lazy" src="https://images.unsplash.com/photo-1556761175-4b46a572b786?w=600&q=80" alt="Cómo conseguir clientes como freelance" style="width:100%;height:100%;object-fit:cover;">
+      <div class="blog-thumb">
+        <img loading="lazy" src="https://images.unsplash.com/photo-1556761175-4b46a572b786?w=600&q=80" alt="Cómo conseguir clientes como freelance">
       </div>
       <div class="blog-body">
-        <div class="blog-cat">Clientes</div>
+        <div class="blog-cat">🎯 Clientes</div>
         <div class="blog-title">Cómo conseguir tus primeros clientes como freelance</div>
         <div class="blog-excerpt">Estrategias probadas para empezar a facturar sin experiencia previa ni contactos.</div>
         <div class="blog-meta">11 min · Guía</div>
       </div>
     </a>
-
-    <a href="/blog/mejor-app-facturacion-autonomo" class="blog-card">
-      <div class="blog-thumb" style="background:none;padding:0;overflow:hidden;">
-        <img loading="lazy" src="https://images.unsplash.com/photo-1554224155-6726b3ff858f?w=600&q=80" alt="Mejor app facturación autónomos 2026" style="width:100%;height:100%;object-fit:cover;">
+    <a href="/blog/notion-para-freelance" class="blog-card">
+      <div class="blog-thumb">
+        <img loading="lazy" src="https://images.unsplash.com/photo-1611532736597-de2d4265fba3?w=600&q=80" alt="Notion para freelancers organizar negocio">
       </div>
       <div class="blog-body">
-        <div class="blog-cat">Herramientas</div>
+        <div class="blog-cat">📋 Productividad</div>
+        <div class="blog-title">Cómo usar Notion para organizar tu negocio freelance</div>
+        <div class="blog-excerpt">Sistema completo para gestionar clientes, proyectos y tareas con Notion.</div>
+        <div class="blog-meta">10 min · Tutorial</div>
+      </div>
+    </a>
+    <a href="/blog/mejores-herramientas-freelance-2025" class="blog-card">
+      <div class="blog-thumb">
+        <img loading="lazy" src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?w=600&q=80" alt="Mejores herramientas para freelancers 2026">
+      </div>
+      <div class="blog-body">
+        <div class="blog-cat">🛠️ Herramientas</div>
+        <div class="blog-title">Las 15 mejores herramientas para freelancers en 2026</div>
+        <div class="blog-excerpt">Desde gestión de proyectos hasta facturación, estas son las apps imprescindibles.</div>
+        <div class="blog-meta">12 min · Comparativa</div>
+      </div>
+    </a>
+    <a href="/blog/mejor-app-facturacion-autonomo" class="blog-card">
+      <div class="blog-thumb">
+        <img loading="lazy" src="https://images.unsplash.com/photo-1554224155-6726b3ff858f?w=600&q=80" alt="Mejor app facturación autónomos 2026">
+      </div>
+      <div class="blog-body">
+        <div class="blog-cat">🧾 Herramientas</div>
         <div class="blog-title">Mejor app de facturación para autónomos en 2026</div>
         <div class="blog-excerpt">Comparamos Holded, Quaderno, Quipu y más para que elijas la que mejor se adapta.</div>
         <div class="blog-meta">10 min · Comparativa</div>
       </div>
     </a>
-      <a href="/blog/iva-trimestral-autonomos" class="blog-card">
-      <div class="blog-thumb" style="background:none;padding:0;overflow:hidden;">
-        <img loading="lazy" src="https://images.unsplash.com/photo-1554224155-8d04cb21cd6c?w=600&q=80" alt="IVA trimestral para autónomos modelo 303" style="width:100%;height:100%;object-fit:cover;">
-      </div>
-      <div class="blog-body">
-        <div class="blog-cat">🧮 Fiscal</div>
-        <div class="blog-title">IVA trimestral para autónomos: guía completa 2026</div>
-        <div class="blog-excerpt">Todo sobre el modelo 303: cómo calcularlo, qué puedes deducir, fechas límite y qué pasa si te retrasas.</div>
-        <div class="blog-meta">14 min · Guía completa</div>
-      </div>
-    </a>
   </div>
 </div>
+
 <footer>© 2026 <a href="/">AutónomoLab</a> · <a href="/privacidad">Privacidad</a> · <a href="/cookies">Cookies</a> · <a href="/aviso-legal">Aviso legal</a></footer>
 </body>
 </html>
