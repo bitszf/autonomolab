@@ -1,7 +1,7 @@
 /* ============================================================
    BANNER DE COOKIES — AutónomoLab
-   Añadir este script en el <head> de todas las páginas HTML
-   IMPORTANTE: debe ir ANTES del script de Google Analytics
+   GA4: G-5CPLF5TR3E
+   Solo carga Analytics si el usuario acepta explícitamente
    ============================================================ */
 
 (function() {
@@ -9,8 +9,8 @@
 
   var CONSENT_KEY = 'al_cookie_consent';
   var CONSENT_VERSION = '1';
+  var GA_ID = 'G-5CPLF5TR3E';
 
-  // Comprobar si ya existe consentimiento
   function getConsent() {
     try {
       var stored = localStorage.getItem(CONSENT_KEY);
@@ -38,15 +38,22 @@
   }
 
   function loadAnalytics() {
-    // Cargar Google Analytics 4 (descomentar cuando tengas el GA4 ID)
-    // var s = document.createElement('script');
-    // s.async = true;
-    // s.src = 'https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX';
-    // document.head.appendChild(s);
-    // window.dataLayer = window.dataLayer || [];
-    // function gtag(){dataLayer.push(arguments);}
-    // gtag('js', new Date());
-    // gtag('config', 'G-XXXXXXXXXX', { anonymize_ip: true });
+    if (window._gaLoaded) return;
+    window._gaLoaded = true;
+
+    var s = document.createElement('script');
+    s.async = true;
+    s.src = 'https://www.googletagmanager.com/gtag/js?id=' + GA_ID;
+    document.head.appendChild(s);
+
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){window.dataLayer.push(arguments);}
+    window.gtag = gtag;
+    gtag('js', new Date());
+    gtag('config', GA_ID, {
+      anonymize_ip: true,
+      cookie_flags: 'SameSite=None;Secure'
+    });
   }
 
   function showBanner() {
@@ -79,14 +86,12 @@
             'border:1px solid rgba(255,255,255,0.2);border-radius:8px;',
             'padding:10px 18px;font-size:13px;font-weight:700;',
             'cursor:pointer;font-family:inherit;',
-            'transition:all 0.2s;',
           '">Rechazar</button>',
           '<button id="al-cookie-accept" style="',
             'background:#d45a2a;color:#fff;',
             'border:none;border-radius:8px;',
             'padding:10px 20px;font-size:13px;font-weight:800;',
             'cursor:pointer;font-family:inherit;',
-            'transition:opacity 0.2s;',
           '">Aceptar cookies</button>',
         '</div>',
       '</div>'
@@ -94,42 +99,35 @@
 
     document.body.appendChild(banner);
 
-    // Animar entrada
     requestAnimationFrame(function() {
       requestAnimationFrame(function() {
         banner.querySelector('div').style.transform = 'translateY(0)';
       });
     });
 
-    // Evento aceptar
     document.getElementById('al-cookie-accept').addEventListener('click', function() {
       setConsent(true);
       loadAnalytics();
       hideBanner();
     });
 
-    // Evento rechazar
     document.getElementById('al-cookie-reject').addEventListener('click', function() {
       setConsent(false);
       hideBanner();
     });
   }
 
-  // Inicializar
   function init() {
     var consent = getConsent();
     if (consent === null) {
-      // Sin decisión previa — mostrar banner
       if (document.readyState === 'loading') {
         document.addEventListener('DOMContentLoaded', showBanner);
       } else {
         showBanner();
       }
     } else if (consent.accepted === true) {
-      // Ya aceptó — cargar analytics
       loadAnalytics();
     }
-    // Si rechazó, no hacemos nada
   }
 
   init();
