@@ -77,7 +77,7 @@
           '<p style="font-size:13px;color:rgba(255,255,255,0.65);margin:0;line-height:1.5;">',
             'Usamos Google Analytics para entender cómo se usa el sitio. ',
             'Las herramientas funcionan sin cookies. ',
-            '<a href="/cookies" style="color:#d45a2a;text-decoration:underline;">Más información</a>',
+            '<a href="/cookies" style="color:#d45a2a;text-decoration:underline;">Política de cookies</a>',
           '</p>',
         '</div>',
         '<div style="display:flex;gap:10px;flex-shrink:0;flex-wrap:wrap;">',
