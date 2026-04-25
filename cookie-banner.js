@@ -132,3 +132,17 @@
 
   init();
 })();
+
+// QW3 — inputmode decimal en todos los inputs numéricos
+(function(){
+  function patchInputs(){
+    document.querySelectorAll('input[type="number"]').forEach(function(el){
+      if(!el.getAttribute('inputmode')) el.setAttribute('inputmode','decimal');
+    });
+  }
+  if(document.readyState === 'loading'){
+    document.addEventListener('DOMContentLoaded', patchInputs);
+  } else {
+    patchInputs();
+  }
+})();
