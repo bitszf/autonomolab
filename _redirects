@@ -75,3 +75,11 @@
 
 # === ALIASES ===
 /tools/* /herramientas/:splat 301
+
+# === BLOG POSTS ADICIONALES ===
+/blog/como-calcular-finiquito/ /herramientas/calculadora-finiquito/ 301
+/blog/como-calcular-finiquito /blog/como-calcular-finiquito/ 301
+/blog/modelo-130-autonomos/ /blog/modelo-130-autonomos/index.html 200
+/blog/modelo-130-autonomos /blog/modelo-130-autonomos/ 301
+/blog/cuota-autonomo-2026/ /blog/cuota-autonomo-2026/index.html 200
+/blog/cuota-autonomo-2026 /blog/cuota-autonomo-2026/ 301

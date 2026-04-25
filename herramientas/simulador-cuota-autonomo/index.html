@@ -122,6 +122,14 @@
   footer a{color:var(--accent);text-decoration:none;}
 </style>
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"¿Cuánto se paga de cuota de autónomo en 2026?","acceptedAnswer":{"@type":"Answer","text":"En 2026 la cuota de autónomo depende de los ingresos netos reales: desde ~200€/mes en el tramo 1 hasta ~590€/mes en el tramo 15. Los nuevos autónomos pagan 80€/mes el primer año con la tarifa plana."}},{"@type":"Question","name":"¿Qué es la tarifa plana de autónomos?","acceptedAnswer":{"@type":"Answer","text":"La tarifa plana es una bonificación de 80€/mes para autónomos que se dan de alta por primera vez. Se aplica durante el primer año completo sin límite de ingresos."}},{"@type":"Question","name":"¿Cuántas veces puedo cambiar mi base de cotización?","acceptedAnswer":{"@type":"Answer","text":"Puedes cambiar la base de cotización hasta 6 veces al año, con efectos el primer día del mes siguiente a la solicitud."}}]}</script>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-5CPLF5TR3E"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-5CPLF5TR3E');
+</script>
 </head>
 <body>
 <nav>
@@ -301,5 +309,6 @@ function calcular(){
 
 document.querySelectorAll('.faq-q').forEach(function(q){q.addEventListener('click',function(){q.parentElement.classList.toggle('open');});});
 </script>
+<script src="/cookie-banner.js"></script>
 </body>
 </html>
