@@ -164,3 +164,35 @@
     document.head.appendChild(s);
   }
 })();
+
+// F11 — Deduplicar schemas FAQPage si hay más de uno en la misma página
+(function(){
+  if(document.readyState !== 'loading'){
+    deduplicateFAQ();
+  } else {
+    document.addEventListener('DOMContentLoaded', deduplicateFAQ);
+  }
+  function deduplicateFAQ(){
+    var scripts = document.querySelectorAll('script[type="application/ld+json"]');
+    var faqSchemas = [];
+    var toRemove = [];
+    scripts.forEach(function(s){
+      try {
+        var data = JSON.parse(s.textContent);
+        if(data['@type'] === 'FAQPage'){
+          faqSchemas.push({el: s, data: data});
+        }
+      } catch(e){}
+    });
+    // Si hay más de un FAQPage, fusionar en uno solo
+    if(faqSchemas.length > 1){
+      var merged = faqSchemas[0].data;
+      for(var i = 1; i < faqSchemas.length; i++){
+        var extra = faqSchemas[i].data.mainEntity || [];
+        merged.mainEntity = (merged.mainEntity || []).concat(extra);
+        faqSchemas[i].el.remove();
+      }
+      faqSchemas[0].el.textContent = JSON.stringify(merged);
+    }
+  }
+})();
