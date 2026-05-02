@@ -45,46 +45,88 @@
   @media(max-width:640px){.nav-links{display:none;}}
 
   /* HERO */
-  .hero{max-width:1200px;margin:0 auto;padding:64px 24px 72px;display:grid;grid-template-columns:1fr 520px;gap:56px;align-items:center;}
-  @media(max-width:960px){.hero{grid-template-columns:1fr;gap:40px;padding:48px 24px 56px;}}
+  .hero-section{background:var(--bg);}
+  .hero-center{max-width:780px;margin:0 auto;padding:60px 24px 40px;text-align:center;}
   .hero-badge{display:inline-flex;align-items:center;gap:8px;background:var(--card);border:1px solid var(--border);border-radius:100px;padding:5px 14px;font-size:12px;font-weight:700;color:var(--ink2);margin-bottom:20px;}
   .hero-badge-dot{width:6px;height:6px;background:var(--accent);border-radius:50%;animation:blink 2s infinite;}
   @keyframes blink{0%,100%{opacity:1;}50%{opacity:.3;}}
-  .hero h1{font-size:clamp(34px,4.8vw,58px);font-weight:900;letter-spacing:-.04em;line-height:1.06;margin-bottom:18px;}
-  .hero h1 em{font-family:'Instrument Serif',serif;font-style:italic;font-weight:400;color:var(--accent);}
-  .hero-desc{font-size:17px;color:var(--ink2);line-height:1.65;margin-bottom:28px;max-width:460px;}
-  .hero-ctas{display:flex;gap:10px;flex-wrap:wrap;margin-bottom:32px;}
+  .hero-center h1{font-size:clamp(34px,5vw,60px);font-weight:900;letter-spacing:-.04em;line-height:1.06;margin-bottom:16px;}
+  .hero-center h1 em{font-family:'Instrument Serif',serif;font-style:italic;font-weight:400;color:var(--accent);}
+  .hero-desc{font-size:17px;color:var(--ink2);line-height:1.65;margin-bottom:28px;}
+  .hero-ctas{display:flex;gap:10px;flex-wrap:wrap;justify-content:center;margin-bottom:28px;}
   .btn-primary{display:inline-block;background:var(--ink);color:#fff;padding:13px 26px;border-radius:10px;font-size:14px;font-weight:800;text-decoration:none;transition:background .18s;}
   .btn-primary:hover{background:var(--accent);}
   .btn-secondary{display:inline-block;background:transparent;color:var(--ink);padding:13px 26px;border-radius:10px;font-size:14px;font-weight:700;text-decoration:none;border:1.5px solid var(--border);transition:border-color .18s;}
   .btn-secondary:hover{border-color:var(--ink);}
-  .hero-stats{display:flex;gap:24px;flex-wrap:wrap;}
-  .hero-stat-num{font-size:22px;font-weight:900;color:var(--ink);display:block;letter-spacing:-.02em;}
-  .hero-stat-label{font-size:11px;color:var(--ink3);font-weight:600;}
+  .hero-stats{display:flex;align-items:center;justify-content:center;background:var(--card);border:1px solid var(--border);border-radius:11px;overflow:hidden;max-width:520px;margin:0 auto;}
+  .hero-stat{flex:1;padding:12px 8px;text-align:center;}
+  .hero-stat-div{width:1px;height:30px;background:var(--border);flex-shrink:0;}
+  .hero-stat-num{font-size:19px;font-weight:900;color:var(--ink);display:block;letter-spacing:-.02em;}
+  .hero-stat-label{font-size:9px;color:var(--ink3);font-weight:700;text-transform:uppercase;letter-spacing:.05em;}
 
-  /* HERO TOOLS GRID */
-  .hero-tools{display:grid;grid-template-columns:1fr 1fr;gap:10px;}
-  .htool{background:var(--card);border:1px solid var(--border);border-radius:12px;padding:16px;text-decoration:none;display:flex;flex-direction:column;position:relative;overflow:hidden;transition:transform .18s,border-color .18s,box-shadow .18s;}
-  .htool:hover{transform:translateY(-2px);border-color:rgba(212,90,42,.35);box-shadow:0 6px 20px rgba(26,24,20,.08);}
-  .htool-accent{position:absolute;top:0;left:0;width:3px;height:100%;background:var(--accent);opacity:0;transition:opacity .18s;}
-  .htool:hover .htool-accent{opacity:1;}
-  .htool-featured{grid-column:span 2;background:linear-gradient(135deg,var(--ink) 0%,#2d2b27 100%);border-color:transparent;}
-  .htool-featured .htool-name{color:#fff;font-size:15px;}
-  .htool-featured .htool-desc{color:rgba(255,255,255,.5);font-size:13px;}
-  .htool-featured .htool-tag{color:rgba(255,255,255,.3);}
-  .htool-featured .htool-arrow{color:var(--accent);}
-  .htool-featured:hover{border-color:rgba(212,90,42,.4);}
-  .htool-badge{display:inline-flex;align-items:center;font-size:9px;font-weight:800;text-transform:uppercase;letter-spacing:.1em;padding:2px 8px;border-radius:20px;margin-bottom:10px;width:fit-content;}
-  .htool-badge-top{background:rgba(212,90,42,.2);color:#d45a2a;}
-  .htool-badge-new{background:rgba(42,184,122,.12);color:var(--green);}
-  .htool-badge-fiscal{background:rgba(26,24,20,.07);color:var(--ink2);}
-  .htool-badge-laboral{background:rgba(42,107,212,.1);color:#2a6bd4;}
+  /* HERO GRID — psicología del color */
+  .hero-grid{max-width:1100px;margin:0 auto;padding:32px 24px 60px;display:grid;grid-template-columns:repeat(4,1fr);gap:10px;}
+  @media(max-width:900px){.hero-grid{grid-template-columns:repeat(2,1fr);}}
+  @media(max-width:500px){.hero-grid{grid-template-columns:1fr;}}
+
+  /* Base de todas las cards */
+  .htool{border-radius:12px;padding:16px;display:flex;flex-direction:column;position:relative;overflow:hidden;text-decoration:none;transition:transform .18s,box-shadow .18s;}
+  .htool:hover{transform:translateY(-3px);}
+
+  /* Línea superior de color — señal visual de categoría */
+  .htool::before{content:'';position:absolute;top:0;left:0;right:0;height:3px;border-radius:12px 12px 0 0;}
+
+  /* ⚫ NEGRO — Autoridad */
+  .htool-black{background:#1a1814;border:1px solid transparent;grid-column:span 2;}
+  .htool-black::before{background:linear-gradient(90deg,#d45a2a,#f07850);}
+  .htool-black:hover{box-shadow:0 8px 32px rgba(26,24,20,.35);}
+
+  /* 🟠 NARANJA — Urgencia fiscal */
+  .htool-orange{background:#fff;border:1px solid #ddd8ce;}
+  .htool-orange::before{background:#d45a2a;}
+  .htool-orange:hover{box-shadow:0 6px 20px rgba(212,90,42,.15);border-color:rgba(212,90,42,.3);}
+
+  /* 🔵 AZUL — Confianza/Legal */
+  .htool-blue{background:#fff;border:1px solid #ddd8ce;}
+  .htool-blue::before{background:#2a6bd4;}
+  .htool-blue:hover{box-shadow:0 6px 20px rgba(42,107,212,.12);border-color:rgba(42,107,212,.3);}
+
+  /* 🟢 VERDE — Ganancia/Crecimiento */
+  .htool-green{background:#fff;border:1px solid #ddd8ce;}
+  .htool-green::before{background:#2ab87a;}
+  .htool-green:hover{box-shadow:0 6px 20px rgba(42,184,122,.12);border-color:rgba(42,184,122,.3);}
+
+  /* Card "ver todas" */
+  .htool-all{background:var(--bg2);border:1.5px dashed var(--border);display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;min-height:120px;}
+  .htool-all::before{display:none;}
+  .htool-all:hover{transform:none;border-color:rgba(212,90,42,.4);}
+  .htool-all-num{font-size:28px;font-weight:900;color:var(--accent);letter-spacing:-.03em;line-height:1;}
+  .htool-all-label{font-size:10px;color:var(--ink3);font-weight:700;text-transform:uppercase;letter-spacing:.05em;margin-bottom:10px;}
+  .htool-all-btn{background:var(--ink);color:#fff;padding:7px 16px;border-radius:7px;font-size:12px;font-weight:800;text-decoration:none;}
+
+  /* Badges por color psicológico */
+  .htool-badge{display:inline-flex;font-size:9px;font-weight:800;text-transform:uppercase;letter-spacing:.09em;padding:2px 8px;border-radius:20px;margin-bottom:10px;width:fit-content;}
+  .hb-feat{background:rgba(255,255,255,.12);color:rgba(255,255,255,.75);}
+  .hb-orange{background:rgba(212,90,42,.1);color:#b8431c;}
+  .hb-blue{background:rgba(42,107,212,.1);color:#1a55b0;}
+  .hb-green{background:rgba(42,184,122,.12);color:#1a8a58;}
+
   .htool-emoji{font-size:22px;margin-bottom:8px;display:block;}
   .htool-name{font-size:13px;font-weight:900;color:var(--ink);margin-bottom:5px;line-height:1.3;}
+  .htn-wh{color:#fff;}
   .htool-desc{font-size:11px;color:var(--ink3);line-height:1.55;flex:1;}
-  .htool-footer{margin-top:12px;display:flex;align-items:center;justify-content:space-between;}
-  .htool-tag{font-size:10px;font-weight:700;color:var(--ink3);}
-  .htool-arrow{font-size:14px;color:var(--accent);font-weight:900;}
+  .htd-wh{color:rgba(255,255,255,.45);}
+  .htool-footer{margin-top:11px;display:flex;align-items:center;justify-content:space-between;}
+  .htool-tag{font-size:9px;font-weight:700;}
+  .htt-wh{color:rgba(255,255,255,.28);}
+  .htt-orange{color:rgba(184,67,28,.55);}
+  .htt-blue{color:rgba(26,85,176,.55);}
+  .htt-green{color:rgba(26,138,88,.55);}
+  .htool-arrow{font-size:14px;font-weight:900;}
+  .hta-accent{color:#d45a2a;}
+  .hta-orange{color:#d45a2a;}
+  .hta-blue{color:#2a6bd4;}
+  .hta-green{color:#2ab87a;}
 
   /* SECCIÓN HERRAMIENTAS */
   .section{max-width:1200px;margin:0 auto;padding:0 24px 80px;}
@@ -203,73 +245,98 @@
 </nav>
 
 <!-- HERO -->
-<section>
-  <div class="hero">
-    <!-- Izquierda: copy + CTAs + stats -->
-    <div class="hero-left">
-      <div class="hero-badge"><span class="hero-badge-dot"></span>Para autónomos que odian el papeleo · +5.000 ya lo usan</div>
-      <h1>El <em>copiloto</em> que te<br>faltaba como autónomo</h1>
-      <p class="hero-desc">12 herramientas gratuitas para gestionar tu negocio independiente. Calcula, genera y descarga. Sin registro, sin trampa.</p>
-      <div class="hero-ctas">
-        <a href="/herramientas" class="btn-primary">Ver todas las herramientas →</a>
-        <a href="/blog" class="btn-secondary">Leer el blog</a>
-      </div>
-      <div class="hero-stats">
-        <div><span class="hero-stat-num">12+</span><span class="hero-stat-label">Herramientas gratis</span></div>
-        <div><span class="hero-stat-num">100%</span><span class="hero-stat-label">Sin registro</span></div>
-        <div><span class="hero-stat-num">ES+LATAM</span><span class="hero-stat-label">Adaptado a tu país</span></div>
-        <div><span class="hero-stat-num">5.000+</span><span class="hero-stat-label">Autónomos lo usan</span></div>
-      </div>
+<section class="hero-section">
+  <div class="hero-center">
+    <div class="hero-badge"><span class="hero-badge-dot"></span>Para autónomos que odian el papeleo · +5.000 ya lo usan</div>
+    <h1>El <em>copiloto</em> que te faltaba<br>como autónomo</h1>
+    <p class="hero-desc">12 herramientas gratuitas para gestionar tu negocio independiente.<br>Calcula, genera y descarga. Sin registro, sin trampa.</p>
+    <div class="hero-ctas">
+      <a href="/herramientas" class="btn-primary">Ver todas las herramientas →</a>
+      <a href="/blog" class="btn-secondary">Leer el blog</a>
     </div>
-
-    <!-- Derecha: mini grid de herramientas -->
-    <div class="hero-tools">
-      <!-- Card destacada grande -->
-      <a href="/herramientas/calculadora-tarifa-hora" class="htool htool-featured">
-        <span class="htool-accent"></span>
-        <span class="htool-badge htool-badge-top">⭐ Más usada</span>
-        <span class="htool-emoji">💰</span>
-        <div class="htool-name">Calculadora de tarifa hora</div>
-        <div class="htool-desc">¿Estás cobrando lo suficiente? La fórmula que el 65% de freelancers no conoce — y que puede cambiarte los ingresos.</div>
-        <div class="htool-footer"><span class="htool-tag">Resultado en 30 seg</span><span class="htool-arrow">→</span></div>
-      </a>
-
-      <a href="/herramientas/calculadora-iva" class="htool">
-        <span class="htool-accent"></span>
-        <span class="htool-badge htool-badge-fiscal">Fiscal</span>
-        <span class="htool-emoji">🧮</span>
-        <div class="htool-name">IVA trimestral</div>
-        <div class="htool-desc">Modelo 303 sin errores. Resultado al instante.</div>
-        <div class="htool-footer"><span class="htool-tag">Modelo 303</span><span class="htool-arrow">→</span></div>
-      </a>
-
-      <a href="/herramientas/simulador-cuota-autonomo" class="htool">
-        <span class="htool-accent"></span>
-        <span class="htool-badge htool-badge-fiscal">Fiscal</span>
-        <span class="htool-emoji">🏦</span>
-        <div class="htool-name">Cuota de autónomo</div>
-        <div class="htool-desc">Simula tu tramo 2026 por ingresos reales.</div>
-        <div class="htool-footer"><span class="htool-tag">Tramos 2026</span><span class="htool-arrow">→</span></div>
-      </a>
-
-      <a href="/herramientas/calculadora-finiquito" class="htool">
-        <span class="htool-accent"></span>
-        <span class="htool-badge htool-badge-laboral">Laboral</span>
-        <span class="htool-emoji">💼</span>
-        <div class="htool-name">Calculadora finiquito</div>
-        <div class="htool-desc">Comprueba lo que te deben antes de firmar.</div>
-        <div class="htool-footer"><span class="htool-tag">No te dejes engañar</span><span class="htool-arrow">→</span></div>
-      </a>
-
-      <a href="/herramientas/generador-contrato-freelance" class="htool">
-        <span class="htool-accent"></span>
-        <span class="htool-badge htool-badge-new">Nuevo</span>
-        <span class="htool-emoji">📄</span>
-        <div class="htool-name">Contrato freelance</div>
-        <div class="htool-desc">PDF profesional listo en 2 minutos.</div>
-        <div class="htool-footer"><span class="htool-tag">PDF en 2 min</span><span class="htool-arrow">→</span></div>
-      </a>
+    <div class="hero-stats">
+      <div class="hero-stat"><span class="hero-stat-num">12+</span><span class="hero-stat-label">Herramientas</span></div>
+      <div class="hero-stat-div"></div>
+      <div class="hero-stat"><span class="hero-stat-num">100%</span><span class="hero-stat-label">Sin registro</span></div>
+      <div class="hero-stat-div"></div>
+      <div class="hero-stat"><span class="hero-stat-num">ES+LATAM</span><span class="hero-stat-label">Tu país</span></div>
+      <div class="hero-stat-div"></div>
+      <div class="hero-stat"><span class="hero-stat-num">5.000+</span><span class="hero-stat-label">Autónomos</span></div>
     </div>
+  </div>
+
+  <div class="hero-grid">
+
+    <!-- ⚫ NEGRO — Autoridad. La herramienta más importante -->
+    <a href="/herramientas/calculadora-tarifa-hora" class="htool htool-black">
+      <span class="htool-badge hb-feat">⭐ La más usada</span>
+      <span class="htool-emoji">💰</span>
+      <div class="htool-name htn-wh">Calculadora de tarifa hora</div>
+      <div class="htool-desc htd-wh">¿Estás cobrando lo suficiente? La fórmula que el 65% de freelancers no conoce — y que puede cambiarte los ingresos.</div>
+      <div class="htool-footer"><span class="htool-tag htt-wh">Resultado en 30 seg</span><span class="htool-arrow hta-accent">→</span></div>
+    </a>
+
+    <!-- 🟠 NARANJA — Urgencia fiscal -->
+    <a href="/herramientas/calculadora-iva" class="htool htool-orange">
+      <span class="htool-badge hb-orange">⚡ Urgente</span>
+      <span class="htool-emoji">🧮</span>
+      <div class="htool-name">IVA trimestral</div>
+      <div class="htool-desc">Modelo 303 sin errores. Evita sanciones de Hacienda.</div>
+      <div class="htool-footer"><span class="htool-tag htt-orange">Modelo 303</span><span class="htool-arrow hta-orange">→</span></div>
+    </a>
+
+    <!-- 🟠 NARANJA — Urgencia fiscal -->
+    <a href="/herramientas/simulador-cuota-autonomo" class="htool htool-orange">
+      <span class="htool-badge hb-orange">⚡ Urgente</span>
+      <span class="htool-emoji">🏦</span>
+      <div class="htool-name">Cuota autónomo 2026</div>
+      <div class="htool-desc">¿Cuánto pagarás? Simula tu tramo por ingresos reales.</div>
+      <div class="htool-footer"><span class="htool-tag htt-orange">Tramos 2026</span><span class="htool-arrow hta-orange">→</span></div>
+    </a>
+
+    <!-- 🔵 AZUL — Confianza/Protección legal -->
+    <a href="/herramientas/calculadora-finiquito" class="htool htool-blue">
+      <span class="htool-badge hb-blue">🛡 Protégete</span>
+      <span class="htool-emoji">💼</span>
+      <div class="htool-name">Calculadora finiquito</div>
+      <div class="htool-desc">Comprueba lo que te deben antes de firmar.</div>
+      <div class="htool-footer"><span class="htool-tag htt-blue">No te engañen</span><span class="htool-arrow hta-blue">→</span></div>
+    </a>
+
+    <!-- 🔵 AZUL — Confianza/Legal -->
+    <a href="/herramientas/generador-contrato-freelance" class="htool htool-blue">
+      <span class="htool-badge hb-blue">🛡 Protégete</span>
+      <span class="htool-emoji">📄</span>
+      <div class="htool-name">Contrato freelance</div>
+      <div class="htool-desc">PDF profesional listo en 2 minutos.</div>
+      <div class="htool-footer"><span class="htool-tag htt-blue">PDF en 2 min</span><span class="htool-arrow hta-blue">→</span></div>
+    </a>
+
+    <!-- 🟢 VERDE — Ganancia/Crecimiento -->
+    <a href="/herramientas/calculadora-ahorro-fiscal" class="htool htool-green">
+      <span class="htool-badge hb-green">💸 Ahorra</span>
+      <span class="htool-emoji">💡</span>
+      <div class="htool-name">Ahorro fiscal</div>
+      <div class="htool-desc">El dinero que se te escapa en impuestos cada trimestre.</div>
+      <div class="htool-footer"><span class="htool-tag htt-green">IRPF</span><span class="htool-arrow hta-green">→</span></div>
+    </a>
+
+    <!-- 🟢 VERDE — Crecimiento -->
+    <a href="/herramientas/generador-presupuesto" class="htool htool-green">
+      <span class="htool-badge hb-green">💸 Gana más</span>
+      <span class="htool-emoji">📋</span>
+      <div class="htool-name">Generador presupuesto</div>
+      <div class="htool-desc">El cliente lo firma o no — tú decides el precio.</div>
+      <div class="htool-footer"><span class="htool-tag htt-green">PDF en 2 min</span><span class="htool-arrow hta-green">→</span></div>
+    </a>
+
+    <!-- Ver todas -->
+    <a href="/herramientas" class="htool htool-all">
+      <div class="htool-all-num">12+</div>
+      <div class="htool-all-label">herramientas disponibles</div>
+      <span class="htool-all-btn">Ver todas →</span>
+    </a>
+
   </div>
 </section>
 
