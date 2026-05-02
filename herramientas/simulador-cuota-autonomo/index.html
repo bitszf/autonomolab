@@ -3,15 +3,15 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Simulador cuota de autónomo 2026 — AutónomoLab</title>
-<meta name="description" content="Calcula cuánto pagarás de cuota de autónomo en 2026 según tus ingresos reales. Sistema de cotización por tramos. Gratis y sin registro.">
+<title>Simulador cuota autónomo 2026 — ¿Cuánto pagarás? | AutónomoLab</title>
+<meta name="description" content="¿Cuánto pagarás de cuota en 2026? Simula tu tramo por ingresos reales en segundos. Datos oficiales SS actualizados. Gratis y sin registro.">
 <meta name="robots" content="index, follow">
 <link rel="canonical" href="https://autonomolab.com/herramientas/simulador-cuota-autonomo/">
 <link rel="alternate" hreflang="es" href="https://autonomolab.com/herramientas/simulador-cuota-autonomo/" />
 <link rel="alternate" hreflang="es-419" href="https://autonomolab.com/herramientas/simulador-cuota-autonomo/" />
 <link rel="alternate" hreflang="x-default" href="https://autonomolab.com/herramientas/simulador-cuota-autonomo/" />
 <meta property="og:title" content="Simulador cuota de autónomo 2026">
-<meta property="og:description" content="Calcula tu cuota mensual de autónomo según tus ingresos reales. Sistema de tramos 2026.">
+<meta property="og:description" content="Simula tu cuota de autónomo 2026 por ingresos reales en segundos. 15 tramos actualizados. Resultado inmediato, sin registro, 100% gratis.">
 <meta property="og:url" content="https://autonomolab.com/herramientas/simulador-cuota-autonomo/">
 <meta property="og:site_name" content="AutónomoLab">
 <script type="application/ld+json">{
@@ -120,6 +120,10 @@
   .rc-n{font-size:13px;font-weight:800;color:var(--ink);}
   footer{text-align:center;padding:32px 24px;border-top:1px solid var(--border);font-size:13px;color:var(--ink3);margin-top:40px;}
   footer a{color:var(--accent);text-decoration:none;}
+
+  .trust-band{display:flex;gap:16px;flex-wrap:wrap;margin:12px 0 28px;padding:14px 18px;background:rgba(42,184,122,.06);border:1px solid rgba(42,184,122,.2);border-radius:10px;}
+  .trust-item{display:flex;align-items:center;gap:6px;font-size:13px;color:var(--ink2);font-weight:600;}
+  .trust-icon{font-size:14px;}
 </style>
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"¿Cuánto se paga de cuota de autónomo en 2026?","acceptedAnswer":{"@type":"Answer","text":"En 2026 la cuota de autónomo depende de los ingresos netos reales: desde ~200€/mes en el tramo 1 hasta ~590€/mes en el tramo 15. Los nuevos autónomos pagan 80€/mes el primer año con la tarifa plana."}},{"@type":"Question","name":"¿Qué es la tarifa plana de autónomos?","acceptedAnswer":{"@type":"Answer","text":"La tarifa plana es una bonificación de 80€/mes para autónomos que se dan de alta por primera vez. Se aplica durante el primer año completo sin límite de ingresos."}},{"@type":"Question","name":"¿Cuántas veces puedo cambiar mi base de cotización?","acceptedAnswer":{"@type":"Answer","text":"Puedes cambiar la base de cotización hasta 6 veces al año, con efectos el primer día del mes siguiente a la solicitud."}}]}</script>
 <!-- Google tag (gtag.js) -->
@@ -176,7 +180,14 @@
   <div class="bc"><a href="/">Inicio</a><span>›</span><a href="/herramientas">Herramientas</a><span>›</span>Cuota de autónomo</div>
   <div class="tool-tag">💼 Herramienta gratuita</div>
   <h1>Simulador <em>cuota de autónomo</em></h1>
-  <p class="tool-desc-header">Descubre cuánto pagarás de cuota según tus ingresos reales netos con el sistema de tramos vigente en 2026.</p>
+
+  <div class="trust-band">
+    <div class="trust-item"><span class="trust-icon">✅</span><span>100% gratis</span></div>
+    <div class="trust-item"><span class="trust-icon">🔒</span><span>Sin registro</span></div>
+    <div class="trust-item"><span class="trust-icon">⚡</span><span>Resultado al instante</span></div>
+    <div class="trust-item"><span class="trust-icon">🌍</span><span>España y LATAM</span></div>
+  </div>
+  <p class="tool-desc-header">En 2026, lo que pagas de cuota depende de lo que ganas — no de un importe fijo. Introduce tus ingresos y descubre en qué tramo estás, cuánto pagarás cada mes y si tienes derecho a la tarifa plana de 80€.</p>
 
   <div class="layout">
     <div class="form-card">
@@ -239,7 +250,16 @@
       <thead><tr><th>Tramo</th><th>Ingresos netos/mes</th><th>Base mín.</th><th>Base máx.</th><th>Cuota mín.</th></tr></thead>
       <tbody id="tramos-body"></tbody>
     </table>
-    <div class="tip"><p>💡 <strong>Importante:</strong> estos son los tramos orientativos. La base de cotización exacta puede ajustarse al alza o a la baja dentro de tu tramo. Comprueba siempre en la Seguridad Social los valores vigentes.</p></div>
+    <div class="tip"><p>💡 <strong>¿Puedes pagar menos?</strong> Sí — y más adelante te explicamos cómo ajustar tu base de cotización hasta 6 veces al año para adaptarla a meses con menos ingresos. <strong>Importante:</strong> estos son los tramos orientativos. La base de cotización exacta puede ajustarse al alza o a la baja dentro de tu tramo. Comprueba siempre en la Seguridad Social los valores vigentes.</p></div>
+  </div>
+
+  <div style="background:var(--bg2);border-radius:12px;padding:20px 24px;margin:32px 0;">
+    <div style="font-size:12px;font-weight:800;text-transform:uppercase;letter-spacing:.1em;color:var(--ink3);margin-bottom:14px;">Sigue gestionando tu negocio</div>
+    <div style="display:flex;flex-direction:column;gap:10px;">
+      <a href="/blog/cuota-autonomo-2026/" style="font-size:14px;color:var(--accent);text-decoration:none;font-weight:700;">→ Lo que no te cuentan del sistema de tramos 2026 (y cómo aprovecharlo)</a>
+      <a href="/herramientas/calculadora-ahorro-fiscal/" style="font-size:14px;color:var(--accent);text-decoration:none;font-weight:700;">→ ¿Sabes que la cuota de autónomo te rebaja el IRPF? Calcula cuánto</a>
+      <a href="/herramientas/calculadora-irpf/" style="font-size:14px;color:var(--accent);text-decoration:none;font-weight:700;">→ Modelo 130: comprueba si tu pago fraccionado está bien calculado</a>
+    </div>
   </div>
 
   <div class="faq-section">
@@ -248,6 +268,48 @@
     <div class="faq-item"><div class="faq-q">¿La cuota de autónomo es deducible en el IRPF?</div><div class="faq-a">Sí, completamente. La cuota de autónomo es un gasto deducible que reduce tu rendimiento neto en el modelo 130 y en la declaración de la renta anual.</div></div>
     <div class="faq-item"><div class="faq-q">¿Qué es la tarifa plana de autónomos?</div><div class="faq-a">Los nuevos autónomos que se dan de alta por primera vez pueden pagar una cuota reducida durante los primeros 24 meses. En 2026 la tarifa plana es de 80€/mes el primer año. A partir del segundo año la bonificación se reduce gradualmente.</div></div>
     <div class="faq-item"><div class="faq-q">¿Se puede pagar menos cuota si se gana poco?</div><div class="faq-a">Sí, el sistema de tramos garantiza que quien más gana, más cotiza. Los autónomos con ingresos muy bajos (por debajo del SMI) están en el tramo 1 con la cuota más reducida.</div></div>
+  </div>
+
+  
+  <h2>Cómo reducir tu cuota legalmente: el truco de los 6 cambios anuales</h2>
+  <p>Pocos autónomos usan este derecho que la Seguridad Social reconoce explícitamente: <strong>puedes cambiar tu base de cotización hasta 6 veces al año</strong>, con efectos cada dos meses.</p>
+  <p>Lo que esto significa en la práctica: si tienes un trimestre flojo — vacaciones de verano, cliente que tarda en pagar, temporada baja — puedes bajar a la base mínima de tu tramo y pagar menos durante esos meses. Cuando la actividad se recupere, vuelves a subir.</p>
+
+  <table class="tabla">
+    <thead><tr><th>Solicitas el cambio entre...</th><th>Entra en vigor el...</th></tr></thead>
+    <tbody>
+      <tr><td>1 enero – 28 febrero</td><td>1 de marzo</td></tr>
+      <tr><td>1 marzo – 30 abril</td><td>1 de mayo</td></tr>
+      <tr><td>1 mayo – 30 junio</td><td>1 de julio</td></tr>
+      <tr><td>1 julio – 31 agosto</td><td>1 de septiembre</td></tr>
+      <tr><td>1 septiembre – 31 octubre</td><td>1 de noviembre</td></tr>
+      <tr><td>1 noviembre – 31 diciembre</td><td>1 de enero siguiente</td></tr>
+    </tbody>
+  </table>
+
+  <div class="tip"><p>💡 <strong>Cómo hacer el cambio:</strong> entra en <strong>Import@ss</strong> (importass.seg-social.es) con tu certificado digital o Cl@ve. En "Trabajadores" → "Autónomos" → "Cambio de base de cotización". Es un trámite de 5 minutos que puede ahorrarte cientos de euros en meses malos.</p></div>
+
+  <h2>La cuota de autónomo es deducible en tu IRPF</h2>
+  <p>Este es uno de los puntos que más autónomos olvidan incluir en su contabilidad. <strong>La cuota que pagas a la Seguridad Social se deduce 100% de tu base imponible en el IRPF</strong>, reduciendo lo que pagas tanto en el modelo 130 trimestral como en la declaración anual.</p>
+  <p>Con una cuota media de 300€/mes (3.600€/año) y un tipo del 30% de IRPF, el ahorro fiscal real es de <strong>1.080€ al año</strong>. La cuota efectiva que pagas no son 3.600€ — son 2.520€.</p>
+
+  <h2>¿Qué pasa si al final del año cotizaste de más o de menos?</h2>
+  <p>El sistema se regulariza automáticamente cuando presentas la declaración de la renta:</p>
+  <ul>
+    <li><strong>Cotizaste de más:</strong> la Seguridad Social te devuelve la diferencia antes del 30 de abril del año siguiente. Sin hacer nada — es automático.</li>
+    <li><strong>Cotizaste de menos:</strong> recibes una notificación para pagar la diferencia en un plazo determinado. No tiene recargo si pagas en plazo.</li>
+  </ul>
+  <p>Por eso la estrategia recomendada es cotizar por la <strong>estimación conservadora</strong>: si ganas más, pagas la diferencia sin problema. Si cotizas de más, esperas la devolución mientras has tenido más liquidez durante el año.</p>
+
+  <div class="faq-section" style="margin-top:0;">
+    <div class="faq-item">
+      <div class="faq-q">¿Puedo cotizar por la base mínima aunque gane mucho?</div>
+      <div class="faq-a">Sí, pero con consecuencias. Puedes elegir cualquier base dentro de tu tramo — desde la mínima hasta la máxima. Si eliges la mínima y luego la regularización muestra que deberías haber cotizado más, pagas la diferencia sin recargo. La base mínima tiene sentido para maximizar liquidez, pero implica pensión y prestaciones más bajas en el futuro.</div>
+    </div>
+    <div class="faq-item">
+      <div class="faq-q">¿La tarifa plana aplica aunque tenga muchos ingresos?</div>
+      <div class="faq-a">Sí. La tarifa plana de 80€/mes se aplica durante el primer año independientemente de cuánto factures. No hay límite de ingresos durante los primeros 12 meses. A partir del segundo año, se mantiene solo si tus rendimientos netos no superan el SMI (~1.184€/mes en 2026).</div>
+    </div>
   </div>
 
   <div class="related">
