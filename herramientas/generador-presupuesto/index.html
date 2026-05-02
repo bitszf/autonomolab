@@ -118,6 +118,40 @@
   .trust-band{display:flex;gap:16px;flex-wrap:wrap;margin:12px 0 28px;padding:14px 18px;background:rgba(42,184,122,.06);border:1px solid rgba(42,184,122,.2);border-radius:10px;}
   .trust-item{display:flex;align-items:center;gap:6px;font-size:13px;color:var(--ink2);font-weight:600;}
   .trust-icon{font-size:14px;}
+
+  .tabla{width:100%;border-collapse:collapse;margin:20px 0;font-size:14px;display:block;overflow-x:auto;}
+  .tabla th{background:var(--ink);color:#fff;padding:10px 14px;text-align:left;font-size:12px;text-transform:uppercase;letter-spacing:.06em;white-space:nowrap;}
+  .tabla td{padding:10px 14px;border-bottom:1px solid var(--border);color:var(--ink2);}
+  .tabla tr:last-child td{border-bottom:none;}
+  .tabla tr:nth-child(even) td{background:var(--bg2);}
+  .tabla td:first-child{font-weight:700;color:var(--ink);}
+  .tip{background:var(--bg2);border-left:4px solid var(--accent);padding:16px 20px;border-radius:0 8px 8px 0;margin:24px 0;}
+  .tip p{margin:0;font-size:14px;color:var(--ink2);}
+  .warning{background:rgba(212,90,42,.06);border:1px solid rgba(212,90,42,.2);border-radius:10px;padding:16px 20px;margin:24px 0;}
+  .warning p{margin:0;font-size:14px;color:var(--ink2);}
+  .faq-section{margin-top:48px;padding-top:36px;border-top:1px solid var(--border);}
+  .faq-section h2{font-size:22px;font-weight:900;margin-bottom:20px;letter-spacing:-.02em;}
+  .faq-item{background:var(--card);border:1px solid var(--border);border-radius:12px;margin-bottom:10px;overflow:hidden;}
+  .faq-q{font-size:15px;font-weight:800;color:var(--ink);padding:16px 20px;cursor:pointer;display:flex;justify-content:space-between;align-items:center;}
+  .faq-q::after{content:"+";font-size:20px;font-weight:400;color:var(--ink3);flex-shrink:0;margin-left:12px;}
+  .faq-item.open .faq-q::after{content:"−";}
+  .faq-a{font-size:14px;color:var(--ink2);line-height:1.6;padding:0 20px 16px;display:none;}
+  .faq-item.open .faq-a{display:block;}
+  .content-area h2{font-size:22px;font-weight:900;margin:40px 0 14px;color:var(--ink);}
+  .content-area h3{font-size:17px;font-weight:800;margin:24px 0 10px;color:var(--ink);}
+  .content-area p{font-size:15px;color:var(--ink2);margin-bottom:14px;line-height:1.7;}
+  .content-area ul,.content-area ol{padding-left:20px;margin-bottom:16px;}
+  .content-area li{font-size:15px;color:var(--ink2);margin-bottom:8px;}
+
+  /* === CONTENIDO EXPANDIDO — tipografía y layout === */
+  .page h2{font-size:22px;font-weight:900;margin:48px 0 16px;color:var(--ink);letter-spacing:-.02em;line-height:1.25;}
+  .page h3{font-size:17px;font-weight:800;margin:28px 0 10px;color:var(--ink);}
+  .page > p,.page > ul,.page > ol{font-size:15px;color:var(--ink2);line-height:1.7;margin-bottom:14px;}
+  .page > ul,.page > ol{padding-left:20px;}
+  .page > li{font-size:15px;color:var(--ink2);margin-bottom:8px;}
+  .page > p strong{color:var(--ink);font-weight:800;}
+  .page a{color:var(--accent);}
+  .page a:hover{text-decoration:underline;}
 </style>
 
 
@@ -548,5 +582,10 @@ document.getElementById('pres-validez').value=validez.toISOString().split('T')[0
 document.getElementById('pres-num').value='PRE-'+new Date().getFullYear()+'-001';
 </script>
 <script src="/cookie-banner.js" defer></script>
+<script>
+  document.querySelectorAll('.faq-q').forEach(function(q){
+    q.addEventListener('click',function(){q.parentElement.classList.toggle('open');});
+  });
+</script>
 </body>
 </html>
