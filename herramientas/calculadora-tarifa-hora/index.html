@@ -301,11 +301,26 @@
         </div>
 
         <div class="field">
-          <label>Margen de seguridad</label>
-          <div class="field-hint">Buffer para imprevistos y meses sin proyectos</div>
+          <label>Semanas de vacaciones al año <span class="range-val" id="vacaciones-val">4</span></label>
+          <div class="field-hint">Vacaciones + festivos nacionales + días de baja estimados</div>
           <div class="range-wrap">
-            <input type="range" id="margen" min="0" max="40" value="15">
-            <span class="range-val" id="margen-val">15%</span>
+            <input type="range" id="vacaciones" min="0" max="12" value="4">
+          </div>
+        </div>
+
+        <div class="field">
+          <label>Tiempo no facturable <span class="range-val" id="no-facturable-val">35%</span></label>
+          <div class="field-hint">Emails, reuniones, gestión, captación — horas que trabajas pero no cobras</div>
+          <div class="range-wrap">
+            <input type="range" id="no-facturable" min="10" max="70" value="35">
+          </div>
+        </div>
+
+        <div class="field">
+          <label>Margen de beneficio/ahorro <span class="range-val" id="beneficio-val">20%</span></label>
+          <div class="field-hint">Colchón para imprevistos, reinversión y crecimiento del negocio</div>
+          <div class="range-wrap">
+            <input type="range" id="beneficio" min="0" max="50" value="20">
           </div>
         </div>
       </div>
@@ -323,32 +338,49 @@
       </div>
 
       <div class="result-breakdown">
-        <div class="breakdown-title">Desglose</div>
-        <div class="breakdown-row">
-          <span class="breakdown-key">Horas facturables / año</span>
-          <span class="breakdown-val" id="bd-horas">1.150h</span>
-        </div>
-        <div class="breakdown-row">
-          <span class="breakdown-key">Gastos anuales negocio</span>
-          <span class="breakdown-val" id="bd-gastos">€3.600</span>
-        </div>
+        <div class="breakdown-title">Desglose completo</div>
         <div class="breakdown-row">
           <span class="breakdown-key">Ingresos brutos necesarios</span>
-          <span class="breakdown-val accent" id="bd-brutos">€46.600</span>
+          <span class="breakdown-val accent" id="bd-brutos">€48.600</span>
         </div>
         <div class="breakdown-row">
-          <span class="breakdown-key">Tarifa mínima</span>
-          <span class="breakdown-val" id="bd-minima">€40/h</span>
+          <span class="breakdown-key">Gastos anuales del negocio</span>
+          <span class="breakdown-val" id="bd-gastos">€3.600</span>
+        </div>
+        <div class="breakdown-row" style="border-top:2px solid var(--border);margin-top:4px;padding-top:10px;">
+          <span class="breakdown-key" style="font-weight:800;">Coste total anual</span>
+          <span class="breakdown-val accent" id="bd-coste-total">€52.200</span>
+        </div>
+        <div class="breakdown-row" style="margin-top:6px;">
+          <span class="breakdown-key">Horas trabajadas al año</span>
+          <span class="breakdown-val" id="bd-horas-brutas">1.196h</span>
         </div>
         <div class="breakdown-row">
-          <span class="breakdown-key">Tarifa con margen (+15%)</span>
-          <span class="breakdown-val green" id="bd-final">€47/h</span>
+          <span class="breakdown-key">Horas facturables reales</span>
+          <span class="breakdown-val green" id="bd-horas">777h</span>
+        </div>
+        <div class="breakdown-row" style="border-top:2px solid var(--border);margin-top:4px;padding-top:10px;">
+          <span class="breakdown-key">Tarifa mínima (sin margen)</span>
+          <span class="breakdown-val" id="bd-minima">€55/h</span>
+        </div>
+        <div class="breakdown-row">
+          <span class="breakdown-key">Margen beneficio/ahorro</span>
+          <span class="breakdown-val" id="bd-margen">+20%</span>
+        </div>
+        <div class="breakdown-row" style="background:rgba(42,184,122,.05);border-radius:8px;padding:10px 12px;margin-top:4px;">
+          <span class="breakdown-key" style="font-weight:900;">✅ Tarifa recomendada</span>
+          <span class="breakdown-val green" id="bd-final" style="font-size:15px;">€66/h</span>
         </div>
       </div>
 
       <div class="tip-box">
-        <strong>💡 Consejo</strong>
-        La mayoría de freelancers cobran un 30% menos de lo que deberían. Si un cliente rechaza tu tarifa, probablemente no es el cliente correcto para ti.
+        <strong>💡 Consejo personalizado</strong>
+        <span id="tip-dinamico">Según tu tarifa, eres un perfil intermedio. Los freelancers que revisan su precio cada 12 meses ganan un 28% más — Malt Insights 2024.</span>
+      </div>
+
+      <div class="tip-box" style="margin-top:10px;background:rgba(212,90,42,.04);border:1px solid rgba(212,90,42,.2);">
+        <strong style="color:var(--accent);">📊 Dato — Malt Insights 2024</strong>
+        Los freelancers que revisan su tarifa cada 12 meses ganan de media un <strong>28% más</strong> que los que la mantienen congelada.
       </div>
     </div>
   </div>
@@ -430,7 +462,9 @@
   const ranges = [
     {id:'semanas', out:'semanas-val', suffix:''},
     {id:'horas-semana', out:'horas-semana-val', suffix:'h'},
-    {id:'margen', out:'margen-val', suffix:'%'}
+    {id:'vacaciones', out:'vacaciones-val', suffix:''},
+    {id:'no-facturable', out:'no-facturable-val', suffix:'%'},
+    {id:'beneficio', out:'beneficio-val', suffix:'%'}
   ];
   ranges.forEach(r => {
     const el = document.getElementById(r.id);
@@ -449,10 +483,11 @@
     const semanas = parseFloat(document.getElementById('semanas').value);
     const horasSemana = parseFloat(document.getElementById('horas-semana').value);
     const gastosMes = parseFloat(document.getElementById('gastos-mes').value) || 0;
-    const margen = parseFloat(document.getElementById('margen').value) / 100;
+    const vacaciones = parseFloat(document.getElementById('vacaciones').value);
+    const noFacturable = parseFloat(document.getElementById('no-facturable').value) / 100;
+    const beneficio = parseFloat(document.getElementById('beneficio').value) / 100;
     const pais = document.getElementById('pais').value;
 
-    // Config por país
     const paisConfig = {
       es: { factor: 1.35, simbolo: '€', moneda: 'EUR', label: 'Ingresos netos anuales (€)' },
       mx: { factor: 1.30, simbolo: '$', moneda: 'MXN', label: 'Ingresos netos anuales (MXN)' },
@@ -464,30 +499,51 @@
     const cfg = paisConfig[pais] || paisConfig.otro;
     const s = cfg.simbolo;
 
-    // Actualizar labels de moneda en UI
     document.querySelectorAll('.moneda-simbolo').forEach(el => el.textContent = s);
-    document.getElementById('label-ingreso').textContent = cfg.label;
-    document.getElementById('label-gastos').textContent = `Gastos mensuales del negocio (${cfg.moneda})`;
+    document.getElementById('label-ingreso').innerHTML =
+      cfg.label + ' <span class="field-hint-inline">(neto después de impuestos)</span>';
 
-    const horasAnuales = semanas * horasSemana;
-    const gastosAnuales = gastosMes * 12;
-    const ingresoBrutoNecesario = (ingresoAnual * cfg.factor) + gastosAnuales;
-    const tarifaMinima = ingresoBrutoNecesario / horasAnuales;
-    const tarifaFinal = tarifaMinima * (1 + margen);
-    const tarifaBaja = tarifaFinal * 0.9;
-    const tarifaAlta = tarifaFinal * 1.1;
+    // Fórmula mejorada
+    const semanasReales = semanas - vacaciones;
+    const horasBrutasAnio = semanasReales * horasSemana;
+    const horasFacturables = Math.max(horasBrutasAnio * (1 - noFacturable), 1);
+    const ingresosBrutos = ingresoAnual * cfg.factor;
+    const gastosAnio = gastosMes * 12;
+    const costeTotalAnio = ingresosBrutos + gastosAnio;
+    const tarifaMinima = costeTotalAnio / horasFacturables;
+    const tarifaRecomendada = tarifaMinima * (1 + beneficio);
+    const tarifaLow = tarifaRecomendada * 0.9;
+    const tarifaHigh = tarifaRecomendada * 1.15;
 
-    // Update UI
-    document.getElementById('tarifa-hora').textContent = s + Math.round(tarifaFinal);
-    document.getElementById('tarifa-rango').textContent = `Rango: ${s}${Math.round(tarifaBaja)} – ${s}${Math.round(tarifaAlta)} / hora`;
-    document.getElementById('bd-horas').textContent = Math.round(horasAnuales) + 'h';
-    document.getElementById('bd-gastos').textContent = s + gastosAnuales.toLocaleString('es-ES');
-    document.getElementById('bd-brutos').textContent = s + Math.round(ingresoBrutoNecesario).toLocaleString('es-ES');
-    document.getElementById('bd-minima').textContent = s + Math.round(tarifaMinima) + '/h';
-    document.getElementById('bd-final').textContent = s + Math.round(tarifaFinal) + '/h';
+    const fmt = (n) => Math.round(n).toLocaleString('es-ES');
+
+    // Resultado principal
+    document.getElementById('tarifa-hora').textContent = s + fmt(tarifaRecomendada);
+    document.getElementById('tarifa-rango').textContent =
+      `Rango: ${s}${fmt(tarifaLow)} – ${s}${fmt(tarifaHigh)} / hora`;
+
+    // Desglose
+    document.getElementById('bd-brutos').textContent = s + fmt(ingresosBrutos);
+    document.getElementById('bd-gastos').textContent = s + fmt(gastosAnio);
+    document.getElementById('bd-coste-total').textContent = s + fmt(costeTotalAnio);
+    document.getElementById('bd-horas-brutas').textContent = Math.round(horasBrutasAnio) + 'h';
+    document.getElementById('bd-horas').textContent = Math.round(horasFacturables) + 'h';
+    document.getElementById('bd-minima').textContent = s + fmt(tarifaMinima) + '/h';
+    document.getElementById('bd-margen').textContent = '+' + Math.round(beneficio * 100) + '%';
+    document.getElementById('bd-final').textContent = s + fmt(tarifaRecomendada) + '/h';
+
+    // Consejo dinámico
+    const tip = document.getElementById('tip-dinamico');
+    if (tarifaRecomendada < 25) {
+      tip.textContent = 'Tu tarifa es baja. Considera reducir el tiempo no facturable automatizando tareas o elevar tus ingresos objetivo progresivamente.';
+    } else if (tarifaRecomendada < 45) {
+      tip.textContent = 'Tarifa junior-intermedia. Si tienes más de 2 años de experiencia, especializarte en un nicho puede permitirte doblar esta tarifa en 12 meses.';
+    } else if (tarifaRecomendada < 80) {
+      tip.textContent = 'Tarifa intermedia-senior. Dato: los freelancers que revisan su precio cada 12 meses ganan un 28% más — Malt Insights 2024.';
+    } else {
+      tip.textContent = 'Tarifa senior. Presenta tu precio como inversión, no como coste. El ROI que generas al cliente justifica cualquier tarifa por encima del mercado.';
+    }
   }
-
-  // Init
   calcular();
 </script>
 
