@@ -127,6 +127,35 @@
   gtag('js', new Date());
   gtag('config', 'G-5CPLF5TR3E');
 </script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "HowTo",
+  "name": "Cómo calcular la retención de IRPF",
+  "step": [
+    {
+      "@type": "HowToStep",
+      "name": "Introduce tus ingresos brutos anuales",
+      "text": "Escribe el total de ingresos que esperas facturar durante el año, antes de impuestos."
+    },
+    {
+      "@type": "HowToStep",
+      "name": "Añade tus gastos deducibles",
+      "text": "Incluye la cuota de autónomo, gestoría, material, formación y otros gastos del negocio."
+    },
+    {
+      "@type": "HowToStep",
+      "name": "Obtén tu tipo de IRPF estimado",
+      "text": "La calculadora estima el porcentaje de retención que deberías aplicar en tus facturas."
+    },
+    {
+      "@type": "HowToStep",
+      "name": "Aplica la retención en tus facturas",
+      "text": "Usa el porcentaje calculado para aplicar la retención correcta de IRPF en cada factura."
+    }
+  ]
+}
+</script>
 </head>
 <body>
 <nav>
@@ -152,7 +181,7 @@
         <div class="section-title">💰 Ingresos del año hasta este trimestre</div>
         <div class="field">
           <label>Ingresos brutos acumulados en el año (€)</label>
-          <input type="number" id="ingresos" placeholder="Ej: 15000" min="0" step="100">
+          <input type="number" id="ingresos" placeholder="Ej: 15000" min="0" step="100" inputmode="decimal">
           <div class="hint">Suma todos los ingresos desde enero hasta el final del trimestre actual.</div>
         </div>
       </div>
@@ -160,7 +189,7 @@
         <div class="section-title">💸 Gastos deducibles acumulados</div>
         <div class="field">
           <label>Gastos deducibles acumulados en el año (€)</label>
-          <input type="number" id="gastos" placeholder="Ej: 4000" min="0" step="100">
+          <input type="number" id="gastos" placeholder="Ej: 4000" min="0" step="100" inputmode="decimal">
           <div class="hint">Suma todos los gastos deducibles desde enero: gestoría, software, material, etc.</div>
         </div>
       </div>
@@ -168,12 +197,12 @@
         <div class="section-title">⚙️ Ajustes</div>
         <div class="field">
           <label>Pagos fraccionados ya realizados este año (€)</label>
-          <input type="number" id="pagos-previos" placeholder="0" min="0" step="1" value="0">
+          <input type="number" id="pagos-previos" placeholder="0" min="0" step="1" value="0" inputmode="decimal">
           <div class="hint">Suma los importes pagados en trimestres anteriores del mismo año.</div>
         </div>
         <div class="field">
           <label>Retenciones soportadas acumuladas (€)</label>
-          <input type="number" id="retenciones" placeholder="0" min="0" step="1" value="0">
+          <input type="number" id="retenciones" placeholder="0" min="0" step="1" value="0" inputmode="decimal">
           <div class="hint">IRPF que tus clientes te retienen directamente en factura (normalmente 15%).</div>
         </div>
         <div class="field">

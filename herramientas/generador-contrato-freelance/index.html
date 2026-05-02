@@ -299,6 +299,40 @@
   ]
 }
 </script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "HowTo",
+  "name": "Cómo generar un contrato freelance",
+  "step": [
+    {
+      "@type": "HowToStep",
+      "name": "Introduce tus datos como freelance",
+      "text": "Escribe tu nombre, NIF, dirección y datos de contacto profesional."
+    },
+    {
+      "@type": "HowToStep",
+      "name": "Añade los datos del cliente",
+      "text": "Introduce el nombre o razón social del cliente, su NIF/CIF y dirección."
+    },
+    {
+      "@type": "HowToStep",
+      "name": "Define el alcance del proyecto",
+      "text": "Describe el servicio que vas a prestar, los entregables y el plazo de ejecución."
+    },
+    {
+      "@type": "HowToStep",
+      "name": "Establece las condiciones económicas",
+      "text": "Indica el precio acordado, forma de pago, porcentaje de anticipo y plazos de cobro."
+    },
+    {
+      "@type": "HowToStep",
+      "name": "Descarga el contrato",
+      "text": "Genera el contrato en PDF listo para firmar por ambas partes."
+    }
+  ]
+}
+</script>
 </head>
 <body>
 
@@ -409,7 +443,7 @@
           <label id="label-importe">Importe total (€)</label>
           <div class="input-with-symbol">
             <span class="input-symbol" id="symbol-moneda">€</span>
-            <input type="number" id="importe" placeholder="2500" min="0">
+            <input type="number" id="importe" placeholder="2500" min="0" inputmode="decimal">
           </div>
         </div>
         <div class="field">

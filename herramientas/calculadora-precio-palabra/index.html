@@ -177,6 +177,35 @@
   ]
 }
 </script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "HowTo",
+  "name": "Cómo calcular el precio por palabra como redactor",
+  "step": [
+    {
+      "@type": "HowToStep",
+      "name": "Define tu tarifa hora objetivo",
+      "text": "Introduce cuánto quieres ganar por hora de trabajo como redactor freelance."
+    },
+    {
+      "@type": "HowToStep",
+      "name": "Estima tu velocidad de escritura",
+      "text": "Indica cuántas palabras eres capaz de escribir por hora incluyendo revisión."
+    },
+    {
+      "@type": "HowToStep",
+      "name": "Añade el tipo de contenido",
+      "text": "Selecciona si es contenido estándar, técnico o especializado según el tiempo de investigación."
+    },
+    {
+      "@type": "HowToStep",
+      "name": "Obtén tu precio por palabra",
+      "text": "La calculadora muestra el precio mínimo por palabra para alcanzar tu tarifa objetivo."
+    }
+  ]
+}
+</script>
 </head>
 <body>
 <nav>
@@ -202,7 +231,7 @@
         <div class="section-title">🎯 Tus objetivos</div>
         <div class="field">
           <label>Ingresos netos mensuales objetivo (€)</label>
-          <input type="number" id="ingresos-obj" placeholder="Ej: 2000" min="0" step="100" value="2000">
+          <input type="number" id="ingresos-obj" placeholder="Ej: 2000" min="0" step="100" value="2000" inputmode="decimal">
         </div>
         <div class="field">
           <label>Horas de trabajo al día disponibles</label>
@@ -237,12 +266,12 @@
         </div>
         <div class="field" id="velocidad-field">
           <label>Palabras que escribes por hora (netas) <span id="velocidad-ref" style="font-size:11px;color:var(--ink3);font-weight:400;"></span></label>
-          <input type="number" id="velocidad" placeholder="Ej: 1000" min="100" step="50" value="1000">
+          <input type="number" id="velocidad" placeholder="Ej: 1000" min="100" step="50" value="1000" inputmode="decimal">
           <div class="hint">Incluye investigación, escritura y revisión. Sé realista — no solo la velocidad de tecleo.</div>
         </div>
         <div class="field">
           <label>Gastos mensuales del negocio (€)</label>
-          <input type="number" id="gastos-neg" placeholder="Ej: 400" min="0" step="50" value="400">
+          <input type="number" id="gastos-neg" placeholder="Ej: 400" min="0" step="50" value="400" inputmode="decimal">
           <div class="hint">Cuota de autónomo, gestoría, software, etc.</div>
         </div>
         <div class="field">
@@ -277,7 +306,7 @@
         <div class="sim-title">Simula un proyecto concreto</div>
         <div class="sim-field">
           <label>Número de palabras</label>
-          <input type="number" id="sim-palabras" placeholder="1500" min="0" step="100" oninput="simular()">
+          <input type="number" id="sim-palabras" placeholder="1500" min="0" step="100" oninput="simular()" inputmode="decimal">
         </div>
         <div class="sim-result" id="sim-result">— €</div>
       </div>

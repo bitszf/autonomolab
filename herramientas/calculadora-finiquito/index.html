@@ -125,6 +125,35 @@
   gtag('js', new Date());
   gtag('config', 'G-5CPLF5TR3E');
 </script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "HowTo",
+  "name": "Cómo calcular un finiquito",
+  "step": [
+    {
+      "@type": "HowToStep",
+      "name": "Introduce los datos del contrato",
+      "text": "Escribe la fecha de inicio, fecha de fin y el salario bruto mensual del trabajador."
+    },
+    {
+      "@type": "HowToStep",
+      "name": "Selecciona el tipo de baja",
+      "text": "Indica si es despido objetivo, disciplinario, baja voluntaria o fin de contrato temporal."
+    },
+    {
+      "@type": "HowToStep",
+      "name": "Añade días de vacaciones pendientes",
+      "text": "Introduce los días de vacaciones que el trabajador no ha disfrutado para incluirlos en el cálculo."
+    },
+    {
+      "@type": "HowToStep",
+      "name": "Obtén el importe del finiquito",
+      "text": "La calculadora muestra el desglose completo: vacaciones, parte proporcional de pagas e indemnización."
+    }
+  ]
+}
+</script>
 </head>
 <body>
 <nav>
@@ -152,7 +181,7 @@
         <div class="section-title">💰 Datos salariales</div>
         <div class="field">
           <label>Salario bruto anual (€)</label>
-          <input type="number" id="salario-anual" placeholder="Ej: 24000" min="0" step="100">
+          <input type="number" id="salario-anual" placeholder="Ej: 24000" min="0" step="100" inputmode="decimal">
         </div>
         <div class="field">
           <label>Número de pagas al año</label>
@@ -178,12 +207,12 @@
         </div>
         <div class="field">
           <label>Días de vacaciones al año (según convenio)</label>
-          <input type="number" id="vacaciones-año" placeholder="22" min="0" step="1" value="22">
+          <input type="number" id="vacaciones-año" placeholder="22" min="0" step="1" value="22" inputmode="decimal">
           <div class="hint">El mínimo legal en España son 22 días laborables.</div>
         </div>
         <div class="field">
           <label>Días de vacaciones ya disfrutados este año</label>
-          <input type="number" id="vacaciones-disfrutadas" placeholder="0" min="0" step="1" value="0">
+          <input type="number" id="vacaciones-disfrutadas" placeholder="0" min="0" step="1" value="0" inputmode="decimal">
         </div>
       </div>
 
@@ -191,12 +220,12 @@
         <div class="section-title">📋 Otros conceptos</div>
         <div class="field">
           <label>Salario de días trabajados este mes (si no está cobrado)</label>
-          <input type="number" id="salario-pendiente" placeholder="0" min="0" step="0.01" value="0">
+          <input type="number" id="salario-pendiente" placeholder="0" min="0" step="0.01" value="0" inputmode="decimal">
           <div class="hint">Déjalo en 0 si ya has cobrado el salario del mes completo.</div>
         </div>
         <div class="field">
           <label>Otros conceptos pendientes (€)</label>
-          <input type="number" id="otros" placeholder="0" min="0" step="0.01" value="0">
+          <input type="number" id="otros" placeholder="0" min="0" step="0.01" value="0" inputmode="decimal">
           <div class="hint">Comisiones, horas extra, complementos pendientes, etc.</div>
         </div>
       </div>

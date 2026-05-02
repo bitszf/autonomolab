@@ -201,6 +201,35 @@
   ]
 }
 </script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "HowTo",
+  "name": "Cómo generar un presupuesto profesional",
+  "step": [
+    {
+      "@type": "HowToStep",
+      "name": "Añade tus datos y los del cliente",
+      "text": "Introduce nombre, NIF y datos de contacto del emisor y del receptor del presupuesto."
+    },
+    {
+      "@type": "HowToStep",
+      "name": "Describe los servicios o productos",
+      "text": "Añade cada línea con descripción, cantidad, precio unitario y tipo de IVA."
+    },
+    {
+      "@type": "HowToStep",
+      "name": "Revisa el total calculado",
+      "text": "La herramienta calcula automáticamente la base imponible, el IVA y el total."
+    },
+    {
+      "@type": "HowToStep",
+      "name": "Descarga en PDF",
+      "text": "Genera el presupuesto en formato PDF profesional listo para enviar al cliente."
+    }
+  ]
+}
+</script>
 </head>
 <body>
 <nav>
@@ -275,20 +304,20 @@
         <div id="lineas-container">
           <div class="linea-row">
             <input type="text" placeholder="Diseño de wireframes" class="l-desc">
-            <input type="number" placeholder="1" min="0" step="1" class="l-cant" oninput="recalcular()">
-            <input type="number" placeholder="0" min="0" step="0.01" class="l-precio" oninput="recalcular()">
+            <input type="number" placeholder="1" min="0" step="1" class="l-cant" oninput="recalcular()" inputmode="decimal">
+            <input type="number" placeholder="0" min="0" step="0.01" class="l-precio" oninput="recalcular()" inputmode="decimal">
             <button class="del-btn" onclick="eliminarLinea(this)">×</button>
           </div>
           <div class="linea-row">
             <input type="text" placeholder="Maquetación HTML/CSS" class="l-desc">
-            <input type="number" placeholder="1" min="0" step="1" class="l-cant" oninput="recalcular()">
-            <input type="number" placeholder="0" min="0" step="0.01" class="l-precio" oninput="recalcular()">
+            <input type="number" placeholder="1" min="0" step="1" class="l-cant" oninput="recalcular()" inputmode="decimal">
+            <input type="number" placeholder="0" min="0" step="0.01" class="l-precio" oninput="recalcular()" inputmode="decimal">
             <button class="del-btn" onclick="eliminarLinea(this)">×</button>
           </div>
           <div class="linea-row">
             <input type="text" placeholder="Reuniones y coordinación" class="l-desc">
-            <input type="number" placeholder="1" min="0" step="1" class="l-cant" oninput="recalcular()">
-            <input type="number" placeholder="0" min="0" step="0.01" class="l-precio" oninput="recalcular()">
+            <input type="number" placeholder="1" min="0" step="1" class="l-cant" oninput="recalcular()" inputmode="decimal">
+            <input type="number" placeholder="0" min="0" step="0.01" class="l-precio" oninput="recalcular()" inputmode="decimal">
             <button class="del-btn" onclick="eliminarLinea(this)">×</button>
           </div>
         </div>
@@ -397,7 +426,7 @@ function addLinea(){
   var c=document.getElementById('lineas-container');
   var div=document.createElement('div');
   div.className='linea-row';
-  div.innerHTML='<input type="text" placeholder="Nueva partida" class="l-desc"><input type="number" placeholder="1" min="0" step="1" class="l-cant" oninput="recalcular()"><input type="number" placeholder="0" min="0" step="0.01" class="l-precio" oninput="recalcular()"><button class="del-btn" onclick="eliminarLinea(this)">×</button>';
+  div.innerHTML='<input type="text" placeholder="Nueva partida" class="l-desc"><input type="number" placeholder="1" min="0" step="1" class="l-cant" oninput="recalcular()" inputmode="decimal"><input type="number" placeholder="0" min="0" step="0.01" class="l-precio" oninput="recalcular()" inputmode="decimal"><button class="del-btn" onclick="eliminarLinea(this)">×</button>';
   c.appendChild(div);
 }
 

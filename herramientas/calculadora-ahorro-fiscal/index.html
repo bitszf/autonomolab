@@ -175,6 +175,35 @@
   ]
 }
 </script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "HowTo",
+  "name": "Cómo calcular tu ahorro fiscal como autónomo",
+  "step": [
+    {
+      "@type": "HowToStep",
+      "name": "Introduce tus ingresos anuales",
+      "text": "Escribe el total de ingresos brutos que esperas facturar durante el año."
+    },
+    {
+      "@type": "HowToStep",
+      "name": "Añade tus gastos deducibles",
+      "text": "Incluye cuota autónomo, gestoría, local, vehículo, formación, dietas y más."
+    },
+    {
+      "@type": "HowToStep",
+      "name": "Compara con y sin deducciones",
+      "text": "La calculadora muestra cuánto pagarías de IRPF con y sin los gastos deducibles."
+    },
+    {
+      "@type": "HowToStep",
+      "name": "Obtén tu ahorro fiscal estimado",
+      "text": "Ve el ahorro total en euros que consigues declarando correctamente todos tus gastos."
+    }
+  ]
+}
+</script>
 </head>
 <body>
 <nav>
@@ -200,7 +229,7 @@
         <div class="section-title">💰 Ingresos anuales brutos</div>
         <div class="field">
           <label>Facturación anual total (€)</label>
-          <input type="number" id="facturacion" placeholder="Ej: 40000" min="0" step="500" value="">
+          <input type="number" id="facturacion" placeholder="Ej: 40000" min="0" step="500" value="" inputmode="decimal">
         </div>
         <div class="field">
           <label>Tramo IRPF estimado</label>
@@ -216,14 +245,14 @@
 
       <div class="section">
         <div class="section-title">📋 Gastos deducibles anuales — introduce lo que pagas</div>
-        <div class="gasto-row"><span class="gasto-nombre">Cuota de autónomo</span><input type="number" class="gasto-input gasto" placeholder="0" data-nombre="Cuota autónomo" min="0" step="10" value="2760" oninput="calcular()"></div>
-        <div class="gasto-row"><span class="gasto-nombre">Gestoría / asesoría</span><input type="number" class="gasto-input gasto" placeholder="0" data-nombre="Gestoría" min="0" step="10" oninput="calcular()"></div>
-        <div class="gasto-row"><span class="gasto-nombre">Software y suscripciones</span><input type="number" class="gasto-input gasto" placeholder="0" data-nombre="Software" min="0" step="10" oninput="calcular()"></div>
-        <div class="gasto-row"><span class="gasto-nombre">Material y equipamiento</span><input type="number" class="gasto-input gasto" placeholder="0" data-nombre="Material" min="0" step="10" oninput="calcular()"></div>
-        <div class="gasto-row"><span class="gasto-nombre">Formación</span><input type="number" class="gasto-input gasto" placeholder="0" data-nombre="Formación" min="0" step="10" oninput="calcular()"></div>
-        <div class="gasto-row"><span class="gasto-nombre">Marketing y publicidad</span><input type="number" class="gasto-input gasto" placeholder="0" data-nombre="Marketing" min="0" step="10" oninput="calcular()"></div>
-        <div class="gasto-row"><span class="gasto-nombre">Teléfono e internet (50%)</span><input type="number" class="gasto-input gasto" placeholder="0" data-nombre="Teléfono" min="0" step="10" oninput="calcular()"></div>
-        <div class="gasto-row"><span class="gasto-nombre">Otros gastos deducibles</span><input type="number" class="gasto-input gasto" placeholder="0" data-nombre="Otros" min="0" step="10" oninput="calcular()"></div>
+        <div class="gasto-row"><span class="gasto-nombre">Cuota de autónomo</span><input type="number" class="gasto-input gasto" placeholder="0" data-nombre="Cuota autónomo" min="0" step="10" value="2760" oninput="calcular()" inputmode="decimal"></div>
+        <div class="gasto-row"><span class="gasto-nombre">Gestoría / asesoría</span><input type="number" class="gasto-input gasto" placeholder="0" data-nombre="Gestoría" min="0" step="10" oninput="calcular()" inputmode="decimal"></div>
+        <div class="gasto-row"><span class="gasto-nombre">Software y suscripciones</span><input type="number" class="gasto-input gasto" placeholder="0" data-nombre="Software" min="0" step="10" oninput="calcular()" inputmode="decimal"></div>
+        <div class="gasto-row"><span class="gasto-nombre">Material y equipamiento</span><input type="number" class="gasto-input gasto" placeholder="0" data-nombre="Material" min="0" step="10" oninput="calcular()" inputmode="decimal"></div>
+        <div class="gasto-row"><span class="gasto-nombre">Formación</span><input type="number" class="gasto-input gasto" placeholder="0" data-nombre="Formación" min="0" step="10" oninput="calcular()" inputmode="decimal"></div>
+        <div class="gasto-row"><span class="gasto-nombre">Marketing y publicidad</span><input type="number" class="gasto-input gasto" placeholder="0" data-nombre="Marketing" min="0" step="10" oninput="calcular()" inputmode="decimal"></div>
+        <div class="gasto-row"><span class="gasto-nombre">Teléfono e internet (50%)</span><input type="number" class="gasto-input gasto" placeholder="0" data-nombre="Teléfono" min="0" step="10" oninput="calcular()" inputmode="decimal"></div>
+        <div class="gasto-row"><span class="gasto-nombre">Otros gastos deducibles</span><input type="number" class="gasto-input gasto" placeholder="0" data-nombre="Otros" min="0" step="10" oninput="calcular()" inputmode="decimal"></div>
       </div>
       <button class="calc-btn" onclick="calcular()">Calcular mi ahorro fiscal →</button>
     </div>

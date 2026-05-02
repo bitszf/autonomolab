@@ -192,6 +192,40 @@
   ]
 }
 </script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "HowTo",
+  "name": "Cómo calcular el precio de un proyecto freelance",
+  "step": [
+    {
+      "@type": "HowToStep",
+      "name": "Estima las horas necesarias",
+      "text": "Calcula cuántas horas requiere el proyecto sumando todas las tareas y revisiones previstas."
+    },
+    {
+      "@type": "HowToStep",
+      "name": "Introduce tu tarifa hora",
+      "text": "Escribe tu tarifa horaria habitual o usa la calculadora de tarifa hora si no la tienes definida."
+    },
+    {
+      "@type": "HowToStep",
+      "name": "Añade los gastos del proyecto",
+      "text": "Suma gastos externos: licencias, subcontrataciones, materiales o viajes relacionados."
+    },
+    {
+      "@type": "HowToStep",
+      "name": "Aplica tu margen de beneficio",
+      "text": "Añade un porcentaje de margen (15-30%) para cubrir imprevistos y asegurar rentabilidad."
+    },
+    {
+      "@type": "HowToStep",
+      "name": "Obtén el precio final",
+      "text": "La calculadora muestra el precio mínimo recomendado y el precio con margen para el cliente."
+    }
+  ]
+}
+</script>
 </head>
 <body>
 <nav>
@@ -219,7 +253,7 @@
         <div class="section-title">💰 Tu tarifa</div>
         <div class="field">
           <label>Tu tarifa hora (€)</label>
-          <input type="number" id="tarifa" placeholder="Ej: 50" min="1" step="0.5" value="50">
+          <input type="number" id="tarifa" placeholder="Ej: 50" min="1" step="0.5" value="50" inputmode="decimal">
           <div class="hint">¿No sabes cuánto cobrar? <a href="/herramientas/calculadora-tarifa-hora" style="color:var(--accent);">Calcula tu tarifa hora aquí</a></div>
         </div>
       </div>
@@ -235,20 +269,20 @@
         <div id="tasks-container">
           <div class="task-row">
             <input type="text" placeholder="Ej: Diseño de wireframes" class="task-name">
-            <input type="number" placeholder="4" min="0" step="0.5" class="task-est">
-            <input type="number" placeholder="5" min="0" step="0.5" class="task-real">
+            <input type="number" placeholder="4" min="0" step="0.5" class="task-est" inputmode="decimal">
+            <input type="number" placeholder="5" min="0" step="0.5" class="task-real" inputmode="decimal">
             <button class="task-del" onclick="removeTask(this)">×</button>
           </div>
           <div class="task-row">
             <input type="text" placeholder="Ej: Maquetación HTML/CSS" class="task-name">
-            <input type="number" placeholder="8" min="0" step="0.5" class="task-est">
-            <input type="number" placeholder="10" min="0" step="0.5" class="task-real">
+            <input type="number" placeholder="8" min="0" step="0.5" class="task-est" inputmode="decimal">
+            <input type="number" placeholder="10" min="0" step="0.5" class="task-real" inputmode="decimal">
             <button class="task-del" onclick="removeTask(this)">×</button>
           </div>
           <div class="task-row">
             <input type="text" placeholder="Ej: Reuniones y revisiones" class="task-name">
-            <input type="number" placeholder="2" min="0" step="0.5" class="task-est">
-            <input type="number" placeholder="2" min="0" step="0.5" class="task-real">
+            <input type="number" placeholder="2" min="0" step="0.5" class="task-est" inputmode="decimal">
+            <input type="number" placeholder="2" min="0" step="0.5" class="task-real" inputmode="decimal">
             <button class="task-del" onclick="removeTask(this)">×</button>
           </div>
         </div>
@@ -270,7 +304,7 @@
         </div>
         <div class="field">
           <label>Gastos directos del proyecto (€)</label>
-          <input type="number" id="gastos" placeholder="Ej: licencias, stock, subcontratación" min="0" step="1" value="0">
+          <input type="number" id="gastos" placeholder="Ej: licencias, stock, subcontratación" min="0" step="1" value="0" inputmode="decimal">
         </div>
         <div class="field">
           <label>Calcular precio usando</label>
@@ -335,7 +369,7 @@
     const c = document.getElementById('tasks-container');
     const div = document.createElement('div');
     div.className = 'task-row';
-    div.innerHTML = `<input type="text" placeholder="Nombre de la tarea" class="task-name"><input type="number" placeholder="0" min="0" step="0.5" class="task-est"><input type="number" placeholder="0" min="0" step="0.5" class="task-real"><button class="task-del" onclick="removeTask(this)">×</button>`;
+    div.innerHTML = `<input type="text" placeholder="Nombre de la tarea" class="task-name"><input type="number" placeholder="0" min="0" step="0.5" class="task-est" inputmode="decimal"><input type="number" placeholder="0" min="0" step="0.5" class="task-real" inputmode="decimal"><button class="task-del" onclick="removeTask(this)">×</button>`;
     c.appendChild(div);
   }
   function removeTask(btn) {
@@ -371,7 +405,7 @@
     document.getElementById('margen').value = '20';
     document.getElementById('gastos').value = '0';
     const c = document.getElementById('tasks-container');
-    c.innerHTML = '<div class="task-row"><input type="text" placeholder="Nombre de la tarea" class="task-name"><input type="number" placeholder="0" min="0" step="0.5" class="task-est"><input type="number" placeholder="0" min="0" step="0.5" class="task-real"><button class="task-del" onclick="removeTask(this)">×</button></div>';
+    c.innerHTML = '<div class="task-row"><input type="text" placeholder="Nombre de la tarea" class="task-name"><input type="number" placeholder="0" min="0" step="0.5" class="task-est" inputmode="decimal"><input type="number" placeholder="0" min="0" step="0.5" class="task-real" inputmode="decimal"><button class="task-del" onclick="removeTask(this)">×</button></div>';
     document.getElementById('result-price').textContent = '—';
     document.getElementById('result-hours').textContent = 'Introduce tus datos y pulsa calcular';
     ['bd-horas-est','bd-base','bd-margen','bd-gastos','bd-total'].forEach(id => document.getElementById(id).textContent = '—');
