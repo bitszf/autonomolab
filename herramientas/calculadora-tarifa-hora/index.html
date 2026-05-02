@@ -139,7 +139,37 @@
   .trust-band{display:flex;gap:16px;flex-wrap:wrap;margin:12px 0 28px;padding:14px 18px;background:rgba(42,184,122,.06);border:1px solid rgba(42,184,122,.2);border-radius:10px;}
   .trust-item{display:flex;align-items:center;gap:6px;font-size:13px;color:var(--ink2);font-weight:600;}
   .trust-icon{font-size:14px;}
-</style>
+    .page > h2{font-size:24px;font-weight:900;margin:56px 0 16px;color:var(--ink);letter-spacing:-.02em;line-height:1.2;}
+    .page > h2:first-of-type{margin-top:48px;}
+    .page > p{font-size:15px;color:var(--ink2);line-height:1.7;margin-bottom:14px;}
+    .page > p strong{color:var(--ink);font-weight:800;}
+    .page > ol{padding-left:22px;margin-bottom:20px;}
+    .page > ol li{font-size:15px;color:var(--ink2);line-height:1.65;margin-bottom:10px;}
+    .page > ol li strong{color:var(--ink);font-weight:800;}
+    .page .tabla{width:100%;border-collapse:collapse;margin:20px 0;font-size:14px;display:block;overflow-x:auto;}
+    .page .tabla th{background:var(--ink);color:#fff;padding:10px 14px;text-align:left;font-size:12px;text-transform:uppercase;letter-spacing:.06em;white-space:nowrap;}
+    .page .tabla td{padding:10px 14px;border-bottom:1px solid var(--border);color:var(--ink2);}
+    .page .tabla tr:last-child td{border-bottom:none;}
+    .page .tabla tr:nth-child(even) td{background:var(--bg2);}
+    .page .tabla td:first-child{font-weight:700;color:var(--ink);}
+    .page > p[style*="font-size:12px"]{font-size:12px!important;color:var(--ink3)!important;}
+  
+    /* === CONTENIDO EXPANDIDO .page-content === */
+    .page-content{margin-top:48px;}
+    .page-content h2{font-size:24px;font-weight:900;margin:48px 0 14px;color:var(--ink);letter-spacing:-.02em;line-height:1.2;}
+    .page-content h2:first-child{margin-top:0;}
+    .page-content p{font-size:15px;color:var(--ink2);line-height:1.7;margin-bottom:14px;}
+    .page-content p strong,.page-content li strong{color:var(--ink);font-weight:800;}
+    .page-content ol{padding-left:22px;margin-bottom:20px;}
+    .page-content ol li{font-size:15px;color:var(--ink2);line-height:1.65;margin-bottom:10px;}
+    .page-content .tabla{width:100%;border-collapse:collapse;margin:20px 0;font-size:14px;display:block;overflow-x:auto;}
+    .page-content .tabla th{background:var(--ink);color:#fff;padding:10px 14px;text-align:left;font-size:12px;text-transform:uppercase;letter-spacing:.06em;white-space:nowrap;}
+    .page-content .tabla td{padding:10px 14px;border-bottom:1px solid var(--border);color:var(--ink2);}
+    .page-content .tabla tr:last-child td{border-bottom:none;}
+    .page-content .tabla tr:nth-child(even) td{background:var(--bg2);}
+    .page-content .tabla td:first-child{font-weight:700;color:var(--ink);}
+    .page-content [style*="font-size:12px"]{color:var(--ink3);}
+  </style>
 <meta property="og:title" content="Calculadora de tarifa hora freelance">
 <meta property="og:description" content="¿Estás cobrando lo suficiente? Calcula tu tarifa hora real en 30 segundos. Gratis, sin registro. Fórmula usada por +2.000 freelancers en España y LATAM.">
 <meta property="og:type" content="website">
@@ -392,6 +422,7 @@
   <!-- RELATED TOOLS -->
   
   <!-- CONTENIDO EXPANDIDO -->
+  <div class="page-content">
   <h2>Por qué tu tarifa hora real es más alta de lo que crees</h2>
   <p>El error más frecuente al calcular la tarifa no es la fórmula — es el número de horas de base. La mayoría de freelancers divide sus ingresos entre todas las horas que trabaja. Pero no todas las horas que trabajas se pueden cobrar a un cliente.</p>
 
@@ -441,7 +472,8 @@
     <li style="font-size:15px;color:var(--ink2);margin-bottom:10px;"><strong style="color:var(--ink);">No añadir margen de beneficio.</strong> Una tarifa que solo cubre costes es insostenible. Sin margen no hay reinversión, formación ni colchón para los meses malos. Mínimo recomendado: 15–20%.</li>
   </ol>
 
-  <!-- FAQ ÚNICO -->
+  </div>
+
   <div class="faq">
     <h2>Preguntas <em>frecuentes</em></h2>
 
