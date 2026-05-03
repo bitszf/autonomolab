@@ -139,36 +139,20 @@
   .trust-band{display:flex;gap:16px;flex-wrap:wrap;margin:12px 0 28px;padding:14px 18px;background:rgba(42,184,122,.06);border:1px solid rgba(42,184,122,.2);border-radius:10px;}
   .trust-item{display:flex;align-items:center;gap:6px;font-size:13px;color:var(--ink2);font-weight:600;}
   .trust-icon{font-size:14px;}
-    .page > h2{font-size:24px;font-weight:900;margin:56px 0 16px;color:var(--ink);letter-spacing:-.02em;line-height:1.2;}
-    .page > h2:first-of-type{margin-top:48px;}
-    .page > p{font-size:15px;color:var(--ink2);line-height:1.7;margin-bottom:14px;}
-    .page > p strong{color:var(--ink);font-weight:800;}
-    .page > ol{padding-left:22px;margin-bottom:20px;}
-    .page > ol li{font-size:15px;color:var(--ink2);line-height:1.65;margin-bottom:10px;}
-    .page > ol li strong{color:var(--ink);font-weight:800;}
-    .page .tabla{width:100%;border-collapse:collapse;margin:20px 0;font-size:14px;display:block;overflow-x:auto;}
-    .page .tabla th{background:var(--ink);color:#fff;padding:10px 14px;text-align:left;font-size:12px;text-transform:uppercase;letter-spacing:.06em;white-space:nowrap;}
-    .page .tabla td{padding:10px 14px;border-bottom:1px solid var(--border);color:var(--ink2);}
-    .page .tabla tr:last-child td{border-bottom:none;}
-    .page .tabla tr:nth-child(even) td{background:var(--bg2);}
-    .page .tabla td:first-child{font-weight:700;color:var(--ink);}
-    .page > p[style*="font-size:12px"]{font-size:12px!important;color:var(--ink3)!important;}
-  
-    /* === CONTENIDO EXPANDIDO .page-content === */
-    .page-content{margin-top:48px;}
-    .page-content h2{font-size:24px;font-weight:900;margin:48px 0 14px;color:var(--ink);letter-spacing:-.02em;line-height:1.2;}
+
+    .page-content{margin-top:0;}
+    .page-content h2{font-size:22px;font-weight:900;margin:40px 0 14px;color:var(--ink);letter-spacing:-.02em;}
     .page-content h2:first-child{margin-top:0;}
     .page-content p{font-size:15px;color:var(--ink2);line-height:1.7;margin-bottom:14px;}
     .page-content p strong,.page-content li strong{color:var(--ink);font-weight:800;}
     .page-content ol{padding-left:22px;margin-bottom:20px;}
     .page-content ol li{font-size:15px;color:var(--ink2);line-height:1.65;margin-bottom:10px;}
-    .page-content .tabla{width:100%;border-collapse:collapse;margin:20px 0;font-size:14px;display:block;overflow-x:auto;}
+    .page-content .tabla{width:100%;border-collapse:collapse;margin:16px 0;font-size:14px;display:block;overflow-x:auto;}
     .page-content .tabla th{background:var(--ink);color:#fff;padding:10px 14px;text-align:left;font-size:12px;text-transform:uppercase;letter-spacing:.06em;white-space:nowrap;}
     .page-content .tabla td{padding:10px 14px;border-bottom:1px solid var(--border);color:var(--ink2);}
     .page-content .tabla tr:last-child td{border-bottom:none;}
     .page-content .tabla tr:nth-child(even) td{background:var(--bg2);}
     .page-content .tabla td:first-child{font-weight:700;color:var(--ink);}
-    .page-content [style*="font-size:12px"]{color:var(--ink3);}
   </style>
 <meta property="og:title" content="Calculadora de tarifa hora freelance">
 <meta property="og:description" content="¿Estás cobrando lo suficiente? Calcula tu tarifa hora real en 30 segundos. Gratis, sin registro. Fórmula usada por +2.000 freelancers en España y LATAM.">
@@ -331,26 +315,11 @@
         </div>
 
         <div class="field">
-          <label>Semanas de vacaciones al año <span class="range-val" id="vacaciones-val">4</span></label>
-          <div class="field-hint">Vacaciones + festivos + días de baja estimados</div>
+          <label>Margen de seguridad</label>
+          <div class="field-hint">Buffer para imprevistos y meses sin proyectos</div>
           <div class="range-wrap">
-            <input type="range" id="vacaciones" min="0" max="12" value="4">
-          </div>
-        </div>
-
-        <div class="field">
-          <label>Tiempo no facturable <span class="range-val" id="no-facturable-val">35%</span></label>
-          <div class="field-hint">Emails, reuniones, gestión, captación — horas que no puedes cobrar</div>
-          <div class="range-wrap">
-            <input type="range" id="no-facturable" min="10" max="70" value="35">
-          </div>
-        </div>
-
-        <div class="field">
-          <label>Margen beneficio/ahorro <span class="range-val" id="beneficio-val">20%</span></label>
-          <div class="field-hint">Colchón para imprevistos y reinversión en el negocio</div>
-          <div class="range-wrap">
-            <input type="range" id="beneficio" min="0" max="50" value="20">
+            <input type="range" id="margen" min="0" max="40" value="15">
+            <span class="range-val" id="margen-val">15%</span>
           </div>
         </div>
       </div>
@@ -368,150 +337,117 @@
       </div>
 
       <div class="result-breakdown">
-        <div class="breakdown-title">Desglose completo</div>
+        <div class="breakdown-title">Desglose</div>
         <div class="breakdown-row">
-          <span class="breakdown-key">Ingresos brutos necesarios</span>
-          <span class="breakdown-val accent" id="bd-brutos">—</span>
+          <span class="breakdown-key">Horas facturables / año</span>
+          <span class="breakdown-val" id="bd-horas">1.150h</span>
         </div>
         <div class="breakdown-row">
           <span class="breakdown-key">Gastos anuales negocio</span>
-          <span class="breakdown-val" id="bd-gastos">—</span>
-        </div>
-        <div class="breakdown-row" style="border-top:2px solid var(--border);margin-top:4px;padding-top:10px;">
-          <span class="breakdown-key" style="font-weight:800;">Coste total anual</span>
-          <span class="breakdown-val accent" id="bd-coste-total">—</span>
-        </div>
-        <div class="breakdown-row" style="margin-top:6px;">
-          <span class="breakdown-key">Horas trabajadas al año</span>
-          <span class="breakdown-val" id="bd-horas-brutas">—</span>
+          <span class="breakdown-val" id="bd-gastos">€3.600</span>
         </div>
         <div class="breakdown-row">
-          <span class="breakdown-key">Horas facturables reales</span>
-          <span class="breakdown-val green" id="bd-horas">—</span>
-        </div>
-        <div class="breakdown-row" style="border-top:2px solid var(--border);margin-top:4px;padding-top:10px;">
-          <span class="breakdown-key">Tarifa mínima (sin margen)</span>
-          <span class="breakdown-val" id="bd-minima">—</span>
+          <span class="breakdown-key">Ingresos brutos necesarios</span>
+          <span class="breakdown-val accent" id="bd-brutos">€46.600</span>
         </div>
         <div class="breakdown-row">
-          <span class="breakdown-key">Margen beneficio/ahorro</span>
-          <span class="breakdown-val" id="bd-margen">—</span>
+          <span class="breakdown-key">Tarifa mínima</span>
+          <span class="breakdown-val" id="bd-minima">€40/h</span>
         </div>
-        <div class="breakdown-row" style="background:rgba(42,184,122,.06);border-radius:8px;padding:10px 12px;margin-top:4px;">
-          <span class="breakdown-key" style="font-weight:900;">✅ Tarifa recomendada</span>
-          <span class="breakdown-val green" id="bd-final" style="font-size:15px;">—</span>
+        <div class="breakdown-row">
+          <span class="breakdown-key">Tarifa con margen (+15%)</span>
+          <span class="breakdown-val green" id="bd-final">€47/h</span>
         </div>
       </div>
 
       <div class="tip-box">
-        <strong>💡 Consejo personalizado</strong>
-        <span id="tip-dinamico">Ajusta los valores para ver tu tarifa real.</span>
-      </div>
-
-      <div class="tip-box" style="margin-top:10px;background:rgba(212,90,42,.04);border:1px solid rgba(212,90,42,.2);">
-        <strong style="color:var(--accent);">📊 Dato — Malt Insights 2024</strong>
-        Los freelancers que revisan su tarifa cada 12 meses ganan de media un <strong>28% más</strong> que los que la mantienen congelada.
+        <strong>💡 Consejo</strong>
+        La mayoría de freelancers cobran un 30% menos de lo que deberían. Si un cliente rechaza tu tarifa, probablemente no es el cliente correcto para ti.
       </div>
     </div>
   </div>
 
   <!-- FAQ -->
-
-    
   <!-- CONTENIDO EXPANDIDO -->
   <div class="page-content">
-  <h2>Por qué tu tarifa hora real es más alta de lo que crees</h2>
-  <p>El error más frecuente al calcular la tarifa no es la fórmula — es el número de horas de base. La mayoría de freelancers divide sus ingresos entre todas las horas que trabaja. Pero no todas las horas que trabajas se pueden cobrar a un cliente.</p>
 
-  <div style="display:grid;grid-template-columns:1fr 1fr;gap:14px;margin:20px 0;">
-    <div style="background:var(--card);border:1px solid var(--border);border-radius:10px;padding:16px;">
-      <div style="font-size:13px;font-weight:900;color:var(--accent);margin-bottom:6px;">⛔ Tiempo NO facturable</div>
-      <p style="font-size:13px;margin:0;color:var(--ink2);">Emails con clientes, reuniones de seguimiento, captación, contabilidad, formación. El 30–45% de tu jornada.</p>
+    <h2>Por qué tu tarifa hora real es más alta de lo que crees</h2>
+    <p>El error más frecuente al calcular la tarifa no es la fórmula — es el número de horas de base. La mayoría de freelancers divide sus ingresos entre todas las horas que trabaja. El problema es que no todas las horas que trabajas se pueden cobrar a un cliente.</p>
+
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:14px;margin:20px 0;">
+      <div style="background:var(--card);border:1px solid var(--border);border-radius:10px;padding:16px;">
+        <div style="font-size:13px;font-weight:900;color:var(--accent);margin-bottom:6px;">⛔ Tiempo NO facturable</div>
+        <p style="font-size:13px;margin:0;color:var(--ink2);">Emails con clientes, reuniones, captación, contabilidad, formación. El 30–45% de tu jornada.</p>
+      </div>
+      <div style="background:var(--card);border:1px solid var(--border);border-radius:10px;padding:16px;">
+        <div style="font-size:13px;font-weight:900;color:var(--green);margin-bottom:6px;">✅ Tiempo facturable</div>
+        <p style="font-size:13px;margin:0;color:var(--ink2);">Trabajo directo entregable al cliente: diseño, código, redacción, consultoría. Solo esto se cobra.</p>
+      </div>
     </div>
-    <div style="background:var(--card);border:1px solid var(--border);border-radius:10px;padding:16px;">
-      <div style="font-size:13px;font-weight:900;color:var(--green);margin-bottom:6px;">✅ Tiempo facturable</div>
-      <p style="font-size:13px;margin:0;color:var(--ink2);">Trabajo directo entregable al cliente: diseño, código, redacción, consultoría, producción. Solo esto se cobra.</p>
+
+    <div style="background:var(--bg2);border-left:4px solid var(--accent);padding:16px 20px;border-radius:0 8px 8px 0;margin:24px 0;">
+      <p style="margin:0;font-size:14px;color:var(--ink2);">💡 <strong>El dato que cambia el cálculo:</strong> con un 35% de tiempo no facturable y 25 horas/semana brutas, solo tienes ~780 horas facturables reales al año — muy lejos de las 1.300 horas que muchos usan como base y que producen tarifas un 40% por debajo de la real.</p>
     </div>
-  </div>
 
-  <div style="background:var(--bg2);border-left:4px solid var(--accent);padding:16px 20px;border-radius:0 8px 8px 0;margin:24px 0;">
-    <p style="margin:0;font-size:14px;color:var(--ink2);">💡 <strong>El dato que cambia el cálculo:</strong> con un 35% de tiempo no facturable y 25 horas/semana brutas, solo tienes ~16 horas facturables reales semanales — unas 780 al año. Muy lejos de las 1.300 horas que muchos usan como base y que producen tarifas un 40% por debajo de la real.</p>
-  </div>
+    <h2>Tarifas freelance por sector en España 2026</h2>
+    <p>Contrasta tu tarifa con lo que cobra el mercado. Si estás por debajo, tienes margen para subir sin perder clientes.</p>
 
-  <h2>Tarifas freelance por sector en España 2026</h2>
-  <p>Contrasta tu tarifa calculada con lo que cobra el mercado en tu sector. Si estás por debajo, tienes margen para subir sin perder clientes.</p>
+    <table class="tabla">
+      <thead>
+        <tr><th>Perfil</th><th>Junior (0–2 años)</th><th>Intermedio (2–5 años)</th><th>Senior (5+ años)</th></tr>
+      </thead>
+      <tbody>
+        <tr><td>Desarrollo web fullstack</td><td>30–50€</td><td>50–90€</td><td>90–160€</td></tr>
+        <tr><td>Diseño UX/UI</td><td>25–40€</td><td>40–75€</td><td>75–130€</td></tr>
+        <tr><td>Diseño gráfico / branding</td><td>20–35€</td><td>35–60€</td><td>60–100€</td></tr>
+        <tr><td>Marketing digital / SEO</td><td>20–35€</td><td>35–65€</td><td>65–110€</td></tr>
+        <tr><td>Copywriting / redacción</td><td>18–30€</td><td>30–55€</td><td>55–90€</td></tr>
+        <tr><td>Consultoría IT</td><td>35–55€</td><td>55–90€</td><td>90–150€</td></tr>
+        <tr><td>Consultoría estratégica</td><td>40–65€</td><td>65–100€</td><td>100–200€</td></tr>
+        <tr><td>Fotografía y vídeo</td><td>20–35€</td><td>35–65€</td><td>65–120€</td></tr>
+      </tbody>
+    </table>
+    <p style="font-size:12px;color:var(--ink3);margin-top:8px;">Fuentes: Freelancermap Índice de Precios 2025, Malt Insights 2024. Datos orientativos.</p>
 
-  <table class="tabla">
-    <thead>
-      <tr><th>Perfil</th><th>Junior (0–2 años)</th><th>Intermedio (2–5 años)</th><th>Senior (5+ años)</th></tr>
-    </thead>
-    <tbody>
-      <tr><td>Desarrollo web fullstack</td><td>30–50€</td><td>50–90€</td><td>90–160€</td></tr>
-      <tr><td>Diseño UX/UI</td><td>25–40€</td><td>40–75€</td><td>75–130€</td></tr>
-      <tr><td>Diseño gráfico / branding</td><td>20–35€</td><td>35–60€</td><td>60–100€</td></tr>
-      <tr><td>Marketing digital / SEO</td><td>20–35€</td><td>35–65€</td><td>65–110€</td></tr>
-      <tr><td>Copywriting / redacción</td><td>18–30€</td><td>30–55€</td><td>55–90€</td></tr>
-      <tr><td>Consultoría IT</td><td>35–55€</td><td>55–90€</td><td>90–150€</td></tr>
-      <tr><td>Consultoría estratégica</td><td>40–65€</td><td>65–100€</td><td>100–200€</td></tr>
-      <tr><td>Fotografía y vídeo</td><td>20–35€</td><td>35–65€</td><td>65–120€</td></tr>
-    </tbody>
-  </table>
-  <p style="font-size:12px;color:var(--ink3);">Fuentes: Freelancermap Índice de Precios 2025, Malt Insights 2024. Datos orientativos.</p>
+    <div style="background:rgba(42,184,122,.06);border:1px solid rgba(42,184,122,.2);border-radius:10px;padding:16px 20px;margin:24px 0;">
+      <p style="margin:0;font-size:14px;color:var(--ink2);">📊 <strong>Dato — Malt Insights 2024:</strong> los freelancers que revisan su tarifa cada 12 meses ganan de media un <strong>28% más</strong> que los que la mantienen congelada.</p>
+    </div>
 
-  <div style="background:rgba(42,184,122,.06);border:1px solid rgba(42,184,122,.2);border-radius:10px;padding:16px 20px;margin:24px 0;">
-    <p style="margin:0;font-size:14px;color:var(--ink2);">📊 <strong>Dato — Malt Insights 2024:</strong> los freelancers que revisan su tarifa cada 12 meses ganan de media un <strong>28% más</strong> que los que la mantienen congelada. ¿Cuándo actualizaste la tuya por última vez?</p>
-  </div>
-
-  <h2>Los 3 errores que hacen que tu tarifa sea demasiado baja</h2>
-  <ol style="padding-left:20px;margin-bottom:24px;">
-    <li style="font-size:15px;color:var(--ink2);margin-bottom:10px;"><strong style="color:var(--ink);">Usar todas las horas como facturables.</strong> Si no descuentas el 35–40% de tiempo no facturable, tu tarifa mínima queda un 40–60% por debajo de la real.</li>
-    <li style="font-size:15px;color:var(--ink2);margin-bottom:10px;"><strong style="color:var(--ink);">Olvidar la cuota de autónomo.</strong> En España entre 200 y 500€/mes — hasta 6.000€/año. Sin incluirla en gastos, pagas ese importe "de tu sueldo".</li>
-    <li style="font-size:15px;color:var(--ink2);margin-bottom:10px;"><strong style="color:var(--ink);">No añadir margen de beneficio.</strong> Una tarifa que solo cubre costes es insostenible. Sin margen no hay reinversión, formación ni colchón para los meses malos. Mínimo recomendado: 15–20%.</li>
-  </ol>
+    <h2>Los 3 errores que hacen que tu tarifa sea demasiado baja</h2>
+    <ol>
+      <li><strong>Usar todas las horas trabajadas como facturables.</strong> Si no descuentas el 35–40% de tiempo no facturable, tu tarifa mínima queda un 40–60% por debajo de la real.</li>
+      <li><strong>Olvidar incluir la cuota de autónomo.</strong> En España entre 200 y 500€/mes. Sin incluirla en gastos, pagas ese importe de tu sueldo sin haberlo calculado.</li>
+      <li><strong>No añadir margen de beneficio.</strong> Sin margen no hay reinversión ni colchón para los meses malos. Mínimo recomendado: 15–20%.</li>
+    </ol>
 
   </div>
+
 
   <div class="faq">
     <h2>Preguntas <em>frecuentes</em></h2>
 
     <div class="faq-item">
       <div class="faq-q">¿Cómo se calcula la tarifa hora de un freelance?</div>
-      <div class="faq-a">La fórmula completa es: (Ingresos netos objetivo × factor fiscal + Gastos anuales) ÷ Horas facturables reales al año, más un margen de beneficio del 15–20%. Las horas facturables reales son las totales menos vacaciones y el tiempo no facturable (emails, gestión, captación), que supone el 30–45% de la jornada.</div>
+      <div class="faq-a">La fórmula base es: (Ingresos anuales objetivo + Gastos anuales) ÷ Horas facturables al año. A ese resultado se le añade un margen de seguridad del 10-20% para cubrir meses sin proyectos, vacaciones no previstas e imprevistos.</div>
     </div>
+
     <div class="faq-item">
       <div class="faq-q">¿Cuántas horas facturables tiene un freelance al año?</div>
-      <div class="faq-a">La media real está entre 750 y 1.100 horas al año. Con 25 horas/semana brutas, 4 semanas de vacaciones y un 35% de tiempo no facturable, obtienes unas 780 horas facturables reales — muy lejos de las 1.300 horas que muchos usan como base y que producen tarifas artificialmente bajas.</div>
+      <div class="faq-a">La media real es entre 1.000 y 1.400 horas. Aunque trabajes 8 horas al día, solo entre 4 y 5 son facturables — el resto se va en administración, captación de clientes, formación y gestión. Nuestra calculadora usa 25 horas facturables/semana como punto de partida realista.</div>
     </div>
-    <div class="faq-item">
-      <div class="faq-q">¿Cuánto cobra un freelance por hora en España?</div>
-      <div class="faq-a">Depende del sector y la experiencia. Un perfil junior cobra entre 20–40€/hora, nivel intermedio entre 40–75€/hora y senior entre 75–150€/hora o más. Perfiles técnicos especializados (fullstack senior, consultoría estratégica) pueden superar los 150€/hora. Consulta la tabla de esta página para ver tu sector concreto.</div>
-    </div>
+
     <div class="faq-item">
       <div class="faq-q">¿Es lo mismo tarifa hora que precio del proyecto?</div>
-      <div class="faq-a">No. La tarifa hora es tu referencia interna — no tienes que mostrársela al cliente. El precio del proyecto se calcula multiplicando las horas estimadas por tu tarifa y añadiendo un margen de riesgo del 15–25%. Para servicios con entregables claros, cobrar por proyecto es más rentable: si trabajas rápido, tu hora efectiva vale más.</div>
+      <div class="faq-a">No. La tarifa hora es tu referencia interna para calcular presupuestos. Lo que facturas al cliente puede ser una tarifa por proyecto, por día o por resultado. Conocer tu tarifa hora te ayuda a saber si un proyecto es rentable, independientemente de cómo lo presentes al cliente.</div>
     </div>
+
     <div class="faq-item">
       <div class="faq-q">¿Tengo que aplicar IVA encima de mi tarifa?</div>
-      <div class="faq-a">En España sí — si facturas a clientes españoles añades el 21% de IVA. El IVA no es tuyo: lo cobras y lo ingresas a Hacienda cada trimestre. Si facturas a empresas de otros países de la UE o fuera de la UE, la factura puede ir sin IVA. La tarifa calculada aquí es siempre la base imponible, sin IVA.</div>
-    </div>
-    <div class="faq-item">
-      <div class="faq-q">¿Cómo sé si mi tarifa es demasiado baja?</div>
-      <div class="faq-a">Tres señales claras: los clientes aceptan tu precio sin negociar (si nadie discute, cobras un 20–30% menos de lo que podrías), tu agenda siempre está llena sin poder seleccionar proyectos, o llevas más de un año sin actualizar tu tarifa. La negociación leve y respetuosa es señal de que tu precio está en el rango correcto.</div>
-    </div>
-    <div class="faq-item">
-      <div class="faq-q">¿Cada cuánto tiempo debo subir mi tarifa?</div>
-      <div class="faq-a">Mínimo una vez al año. Según Malt Insights 2024, los freelancers que revisan su tarifa anualmente ganan de media un 28% más que los que la mantienen congelada. El momento ideal: cuando tu agenda esté llena, hayas adquirido nuevas habilidades, o haya pasado más de un año. Aplica siempre las nuevas tarifas a proyectos nuevos, nunca a contratos activos.</div>
-    </div>
-    <div class="faq-item">
-      <div class="faq-q">¿Qué porcentaje de tiempo no facturable debo usar?</div>
-      <div class="faq-a">Para freelancers nuevos o con muchos clientes: 40–50%. Para freelancers consolidados con clientes recurrentes: 25–35%. Para proyectos largos con poco tiempo de gestión: 20–25%. La media del sector ronda el 35%. Si no sabes tu número real, lleva un registro de tiempo durante dos semanas y mide cuántas horas son directamente cobrables al cliente.</div>
-    </div>
-    <div class="faq-item">
-      <div class="faq-q">¿La calculadora funciona para México, Argentina, Colombia y Chile?</div>
-      <div class="faq-a">Sí. Selecciona tu país en el desplegable y la calculadora ajusta el factor fiscal automáticamente: España ×1,35, México ×1,30, Argentina ×1,25, Colombia ×1,28, Chile ×1,27. Introduce los ingresos en tu moneda local — el resultado se muestra en la misma moneda.</div>
+      <div class="faq-a">En España, si eres autónomo y tu actividad está sujeta a IVA, sí: añades el 21% (IVA general) a tu tarifa neta. Por ejemplo, si tu tarifa es €50/h, facturas €60,50/h (€50 + €10,50 de IVA). Recuerda que ese IVA no es tuyo — lo ingresas a Hacienda trimestralmente.</div>
     </div>
   </div>
 
+  <!-- RELATED TOOLS -->
   <div class="related">
     <h2>Más herramientas relacionadas</h2>
     <div class="related-grid">
@@ -530,8 +466,34 @@
     </div>
   </div>
 
-</div>      <div class="faq-a">En España, la tarifa hora freelance varía mucho por sector y experiencia. Un freelance junior cobra entre 20-40€/hora, nivel medio entre 40-65€/hora y senior entre 65-100€/hora o más. Los perfiles más especializados (desarrollo de software, consultoría estratégica) pueden superar los 120€/hora.</div>
+</div>
+
+    <div class="faq-item">
+      <div class="faq-q">¿Cuánto cobra un freelance por hora en España?</div>
+      <div class="faq-a">Las tarifas varían mucho por sector. Un freelance junior cobra entre 20–40€/hora, intermedio entre 40–75€/hora y senior entre 75–150€/hora. Perfiles técnicos especializados como desarrollo fullstack senior o consultoría estratégica pueden superar los 150€/hora. Consulta la tabla de tarifas por sector de esta misma página para ver el rango de tu perfil.</div>
     </div>
+
+    <div class="faq-item">
+      <div class="faq-q">¿Cómo sé si mi tarifa es demasiado baja?</div>
+      <div class="faq-a">Tres señales claras: los clientes aceptan tu precio sin negociar nada (si nadie discute, cobras un 20–30% menos de lo que podrías), tu agenda siempre está llena sin poder rechazar proyectos, o llevas más de un año sin actualizar tu tarifa. La negociación leve y respetuosa es señal de que tu precio está en el rango correcto del mercado.</div>
+    </div>
+
+    <div class="faq-item">
+      <div class="faq-q">¿Cada cuánto tiempo debo subir mi tarifa?</div>
+      <div class="faq-a">Mínimo una vez al año. Según Malt Insights 2024, los freelancers que revisan su tarifa anualmente ganan de media un 28% más que los que la mantienen congelada. El momento ideal: cuando tu agenda esté llena, hayas adquirido nuevas habilidades o haya pasado más de un año. Aplica siempre las nuevas tarifas a proyectos nuevos, nunca a contratos activos.</div>
+    </div>
+
+    <div class="faq-item">
+      <div class="faq-q">¿La calculadora funciona para México, Argentina, Colombia y Chile?</div>
+      <div class="faq-a">Sí. Selecciona tu país en el desplegable y la calculadora ajusta el factor fiscal: España ×1,35, México ×1,30, Argentina ×1,25, Colombia ×1,28, Chile ×1,27. Introduce los ingresos en tu moneda local — el resultado se muestra en la misma moneda.</div>
+    </div>
+
+  </div>
+
+  <!--REMOVED_FAQ_SECTION-->
+    <h2>Preguntas frecuentes sobre la tarifa hora freelance</h2>
+
+    
 
     
 
@@ -539,10 +501,6 @@
 
     
   </div>
-</div>
-
-  <!-- RELATED TOOLS -->
-  
 <footer>© 2026 <a href="/">AutónomoLab</a> · Herramientas gratuitas para autónomos y freelancers</footer>
 
 <script>
@@ -550,9 +508,7 @@
   const ranges = [
     {id:'semanas', out:'semanas-val', suffix:''},
     {id:'horas-semana', out:'horas-semana-val', suffix:'h'},
-    {id:'vacaciones', out:'vacaciones-val', suffix:''},
-    {id:'no-facturable', out:'no-facturable-val', suffix:'%'},
-    {id:'beneficio', out:'beneficio-val', suffix:'%'}
+    {id:'margen', out:'margen-val', suffix:'%'}
   ];
   ranges.forEach(r => {
     const el = document.getElementById(r.id);
@@ -571,60 +527,45 @@
     const semanas = parseFloat(document.getElementById('semanas').value);
     const horasSemana = parseFloat(document.getElementById('horas-semana').value);
     const gastosMes = parseFloat(document.getElementById('gastos-mes').value) || 0;
-    const vacaciones = parseFloat(document.getElementById('vacaciones').value);
-    const noFacturable = parseFloat(document.getElementById('no-facturable').value) / 100;
-    const beneficio = parseFloat(document.getElementById('beneficio').value) / 100;
+    const margen = parseFloat(document.getElementById('margen').value) / 100;
     const pais = document.getElementById('pais').value;
 
+    // Config por país
     const paisConfig = {
-      es: { factor: 1.35, simbolo: '€', label: 'Ingresos netos anuales (€)' },
-      mx: { factor: 1.30, simbolo: '$', label: 'Ingresos netos anuales (MXN)' },
-      ar: { factor: 1.25, simbolo: '$', label: 'Ingresos netos anuales (ARS)' },
-      co: { factor: 1.28, simbolo: '$', label: 'Ingresos netos anuales (COP)' },
-      cl: { factor: 1.27, simbolo: '$', label: 'Ingresos netos anuales (CLP)' },
-      otro: { factor: 1.30, simbolo: '$', label: 'Ingresos netos anuales (USD)' },
+      es: { factor: 1.35, simbolo: '€', moneda: 'EUR', label: 'Ingresos netos anuales (€)' },
+      mx: { factor: 1.30, simbolo: '$', moneda: 'MXN', label: 'Ingresos netos anuales (MXN)' },
+      ar: { factor: 1.25, simbolo: '$', moneda: 'ARS', label: 'Ingresos netos anuales (ARS)' },
+      co: { factor: 1.28, simbolo: '$', moneda: 'COP', label: 'Ingresos netos anuales (COP)' },
+      cl: { factor: 1.27, simbolo: '$', moneda: 'CLP', label: 'Ingresos netos anuales (CLP)' },
+      otro: { factor: 1.30, simbolo: '$', moneda: 'USD', label: 'Ingresos netos anuales (USD)' },
     };
     const cfg = paisConfig[pais] || paisConfig.otro;
     const s = cfg.simbolo;
 
+    // Actualizar labels de moneda en UI
     document.querySelectorAll('.moneda-simbolo').forEach(el => el.textContent = s);
-    document.getElementById('label-ingreso').innerHTML =
-      cfg.label + ' <span class="field-hint-inline">(neto después de impuestos)</span>';
+    document.getElementById('label-ingreso').textContent = cfg.label;
+    document.getElementById('label-gastos').textContent = `Gastos mensuales del negocio (${cfg.moneda})`;
 
-    const semanasReales = semanas - vacaciones;
-    const horasBrutasAnio = semanasReales * horasSemana;
-    const horasFacturables = Math.max(horasBrutasAnio * (1 - noFacturable), 1);
-    const ingresosBrutos = ingresoAnual * cfg.factor;
-    const gastosAnio = gastosMes * 12;
-    const costeTotalAnio = ingresosBrutos + gastosAnio;
-    const tarifaMinima = costeTotalAnio / horasFacturables;
-    const tarifaRecomendada = tarifaMinima * (1 + beneficio);
-    const fmt = (n) => Math.round(n).toLocaleString('es-ES');
+    const horasAnuales = semanas * horasSemana;
+    const gastosAnuales = gastosMes * 12;
+    const ingresoBrutoNecesario = (ingresoAnual * cfg.factor) + gastosAnuales;
+    const tarifaMinima = ingresoBrutoNecesario / horasAnuales;
+    const tarifaFinal = tarifaMinima * (1 + margen);
+    const tarifaBaja = tarifaFinal * 0.9;
+    const tarifaAlta = tarifaFinal * 1.1;
 
-    document.getElementById('tarifa-hora').textContent = s + fmt(tarifaRecomendada);
-    document.getElementById('tarifa-rango').textContent =
-      `Rango: ${s}${fmt(tarifaRecomendada * 0.9)} – ${s}${fmt(tarifaRecomendada * 1.15)} / hora`;
-
-    document.getElementById('bd-brutos').textContent = s + fmt(ingresosBrutos);
-    document.getElementById('bd-gastos').textContent = s + fmt(gastosAnio);
-    document.getElementById('bd-coste-total').textContent = s + fmt(costeTotalAnio);
-    document.getElementById('bd-horas-brutas').textContent = Math.round(horasBrutasAnio) + 'h';
-    document.getElementById('bd-horas').textContent = Math.round(horasFacturables) + 'h';
-    document.getElementById('bd-minima').textContent = s + fmt(tarifaMinima) + '/h';
-    document.getElementById('bd-margen').textContent = '+' + Math.round(beneficio * 100) + '%';
-    document.getElementById('bd-final').textContent = s + fmt(tarifaRecomendada) + '/h';
-
-    const tip = document.getElementById('tip-dinamico');
-    if (tarifaRecomendada < 25) {
-      tip.textContent = 'Tu tarifa es baja. Considera reducir el tiempo no facturable o elevar tus ingresos objetivo progresivamente.';
-    } else if (tarifaRecomendada < 45) {
-      tip.textContent = 'Tarifa junior-intermedia. Especializarte en un nicho puede permitirte doblarla en 12 meses.';
-    } else if (tarifaRecomendada < 80) {
-      tip.textContent = 'Tarifa intermedia-senior. Dato: los freelancers que revisan su precio cada año ganan un 28% más — Malt Insights 2024.';
-    } else {
-      tip.textContent = 'Tarifa senior. Presenta tu precio como inversión, no como coste. El ROI que generas justifica cualquier tarifa por encima del mercado.';
-    }
+    // Update UI
+    document.getElementById('tarifa-hora').textContent = s + Math.round(tarifaFinal);
+    document.getElementById('tarifa-rango').textContent = `Rango: ${s}${Math.round(tarifaBaja)} – ${s}${Math.round(tarifaAlta)} / hora`;
+    document.getElementById('bd-horas').textContent = Math.round(horasAnuales) + 'h';
+    document.getElementById('bd-gastos').textContent = s + gastosAnuales.toLocaleString('es-ES');
+    document.getElementById('bd-brutos').textContent = s + Math.round(ingresoBrutoNecesario).toLocaleString('es-ES');
+    document.getElementById('bd-minima').textContent = s + Math.round(tarifaMinima) + '/h';
+    document.getElementById('bd-final').textContent = s + Math.round(tarifaFinal) + '/h';
   }
+
+  // Init
   calcular();
 </script>
 
