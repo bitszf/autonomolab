@@ -655,7 +655,22 @@
   /* GRID NORMAL */
   .blog-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;}
   .blog-excerpt{font-size:13px;color:var(--ink2);line-height:1.5;margin-bottom:10px;}
-  .wrap{max-width:680px;margin:0 auto;padding:48px 24px 80px;}
+  .wrap{max-width:700px;margin:0 auto;padding:48px 24px 80px;}
+  /* ── TIPOGRAFÍA ARTÍCULOS BLOG — optimizada para retención ── */
+  /* font-size 17px, line-height 1.75, margin-bottom 1.5rem */
+  /* Siguiendo estándares de legibilidad de blogs de alto tráfico */
+  .wrap h1{font-size:clamp(28px,4vw,44px);font-weight:900;letter-spacing:-.03em;line-height:1.1;margin-bottom:16px;}
+  .wrap h1 em{font-family:'Instrument Serif',serif;font-style:italic;font-weight:400;color:var(--accent);}
+  .wrap h2{font-size:24px;font-weight:900;margin:52px 0 18px;color:var(--ink);letter-spacing:-.02em;line-height:1.2;}
+  .wrap h3{font-size:19px;font-weight:800;margin:36px 0 12px;color:var(--ink);letter-spacing:-.01em;}
+  .wrap p{font-size:17px;color:var(--ink2);line-height:1.75;margin-bottom:24px;}
+  .wrap ul,.wrap ol{padding-left:24px;margin-bottom:24px;}
+  .wrap li{font-size:17px;color:var(--ink2);line-height:1.7;margin-bottom:10px;}
+  .wrap strong{color:var(--ink);font-weight:800;}
+  .wrap a{color:var(--accent);}
+  .wrap a:hover{text-decoration:underline;}
+  .wrap blockquote{border-left:4px solid var(--accent);padding:16px 20px;margin:28px 0;background:var(--bg2);border-radius:0 8px 8px 0;}
+  .wrap blockquote p{font-size:17px;font-style:italic;color:var(--ink2);margin:0;}
   .meta{font-size:13px;color:var(--ink3);margin-bottom:32px;display:flex;gap:16px;flex-wrap:wrap;}
   .thumb{width:100%;height:220px;border-radius:14px;overflow:hidden;margin-bottom:36px;}
   .thumb img{width:100%;height:100%;object-fit:cover;display:block;}
@@ -665,11 +680,11 @@
   .formula-sub{font-size:12px;color:rgba(255,255,255,.55);}
   .ejemplo{background:var(--bg2);border-radius:10px;padding:20px 22px;margin:20px 0;}
   .ejemplo-title{font-size:12px;font-weight:800;text-transform:uppercase;letter-spacing:.1em;color:var(--accent);margin-bottom:10px;}
-  .ejemplo p{margin-bottom:8px;font-size:14px;}
+  .ejemplo p{margin-bottom:10px;font-size:15px;}
   .ejemplo p:last-child{margin-bottom:0;}
   .cta{background:rgba(212,90,42,.06);border:1px solid rgba(212,90,42,.2);border-radius:14px;padding:28px;margin:40px 0;text-align:center;}
   .cta h3{font-size:20px;margin-bottom:8px;}
-  .cta p{margin-bottom:16px;font-size:14px;}
+  .cta p{margin-bottom:18px;font-size:15px;}
   .cta-btn{display:inline-block;background:var(--accent);color:#fff;padding:12px 24px;border-radius:8px;font-size:14px;font-weight:700;text-decoration:none;}
   .cta-btn:hover{opacity:.9;}
   .indice{background:var(--card);border:1px solid var(--border);border-radius:12px;padding:20px 24px;margin:28px 0;}
@@ -681,7 +696,7 @@
   .paso{background:var(--card);border:1px solid var(--border);border-radius:12px;padding:20px 22px;margin:16px 0;display:flex;gap:16px;align-items:flex-start;}
   .paso-num{background:var(--accent);color:#fff;width:32px;height:32px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-weight:900;font-size:14px;flex-shrink:0;margin-top:2px;}
   .paso-content h3{margin:0 0 6px;font-size:16px;}
-  .paso-content p{margin:0;font-size:14px;}
+  .paso-content p{margin:0;font-size:15px;line-height:1.6;}
   .stats-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:12px;margin:24px 0;}
   .stat-card{background:var(--card);border:1px solid var(--border);border-radius:12px;padding:18px 20px;text-align:center;}
   .highlight-row td{background:rgba(212,90,42,.08) !important;font-weight:700;}
