@@ -122,7 +122,31 @@
   .trust-band{display:flex;gap:16px;flex-wrap:wrap;margin:12px 0 28px;padding:14px 18px;background:rgba(42,184,122,.06);border:1px solid rgba(42,184,122,.2);border-radius:10px;}
   .trust-item{display:flex;align-items:center;gap:6px;font-size:13px;color:var(--ink2);font-weight:600;}
   .trust-icon{font-size:14px;}
-</style>
+
+    .page-content{margin-top:48px;}
+    .page-content h2{font-size:22px;font-weight:900;margin:44px 0 14px;color:var(--ink);letter-spacing:-.02em;line-height:1.25;}
+    .page-content h2:first-child{margin-top:0;}
+    .page-content h3{font-size:17px;font-weight:800;margin:26px 0 10px;color:var(--ink);}
+    .page-content p{font-size:15px;color:var(--ink2);line-height:1.7;margin-bottom:14px;}
+    .page-content p strong,.page-content li strong{color:var(--ink);font-weight:800;}
+    .page-content ul,.page-content ol{padding-left:22px;margin-bottom:16px;}
+    .page-content li{font-size:15px;color:var(--ink2);line-height:1.65;margin-bottom:8px;}
+    .page-content .tabla{width:100%;border-collapse:collapse;margin:16px 0;font-size:14px;display:block;overflow-x:auto;}
+    .page-content .tabla th{background:var(--ink);color:#fff;padding:10px 14px;text-align:left;font-size:12px;text-transform:uppercase;letter-spacing:.06em;white-space:nowrap;}
+    .page-content .tabla td{padding:10px 14px;border-bottom:1px solid var(--border);color:var(--ink2);}
+    .page-content .tabla tr:last-child td{border-bottom:none;}
+    .page-content .tabla tr:nth-child(even) td{background:var(--bg2);}
+    .page-content .tabla td:first-child{font-weight:700;color:var(--ink);}
+    .page-content .tip{background:var(--bg2);border-left:4px solid var(--accent);padding:14px 18px;border-radius:0 8px 8px 0;margin:20px 0;}
+    .page-content .tip p{margin:0;font-size:14px;}
+    .page-content .warning{background:rgba(212,90,42,.05);border:1px solid rgba(212,90,42,.2);border-radius:10px;padding:14px 18px;margin:20px 0;}
+    .page-content .warning p{margin:0;font-size:14px;}
+    .page-content .grid2{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin:16px 0;}
+    @media(max-width:600px){.page-content .grid2{grid-template-columns:1fr;}}
+    .page-content .card{background:var(--card);border:1px solid var(--border);border-radius:10px;padding:16px;}
+    .page-content .card-title{font-size:13px;font-weight:900;margin-bottom:6px;}
+    .page-content .card-body{font-size:13px;color:var(--ink2);margin:0;}
+  </style>
 <!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-5CPLF5TR3E"></script>
 <script>
@@ -271,6 +295,59 @@
     <div class="faq-item"><div class="faq-q">¿Puedo deducirme la cuota de autónomo en el modelo 130?</div><div class="faq-a">Sí. La cuota de autónomo que pagas a la Seguridad Social es un gasto deducible que reduce tu rendimiento neto. Inclúyela en el apartado de gastos deducibles acumulados.</div></div>
     <div class="faq-item"><div class="faq-q">¿Cuándo se presenta el modelo 130?</div><div class="faq-a">En las mismas fechas que el modelo 303: 1T hasta el 20 de abril, 2T hasta el 20 de julio, 3T hasta el 20 de octubre y 4T hasta el 30 de enero del año siguiente.</div></div>
   </div>
+
+    <!-- CONTENIDO EXPANDIDO -->
+  <div class="page-content">
+
+    <h2>Por qué el modelo 130 existe y cómo te afecta</h2>
+    <p>Como autónomo en estimación directa, Hacienda no te descuenta el IRPF automáticamente de tus ingresos — a diferencia de un empleado por cuenta ajena. El <strong>modelo 130</strong> es el mecanismo que obliga a los autónomos a adelantar trimestralmente el 20% de sus rendimientos netos, evitando una deuda enorme en la declaración anual de abril.</p>
+    <p>La lógica es sencilla: en lugar de pagar todo el IRPF de golpe en junio, Hacienda lo fracciona en 4 pagos trimestrales. Si calculas bien cada trimestre, la declaración de renta de abril no debería suponer ni una sorpresa ni un ingreso inesperado — simplemente un ajuste menor.</p>
+
+    <div class="grid2">
+      <div class="card">
+        <div class="card-title" style="color:var(--accent);">⚡ ¿Quién presenta el modelo 130?</div>
+        <p class="card-body">Autónomos en estimación directa (simplificada o normal). Si estás en módulos (estimación objetiva), presentas el modelo 131 en su lugar. Si el 70%+ de tus ingresos tienen retención de IRPF (trabajas para empresas que te retienen), estás exento del 130.</p>
+      </div>
+      <div class="card">
+        <div class="card-title" style="color:var(--accent);">📅 Plazos de presentación 2026</div>
+        <p class="card-body">1T (enero–marzo) → del 1 al 20 de abril<br>2T (abril–junio) → del 1 al 20 de julio<br>3T (julio–septiembre) → del 1 al 20 de octubre<br>4T (octubre–diciembre) → del 1 al 30 de enero del año siguiente</p>
+      </div>
+    </div>
+
+    <h2>La fórmula real del modelo 130 — paso a paso</h2>
+    <p>El cálculo que hace esta calculadora sigue exactamente la fórmula oficial de la AEAT:</p>
+    <ol>
+      <li><strong>Ingresos acumulados del año</strong> (desde enero, no solo del trimestre)</li>
+      <li><strong>Menos gastos deducibles acumulados</strong> — todos los gastos del negocio desde enero</li>
+      <li><strong>= Rendimiento neto acumulado</strong></li>
+      <li><strong>× 20%</strong> = cuota íntegra acumulada</li>
+      <li><strong>Menos lo ya pagado en trimestres anteriores</strong></li>
+      <li><strong>Menos retenciones soportadas</strong> (si algún cliente te retuvo IRPF)</li>
+      <li><strong>= Lo que ingresas este trimestre</strong></li>
+    </ol>
+
+    <div class="tip"><p>💡 <strong>El error más frecuente:</strong> usar solo los ingresos del trimestre en lugar de los ingresos acumulados desde enero. El modelo 130 es acumulativo — si en el 1T ganaste 5.000€ y en el 2T ganaste 3.000€, en el 2T introduces 8.000€ de ingresos totales y restas lo pagado en el 1T.</p></div>
+
+    <h2>Qué gastos puedes deducir en el modelo 130</h2>
+    <p>La misma lógica que aplica en el IRPF anual aplica aquí. Los gastos deducibles más habituales para freelancers:</p>
+    <table class="tabla">
+      <thead><tr><th>Gasto</th><th>% deducible</th><th>Requisito</th></tr></thead>
+      <tbody>
+        <tr><td>Cuota de autónomo (SS)</td><td>100%</td><td>Ninguno — es deducible siempre</td></tr>
+        <tr><td>Gestoría / asesoría</td><td>100%</td><td>Factura a nombre de la actividad</td></tr>
+        <tr><td>Software y herramientas</td><td>100%</td><td>Uso exclusivo profesional</td></tr>
+        <tr><td>Teléfono e internet</td><td>50–100%</td><td>Proporcional al uso profesional</td></tr>
+        <tr><td>Material de oficina</td><td>100%</td><td>Factura justificativa</td></tr>
+        <tr><td>Formación profesional</td><td>100%</td><td>Relacionada con la actividad</td></tr>
+        <tr><td>Gastos de difícil justificación</td><td>5% del rend. neto (máx 2.000€)</td><td>Sin justificante necesario</td></tr>
+      </tbody>
+    </table>
+
+    <div class="warning"><p>⚠️ <strong>Si el resultado es negativo o cero:</strong> no tienes que pagar nada ese trimestre, pero sí presentar el modelo 130 igualmente con resultado 0. No presentarlo conlleva sanción aunque no haya nada que pagar.</p></div>
+
+  </div>
+
+
 
   <div class="related">
     <h2>Más herramientas</h2>

@@ -89,7 +89,31 @@
   .trust-band{display:flex;gap:16px;flex-wrap:wrap;margin:12px 0 28px;padding:14px 18px;background:rgba(42,184,122,.06);border:1px solid rgba(42,184,122,.2);border-radius:10px;}
   .trust-item{display:flex;align-items:center;gap:6px;font-size:13px;color:var(--ink2);font-weight:600;}
   .trust-icon{font-size:14px;}
-</style>
+
+    .page-content{margin-top:48px;}
+    .page-content h2{font-size:22px;font-weight:900;margin:44px 0 14px;color:var(--ink);letter-spacing:-.02em;line-height:1.25;}
+    .page-content h2:first-child{margin-top:0;}
+    .page-content h3{font-size:17px;font-weight:800;margin:26px 0 10px;color:var(--ink);}
+    .page-content p{font-size:15px;color:var(--ink2);line-height:1.7;margin-bottom:14px;}
+    .page-content p strong,.page-content li strong{color:var(--ink);font-weight:800;}
+    .page-content ul,.page-content ol{padding-left:22px;margin-bottom:16px;}
+    .page-content li{font-size:15px;color:var(--ink2);line-height:1.65;margin-bottom:8px;}
+    .page-content .tabla{width:100%;border-collapse:collapse;margin:16px 0;font-size:14px;display:block;overflow-x:auto;}
+    .page-content .tabla th{background:var(--ink);color:#fff;padding:10px 14px;text-align:left;font-size:12px;text-transform:uppercase;letter-spacing:.06em;white-space:nowrap;}
+    .page-content .tabla td{padding:10px 14px;border-bottom:1px solid var(--border);color:var(--ink2);}
+    .page-content .tabla tr:last-child td{border-bottom:none;}
+    .page-content .tabla tr:nth-child(even) td{background:var(--bg2);}
+    .page-content .tabla td:first-child{font-weight:700;color:var(--ink);}
+    .page-content .tip{background:var(--bg2);border-left:4px solid var(--accent);padding:14px 18px;border-radius:0 8px 8px 0;margin:20px 0;}
+    .page-content .tip p{margin:0;font-size:14px;}
+    .page-content .warning{background:rgba(212,90,42,.05);border:1px solid rgba(212,90,42,.2);border-radius:10px;padding:14px 18px;margin:20px 0;}
+    .page-content .warning p{margin:0;font-size:14px;}
+    .page-content .grid2{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin:16px 0;}
+    @media(max-width:600px){.page-content .grid2{grid-template-columns:1fr;}}
+    .page-content .card{background:var(--card);border:1px solid var(--border);border-radius:10px;padding:16px;}
+    .page-content .card-title{font-size:13px;font-weight:900;margin-bottom:6px;}
+    .page-content .card-body{font-size:13px;color:var(--ink2);margin:0;}
+  </style>
 
 
 <!-- Google tag (gtag.js) -->
@@ -339,6 +363,41 @@
     <div class="faq-item"><div class="faq-q">¿Puedo añadir más líneas de servicio?</div><div class="faq-a">Sí. La plantilla tiene 10 líneas por defecto. Para añadir más, inserta filas nuevas en la tabla y copia las fórmulas de la columna "Total" a las nuevas filas. Recuerda actualizar la fórmula del subtotal para incluir las nuevas filas.</div></div>
     <div class="faq-item"><div class="faq-q">¿Puedo personalizar el logo o colores?</div><div class="faq-a">Sí, el archivo es completamente editable. Puedes cambiar los colores, añadir tu logo como imagen, modificar los textos o adaptar el diseño a tu identidad visual.</div></div>
   </div>
+
+    <div class="page-content">
+
+    <h2>Los errores de facturación que pueden costarte una sanción</h2>
+    <p>Una factura incorrecta no es solo un problema estético — puede ser rechazada por el cliente, no deducible fiscalmente o, en el peor caso, convertirse en una sanción de Hacienda. Estos son los errores más frecuentes en las facturas de freelancers:</p>
+
+    <ul>
+      <li><strong>Numeración no correlativa.</strong> Las facturas deben numerarse de forma secuencial sin saltos. Si vas por la factura 24 y emites la siguiente como 26, Hacienda puede interpretar que falta una factura no declarada.</li>
+      <li><strong>Aplicar el tipo de IVA incorrecto.</strong> El 21% es el general, pero algunos servicios aplican el 10% (ciertos servicios culturales) o están exentos (servicios educativos, sanitarios). Aplicar el tipo equivocado obliga a emitir una factura rectificativa.</li>
+      <li><strong>Olvidar el NIF del cliente.</strong> Obligatorio para empresas. Sin él, el cliente no puede deducirse el IVA de la factura y puede rechazarla.</li>
+      <li><strong>No incluir la retención de IRPF cuando aplica.</strong> Si el cliente es empresa o autónomo en España, generalmente hay que aplicar retención del 15% (7% el primer año de actividad). Sin ella, el cliente puede retenerla de todas formas y pagarte menos de lo esperado.</li>
+      <li><strong>Fecha de factura incorrecta.</strong> La factura debe emitirse en el momento de la prestación del servicio o, como máximo, el día 16 del mes siguiente. Facturas con fechas retroactivas injustificadas generan problemas.</li>
+    </ul>
+
+    <h2>¿Cuándo se aplica retención de IRPF en las facturas?</h2>
+    <div class="grid2">
+      <div class="card">
+        <div class="card-title" style="color:var(--green);">✅ SÍ llevan retención</div>
+        <p class="card-body">Cuando el cliente es empresa o autónomo domiciliado en España. La retención general es el 15%. Los autónomos en los primeros 2 años de actividad aplican el 7%.</p>
+      </div>
+      <div class="card">
+        <div class="card-title" style="color:var(--accent);">⛔ NO llevan retención</div>
+        <p class="card-body">Cuando el cliente es un particular (persona física sin actividad económica). También cuando el cliente es empresa extranjera, aunque estés en España.</p>
+      </div>
+    </div>
+
+    <h2>Cuánto tiempo debes conservar las facturas</h2>
+    <p>En España, la obligación de conservar facturas emitidas y recibidas es de <strong>4 años</strong> desde la fecha límite de presentación de la declaración. En la práctica, muchos asesores recomiendan conservarlas <strong>6 años</strong> por si hay alguna inspección que revise ejercicios anteriores.</p>
+    <p>La conservación puede ser en papel o en formato digital, siempre que garantice la autenticidad, integridad y legibilidad. Guardar PDFs en la nube con copia de seguridad es suficiente.</p>
+
+    <div class="tip"><p>💡 <strong>Truco de productividad:</strong> nombra cada factura con el formato <code>YYYY-NNN-CLIENTE.pdf</code> (ej: 2026-001-EMPRESA.pdf). Así puedes ordenarlas por año y número sin necesidad de abrir cada archivo.</p></div>
+
+  </div>
+
+
 
   <div class="related">
     <h2>Más herramientas gratuitas</h2>

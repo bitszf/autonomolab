@@ -143,7 +143,31 @@
   .page > p strong{color:var(--ink);font-weight:800;}
   .page a{color:var(--accent);}
   .page a:hover{text-decoration:underline;}
-</style>
+
+    .page-content{margin-top:48px;}
+    .page-content h2{font-size:22px;font-weight:900;margin:44px 0 14px;color:var(--ink);letter-spacing:-.02em;line-height:1.25;}
+    .page-content h2:first-child{margin-top:0;}
+    .page-content h3{font-size:17px;font-weight:800;margin:26px 0 10px;color:var(--ink);}
+    .page-content p{font-size:15px;color:var(--ink2);line-height:1.7;margin-bottom:14px;}
+    .page-content p strong,.page-content li strong{color:var(--ink);font-weight:800;}
+    .page-content ul,.page-content ol{padding-left:22px;margin-bottom:16px;}
+    .page-content li{font-size:15px;color:var(--ink2);line-height:1.65;margin-bottom:8px;}
+    .page-content .tabla{width:100%;border-collapse:collapse;margin:16px 0;font-size:14px;display:block;overflow-x:auto;}
+    .page-content .tabla th{background:var(--ink);color:#fff;padding:10px 14px;text-align:left;font-size:12px;text-transform:uppercase;letter-spacing:.06em;white-space:nowrap;}
+    .page-content .tabla td{padding:10px 14px;border-bottom:1px solid var(--border);color:var(--ink2);}
+    .page-content .tabla tr:last-child td{border-bottom:none;}
+    .page-content .tabla tr:nth-child(even) td{background:var(--bg2);}
+    .page-content .tabla td:first-child{font-weight:700;color:var(--ink);}
+    .page-content .tip{background:var(--bg2);border-left:4px solid var(--accent);padding:14px 18px;border-radius:0 8px 8px 0;margin:20px 0;}
+    .page-content .tip p{margin:0;font-size:14px;}
+    .page-content .warning{background:rgba(212,90,42,.05);border:1px solid rgba(212,90,42,.2);border-radius:10px;padding:14px 18px;margin:20px 0;}
+    .page-content .warning p{margin:0;font-size:14px;}
+    .page-content .grid2{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin:16px 0;}
+    @media(max-width:600px){.page-content .grid2{grid-template-columns:1fr;}}
+    .page-content .card{background:var(--card);border:1px solid var(--border);border-radius:10px;padding:16px;}
+    .page-content .card-title{font-size:13px;font-weight:900;margin-bottom:6px;}
+    .page-content .card-body{font-size:13px;color:var(--ink2);margin:0;}
+  </style>
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"¿Cuánto se paga de cuota de autónomo en 2026?","acceptedAnswer":{"@type":"Answer","text":"En 2026 la cuota de autónomo depende de los ingresos netos reales: desde ~200€/mes en el tramo 1 hasta ~590€/mes en el tramo 15. Los nuevos autónomos pagan 80€/mes el primer año con la tarifa plana."}},{"@type":"Question","name":"¿Qué es la tarifa plana de autónomos?","acceptedAnswer":{"@type":"Answer","text":"La tarifa plana es una bonificación de 80€/mes para autónomos que se dan de alta por primera vez. Se aplica durante el primer año completo sin límite de ingresos."}},{"@type":"Question","name":"¿Cuántas veces puedo cambiar mi base de cotización?","acceptedAnswer":{"@type":"Answer","text":"Puedes cambiar la base de cotización hasta 6 veces al año, con efectos el primer día del mes siguiente a la solicitud."}}]}</script>
 <!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-5CPLF5TR3E"></script>
@@ -269,7 +293,7 @@
       <thead><tr><th>Tramo</th><th>Ingresos netos/mes</th><th>Base mín.</th><th>Base máx.</th><th>Cuota mín.</th></tr></thead>
       <tbody id="tramos-body"></tbody>
     </table>
-    <div class="tip"><p>💡 <strong>¿Puedes pagar menos?</strong> Sí — y más adelante te explicamos cómo pagar menos en meses malos sin complicaciones. <strong>Importante:</strong> estos son los tramos orientativos. La base de cotización exacta puede ajustarse al alza o a la baja dentro de tu tramo. Comprueba siempre en la Seguridad Social los valores vigentes.</p></div>
+    <div class="tip"><p>💡 <strong>¿Puedes pagar menos?</strong> Sí — y más adelante te explicamos cómo ajustar tu base de cotización hasta 6 veces al año para adaptarla a meses con menos ingresos. <strong>Importante:</strong> estos son los tramos orientativos. La base de cotización exacta puede ajustarse al alza o a la baja dentro de tu tramo. Comprueba siempre en la Seguridad Social los valores vigentes.</p></div>
   </div>
 
   <div style="background:var(--bg2);border-radius:12px;padding:20px 24px;margin:32px 0;">
@@ -330,6 +354,58 @@
       <div class="faq-a">Sí. La tarifa plana de 80€/mes se aplica durante el primer año independientemente de cuánto factures. No hay límite de ingresos durante los primeros 12 meses. A partir del segundo año, se mantiene solo si tus rendimientos netos no superan el SMI (~1.184€/mes en 2026).</div>
     </div>
   </div>
+
+    <div class="page-content">
+
+    <h2>El sistema de cotización por ingresos reales — qué cambió en 2023</h2>
+    <p>Hasta 2022, la cuota de autónomo era fija independientemente de lo que ganaras. Desde enero de 2023, España adoptó un sistema de <strong>cotización por ingresos reales</strong> que se irá ajustando progresivamente hasta 2025. El resultado: los autónomos que ganan menos pagan menos; los que ganan más, pagan más.</p>
+    <p>El sistema divide los rendimientos netos en <strong>15 tramos</strong>, cada uno con una cuota mínima y máxima. Tú eliges cotizar entre esos dos límites — pero al final del año, Hacienda cruza los datos con tu declaración de la renta y regulariza si cotizaste de más o de menos.</p>
+
+    <div class="tip"><p>💡 <strong>La estrategia que usan los autónomos eficientes:</strong> cotizar por la base mínima de tu tramo durante el año para maximizar la liquidez mensual. Si al hacer la renta resulta que deberías haber cotizado más, pagas la diferencia sin recargo. Si cotizaste de más, te devuelven antes del 30 de abril del año siguiente.</p></div>
+
+    <h2>Los 15 tramos de cotización para autónomos en 2026</h2>
+    <table class="tabla">
+      <thead><tr><th>Tramo</th><th>Rendimiento neto mensual</th><th>Cuota mínima</th><th>Cuota máxima</th></tr></thead>
+      <tbody>
+        <tr><td>1</td><td>Menos de 670€</td><td>225,83€</td><td>500,00€</td></tr>
+        <tr><td>2</td><td>670€ – 900€</td><td>250,00€</td><td>500,00€</td></tr>
+        <tr><td>3</td><td>900€ – 1.166,70€</td><td>267,06€</td><td>500,00€</td></tr>
+        <tr><td>4</td><td>1.166,70€ – 1.300€</td><td>291,44€</td><td>850,00€</td></tr>
+        <tr><td>5</td><td>1.300€ – 1.500€</td><td>294,00€</td><td>850,00€</td></tr>
+        <tr><td>6</td><td>1.500€ – 1.700€</td><td>294,00€</td><td>850,00€</td></tr>
+        <tr><td>7</td><td>1.700€ – 1.850€</td><td>310,00€</td><td>960,00€</td></tr>
+        <tr><td>8</td><td>1.850€ – 2.030€</td><td>315,00€</td><td>960,00€</td></tr>
+        <tr><td>9</td><td>2.030€ – 2.330€</td><td>320,00€</td><td>960,00€</td></tr>
+        <tr><td>10</td><td>2.330€ – 2.760€</td><td>325,00€</td><td>960,00€</td></tr>
+        <tr><td>11</td><td>2.760€ – 3.190€</td><td>330,00€</td><td>1.267,00€</td></tr>
+        <tr><td>12</td><td>3.190€ – 3.620€</td><td>335,00€</td><td>1.267,00€</td></tr>
+        <tr><td>13</td><td>3.620€ – 4.050€</td><td>340,00€</td><td>1.267,00€</td></tr>
+        <tr><td>14</td><td>4.050€ – 6.000€</td><td>345,00€</td><td>1.267,00€</td></tr>
+        <tr><td>15</td><td>Más de 6.000€</td><td>530,00€</td><td>1.267,00€</td></tr>
+      </tbody>
+    </table>
+    <p style="font-size:12px;color:var(--ink3);">Fuente: Seguridad Social española. Cuotas 2026 (tercera fase del sistema progresivo).</p>
+
+    <h2>Cómo cambiarte de tramo — hasta 6 veces al año</h2>
+    <p>Si tus ingresos varían — temporadas bajas, meses sin proyectos, picos de trabajo — puedes cambiar tu base de cotización <strong>hasta 6 veces al año</strong>. Los cambios entran en vigor cada dos meses:</p>
+    <table class="tabla">
+      <thead><tr><th>Solicitas entre...</th><th>Entra en vigor el...</th></tr></thead>
+      <tbody>
+        <tr><td>1 enero – 28 febrero</td><td>1 de marzo</td></tr>
+        <tr><td>1 marzo – 30 abril</td><td>1 de mayo</td></tr>
+        <tr><td>1 mayo – 30 junio</td><td>1 de julio</td></tr>
+        <tr><td>1 julio – 31 agosto</td><td>1 de septiembre</td></tr>
+        <tr><td>1 septiembre – 31 octubre</td><td>1 de noviembre</td></tr>
+        <tr><td>1 noviembre – 31 diciembre</td><td>1 de enero siguiente</td></tr>
+      </tbody>
+    </table>
+    <p>El cambio se hace en <strong>Import@ss</strong> (importass.seg-social.es) con certificado digital o Cl@ve. Es un trámite de 5 minutos que puede ahorrarte cientos de euros en meses flojos.</p>
+
+    <div class="warning"><p>⚠️ <strong>Recuerda:</strong> el rendimiento neto para calcular tu tramo son los ingresos menos los gastos deducibles, <em>incluyendo la propia cuota de autónomo</em>. La cuota que pagas reduce tu base imponible del IRPF — con una cuota de 300€/mes y un IRPF del 30%, el ahorro fiscal real son ~1.080€/año.</p></div>
+
+  </div>
+
+
 
   <div class="related">
     <h2>Más herramientas</h2>
