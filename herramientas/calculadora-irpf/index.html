@@ -41,112 +41,6 @@
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"¿Qué es el modelo 130?","acceptedAnswer":{"@type":"Answer","text":"El modelo 130 es el pago fraccionado del IRPF que deben presentar los autónomos en estimación directa cada trimestre. Equivale al 20% del rendimiento neto (ingresos menos gastos) menos los pagos ya realizados."}},{"@type":"Question","name":"¿Todos los autónomos tienen que presentar el modelo 130?","acceptedAnswer":{"@type":"Answer","text":"No todos. Están exentos los autónomos en estimación objetiva (módulos) y los que facturen más del 70% de sus ingresos a empresas que ya les retienen el IRPF en factura."}},{"@type":"Question","name":"¿Cuándo se presenta el modelo 130?","acceptedAnswer":{"@type":"Answer","text":"El modelo 130 se presenta en las mismas fechas que el IVA: 1T hasta el 20 de abril, 2T hasta el 20 de julio, 3T hasta el 20 de octubre y 4T hasta el 30 de enero."}}]}</script>
 <link rel="icon" type="image/x-icon" href="/favicon.ico">
 <link rel="icon" type="image/svg+xml" href="/favicon.svg">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Cabinet+Grotesk:wght@400;500;700;800;900&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet">
-<style>
-  :root{--bg:#f5f2eb;--bg2:#ede9e0;--ink:#1a1814;--ink2:#4a4740;--ink3:#8a857a;--accent:#d45a2a;--card:#fff;--border:#ddd8ce;--green:#2ab87a;}
-  *{box-sizing:border-box;margin:0;padding:0;}
-  body{background:var(--bg);color:var(--ink);font-family:'Cabinet Grotesk',sans-serif;font-size:16px;line-height:1.7;overflow-x:hidden;}
-  nav{position:sticky;top:0;z-index:100;background:rgba(245,242,235,0.92);backdrop-filter:blur(12px);border-bottom:1px solid var(--border);padding:0 24px;}
-  .nav-inner{max-width:1100px;margin:0 auto;height:60px;display:flex;align-items:center;justify-content:space-between;}
-  .logo{font-size:18px;font-weight:900;color:var(--ink);text-decoration:none;letter-spacing:-0.03em;display:flex;align-items:center;gap:8px;}
-  .logo-dot{width:8px;height:8px;background:var(--accent);border-radius:50%;display:inline-block;flex-shrink:0;}
-  .nav-links{display:flex;gap:28px;list-style:none;}
-  .nav-links a{font-size:14px;font-weight:500;color:var(--ink2);text-decoration:none;}
-  .nav-links a:hover{color:var(--accent);}
-  @media(max-width:640px){.nav-links{display:none;}}
-  .page{max-width:1100px;margin:0 auto;padding:48px 24px 80px;}
-  .bc{font-size:13px;color:var(--ink3);margin-bottom:24px;}
-  .bc a{color:var(--ink3);text-decoration:none;}
-  .bc span{margin:0 6px;}
-  .tool-tag{font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:.15em;color:var(--ink3);margin-bottom:10px;}
-  h1{font-size:clamp(28px,4vw,44px);font-weight:900;letter-spacing:-.03em;margin-bottom:12px;}
-  h1 em{font-family:'Instrument Serif',serif;font-style:italic;font-weight:400;color:var(--accent);}
-  .tool-desc-header{font-size:16px;color:var(--ink2);max-width:540px;margin-bottom:40px;}
-  .layout{display:grid;grid-template-columns:1fr 380px;gap:32px;align-items:start;}
-  @media(max-width:860px){.layout{grid-template-columns:1fr;}}
-  .form-card{background:var(--card);border:1px solid var(--border);border-radius:16px;padding:28px;}
-  .section{margin-bottom:24px;}
-  .section-title{font-size:12px;font-weight:800;text-transform:uppercase;letter-spacing:.1em;color:var(--ink3);margin-bottom:14px;padding-bottom:8px;border-bottom:1px solid var(--border);}
-  .field{margin-bottom:14px;}
-  .field label{display:block;font-size:13px;font-weight:700;color:var(--ink);margin-bottom:6px;}
-  .field input,.field select{width:100%;background:var(--bg);border:1px solid var(--border);border-radius:8px;padding:11px 14px;font-size:15px;font-family:inherit;color:var(--ink);outline:none;transition:border-color .2s;}
-  .field input:focus,.field select:focus{border-color:var(--accent);}
-  .field .hint{font-size:12px;color:var(--ink3);margin-top:4px;}
-  .calc-btn{width:100%;background:var(--accent);color:#fff;border:none;border-radius:10px;padding:14px;font-size:16px;font-weight:800;font-family:inherit;cursor:pointer;margin-top:8px;}
-  .calc-btn:hover{opacity:.9;}
-  .reset-btn{width:100%;background:transparent;color:var(--ink3);border:1px solid var(--border);border-radius:10px;padding:10px;font-size:13px;font-weight:700;font-family:inherit;cursor:pointer;margin-top:8px;}
-  .reset-btn:hover{border-color:var(--ink);color:var(--ink);}
-  .result-panel{position:sticky;top:80px;}
-  .result-card{background:var(--ink);color:#fff;border-radius:16px;padding:28px;margin-bottom:16px;text-align:center;}
-  .result-label{font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:.12em;color:rgba(255,255,255,.5);margin-bottom:8px;}
-  .result-amount{font-size:52px;font-weight:900;letter-spacing:-.03em;line-height:1;margin-bottom:6px;}
-  .result-sub{font-size:13px;color:rgba(255,255,255,.55);}
-  .breakdown{background:var(--card);border:1px solid var(--border);border-radius:14px;padding:20px;margin-bottom:12px;}
-  .bd-title{font-size:12px;font-weight:800;text-transform:uppercase;letter-spacing:.1em;color:var(--ink3);margin-bottom:12px;}
-  .brow{display:flex;justify-content:space-between;padding:9px 0;border-bottom:1px solid var(--border);font-size:14px;}
-  .brow:last-child{border-bottom:none;font-weight:800;}
-  .brow span{color:var(--ink2);}
-  .brow strong{color:var(--ink);}
-  .brow.total strong{color:var(--accent);font-size:16px;}
-  .notice{background:var(--bg2);border-radius:8px;padding:12px 14px;font-size:12px;color:var(--ink3);line-height:1.5;}
-  .info{margin-top:56px;}
-  .info h2{font-size:22px;font-weight:900;margin-bottom:14px;}
-  .info h3{font-size:16px;font-weight:800;margin:20px 0 8px;}
-  .info p{font-size:15px;color:var(--ink2);margin-bottom:14px;}
-  .info ul{padding-left:20px;margin-bottom:14px;}
-  .info li{font-size:15px;color:var(--ink2);margin-bottom:6px;}
-  strong{color:var(--ink);font-weight:800;}
-  .tip{background:var(--bg2);border-left:4px solid var(--accent);padding:14px 18px;border-radius:0 8px 8px 0;margin:20px 0;}
-  .tip p{margin:0;font-size:14px;}
-  .faq-section{margin-top:48px;padding-top:32px;border-top:1px solid var(--border);}
-  .faq-section h2{font-size:22px;font-weight:900;margin-bottom:20px;}
-  .faq-item{background:var(--card);border:1px solid var(--border);border-radius:12px;margin-bottom:10px;overflow:hidden;}
-  .faq-q{font-size:15px;font-weight:800;color:var(--ink);padding:16px 20px;cursor:pointer;display:flex;justify-content:space-between;align-items:center;}
-  .faq-q::after{content:'+';font-size:20px;font-weight:400;color:var(--ink3);flex-shrink:0;margin-left:12px;}
-  .faq-item.open .faq-q::after{content:'−';}
-  .faq-a{font-size:14px;color:var(--ink2);line-height:1.6;padding:0 20px 16px;display:none;}
-  .faq-item.open .faq-a{display:block;}
-  .related{margin-top:48px;padding-top:32px;border-top:1px solid var(--border);}
-  .related h2{font-size:20px;font-weight:900;margin-bottom:14px;}
-  .rg{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;}
-  @media(max-width:560px){.rg{grid-template-columns:1fr 1fr;}}
-  .rc{background:var(--card);border:1px solid var(--border);border-radius:10px;padding:14px;text-decoration:none;display:block;}
-  .rc:hover{border-color:rgba(212,90,42,.3);}
-  .rc-e{font-size:22px;margin-bottom:6px;}
-  .rc-n{font-size:13px;font-weight:800;color:var(--ink);}
-  footer{text-align:center;padding:32px 24px;border-top:1px solid var(--border);font-size:13px;color:var(--ink3);margin-top:40px;}
-  footer a{color:var(--accent);text-decoration:none;}
-
-  .trust-band{display:flex;gap:16px;flex-wrap:wrap;margin:12px 0 28px;padding:14px 18px;background:rgba(42,184,122,.06);border:1px solid rgba(42,184,122,.2);border-radius:10px;}
-  .trust-item{display:flex;align-items:center;gap:6px;font-size:13px;color:var(--ink2);font-weight:600;}
-  .trust-icon{font-size:14px;}
-
-    .page-content{margin-top:48px;}
-    .page-content h2{font-size:22px;font-weight:900;margin:44px 0 14px;color:var(--ink);letter-spacing:-.02em;line-height:1.25;}
-    .page-content h2:first-child{margin-top:0;}
-    .page-content h3{font-size:17px;font-weight:800;margin:26px 0 10px;color:var(--ink);}
-    .page-content p{font-size:15px;color:var(--ink2);line-height:1.7;margin-bottom:14px;}
-    .page-content p strong,.page-content li strong{color:var(--ink);font-weight:800;}
-    .page-content ul,.page-content ol{padding-left:22px;margin-bottom:16px;}
-    .page-content li{font-size:15px;color:var(--ink2);line-height:1.65;margin-bottom:8px;}
-    .page-content .tabla{width:100%;border-collapse:collapse;margin:16px 0;font-size:14px;display:block;overflow-x:auto;}
-    .page-content .tabla th{background:var(--ink);color:#fff;padding:10px 14px;text-align:left;font-size:12px;text-transform:uppercase;letter-spacing:.06em;white-space:nowrap;}
-    .page-content .tabla td{padding:10px 14px;border-bottom:1px solid var(--border);color:var(--ink2);}
-    .page-content .tabla tr:last-child td{border-bottom:none;}
-    .page-content .tabla tr:nth-child(even) td{background:var(--bg2);}
-    .page-content .tabla td:first-child{font-weight:700;color:var(--ink);}
-    .page-content .tip{background:var(--bg2);border-left:4px solid var(--accent);padding:14px 18px;border-radius:0 8px 8px 0;margin:20px 0;}
-    .page-content .tip p{margin:0;font-size:14px;}
-    .page-content .warning{background:rgba(212,90,42,.05);border:1px solid rgba(212,90,42,.2);border-radius:10px;padding:14px 18px;margin:20px 0;}
-    .page-content .warning p{margin:0;font-size:14px;}
-    .page-content .grid2{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin:16px 0;}
-    @media(max-width:600px){.page-content .grid2{grid-template-columns:1fr;}}
-    .page-content .card{background:var(--card);border:1px solid var(--border);border-radius:10px;padding:16px;}
-    .page-content .card-title{font-size:13px;font-weight:900;margin-bottom:6px;}
-    .page-content .card-body{font-size:13px;color:var(--ink2);margin:0;}
-  </style>
 <!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-5CPLF5TR3E"></script>
 <script>
@@ -184,6 +78,11 @@
   ]
 }
 </script>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cabinet+Grotesk:wght@400;500;700;800;900&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/global.css">
 </head>
 <body>
 <nav>
