@@ -59,7 +59,22 @@
   .blog-meta{font-size:12px;color:var(--ink3);}
   footer{text-align:center;padding:40px 24px;border-top:1px solid var(--border);font-size:13px;color:var(--ink3);margin-top:40px;}
   footer a{color:var(--accent);text-decoration:none;}
-</style>
+
+    /* ── MENÚ HAMBURGUESA MÓVIL ── */
+    .nav-hamburger{display:none;flex-direction:column;gap:5px;background:none;border:none;cursor:pointer;padding:4px;z-index:200;}
+    .nav-hamburger span{display:block;width:22px;height:2px;background:var(--ink);border-radius:2px;transition:all .25s;}
+    .nav-hamburger.open span:nth-child(1){transform:translateY(7px) rotate(45deg);}
+    .nav-hamburger.open span:nth-child(2){opacity:0;}
+    .nav-hamburger.open span:nth-child(3){transform:translateY(-7px) rotate(-45deg);}
+    @media(max-width:640px){
+      .nav-hamburger{display:flex;}
+      .nav-links{display:none;position:fixed;top:64px;left:0;right:0;background:rgba(245,242,235,0.98);backdrop-filter:blur(12px);flex-direction:column;gap:0;padding:8px 0 16px;border-bottom:1px solid var(--border);z-index:99;box-shadow:0 8px 24px rgba(26,24,20,.08);}
+      .nav-links.open{display:flex;}
+      .nav-links li{width:100%;}
+      .nav-links a{display:block;padding:13px 24px;font-size:15px;font-weight:600;color:var(--ink);border-bottom:1px solid var(--border);}
+      .nav-links li:last-child a{border-bottom:none;margin:8px 16px 0;border-radius:8px;text-align:center;padding:12px 24px;}
+    }
+  </style>
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"CollectionPage","name":"Artículos de precios para autónomos","url":"https://autonomolab.com/blog/categoria/precios/","inLanguage":"es"}</script>
 
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Inicio","item":"https://autonomolab.com"},{"@type":"ListItem","position":2,"name":"Blog","item":"https://autonomolab.com/blog/"},{"@type":"ListItem","position":3,"name":"Precios para autónomos y freelancers"}]}</script>
@@ -82,6 +97,9 @@
       <li><a href="/comparativas">Comparativas</a></li>
       <li><a href="/sobre">Sobre</a></li>
     </ul>
+      <button class="nav-hamburger" id="navToggle" aria-label="Abrir menú">
+      <span></span><span></span><span></span>
+    </button>
   </div>
 </nav>
 <div class="page">

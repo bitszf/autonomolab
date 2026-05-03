@@ -170,6 +170,21 @@
     .page-content .card{background:var(--card);border:1px solid var(--border);border-radius:10px;padding:16px;}
     .page-content .card-title{font-size:13px;font-weight:900;margin-bottom:6px;}
     .page-content .card-body{font-size:13px;color:var(--ink2);margin:0;}
+  
+    /* ── MENÚ HAMBURGUESA MÓVIL ── */
+    .nav-hamburger{display:none;flex-direction:column;gap:5px;background:none;border:none;cursor:pointer;padding:4px;z-index:200;}
+    .nav-hamburger span{display:block;width:22px;height:2px;background:var(--ink);border-radius:2px;transition:all .25s;}
+    .nav-hamburger.open span:nth-child(1){transform:translateY(7px) rotate(45deg);}
+    .nav-hamburger.open span:nth-child(2){opacity:0;}
+    .nav-hamburger.open span:nth-child(3){transform:translateY(-7px) rotate(-45deg);}
+    @media(max-width:640px){
+      .nav-hamburger{display:flex;}
+      .nav-links{display:none;position:fixed;top:64px;left:0;right:0;background:rgba(245,242,235,0.98);backdrop-filter:blur(12px);flex-direction:column;gap:0;padding:8px 0 16px;border-bottom:1px solid var(--border);z-index:99;box-shadow:0 8px 24px rgba(26,24,20,.08);}
+      .nav-links.open{display:flex;}
+      .nav-links li{width:100%;}
+      .nav-links a{display:block;padding:13px 24px;font-size:15px;font-weight:600;color:var(--ink);border-bottom:1px solid var(--border);}
+      .nav-links li:last-child a{border-bottom:none;margin:8px 16px 0;border-radius:8px;text-align:center;padding:12px 24px;}
+    }
   </style>
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"¿Qué incluye el finiquito en España?","acceptedAnswer":{"@type":"Answer","text":"El finiquito incluye: vacaciones no disfrutadas proporcionales al tiempo trabajado, parte proporcional de las pagas extraordinarias generadas, salario del mes en curso pendiente de cobro y cualquier otro complemento o comisión devengada."}},{"@type":"Question","name":"¿Es lo mismo finiquito que indemnización?","acceptedAnswer":{"@type":"Answer","text":"No. El finiquito es la liquidación de los conceptos devengados y pendientes de cobro. La indemnización es una cantidad adicional que corresponde en caso de despido improcedente o por causas objetivas, y depende de los años de servicio."}},{"@type":"Question","name":"¿Puedo negarme a firmar el finiquito?","acceptedAnswer":{"@type":"Answer","text":"Puedes firmar el finiquito poniendo 'no conforme' si crees que el importe es incorrecto. Esto te permite cobrar el dinero sin renunciar a reclamar la diferencia. Nunca firmes 'conforme' sin verificar que los cálculos son correctos."}},{"@type":"Question","name":"¿Cuántos días de vacaciones me corresponden en el finiquito?","acceptedAnswer":{"@type":"Answer","text":"Te corresponden los días de vacaciones proporcionales al tiempo trabajado en el año menos los que ya hayas disfrutado. Por ejemplo, si tienes 22 días/año y has trabajado 6 meses, te corresponden 11 días menos los que hayas disfrutado."}}]}</script>
 <!-- Google tag (gtag.js) -->
@@ -220,6 +235,9 @@
       <li><a href="/comparativas">Comparativas</a></li>
       <li><a href="/sobre">Sobre</a></li>
     </ul>
+      <button class="nav-hamburger" id="navToggle" aria-label="Abrir menú">
+      <span></span><span></span><span></span>
+    </button>
   </div>
 </nav>
 <div class="page">
