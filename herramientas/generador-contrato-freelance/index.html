@@ -195,6 +195,25 @@
       .nav-links a{display:block;padding:13px 24px;font-size:15px;font-weight:600;color:var(--ink);border-bottom:1px solid var(--border);}
       .nav-links li:last-child a{border-bottom:none;margin:8px 16px 0;border-radius:8px;text-align:center;padding:12px 24px;}
     }
+  
+    /* Contenido expandido dentro del page */
+    .page-content{margin-top:48px;}
+    .page-content h2{font-size:22px;font-weight:900;margin:40px 0 14px;color:var(--ink);letter-spacing:-.02em;line-height:1.25;}
+    .page-content h2:first-child{margin-top:0;}
+    .page-content p{font-size:15px;color:var(--ink2);line-height:1.7;margin-bottom:14px;}
+    .page-content p strong{color:var(--ink);font-weight:800;}
+    .page-content ol{padding-left:22px;margin-bottom:16px;}
+    .page-content li{font-size:15px;color:var(--ink2);line-height:1.65;margin-bottom:8px;}
+    .page-content li strong{color:var(--ink);font-weight:800;}
+    .page-content .grid2{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin:16px 0;}
+    @media(max-width:600px){.page-content .grid2{grid-template-columns:1fr;}}
+    .page-content .card{background:var(--card);border:1px solid var(--border);border-radius:10px;padding:16px;}
+    .page-content .card-title{font-size:13px;font-weight:900;margin-bottom:6px;}
+    .page-content .card-body{font-size:13px;color:var(--ink2);margin:0;line-height:1.55;}
+    .page-content .tip{background:var(--bg2);border-left:4px solid var(--accent);padding:14px 18px;border-radius:0 8px 8px 0;margin:20px 0;}
+    .page-content .tip p{margin:0;font-size:14px;color:var(--ink2);}
+    .page-content .warning{background:rgba(212,90,42,.05);border:1px solid rgba(212,90,42,.2);border-radius:10px;padding:14px 18px;margin:20px 0;}
+    .page-content .warning p{margin:0;font-size:14px;color:var(--ink2);}
   </style>
 <meta property="og:title" content="Generador de contrato freelance">
 <meta property="og:description" content="Genera tu contrato freelance profesional en 2 minutos. Protege tu trabajo antes de empezar cualquier proyecto. PDF descargable, gratis, sin registro.">
@@ -552,9 +571,9 @@
   </div>
 
   <!-- FAQ -->
-  </div>
+  
 
-  <!-- RELATED -->
+<!-- RELATED -->
   
   <!-- CONTENIDO EXPANDIDO -->
   <div class="page-content">
@@ -653,8 +672,12 @@
       </a>
     </div>
   </div>
-</div>
-      <div class="faq-a">Sí, un contrato freelance es completamente válido legalmente en España y LATAM siempre que incluya los datos de ambas partes, la descripción del servicio, el precio y los plazos. No requiere notario ni firma electrónica avanzada para ser válido.</div>
+
+
+  <div class="faq">
+    <h2>Preguntas <em>frecuentes</em></h2>
+
+<div class="faq-a">Sí, un contrato freelance es completamente válido legalmente en España y LATAM siempre que incluya los datos de ambas partes, la descripción del servicio, el precio y los plazos. No requiere notario ni firma electrónica avanzada para ser válido.</div>
     </div>
 
     
