@@ -1,0 +1,513 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="robots" content="index, follow">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cómo usar IA para hacer presupuestos y contratos freelance en 2026 | AutónomoLab</title>
+  <meta name="description" content="Aprende a usar ChatGPT y otras IAs para crear presupuestos y contratos freelance profesionales en minutos. Con ejemplos, prompts y herramientas gratuitas.">
+  <link rel="canonical" href="https://autonomolab.com/blog/ia-presupuestos-contratos-freelance/">
+  <link rel="alternate" hreflang="es" href="https://autonomolab.com/blog/ia-presupuestos-contratos-freelance/">
+  <link rel="alternate" hreflang="es-419" href="https://autonomolab.com/blog/ia-presupuestos-contratos-freelance/">
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="article">
+  <meta property="og:title" content="Cómo usar IA para hacer presupuestos y contratos freelance en 2026">
+  <meta property="og:description" content="Aprende a usar ChatGPT y otras IAs para crear presupuestos y contratos freelance profesionales en minutos. Con ejemplos, prompts y herramientas gratuitas.">
+  <meta property="og:url" content="https://autonomolab.com/blog/ia-presupuestos-contratos-freelance/">
+  <meta property="og:image" content="https://autonomolab.com/img/autonomolab-og.jpg">
+  <meta property="og:site_name" content="AutónomoLab">
+  <meta property="article:published_time" content="2026-05-25">
+  <meta property="article:modified_time" content="2026-05-25">
+
+  <!-- Schema -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "Article",
+        "@id": "https://autonomolab.com/blog/ia-presupuestos-contratos-freelance/#article",
+        "headline": "Cómo usar IA para hacer presupuestos y contratos freelance en 2026",
+        "description": "Aprende a usar ChatGPT y otras IAs para crear presupuestos y contratos freelance profesionales en minutos.",
+        "datePublished": "2026-05-25",
+        "dateModified": "2026-05-25",
+        "author": {
+          "@type": "Person",
+          "name": "AutónomoLab",
+          "url": "https://autonomolab.com/sobre/"
+        },
+        "publisher": {
+          "@type": "Organization",
+          "name": "AutónomoLab",
+          "url": "https://autonomolab.com"
+        },
+        "mainEntityOfPage": "https://autonomolab.com/blog/ia-presupuestos-contratos-freelance/"
+      },
+      {
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          { "@type": "ListItem", "position": 1, "name": "Inicio", "item": "https://autonomolab.com/" },
+          { "@type": "ListItem", "position": 2, "name": "Blog", "item": "https://autonomolab.com/blog/" },
+          { "@type": "ListItem", "position": 3, "name": "IA para presupuestos y contratos freelance", "item": "https://autonomolab.com/blog/ia-presupuestos-contratos-freelance/" }
+        ]
+      },
+      {
+        "@type": "FAQPage",
+        "mainEntity": [
+          {
+            "@type": "Question",
+            "name": "¿Un contrato generado por IA tiene validez legal?",
+            "acceptedAnswer": { "@type": "Answer", "text": "Un contrato generado por IA tiene validez legal si las partes lo firman y el contenido no contradice la legislación vigente. Sin embargo, para proyectos grandes o con cláusulas complejas, siempre es recomendable revisarlo con un abogado o gestor." }
+          },
+          {
+            "@type": "Question",
+            "name": "¿Qué IA es mejor para crear presupuestos freelance?",
+            "acceptedAnswer": { "@type": "Answer", "text": "Para presupuestos freelance, ChatGPT y Claude funcionan muy bien. La clave no es la herramienta sino el prompt: cuanto más detallado sea, mejor será el resultado. Para mayor rapidez, puedes usar directamente el generador de presupuestos gratuito de AutónomoLab." }
+          },
+          {
+            "@type": "Question",
+            "name": "¿Puedo usar IA para negociar el precio con un cliente?",
+            "acceptedAnswer": { "@type": "Answer", "text": "Sí. Puedes pedirle a ChatGPT que genere respuestas para situaciones de negociación concretas: clientes que piden descuento, que retrasan pagos o que amplían el alcance sin querer pagar más. La IA te da un borrador que tú adaptas a tu estilo." }
+          }
+        ]
+      }
+    ]
+  }
+  </script>
+
+  <!-- GA4 -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-5CPLF5TR3E"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-5CPLF5TR3E');
+  </script>
+
+  <style>
+    :root {
+      --bg: #f5f2eb; --bg2: #ede9e0; --ink: #1a1814; --ink2: #4a4740;
+      --ink3: #8a857a; --accent: #d45a2a; --card: #fff; --border: #ddd8ce; --green: #2ab87a;
+    }
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    body { font-family: 'Inter', system-ui, sans-serif; background: var(--bg); color: var(--ink); line-height: 1.7; }
+    a { color: var(--accent); text-decoration: none; }
+    a:hover { text-decoration: underline; }
+
+    nav { background: var(--bg); border-bottom: 1px solid var(--border); position: sticky; top: 0; z-index: 100; }
+    .nav-inner { max-width: 1100px; margin: 0 auto; padding: 0 24px; height: 56px; display: flex; align-items: center; justify-content: space-between; }
+    .logo { font-weight: 800; font-size: 17px; color: var(--ink); display: flex; align-items: center; gap: 6px; }
+    .logo-dot { width: 10px; height: 10px; background: var(--accent); border-radius: 50%; display: inline-block; }
+    .nav-links { display: flex; gap: 28px; list-style: none; }
+    .nav-links a { font-size: 14px; font-weight: 500; color: var(--ink2); }
+    .nav-links a:hover { color: var(--ink); text-decoration: none; }
+    .nav-hamburger { display: none; background: none; border: none; cursor: pointer; flex-direction: column; gap: 5px; padding: 4px; }
+    .nav-hamburger span { display: block; width: 22px; height: 2px; background: var(--ink); border-radius: 2px; transition: all .25s; }
+    .nav-mobile { display: none; flex-direction: column; background: var(--bg); border-top: 1px solid var(--border); padding: 16px 24px; gap: 16px; }
+    .nav-mobile a { font-size: 15px; font-weight: 500; color: var(--ink2); }
+    .nav-mobile.open { display: flex; }
+    @media(max-width:640px) { .nav-links { display: none; } .nav-hamburger { display: flex; } }
+
+    .wrap { max-width: 720px; margin: 0 auto; padding: 48px 24px 80px; }
+    .breadcrumb { font-size: 13px; color: var(--ink3); margin-bottom: 32px; display: flex; gap: 6px; flex-wrap: wrap; }
+    .breadcrumb a { color: var(--ink3); }
+    .breadcrumb a:hover { color: var(--accent); text-decoration: none; }
+    .article-tag { font-size: 11px; font-weight: 700; letter-spacing: .08em; text-transform: uppercase; color: var(--accent); margin-bottom: 12px; }
+    h1 { font-size: clamp(26px, 5vw, 40px); font-weight: 900; line-height: 1.15; letter-spacing: -.02em; margin-bottom: 20px; }
+    .article-meta { font-size: 13px; color: var(--ink3); margin-bottom: 36px; display: flex; gap: 16px; flex-wrap: wrap; align-items: center; }
+    .intro { font-size: 18px; line-height: 1.75; color: var(--ink2); margin-bottom: 40px; padding-bottom: 40px; border-bottom: 1px solid var(--border); }
+    .wrap h2 { font-size: 24px; font-weight: 900; letter-spacing: -.02em; margin: 48px 0 16px; }
+    .wrap h3 { font-size: 19px; font-weight: 800; margin: 36px 0 12px; color: var(--ink); }
+    .wrap p { font-size: 17px; line-height: 1.75; margin-bottom: 24px; color: var(--ink2); }
+    .wrap ul, .wrap ol { padding-left: 20px; margin-bottom: 24px; }
+    .wrap li { font-size: 17px; line-height: 1.75; color: var(--ink2); margin-bottom: 8px; }
+    .wrap strong { color: var(--ink); font-weight: 700; }
+
+    .prompt-box { background: var(--ink); color: #f5f2eb; border-radius: 12px; padding: 24px 28px; margin: 24px 0 32px; position: relative; }
+    .prompt-label { font-size: 11px; font-weight: 700; letter-spacing: .08em; text-transform: uppercase; color: var(--accent); margin-bottom: 12px; }
+    .prompt-text { font-size: 15px; line-height: 1.7; font-family: 'Inter', monospace; white-space: pre-wrap; }
+    .prompt-copy { position: absolute; top: 16px; right: 16px; background: var(--accent); color: white; border: none; border-radius: 6px; padding: 6px 12px; font-size: 12px; font-weight: 600; cursor: pointer; }
+    .prompt-copy:hover { opacity: .85; }
+
+    .tip { background: var(--bg2); border-left: 3px solid var(--accent); border-radius: 0 8px 8px 0; padding: 16px 20px; margin: 24px 0; font-size: 15px; color: var(--ink2); line-height: 1.7; }
+    .tip strong { color: var(--ink); }
+
+    .step-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 16px; margin: 24px 0 36px; }
+    .step-card { background: var(--card); border: 1px solid var(--border); border-radius: 12px; padding: 20px; }
+    .step-num { font-size: 28px; font-weight: 900; color: var(--accent); line-height: 1; margin-bottom: 8px; }
+    .step-title { font-size: 14px; font-weight: 700; color: var(--ink); margin-bottom: 6px; }
+    .step-desc { font-size: 13px; color: var(--ink2); line-height: 1.5; }
+
+    .comparison-table { width: 100%; border-collapse: collapse; margin: 24px 0 32px; font-size: 15px; }
+    .comparison-table th { background: var(--ink); color: var(--bg); padding: 12px 16px; text-align: left; font-weight: 700; }
+    .comparison-table td { padding: 12px 16px; border-bottom: 1px solid var(--border); color: var(--ink2); vertical-align: top; }
+    .comparison-table tr:nth-child(even) td { background: var(--bg2); }
+    .comparison-table .check { color: var(--green); font-weight: 700; }
+    .comparison-table .cross { color: #e05; font-weight: 700; }
+    @media(max-width:500px) { .comparison-table { font-size: 13px; } .comparison-table td, .comparison-table th { padding: 10px 10px; } }
+
+    .faq-section { margin-top: 48px; padding-top: 40px; border-top: 1px solid var(--border); }
+    .faq-section h2 { margin-top: 0; }
+    .faq-item { border: 1px solid var(--border); border-radius: 10px; margin-bottom: 10px; overflow: hidden; }
+    .faq-q { padding: 18px 20px; font-weight: 700; font-size: 16px; cursor: pointer; display: flex; justify-content: space-between; align-items: center; background: var(--card); }
+    .faq-q::after { content: '+'; font-size: 20px; color: var(--ink3); flex-shrink: 0; }
+    .faq-item.open .faq-q::after { content: '−'; }
+    .faq-a { display: none; padding: 0 20px 18px; font-size: 15px; line-height: 1.7; color: var(--ink2); background: var(--card); }
+    .faq-item.open .faq-a { display: block; }
+
+    .related { margin-top: 56px; padding-top: 40px; border-top: 1px solid var(--border); }
+    .related h2 { font-size: 20px; font-weight: 900; margin-bottom: 20px; margin-top: 0; }
+    .related-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 16px; }
+    .rc { background: var(--card); border: 1px solid var(--border); border-radius: 10px; padding: 20px; display: flex; flex-direction: column; gap: 8px; transition: box-shadow .2s; }
+    .rc:hover { box-shadow: 0 4px 16px rgba(0,0,0,.08); text-decoration: none; }
+    .rc-e { font-size: 24px; }
+    .rc-n { font-size: 14px; font-weight: 700; color: var(--ink); }
+
+    footer { border-top: 1px solid var(--border); padding: 32px 24px; text-align: center; font-size: 13px; color: var(--ink3); }
+    footer a { color: var(--ink3); margin: 0 10px; }
+    footer a:hover { color: var(--accent); text-decoration: none; }
+  </style>
+</head>
+<body>
+
+<nav>
+  <div class="nav-inner">
+    <a href="/" class="logo"><span class="logo-dot"></span>AutónomoLab</a>
+    <ul class="nav-links">
+      <li><a href="/herramientas">Herramientas</a></li>
+      <li><a href="/blog">Blog</a></li>
+      <li><a href="/comparativas">Comparativas</a></li>
+      <li><a href="/sobre">Sobre</a></li>
+    </ul>
+    <button class="nav-hamburger" id="navToggle" aria-label="Abrir menú">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+  <div class="nav-mobile" id="navMobile">
+    <a href="/herramientas">Herramientas</a>
+    <a href="/blog">Blog</a>
+    <a href="/comparativas">Comparativas</a>
+    <a href="/sobre">Sobre</a>
+  </div>
+</nav>
+
+<div class="wrap">
+
+  <nav class="breadcrumb" aria-label="Breadcrumb">
+    <a href="/">Inicio</a> ›
+    <a href="/blog">Blog</a> ›
+    <span>IA para presupuestos y contratos freelance</span>
+  </nav>
+
+  <div class="article-tag">Inteligencia Artificial</div>
+
+  <h1>Cómo usar IA para hacer presupuestos y contratos freelance en 2026</h1>
+
+  <div class="article-meta">
+    <span>📅 Mayo 2026</span>
+    <span>⏱ 7 min de lectura</span>
+    <span>✍️ AutónomoLab</span>
+  </div>
+
+  <p class="intro">Redactar un presupuesto profesional desde cero lleva tiempo. Hacer un contrato que proteja tus intereses sin pagar a un abogado, más todavía. La buena noticia es que en 2026 tienes IA a tu disposición para hacer ambas cosas en minutos. En este artículo te explico exactamente cómo usarla, con prompts listos para copiar y las herramientas gratuitas que complementan el proceso.</p>
+
+  <h2>Por qué los presupuestos y contratos son el mayor dolor de cabeza del freelance</h2>
+
+  <p>La mayoría de autónomos odian la parte administrativa. No estudiaron para redactar documentos legales ni para negociar condiciones — estudiaron para hacer su trabajo. Sin embargo, un mal presupuesto puede hacerte perder dinero y un contrato inexistente puede dejarte sin cobrar.</p>
+
+  <p>El problema tiene tres capas:</p>
+
+  <ul>
+    <li><strong>Tiempo:</strong> redactar un presupuesto detallado desde cero puede llevar entre 30 minutos y 2 horas.</li>
+    <li><strong>Inseguridad:</strong> muchos freelancers no saben qué cláusulas incluir en un contrato o cómo justificar su precio.</li>
+    <li><strong>Inconsistencia:</strong> sin plantillas, cada presupuesto parece diferente y transmite poca profesionalidad.</li>
+  </ul>
+
+  <p>La IA no resuelve el problema del precio — eso lo tienes que calcular tú. Pero sí puede encargarse de la redacción, la estructura y las cláusulas legales básicas, dejándote solo la tarea de revisar y personalizar.</p>
+
+  <h2>Flujo de trabajo: IA + herramientas gratuitas</h2>
+
+  <p>El flujo más eficiente combina dos pasos: primero calculas los números con una herramienta específica, luego usas IA para redactar el documento final.</p>
+
+  <div class="step-grid">
+    <div class="step-card">
+      <div class="step-num">1</div>
+      <div class="step-title">Calcula tu precio</div>
+      <div class="step-desc">Usa la calculadora de tarifa hora o precio de proyecto para llegar al número correcto antes de escribir nada.</div>
+    </div>
+    <div class="step-card">
+      <div class="step-num">2</div>
+      <div class="step-title">Genera el borrador con IA</div>
+      <div class="step-desc">Pégale el precio y los detalles del proyecto a ChatGPT o Claude con un prompt estructurado.</div>
+    </div>
+    <div class="step-card">
+      <div class="step-num">3</div>
+      <div class="step-title">Revisa y personaliza</div>
+      <div class="step-desc">Ajusta el tono, añade detalles específicos del cliente y elimina lo que no aplique.</div>
+    </div>
+    <div class="step-card">
+      <div class="step-num">4</div>
+      <div class="step-title">Genera el PDF</div>
+      <div class="step-desc">Usa el generador de presupuestos o contratos de AutónomoLab para tener el PDF listo para enviar.</div>
+    </div>
+  </div>
+
+  <div class="tip">
+    <strong>💡 Atajo:</strong> Si solo necesitas el documento sin personalización extra, el <a href="/herramientas/generador-presupuesto/">generador de presupuestos</a> y el <a href="/herramientas/generador-contrato-freelance/">generador de contrato freelance</a> de AutónomoLab te dan el PDF directamente sin necesidad de IA. Úsalos para proyectos estándar y reserva ChatGPT para los proyectos complejos o clientes nuevos donde quieres personalizar más.
+  </div>
+
+  <h2>Prompts para presupuestos profesionales</h2>
+
+  <p>Un buen presupuesto no es solo una lista de precios. Es un documento de venta que justifica tu tarifa, explica el valor que aportas y anticipa las objeciones del cliente. Estos prompts están diseñados para conseguir exactamente eso.</p>
+
+  <h3>Prompt 1 — Presupuesto completo con desglose</h3>
+
+  <p>Para proyectos medianos o grandes donde el cliente necesita ver exactamente en qué se gasta el dinero.</p>
+
+  <div class="prompt-box">
+    <div class="prompt-label">📋 Prompt — copia y pega</div>
+    <button class="prompt-copy" onclick="copyPrompt(this)">Copiar</button>
+    <div class="prompt-text">Soy freelance especializado/a en [tu especialidad]. Mi cliente es [tipo de empresa] y me pide [descripción del proyecto en 2-3 frases].
+
+Crea un presupuesto profesional en español con esta estructura:
+- Título y datos (mi nombre/empresa, nombre cliente, fecha, validez 15 días)
+- Resumen ejecutivo del proyecto (2-3 frases)
+- Desglose por fases: [lista las fases, ej: análisis, diseño, desarrollo, entrega]
+- Precio de cada fase y precio total: [importe total] € + 21% IVA
+- Qué incluye y qué NO incluye (para evitar malentendidos)
+- Condiciones de pago: [tu condición, ej: 50% al firmar, 50% al entregar]
+- Plazo de entrega: [X semanas/días]
+- Revisiones incluidas: [número]
+
+Tono: profesional y confiable. Que justifique el precio sin sonar defensivo.</div>
+  </div>
+
+  <h3>Prompt 2 — Presupuesto corto para proyectos pequeños</h3>
+
+  <p>Para trabajos rápidos donde un presupuesto de 3 páginas sería excesivo. Claro, directo y fácil de aprobar.</p>
+
+  <div class="prompt-box">
+    <div class="prompt-label">📋 Prompt — copia y pega</div>
+    <button class="prompt-copy" onclick="copyPrompt(this)">Copiar</button>
+    <div class="prompt-text">Redacta un presupuesto breve en español para un proyecto de [descripción en 1 frase]. Precio: [importe] € + IVA. Entrega en [plazo]. Incluye [X] revisiones.
+
+Formato: máximo 200 palabras. Que sea claro, profesional y fácil de aprobar. Incluye una frase que transmita confianza en el resultado y un párrafo de condiciones básicas de pago.</div>
+  </div>
+
+  <h3>Prompt 3 — Email de envío del presupuesto</h3>
+
+  <p>El presupuesto en sí es importante, pero el email con el que lo envías también. Este prompt genera el texto de acompañamiento que pone al cliente en el estado mental correcto antes de abrir el documento.</p>
+
+  <div class="prompt-box">
+    <div class="prompt-label">📋 Prompt — copia y pega</div>
+    <button class="prompt-copy" onclick="copyPrompt(this)">Copiar</button>
+    <div class="prompt-text">Acabo de preparar un presupuesto para [nombre del cliente o "un cliente"] para un proyecto de [descripción breve]. El importe es [X] €.
+
+Redacta el email de envío del presupuesto en español que:
+- Haga referencia a la conversación previa (reunión, llamada, email)
+- Resuma en 1-2 frases el enfoque que propongo
+- Indique que adjunto el presupuesto detallado
+- Proponga un siguiente paso concreto (ej: llamada de 20 min para resolver dudas)
+- Incluya asunto del email
+
+Tono: cercano pero profesional. Sin frases hechas como "espero que sea de su agrado". Máximo 120 palabras.</div>
+  </div>
+
+  <h2>Prompts para contratos freelance</h2>
+
+  <p>Un contrato no tiene que ser un documento de 20 páginas. Para la mayoría de proyectos freelance, un contrato de 1-2 páginas que cubra los puntos esenciales es suficiente para protegerte. Estos prompts generan exactamente eso.</p>
+
+  <h3>Prompt 4 — Contrato estándar para proyectos de servicio</h3>
+
+  <p>Válido para diseño, redacción, programación, consultoría, fotografía o cualquier servicio donde entregas un resultado concreto.</p>
+
+  <div class="prompt-box">
+    <div class="prompt-label">📋 Prompt — copia y pega</div>
+    <button class="prompt-copy" onclick="copyPrompt(this)">Copiar</button>
+    <div class="prompt-text">Redacta un contrato de prestación de servicios freelance en español, adaptado a la legislación española 2026, entre:
+- Prestador: [tu nombre completo], autónomo/a con NIF [NIF], domicilio [ciudad]
+- Cliente: [nombre empresa/persona], con NIF/CIF [NIF], domicilio [ciudad]
+
+Servicio: [descripción del proyecto]
+Precio: [importe] € + 21% IVA
+Forma de pago: [condiciones]
+Plazo: [fecha de entrega]
+Revisiones: [número incluidas]
+
+El contrato debe incluir cláusulas sobre:
+1. Objeto del contrato y entregables
+2. Precio y forma de pago
+3. Plazo de ejecución
+4. Revisiones y modificaciones fuera de alcance
+5. Propiedad intelectual (se transfiere al cliente tras el pago completo)
+6. Confidencialidad básica
+7. Resolución anticipada y penalizaciones
+8. Jurisdicción: tribunales de [tu ciudad]
+
+Formato: documento formal con numeración de cláusulas. Máximo 600 palabras.</div>
+  </div>
+
+  <h3>Prompt 5 — Contrato de retainer mensual</h3>
+
+  <p>Si tienes clientes con los que trabajas de forma recurrente cada mes, el contrato de retainer es diferente al de proyecto único. Este prompt cubre la casuística específica de este tipo de relación.</p>
+
+  <div class="prompt-box">
+    <div class="prompt-label">📋 Prompt — copia y pega</div>
+    <button class="prompt-copy" onclick="copyPrompt(this)">Copiar</button>
+    <div class="prompt-text">Redacta un contrato de servicios mensuales (retainer) en español para autónomo español. Las partes son [tu nombre] y [nombre cliente].
+
+Servicio mensual: [descripción de lo que incluye cada mes, ej: X horas de diseño, Y publicaciones, etc.]
+Precio mensual: [importe] € + IVA
+Duración inicial: [X meses] con renovación automática
+Preaviso de cancelación: [X días/semanas]
+
+Incluye cláusulas sobre:
+1. Alcance mensual y qué pasa si no se usa (no acumulable)
+2. Precio y facturación (día X de cada mes)
+3. Modificaciones del alcance
+4. Duración, renovación y cancelación
+5. Propiedad del trabajo entregado
+6. Confidencialidad
+
+Tono: profesional. Formato con numeración de cláusulas. Máximo 500 palabras.</div>
+  </div>
+
+  <div class="tip">
+    <strong>⚠️ Importante:</strong> Los contratos generados por IA son una base sólida para proyectos pequeños y medianos. Para proyectos grandes, contratos con cláusulas de exclusividad o acuerdos de larga duración, revísalos siempre con un gestor o abogado. El coste de una revisión legal (50-150€) es mínimo comparado con lo que puedes perder si el contrato tiene un hueco.
+  </div>
+
+  <h2>IA vs herramienta específica: ¿cuándo usar cada una?</h2>
+
+  <p>Tener las dos opciones no significa que debas siempre usar la IA. La tabla siguiente te ayuda a decidir:</p>
+
+  <table class="comparison-table">
+    <thead>
+      <tr>
+        <th>Situación</th>
+        <th>Usa la herramienta</th>
+        <th>Usa IA</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>Proyecto estándar, cliente habitual</td>
+        <td class="check">✓ Más rápido</td>
+        <td>—</td>
+      </tr>
+      <tr>
+        <td>Cliente nuevo, quieres personalizar</td>
+        <td>—</td>
+        <td class="check">✓ Mejor resultado</td>
+      </tr>
+      <tr>
+        <td>Proyecto complejo con muchas fases</td>
+        <td>—</td>
+        <td class="check">✓ Estructura mejor</td>
+      </tr>
+      <tr>
+        <td>Necesitas el PDF en 2 minutos</td>
+        <td class="check">✓ Directo a PDF</td>
+        <td>—</td>
+      </tr>
+      <tr>
+        <td>Quieres justificar el precio en el texto</td>
+        <td>—</td>
+        <td class="check">✓ Redacción persuasiva</td>
+      </tr>
+      <tr>
+        <td>Contrato con cláusulas específicas</td>
+        <td>—</td>
+        <td class="check">✓ Más flexible</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <h2>Errores comunes al usar IA para documentos freelance</h2>
+
+  <p><strong>Enviar el borrador sin revisar.</strong> La IA puede generar texto con datos incorrectos, cláusulas que no aplican a tu sector o un tono que no encaja con tu cliente. Siempre lee el resultado antes de enviarlo.</p>
+
+  <p><strong>Poner datos reales de clientes en el prompt.</strong> Evita incluir NIF, emails o información sensible del cliente directamente en ChatGPT. Usa marcadores como [nombre cliente] y rellena los datos reales en el documento final.</p>
+
+  <p><strong>Usar un contrato genérico para todo.</strong> Un contrato de diseño web no es igual que uno de consultoría o fotografía. Adapta el prompt a tu sector y a las particularidades de cada proyecto.</p>
+
+  <p><strong>No guardar los prompts que funcionan.</strong> Cuando encuentres un prompt que genera exactamente lo que necesitas, guárdalo. Puedes tener un documento con tus prompts favoritos para no tener que reescribirlos cada vez.</p>
+
+  <h2>El combo perfecto para autónomos en 2026</h2>
+
+  <p>La mejor combinación para gestionar presupuestos y contratos como freelance sin perder tiempo es:</p>
+
+  <ul>
+    <li><strong>Calcular la tarifa:</strong> <a href="/herramientas/calculadora-tarifa-hora/">Calculadora tarifa hora</a> o <a href="/herramientas/calculadora-precio-proyecto/">Calculadora precio proyecto</a></li>
+    <li><strong>Redactar el documento:</strong> ChatGPT o Claude con los prompts de esta guía</li>
+    <li><strong>Generar el PDF:</strong> <a href="/herramientas/generador-presupuesto/">Generador de presupuesto</a> o <a href="/herramientas/generador-contrato-freelance/">Generador de contrato freelance</a></li>
+    <li><strong>Enviar la factura:</strong> <a href="https://facturapdf.app" target="_blank" rel="noopener">facturapdf.app</a> para generar la factura PDF cuando el cliente apruebe</li>
+  </ul>
+
+  <p>Con este flujo, lo que antes te llevaba 2 horas puede hacerse en 15-20 minutos. Y el resultado tiene más calidad porque cada herramienta hace lo que mejor sabe hacer.</p>
+
+  <div class="faq-section">
+    <h2>Preguntas frecuentes</h2>
+
+    <div class="faq-item">
+      <div class="faq-q">¿Un contrato generado por IA tiene validez legal?</div>
+      <div class="faq-a">Sí, siempre que las partes lo firman y el contenido no contradice la legislación vigente. Para proyectos pequeños y medianos, un contrato bien generado con IA cubre perfectamente tus necesidades. Para proyectos grandes o con cláusulas complejas, revísalo con un abogado o gestor.</div>
+    </div>
+    <div class="faq-item">
+      <div class="faq-q">¿Qué IA es mejor para crear presupuestos freelance?</div>
+      <div class="faq-a">Para presupuestos freelance, tanto ChatGPT como Claude funcionan muy bien. La clave no es la herramienta sino el prompt: cuanto más detallado sea, mejor será el resultado. Para mayor rapidez, usa directamente el generador de presupuestos gratuito de AutónomoLab.</div>
+    </div>
+    <div class="faq-item">
+      <div class="faq-q">¿Puedo usar IA para negociar el precio con un cliente?</div>
+      <div class="faq-a">Sí. Puedes pedirle a ChatGPT que genere respuestas para situaciones de negociación concretas: clientes que piden descuento, que retrasan pagos o que amplían el alcance sin querer pagar más. La IA te da un borrador que tú adaptas a tu estilo y situación.</div>
+    </div>
+    <div class="faq-item">
+      <div class="faq-q">¿Necesito pagar por ChatGPT para usarlo con presupuestos?</div>
+      <div class="faq-a">No, el plan gratuito es suficiente para la mayoría de usos. El plan de pago (ChatGPT Plus, ~20€/mes) da acceso a modelos más potentes y contexto más largo, útil para contratos muy detallados. Es un gasto deducible como autónomo.</div>
+    </div>
+    <div class="faq-item">
+      <div class="faq-q">¿Cómo firmo digitalmente un contrato generado por IA?</div>
+      <div class="faq-a">Puedes usar herramientas gratuitas como DocuSign (plan básico gratuito), Adobe Sign o simplemente pedir al cliente que responda el email confirmando su aceptación (tiene validez legal en España según el Código Civil). Para contratos frecuentes, considera Signaturit o HelloSign.</div>
+    </div>
+  </div>
+
+  <div class="related">
+    <h2>Más herramientas y guías</h2>
+    <div class="related-grid">
+      <a href="/herramientas/generador-presupuesto/" class="rc"><div class="rc-e">📋</div><div class="rc-n">Generador de presupuesto</div></a>
+      <a href="/herramientas/generador-contrato-freelance/" class="rc"><div class="rc-e">📄</div><div class="rc-n">Contrato freelance gratis</div></a>
+      <a href="/blog/prompts-chatgpt-autonomos/" class="rc"><div class="rc-e">🤖</div><div class="rc-n">10 prompts para autónomos</div></a>
+    </div>
+  </div>
+
+</div>
+
+<footer>
+  <a href="/privacidad">Privacidad</a>
+  <a href="/cookies">Cookies</a>
+  <a href="/aviso-legal">Aviso legal</a>
+  <a href="/contacto">Contacto</a>
+  <p style="margin-top:16px">© 2026 AutónomoLab · Herramientas gratis para autónomos</p>
+</footer>
+
+<script src="/cookie-banner.js" defer></script>
+<script>
+  const btn = document.getElementById('navToggle');
+  const mob = document.getElementById('navMobile');
+  btn.addEventListener('click', () => mob.classList.toggle('open'));
+
+  document.querySelectorAll('.faq-q').forEach(q => {
+    q.addEventListener('click', () => q.parentElement.classList.toggle('open'));
+  });
+
+  function copyPrompt(btn) {
+    const text = btn.nextElementSibling.textContent;
+    navigator.clipboard.writeText(text).then(() => {
+      btn.textContent = '✓ Copiado';
+      setTimeout(() => btn.textContent = 'Copiar', 2000);
+    });
+  }
+</script>
+
+</body>
+</html>

@@ -1,0 +1,526 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="robots" content="index, follow">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>10 prompts de ChatGPT para autónomos que ahorran horas cada semana | AutónomoLab</title>
+  <meta name="description" content="Los 10 mejores prompts de ChatGPT para autónomos y freelancers. Copia y pega para redactar emails, presupuestos, contratos y gestionar clientes sin perder tiempo.">
+  <link rel="canonical" href="https://autonomolab.com/blog/prompts-chatgpt-autonomos/">
+  <link rel="alternate" hreflang="es" href="https://autonomolab.com/blog/prompts-chatgpt-autonomos/">
+  <link rel="alternate" hreflang="es-419" href="https://autonomolab.com/blog/prompts-chatgpt-autonomos/">
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="article">
+  <meta property="og:title" content="10 prompts de ChatGPT para autónomos que ahorran horas cada semana">
+  <meta property="og:description" content="Los 10 mejores prompts de ChatGPT para autónomos y freelancers. Copia y pega para redactar emails, presupuestos, contratos y gestionar clientes.">
+  <meta property="og:url" content="https://autonomolab.com/blog/prompts-chatgpt-autonomos/">
+  <meta property="og:image" content="https://autonomolab.com/img/autonomolab-og.jpg">
+  <meta property="og:site_name" content="AutónomoLab">
+  <meta property="article:published_time" content="2026-05-25">
+  <meta property="article:modified_time" content="2026-05-25">
+
+  <!-- Schema -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "Article",
+        "@id": "https://autonomolab.com/blog/prompts-chatgpt-autonomos/#article",
+        "headline": "10 prompts de ChatGPT para autónomos que ahorran horas cada semana",
+        "description": "Los 10 mejores prompts de ChatGPT para autónomos y freelancers. Copia y pega para redactar emails, presupuestos, contratos y gestionar clientes sin perder tiempo.",
+        "datePublished": "2026-05-25",
+        "dateModified": "2026-05-25",
+        "author": {
+          "@type": "Person",
+          "name": "AutónomoLab",
+          "url": "https://autonomolab.com/sobre/"
+        },
+        "publisher": {
+          "@type": "Organization",
+          "name": "AutónomoLab",
+          "url": "https://autonomolab.com"
+        },
+        "mainEntityOfPage": "https://autonomolab.com/blog/prompts-chatgpt-autonomos/"
+      },
+      {
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          { "@type": "ListItem", "position": 1, "name": "Inicio", "item": "https://autonomolab.com/" },
+          { "@type": "ListItem", "position": 2, "name": "Blog", "item": "https://autonomolab.com/blog/" },
+          { "@type": "ListItem", "position": 3, "name": "Prompts ChatGPT para autónomos", "item": "https://autonomolab.com/blog/prompts-chatgpt-autonomos/" }
+        ]
+      },
+      {
+        "@type": "FAQPage",
+        "mainEntity": [
+          {
+            "@type": "Question",
+            "name": "¿Qué es un prompt de ChatGPT?",
+            "acceptedAnswer": { "@type": "Answer", "text": "Un prompt es la instrucción o pregunta que le escribes a ChatGPT para que te genere una respuesta. Cuanto más detallado y específico sea el prompt, mejor será el resultado." }
+          },
+          {
+            "@type": "Question",
+            "name": "¿ChatGPT es gratis para autónomos?",
+            "acceptedAnswer": { "@type": "Answer", "text": "Sí, ChatGPT tiene un plan gratuito que cubre la mayoría de usos del día a día. El plan de pago (ChatGPT Plus, 20€/mes) da acceso a modelos más potentes y es deducible como gasto profesional." }
+          },
+          {
+            "@type": "Question",
+            "name": "¿Es seguro usar ChatGPT con datos de clientes?",
+            "acceptedAnswer": { "@type": "Answer", "text": "Con precaución. Evita introducir datos personales de clientes (nombres, emails, DNI) directamente en ChatGPT. Usa datos genéricos o ficticios en los prompts y adapta el resultado a tu caso concreto." }
+          }
+        ]
+      }
+    ]
+  }
+  </script>
+
+  <!-- GA4 -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-5CPLF5TR3E"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-5CPLF5TR3E');
+  </script>
+
+  <style>
+    :root {
+      --bg: #f5f2eb;
+      --bg2: #ede9e0;
+      --ink: #1a1814;
+      --ink2: #4a4740;
+      --ink3: #8a857a;
+      --accent: #d45a2a;
+      --card: #fff;
+      --border: #ddd8ce;
+      --green: #2ab87a;
+    }
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    body { font-family: 'Inter', system-ui, sans-serif; background: var(--bg); color: var(--ink); line-height: 1.7; }
+    a { color: var(--accent); text-decoration: none; }
+    a:hover { text-decoration: underline; }
+
+    /* NAV */
+    nav { background: var(--bg); border-bottom: 1px solid var(--border); position: sticky; top: 0; z-index: 100; }
+    .nav-inner { max-width: 1100px; margin: 0 auto; padding: 0 24px; height: 56px; display: flex; align-items: center; justify-content: space-between; }
+    .logo { font-weight: 800; font-size: 17px; color: var(--ink); display: flex; align-items: center; gap: 6px; }
+    .logo-dot { width: 10px; height: 10px; background: var(--accent); border-radius: 50%; display: inline-block; }
+    .nav-links { display: flex; gap: 28px; list-style: none; }
+    .nav-links a { font-size: 14px; font-weight: 500; color: var(--ink2); }
+    .nav-links a:hover { color: var(--ink); text-decoration: none; }
+    .nav-hamburger { display: none; background: none; border: none; cursor: pointer; flex-direction: column; gap: 5px; padding: 4px; }
+    .nav-hamburger span { display: block; width: 22px; height: 2px; background: var(--ink); border-radius: 2px; transition: all .25s; }
+    .nav-mobile { display: none; flex-direction: column; background: var(--bg); border-top: 1px solid var(--border); padding: 16px 24px; gap: 16px; }
+    .nav-mobile a { font-size: 15px; font-weight: 500; color: var(--ink2); }
+    .nav-mobile.open { display: flex; }
+    @media(max-width:640px) { .nav-links { display: none; } .nav-hamburger { display: flex; } }
+
+    /* WRAP */
+    .wrap { max-width: 720px; margin: 0 auto; padding: 48px 24px 80px; }
+
+    /* BREADCRUMB */
+    .breadcrumb { font-size: 13px; color: var(--ink3); margin-bottom: 32px; display: flex; gap: 6px; flex-wrap: wrap; }
+    .breadcrumb a { color: var(--ink3); }
+    .breadcrumb a:hover { color: var(--accent); text-decoration: none; }
+
+    /* ARTICLE HEADER */
+    .article-tag { font-size: 11px; font-weight: 700; letter-spacing: .08em; text-transform: uppercase; color: var(--accent); margin-bottom: 12px; }
+    h1 { font-size: clamp(26px, 5vw, 40px); font-weight: 900; line-height: 1.15; letter-spacing: -.02em; margin-bottom: 20px; }
+    .article-meta { font-size: 13px; color: var(--ink3); margin-bottom: 36px; display: flex; gap: 16px; flex-wrap: wrap; align-items: center; }
+    .article-meta span { display: flex; align-items: center; gap: 4px; }
+
+    /* INTRO */
+    .intro { font-size: 18px; line-height: 1.75; color: var(--ink2); margin-bottom: 40px; padding-bottom: 40px; border-bottom: 1px solid var(--border); }
+
+    /* CONTENT */
+    .wrap h2 { font-size: 24px; font-weight: 900; letter-spacing: -.02em; margin: 48px 0 16px; }
+    .wrap h3 { font-size: 18px; font-weight: 800; margin: 32px 0 12px; }
+    .wrap p { font-size: 17px; line-height: 1.75; margin-bottom: 24px; color: var(--ink2); }
+    .wrap ul, .wrap ol { padding-left: 20px; margin-bottom: 24px; }
+    .wrap li { font-size: 17px; line-height: 1.75; color: var(--ink2); margin-bottom: 8px; }
+    .wrap strong { color: var(--ink); font-weight: 700; }
+
+    /* PROMPT BOX */
+    .prompt-box { background: var(--ink); color: #f5f2eb; border-radius: 12px; padding: 24px 28px; margin: 24px 0 32px; position: relative; }
+    .prompt-label { font-size: 11px; font-weight: 700; letter-spacing: .08em; text-transform: uppercase; color: var(--accent); margin-bottom: 12px; }
+    .prompt-text { font-size: 15px; line-height: 1.7; font-family: 'Inter', monospace; white-space: pre-wrap; }
+    .prompt-copy { position: absolute; top: 16px; right: 16px; background: var(--accent); color: white; border: none; border-radius: 6px; padding: 6px 12px; font-size: 12px; font-weight: 600; cursor: pointer; }
+    .prompt-copy:hover { opacity: .85; }
+
+    /* PROMPT NUMBER */
+    .prompt-num { display: inline-flex; align-items: center; justify-content: center; width: 36px; height: 36px; background: var(--accent); color: white; font-weight: 900; font-size: 16px; border-radius: 8px; margin-bottom: 12px; }
+
+    /* TIP BOX */
+    .tip { background: var(--bg2); border-left: 3px solid var(--accent); border-radius: 0 8px 8px 0; padding: 16px 20px; margin: 24px 0; font-size: 15px; color: var(--ink2); }
+    .tip strong { color: var(--ink); }
+
+    /* FAQ */
+    .faq-section { margin-top: 48px; padding-top: 40px; border-top: 1px solid var(--border); }
+    .faq-section h2 { margin-top: 0; }
+    .faq-item { border: 1px solid var(--border); border-radius: 10px; margin-bottom: 10px; overflow: hidden; }
+    .faq-q { padding: 18px 20px; font-weight: 700; font-size: 16px; cursor: pointer; display: flex; justify-content: space-between; align-items: center; background: var(--card); }
+    .faq-q::after { content: '+'; font-size: 20px; color: var(--ink3); flex-shrink: 0; }
+    .faq-item.open .faq-q::after { content: '−'; }
+    .faq-a { display: none; padding: 0 20px 18px; font-size: 15px; line-height: 1.7; color: var(--ink2); background: var(--card); }
+    .faq-item.open .faq-a { display: block; }
+
+    /* RELATED */
+    .related { margin-top: 56px; padding-top: 40px; border-top: 1px solid var(--border); }
+    .related h2 { font-size: 20px; font-weight: 900; margin-bottom: 20px; margin-top: 0; }
+    .related-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 16px; }
+    .rc { background: var(--card); border: 1px solid var(--border); border-radius: 10px; padding: 20px; display: flex; flex-direction: column; gap: 8px; transition: box-shadow .2s; }
+    .rc:hover { box-shadow: 0 4px 16px rgba(0,0,0,.08); text-decoration: none; }
+    .rc-e { font-size: 24px; }
+    .rc-n { font-size: 14px; font-weight: 700; color: var(--ink); }
+
+    /* FOOTER */
+    footer { border-top: 1px solid var(--border); padding: 32px 24px; text-align: center; font-size: 13px; color: var(--ink3); }
+    footer a { color: var(--ink3); margin: 0 10px; }
+    footer a:hover { color: var(--accent); text-decoration: none; }
+  </style>
+</head>
+<body>
+
+<nav>
+  <div class="nav-inner">
+    <a href="/" class="logo"><span class="logo-dot"></span>AutónomoLab</a>
+    <ul class="nav-links">
+      <li><a href="/herramientas">Herramientas</a></li>
+      <li><a href="/blog">Blog</a></li>
+      <li><a href="/comparativas">Comparativas</a></li>
+      <li><a href="/sobre">Sobre</a></li>
+    </ul>
+    <button class="nav-hamburger" id="navToggle" aria-label="Abrir menú">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+  <div class="nav-mobile" id="navMobile">
+    <a href="/herramientas">Herramientas</a>
+    <a href="/blog">Blog</a>
+    <a href="/comparativas">Comparativas</a>
+    <a href="/sobre">Sobre</a>
+  </div>
+</nav>
+
+<div class="wrap">
+
+  <nav class="breadcrumb" aria-label="Breadcrumb">
+    <a href="/">Inicio</a> ›
+    <a href="/blog">Blog</a> ›
+    <span>Prompts ChatGPT para autónomos</span>
+  </nav>
+
+  <div class="article-tag">Inteligencia Artificial</div>
+
+  <h1>10 prompts de ChatGPT para autónomos que ahorran horas cada semana</h1>
+
+  <div class="article-meta">
+    <span>📅 Mayo 2026</span>
+    <span>⏱ 8 min de lectura</span>
+    <span>✍️ AutónomoLab</span>
+  </div>
+
+  <p class="intro">Si eres autónomo, el tiempo es tu recurso más escaso. Redactar emails, hacer presupuestos, preparar contratos, responder a clientes difíciles... todo eso come horas que podrías dedicar a facturar. ChatGPT puede encargarse de buena parte de ese trabajo, pero solo si sabes pedírselo bien. Estos 10 prompts están diseñados específicamente para autónomos y freelancers en España y LATAM. Cópialos, adáptalos a tu caso y empieza a recuperar tiempo.</p>
+
+  <h2>¿Por qué los prompts genéricos no funcionan?</h2>
+
+  <p>La mayoría de autónomos que prueban ChatGPT escriben algo como "redacta un email profesional" y reciben un texto tan genérico que acaba siendo inútil. El problema no es la herramienta, es la instrucción.</p>
+
+  <p>Un buen prompt tiene tres elementos: <strong>contexto</strong> (quién eres y qué haces), <strong>tarea concreta</strong> (qué quieres exactamente) y <strong>restricciones</strong> (tono, longitud, formato). Cuanto más específico seas, más útil será el resultado.</p>
+
+  <p>Los prompts de esta guía siguen esa estructura. Todos tienen marcadores entre corchetes — como <strong>[tu sector]</strong> o <strong>[nombre del cliente]</strong> — que debes sustituir por tu información real antes de usarlos.</p>
+
+  <div class="tip">
+    <strong>💡 Consejo antes de empezar:</strong> Abre ChatGPT y crea un chat nuevo para cada tipo de tarea. Si mezclas temas en el mismo chat, los resultados empeoran porque el modelo pierde el contexto.
+  </div>
+
+  <h2>Los 10 prompts esenciales</h2>
+
+  <h3><span class="prompt-num">1</span> Email para cobrar una factura impagada</h3>
+
+  <p>El dinero que más duele es el que ya ganaste pero no has cobrado. Este prompt genera un email firme pero profesional que no compromete la relación con el cliente.</p>
+
+  <div class="prompt-box">
+    <div class="prompt-label">📋 Prompt — copia y pega</div>
+    <button class="prompt-copy" onclick="copyPrompt(this)">Copiar</button>
+    <div class="prompt-text">Soy autónomo/a en [tu sector] y tengo una factura impagada. El cliente es [tipo de empresa, ej: agencia de marketing] y la factura es de [importe] €, con vencimiento el [fecha]. Es el [primer / segundo / tercer] aviso.
+
+Redacta un email en español, tono profesional pero directo, que:
+- Recuerde el importe y la fecha de vencimiento
+- Pida confirmación de la fecha de pago
+- No suene agresivo pero deje claro que es urgente
+- Tenga asunto incluido
+
+Longitud: máximo 150 palabras.</div>
+  </div>
+
+  <h3><span class="prompt-num">2</span> Presupuesto para un cliente nuevo</h3>
+
+  <p>Uno de los momentos más delicados como freelance es enviar el primer presupuesto a un cliente. Muy alto y te quedas sin proyecto. Muy bajo y trabajas a pérdida. Este prompt te ayuda a estructurarlo y justificarlo.</p>
+
+  <div class="prompt-box">
+    <div class="prompt-label">📋 Prompt — copia y pega</div>
+    <button class="prompt-copy" onclick="copyPrompt(this)">Copiar</button>
+    <div class="prompt-text">Soy freelance especializado/a en [tu especialidad, ej: diseño web, redacción, fotografía]. Un cliente me pide [descripción del proyecto]. Mi tarifa es de [tarifa] €/hora o [precio fijo] € por el proyecto.
+
+Redacta un presupuesto profesional en español que incluya:
+- Resumen del proyecto y alcance
+- Desglose de fases o entregables
+- Precio total (sin IVA) con nota sobre el 21% de IVA
+- Condiciones de pago (ej: 50% al inicio, 50% al entregar)
+- Plazo de entrega estimado
+- Validez del presupuesto (15 días)
+
+Tono: profesional y confiable. Que transmita que soy un profesional serio.</div>
+  </div>
+
+  <div class="tip">
+    <strong>💡 Tip:</strong> Si quieres ir más rápido, usa el <a href="/herramientas/generador-presupuesto/">generador de presupuestos gratuito</a> de AutónomoLab para tener la base y luego pídele a ChatGPT que mejore la redacción.
+  </div>
+
+  <h3><span class="prompt-num">3</span> Respuesta a un cliente que pide descuento</h3>
+
+  <p>Llega el mensaje de siempre: "¿podrías ajustar un poco el precio?". Decir que no sin perder el cliente es un arte. Este prompt te da una respuesta que mantiene tu tarifa y a la vez deja la puerta abierta.</p>
+
+  <div class="prompt-box">
+    <div class="prompt-label">📋 Prompt — copia y pega</div>
+    <button class="prompt-copy" onclick="copyPrompt(this)">Copiar</button>
+    <div class="prompt-text">Soy autónomo/a en [sector]. Un cliente potencial me ha pedido un descuento del [X]% en mi presupuesto de [importe] €. No quiero bajar el precio pero sí mantener al cliente.
+
+Redacta una respuesta en español que:
+- Agradezca el interés sin ser servil
+- Explique el valor de mi trabajo sin sonar defensivo
+- Ofrezca una alternativa (reducir alcance, pago fraccionado, etc.) en lugar de bajar el precio
+- Deje la puerta abierta para avanzar
+
+Tono: seguro, cálido, sin excusas. Máximo 120 palabras.</div>
+  </div>
+
+  <h3><span class="prompt-num">4</span> Contrato freelance básico</h3>
+
+  <p>Trabajar sin contrato es trabajar sin red. Este prompt genera una base que puedes revisar con un gestor o abogado. No sustituye asesoría legal, pero es un punto de partida sólido para proyectos pequeños.</p>
+
+  <div class="prompt-box">
+    <div class="prompt-label">📋 Prompt — copia y pega</div>
+    <button class="prompt-copy" onclick="copyPrompt(this)">Copiar</button>
+    <div class="prompt-text">Redacta un contrato de prestación de servicios freelance en español, adaptado a la legislación española, para un proyecto de [descripción del servicio]. Las partes son: el freelance [tu nombre/empresa] y el cliente [nombre/empresa cliente].
+
+Incluye cláusulas sobre:
+- Descripción del servicio y entregables
+- Precio: [importe] € + IVA, con forma de pago
+- Plazos de entrega
+- Propiedad intelectual (el cliente recibe los derechos al pagar)
+- Revisiones incluidas: [número]
+- Cláusula de confidencialidad básica
+- Resolución del contrato
+
+Formato: documento formal con numeración de cláusulas.</div>
+  </div>
+
+  <div class="tip">
+    <strong>💡 Tip:</strong> AutónomoLab tiene un <a href="/herramientas/generador-contrato-freelance/">generador de contrato freelance gratuito</a> que crea el PDF directamente sin necesidad de ChatGPT.
+  </div>
+
+  <h3><span class="prompt-num">5</span> Email de seguimiento tras una reunión</h3>
+
+  <p>El seguimiento post-reunión es donde se ganan o se pierden los proyectos. Un email bien redactado que resuma lo hablado y proponga el siguiente paso diferencia a los profesionales de los amateurs.</p>
+
+  <div class="prompt-box">
+    <div class="prompt-label">📋 Prompt — copia y pega</div>
+    <button class="prompt-copy" onclick="copyPrompt(this)">Copiar</button>
+    <div class="prompt-text">Acabo de tener una reunión con un cliente potencial sobre [descripción del proyecto]. Lo que acordamos fue: [resumen de 2-3 puntos clave]. El siguiente paso es [próxima acción acordada].
+
+Redacta un email de seguimiento en español que:
+- Resuma los puntos clave de la reunión
+- Confirme el siguiente paso con fecha si la hay
+- Transmita entusiasmo sin ser excesivo
+- Incluya asunto del email
+
+Tono: profesional, cercano. Máximo 150 palabras.</div>
+  </div>
+
+  <h3><span class="prompt-num">6</span> Descripción de servicios para tu web o LinkedIn</h3>
+
+  <p>Muchos autónomos tienen una web con textos que no convencen a nadie. Este prompt genera una descripción de servicios que habla el idioma del cliente, no el del proveedor.</p>
+
+  <div class="prompt-box">
+    <div class="prompt-label">📋 Prompt — copia y pega</div>
+    <button class="prompt-copy" onclick="copyPrompt(this)">Copiar</button>
+    <div class="prompt-text">Soy freelance especializado/a en [servicio]. Mi cliente ideal es [tipo de empresa o perfil]. El principal problema que resuelvo es [problema concreto]. Mi diferencial es [qué me hace diferente].
+
+Redacta una descripción de servicios en español para mi web o perfil de LinkedIn que:
+- Empiece con el problema del cliente, no con "Soy..."
+- Explique cómo lo resuelvo
+- Incluya un resultado concreto o beneficio tangible
+- Termine con una llamada a la acción clara
+
+Tono: profesional pero humano, sin jerga técnica. Entre 80 y 120 palabras.</div>
+  </div>
+
+  <h3><span class="prompt-num">7</span> Respuesta a una reseña negativa</h3>
+
+  <p>Una mala reseña en Google o en una plataforma freelance puede hundir tu reputación si no la gestionas bien. Este prompt te da una respuesta que demuestra profesionalidad y da la vuelta a la situación.</p>
+
+  <div class="prompt-box">
+    <div class="prompt-label">📋 Prompt — copia y pega</div>
+    <button class="prompt-copy" onclick="copyPrompt(this)">Copiar</button>
+    <div class="prompt-text">He recibido esta reseña negativa de un cliente: "[texto de la reseña]". La situación real fue: [tu versión de los hechos en 2-3 frases].
+
+Redacta una respuesta pública en español que:
+- Agradezca el feedback sin ser defensivo
+- Reconozca lo que sea razonable reconocer
+- Aclare con hechos (sin atacar al cliente) si hay inexactitudes
+- Muestre disposición a solucionar el problema
+- Sea breve y mantenga un tono calmado
+
+Máximo 100 palabras. Que cualquier persona que la lea piense que soy un profesional serio.</div>
+  </div>
+
+  <h3><span class="prompt-num">8</span> Plan de tareas semanal para autónomos</h3>
+
+  <p>La gestión del tiempo es el talón de Aquiles de muchos freelancers. Este prompt convierte tu lista de pendientes caótica en un plan semanal estructurado y realista.</p>
+
+  <div class="prompt-box">
+    <div class="prompt-label">📋 Prompt — copia y pega</div>
+    <button class="prompt-copy" onclick="copyPrompt(this)">Copiar</button>
+    <div class="prompt-text">Soy autónomo/a y tengo estas tareas pendientes para esta semana: [lista tus tareas]. Trabajo [número] horas al día, de lunes a [día]. Mis proyectos más urgentes son [1-2 proyectos prioritarios].
+
+Organiza estas tareas en un plan semanal que:
+- Distribuya la carga de forma realista
+- Ponga las tareas más complejas en las franjas de mayor energía (mañanas)
+- Reserve tiempo para emails y gestión administrativa
+- Indique el tiempo estimado para cada tarea
+- Deje un margen del 20% para imprevistos
+
+Formato: tabla por días, con columnas Tarea / Tiempo estimado / Prioridad.</div>
+  </div>
+
+  <h3><span class="prompt-num">9</span> Email para conseguir nuevos clientes (outreach)</h3>
+
+  <p>La prospección en frío funciona cuando el mensaje es relevante y no parece un template. Este prompt genera un email de outreach personalizado que tiene muchas más posibilidades de recibir respuesta.</p>
+
+  <div class="prompt-box">
+    <div class="prompt-label">📋 Prompt — copia y pega</div>
+    <button class="prompt-copy" onclick="copyPrompt(this)">Copiar</button>
+    <div class="prompt-text">Soy freelance especializado/a en [servicio]. Quiero contactar con [tipo de empresa objetivo, ej: agencias de comunicación medianas en España]. He investigado esta empresa específica: [nombre de la empresa] y he visto que [algo concreto sobre ellos: un proyecto reciente, un problema que podrían tener, algo de su web].
+
+Redacta un email de outreach en español que:
+- Empiece mencionando algo específico de ellos (no genérico)
+- Explique brevemente cómo puedo ayudarles con [problema concreto]
+- Incluya un resultado que he conseguido para clientes similares
+- Tenga una llamada a la acción concreta y de bajo compromiso (ej: "¿tendría sentido una llamada de 20 minutos?")
+- Asunto incluido
+
+Tono: directo, sin relleno. Máximo 150 palabras.</div>
+  </div>
+
+  <h3><span class="prompt-num">10</span> Análisis de gastos para la declaración trimestral</h3>
+
+  <p>Cada trimestre toca revisar gastos y preparar el modelo 303 y 130. Este prompt te ayuda a estructurar tus gastos y detectar deducciones que podrías estar olvidando.</p>
+
+  <div class="prompt-box">
+    <div class="prompt-label">📋 Prompt — copia y pega</div>
+    <button class="prompt-copy" onclick="copyPrompt(this)">Copiar</button>
+    <div class="prompt-text">Soy autónomo/a en [sector] en España, en régimen de estimación directa simplificada. Estos son mis gastos del trimestre: [lista tus gastos con importes].
+
+Analiza estos gastos y dime:
+1. Cuáles son deducibles al 100% para un autónomo en mi sector
+2. Cuáles son deducibles parcialmente y en qué porcentaje aproximado
+3. Qué gastos habituales en mi sector podría estar olvidando deducir
+4. El total deducible estimado
+
+Importante: esto es una orientación general, no asesoría fiscal. Formatea la respuesta en una tabla clara.</div>
+  </div>
+
+  <div class="tip">
+    <strong>💡 Recuerda:</strong> ChatGPT puede orientarte sobre deducciones pero no sustituye a un gestor. Para calcular exactamente cuánto pagarás de IRPF, usa la <a href="/herramientas/calculadora-irpf/">calculadora IRPF para autónomos</a> de AutónomoLab.
+  </div>
+
+  <h2>Cómo sacar más partido a estos prompts</h2>
+
+  <p>Estos prompts son puntos de partida, no resultados finales. Hay tres formas de mejorar cualquier respuesta de ChatGPT:</p>
+
+  <p><strong>1. Pide una segunda versión:</strong> Si el resultado no te convence del todo, escribe "hazlo más directo" o "reescríbelo con un tono más informal" sin volver a copiar el prompt entero. ChatGPT recuerda el contexto del chat.</p>
+
+  <p><strong>2. Da feedback específico:</strong> En lugar de "no me gusta", di "el tercer párrafo suena demasiado formal" o "el asunto del email no llama la atención". Cuanto más concreto seas, mejor será la corrección.</p>
+
+  <p><strong>3. Encadena prompts:</strong> Usa el resultado de un prompt como input del siguiente. Por ejemplo, genera el presupuesto con el prompt 2 y luego pídele que redacte el email de envío de ese presupuesto.</p>
+
+  <h2>¿ChatGPT o Claude para autónomos?</h2>
+
+  <p>ChatGPT es la opción más conocida y tiene un plan gratuito generoso. Claude (de Anthropic) destaca especialmente en redacción larga y en tareas que requieren mucho contexto, como revisar contratos completos o analizar documentos. Para el día a día de un autónomo, cualquiera de los dos funciona bien. La clave no es la herramienta, es el prompt.</p>
+
+  <p>Si quieres profundizar en cómo usar la IA en tu trabajo freelance, consulta el artículo completo de <a href="/blog/chatgpt-para-autonomos/">ChatGPT para autónomos</a> en AutónomoLab.</p>
+
+  <div class="faq-section">
+    <h2>Preguntas frecuentes</h2>
+
+    <div class="faq-item">
+      <div class="faq-q">¿Qué es un prompt de ChatGPT?</div>
+      <div class="faq-a">Un prompt es la instrucción o pregunta que le escribes a ChatGPT para que te genere una respuesta. Cuanto más detallado y específico sea el prompt, mejor será el resultado que obtengas.</div>
+    </div>
+    <div class="faq-item">
+      <div class="faq-q">¿ChatGPT es gratis para autónomos?</div>
+      <div class="faq-a">Sí, ChatGPT tiene un plan gratuito que cubre la mayoría de usos del día a día. El plan de pago (ChatGPT Plus, unos 20€/mes) da acceso a modelos más potentes como GPT-4o y es deducible como gasto profesional si lo usas para tu actividad.</div>
+    </div>
+    <div class="faq-item">
+      <div class="faq-q">¿Es seguro usar ChatGPT con datos de clientes?</div>
+      <div class="faq-a">Con precaución. Evita introducir datos personales de clientes (nombres completos, emails, DNI) directamente en ChatGPT. Usa datos genéricos o ficticios en los prompts y adapta el resultado a tu caso concreto. Si manejas información sensible, considera usar la versión de pago con privacidad mejorada.</div>
+    </div>
+    <div class="faq-item">
+      <div class="faq-q">¿Puedo usar estos prompts en Claude o Gemini?</div>
+      <div class="faq-a">Sí, todos los prompts de esta guía funcionan con cualquier IA generativa: ChatGPT, Claude, Gemini o Copilot. La estructura es la misma — contexto, tarea y restricciones — independientemente de la herramienta.</div>
+    </div>
+    <div class="faq-item">
+      <div class="faq-q">¿Cuánto tiempo ahorra realmente usar ChatGPT como autónomo?</div>
+      <div class="faq-a">Depende de cuánto escribas. Autónomos que usan IA para emails, presupuestos y documentos reportan ahorros de entre 3 y 8 horas semanales. El mayor ahorro suele venir de tareas repetitivas como el seguimiento de presupuestos y los emails de cobro.</div>
+    </div>
+  </div>
+
+  <div class="related">
+    <h2>Más herramientas y guías</h2>
+    <div class="related-grid">
+      <a href="/blog/chatgpt-para-autonomos/" class="rc"><div class="rc-e">🤖</div><div class="rc-n">ChatGPT para autónomos</div></a>
+      <a href="/herramientas/generador-presupuesto/" class="rc"><div class="rc-e">📋</div><div class="rc-n">Generador de presupuesto</div></a>
+      <a href="/herramientas/generador-contrato-freelance/" class="rc"><div class="rc-e">📄</div><div class="rc-n">Contrato freelance gratis</div></a>
+    </div>
+  </div>
+
+</div>
+
+<footer>
+  <a href="/privacidad">Privacidad</a>
+  <a href="/cookies">Cookies</a>
+  <a href="/aviso-legal">Aviso legal</a>
+  <a href="/contacto">Contacto</a>
+  <p style="margin-top:16px">© 2026 AutónomoLab · Herramientas gratis para autónomos</p>
+</footer>
+
+<script src="/cookie-banner.js" defer></script>
+<script>
+  // Hamburger menu
+  const btn = document.getElementById('navToggle');
+  const mob = document.getElementById('navMobile');
+  btn.addEventListener('click', () => mob.classList.toggle('open'));
+
+  // FAQ accordion
+  document.querySelectorAll('.faq-q').forEach(q => {
+    q.addEventListener('click', () => {
+      q.parentElement.classList.toggle('open');
+    });
+  });
+
+  // Copy prompt
+  function copyPrompt(btn) {
+    const text = btn.nextElementSibling.textContent;
+    navigator.clipboard.writeText(text).then(() => {
+      btn.textContent = '✓ Copiado';
+      setTimeout(() => btn.textContent = 'Copiar', 2000);
+    });
+  }
+</script>
+
+</body>
+</html>
